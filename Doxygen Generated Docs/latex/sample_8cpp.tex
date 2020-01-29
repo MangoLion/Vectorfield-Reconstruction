@@ -1,0 +1,676 @@
+\hypertarget{sample_8cpp}{}\doxysection{C\+:/\+Users/\+Mango/\+Downloads/\+Skeleton2017 (1) -\/ Copy/\+Skeleton2017\+\_\+new\+\_\+zip -\/ Copy/\+Skeleton2017/sample.cpp File Reference}
+\label{sample_8cpp}\index{C:/Users/Mango/Downloads/Skeleton2017 (1) -\/ Copy/Skeleton2017\_new\_zip -\/ Copy/Skeleton2017/sample.cpp@{C:/Users/Mango/Downloads/Skeleton2017 (1) -\/ Copy/Skeleton2017\_new\_zip -\/ Copy/Skeleton2017/sample.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}G\+L\textbackslash{}include\textbackslash{}\+G\+L.\+H\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G\+L\textbackslash{}include\textbackslash{}glu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G\+L\textbackslash{}include\textbackslash{}glut.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G\+L\textbackslash{}include\textbackslash{}glui.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Skeleton.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Reader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Graph.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+I\+C.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G\+U\+I.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sample_8cpp_a525335710b53cb064ca56b936120431e}{\+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+ES}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{sample_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structnode__main}{node\+\_\+main}} $\ast$$\ast$ \mbox{\hyperlink{sample_8cpp_a6af64b1a744595bacce0bbb99e554aaf}{grid\+\_\+main}} = new \mbox{\hyperlink{structnode__main}{node\+\_\+main}} $\ast$ \mbox{[}50\mbox{]}
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$ $>$ \mbox{\hyperlink{sample_8cpp_a3c581467559c6f7d5e94c51ed224488c}{streamlines}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $\ast$ $>$ \mbox{\hyperlink{sample_8cpp_a5a45084c3cb1fe809e6380f04ccc3637}{bins}} \mbox{[}5\mbox{]}\mbox{[}5\mbox{]}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structsegment}{segment}} $\ast$ $>$ \mbox{\hyperlink{sample_8cpp_a1db2831c417b57bc097286859a9e759c}{segment\+\_\+starters}}
+\item 
+int \mbox{\hyperlink{sample_8cpp_a54ee41423892fb312495458f6797944b}{bin\+\_\+width\+\_\+segment}} = 2
+\item 
+int \mbox{\hyperlink{sample_8cpp_ad5d030a0fd8d2e5ee811914c79799406}{bin\+\_\+num\+\_\+segment}} = 2 $\ast$ 50
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structsegment}{segment}} $\ast$ $>$ \mbox{\hyperlink{sample_8cpp_ac04afb1f730a2f8f62ae0def41bf5f6a}{bins\+\_\+segment}} \mbox{[}2\mbox{]}\mbox{[}2\mbox{]}
+\item 
+const int \mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}} = 512
+\item 
+unsigned char \mbox{\hyperlink{sample_8cpp_a842568517a44209b6c70a8685e30821c}{noise\+\_\+tex}} \mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}3\mbox{]}
+\item 
+unsigned char \mbox{\hyperlink{sample_8cpp_adea82e6b1be5e92aec33c83f779f0ad8}{vec\+\_\+img}} \mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}3\mbox{]}
+\item 
+float \mbox{\hyperlink{sample_8cpp_ab067f656599e91389e174a867b88148c}{data\+\_\+img}} \mbox{[}50\mbox{]}\mbox{[}50\mbox{]}\mbox{[}3\mbox{]}
+\item 
+bool \mbox{\hyperlink{sample_8cpp_a2a9c6652b2d2c83d61960ad22c791742}{data\+\_\+check}} \mbox{[}50\mbox{]}\mbox{[}50\mbox{]}
+\item 
+unsigned char \mbox{\hyperlink{sample_8cpp_ac172e4bdd6c3de8e5e09861978a89899}{L\+I\+C\+\_\+tex}} \mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}3\mbox{]}
+\item 
+unsigned char \mbox{\hyperlink{sample_8cpp_ab2be06ebaf4d7b87e9f0481d202e29dc}{L\+I\+C\+\_\+tex\+\_\+backup}} \mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}3\mbox{]}
+\item 
+float \mbox{\hyperlink{sample_8cpp_a0f10be3036b6f9bbd74ba87341d82276}{mag\+\_\+max}} = -\/1000000
+\item 
+float \mbox{\hyperlink{sample_8cpp_a85889afb94e9029b158d23915cf50d34}{mag\+\_\+min}} = 1000000
+\item 
+float \mbox{\hyperlink{sample_8cpp_a6d19a9b65e908e8594113f748d79336f}{vx\+\_\+min}} = 1000000
+\item 
+float \mbox{\hyperlink{sample_8cpp_abb49e8b1ebd4da1d7e8ea9b573e75849}{vx\+\_\+max}} = -\/1000000
+\item 
+float \mbox{\hyperlink{sample_8cpp_a8f76a33caf07b94d509d96cf2629d92c}{vy\+\_\+min}} = 1000000
+\item 
+float \mbox{\hyperlink{sample_8cpp_aec787e180c4448df8686a1c75cd52d79}{vy\+\_\+max}} = -\/1000000
+\item 
+float \mbox{\hyperlink{sample_8cpp_aaa229fb98b2719bb30048f42edc11582}{angle\+\_\+min}} = 0
+\item 
+float \mbox{\hyperlink{sample_8cpp_a35544b86ef627f20a2ddfcc5b552c2ac}{angle\+\_\+max}} = M\+\_\+\+PI
+\item 
+float \mbox{\hyperlink{sample_8cpp_a73fc13d83638687d92d5ccf9e4fe1722}{x\+\_\+max}} = -\/100000
+\item 
+float \mbox{\hyperlink{sample_8cpp_ab56799f110a6fbd87dc59c9c171516dc}{x\+\_\+min}} = 1000000
+\item 
+float \mbox{\hyperlink{sample_8cpp_af518e87d5d4659e5d34c34c39253be31}{y\+\_\+max}} = -\/100000
+\item 
+float \mbox{\hyperlink{sample_8cpp_a82405015dd45042774ac84009224bfe0}{y\+\_\+min}} = 1000000
+\item 
+float \mbox{\hyperlink{sample_8cpp_a9eb7dd824a714f043b50c53d5e143fde}{max\+\_\+err\+\_\+mag\+\_\+sl}} = -\/100000
+\item 
+float \mbox{\hyperlink{sample_8cpp_af74d825c4d3e537663594dfd64e79da9}{min\+\_\+err\+\_\+mag\+\_\+sl}} = 100000
+\item 
+float \mbox{\hyperlink{sample_8cpp_adb8a61b779bffcb2389cec831b99d360}{max\+\_\+err\+\_\+mag\+\_\+offset}} = -\/100000
+\item 
+float \mbox{\hyperlink{sample_8cpp_a7559c541644795c8a7881aa41bdcf4dc}{min\+\_\+err\+\_\+mag\+\_\+offset}} = 1000000
+\item 
+float \mbox{\hyperlink{sample_8cpp_a9a8c4d707d22ff45da76795453de28c2}{max\+\_\+err\+\_\+dir\+\_\+sl}} = -\/100000
+\item 
+float \mbox{\hyperlink{sample_8cpp_a1336fc75a8ec5b6d037652ff13a2fae8}{min\+\_\+err\+\_\+dir\+\_\+sl}} = 1000000
+\item 
+float \mbox{\hyperlink{sample_8cpp_ac75be3cc2373b762670e4be9509ee8ca}{max\+\_\+err\+\_\+dir\+\_\+offset}} = -\/100000
+\item 
+float \mbox{\hyperlink{sample_8cpp_a33fc1006e11af17d0fe0126c57fdefeb}{min\+\_\+err\+\_\+dir\+\_\+offset}} = 1000000
+\item 
+float \mbox{\hyperlink{sample_8cpp_ae6a1f4a2df9713b9c8c3a7efbfabb367}{max\+\_\+err\+\_\+vx\+\_\+sl}} = -\/100000
+\item 
+float \mbox{\hyperlink{sample_8cpp_a9ebd803a296a6ddc0ebfe2bbf66fa263}{min\+\_\+err\+\_\+vx\+\_\+sl}} = 100000
+\item 
+float \mbox{\hyperlink{sample_8cpp_ab7a2a96b37103ea3a85c0b84c0677d82}{max\+\_\+err\+\_\+vy\+\_\+sl}} = -\/100000
+\item 
+float \mbox{\hyperlink{sample_8cpp_a7bdf9d1d4086f3b8f26be48d3b951fa6}{min\+\_\+err\+\_\+vy\+\_\+sl}} = 100000
+\item 
+float \mbox{\hyperlink{sample_8cpp_a6d492414c3e1bc696c1a5eef1cd6cc3c}{max\+\_\+err\+\_\+vx\+\_\+offset}} = -\/100000
+\item 
+float \mbox{\hyperlink{sample_8cpp_a72e88e289ab263f9afe7607393691e40}{min\+\_\+err\+\_\+vx\+\_\+offset}} = 100000
+\item 
+float \mbox{\hyperlink{sample_8cpp_a399dfaa265722e631a834ef7e23407f0}{max\+\_\+err\+\_\+vy\+\_\+offset}} = -\/100000
+\item 
+float \mbox{\hyperlink{sample_8cpp_afc925da2c9037b988f9092cfb64bc600}{min\+\_\+err\+\_\+vy\+\_\+offset}} = 100000
+\item 
+float \mbox{\hyperlink{sample_8cpp_ae5ce35220d6bd547f3a96a1abf2fafb8}{max\+\_\+err\+\_\+vxy\+\_\+sl}} = -\/100000
+\item 
+float \mbox{\hyperlink{sample_8cpp_a27b46120619dd79fba6c59ed19d18fbe}{min\+\_\+err\+\_\+vxy\+\_\+sl}} = 100000
+\item 
+float \mbox{\hyperlink{sample_8cpp_a7e1f32589990e1c663e3cea5ead9a0dd}{err\+\_\+min}} = 10000
+\item 
+float \mbox{\hyperlink{sample_8cpp_a4ac86f1e027de713b6cf7dcca798892c}{err\+\_\+max}} = -\/100000
+\item 
+float \mbox{\hyperlink{sample_8cpp_a8f0c39a256c530cecc270577d23e3af5}{err\+\_\+avg}} = 0
+\item 
+\mbox{\hyperlink{class_polyhedron}{Polyhedron}} $\ast$ \mbox{\hyperlink{sample_8cpp_ac666475eaaf6ec7ae137394ca110f84b}{poly}} = N\+U\+LL
+\item 
+int \mbox{\hyperlink{sample_8cpp_a970cc9e126e5e2352773f2c279594e98}{do\+\_\+draw\+\_\+arrows}} = 0
+\item 
+int \mbox{\hyperlink{sample_8cpp_a1342a60c13f93e7bfa26a2f34d37723b}{vis\+\_\+option}} = 0
+\item 
+int \mbox{\hyperlink{sample_8cpp_a9150bcccdb4fcac5c2009cadf1d0db6a}{do\+\_\+draw\+\_\+streamlines}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sample_8cpp_a525335710b53cb064ca56b936120431e}\label{sample_8cpp_a525335710b53cb064ca56b936120431e}} 
+\index{sample.cpp@{sample.cpp}!\_USE\_MATH\_DEFINES@{\_USE\_MATH\_DEFINES}}
+\index{\_USE\_MATH\_DEFINES@{\_USE\_MATH\_DEFINES}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{\_USE\_MATH\_DEFINES}{\_USE\_MATH\_DEFINES}}
+{\footnotesize\ttfamily \#define \+\_\+\+U\+S\+E\+\_\+\+M\+A\+T\+H\+\_\+\+D\+E\+F\+I\+N\+ES}
+
+
+
+Definition at line 10 of file sample.\+cpp.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sample_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{sample_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{sample.cpp@{sample.cpp}!main@{main}}
+\index{main@{main}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 94 of file sample.\+cpp.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{sample_8cpp_a35544b86ef627f20a2ddfcc5b552c2ac}\label{sample_8cpp_a35544b86ef627f20a2ddfcc5b552c2ac}} 
+\index{sample.cpp@{sample.cpp}!angle\_max@{angle\_max}}
+\index{angle\_max@{angle\_max}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{angle\_max}{angle\_max}}
+{\footnotesize\ttfamily float angle\+\_\+max = M\+\_\+\+PI}
+
+
+
+Definition at line 76 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_aaa229fb98b2719bb30048f42edc11582}\label{sample_8cpp_aaa229fb98b2719bb30048f42edc11582}} 
+\index{sample.cpp@{sample.cpp}!angle\_min@{angle\_min}}
+\index{angle\_min@{angle\_min}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{angle\_min}{angle\_min}}
+{\footnotesize\ttfamily float angle\+\_\+min = 0}
+
+
+
+Definition at line 76 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_ad5d030a0fd8d2e5ee811914c79799406}\label{sample_8cpp_ad5d030a0fd8d2e5ee811914c79799406}} 
+\index{sample.cpp@{sample.cpp}!bin\_num\_segment@{bin\_num\_segment}}
+\index{bin\_num\_segment@{bin\_num\_segment}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{bin\_num\_segment}{bin\_num\_segment}}
+{\footnotesize\ttfamily int bin\+\_\+num\+\_\+segment = 2 $\ast$ 50}
+
+
+
+Definition at line 64 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a54ee41423892fb312495458f6797944b}\label{sample_8cpp_a54ee41423892fb312495458f6797944b}} 
+\index{sample.cpp@{sample.cpp}!bin\_width\_segment@{bin\_width\_segment}}
+\index{bin\_width\_segment@{bin\_width\_segment}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{bin\_width\_segment}{bin\_width\_segment}}
+{\footnotesize\ttfamily int bin\+\_\+width\+\_\+segment = 2}
+
+
+
+Definition at line 63 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a5a45084c3cb1fe809e6380f04ccc3637}\label{sample_8cpp_a5a45084c3cb1fe809e6380f04ccc3637}} 
+\index{sample.cpp@{sample.cpp}!bins@{bins}}
+\index{bins@{bins}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{bins}{bins}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structnode}{node}}$\ast$$>$ bins\mbox{[}5\mbox{]}\mbox{[}5\mbox{]}}
+
+
+
+Definition at line 61 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_ac04afb1f730a2f8f62ae0def41bf5f6a}\label{sample_8cpp_ac04afb1f730a2f8f62ae0def41bf5f6a}} 
+\index{sample.cpp@{sample.cpp}!bins\_segment@{bins\_segment}}
+\index{bins\_segment@{bins\_segment}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{bins\_segment}{bins\_segment}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structsegment}{segment}}$\ast$$>$ bins\+\_\+segment\mbox{[}2\mbox{]}\mbox{[}2\mbox{]}}
+
+
+
+Definition at line 65 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a2a9c6652b2d2c83d61960ad22c791742}\label{sample_8cpp_a2a9c6652b2d2c83d61960ad22c791742}} 
+\index{sample.cpp@{sample.cpp}!data\_check@{data\_check}}
+\index{data\_check@{data\_check}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{data\_check}{data\_check}}
+{\footnotesize\ttfamily bool data\+\_\+check\mbox{[}50\mbox{]}\mbox{[}50\mbox{]}}
+
+
+
+Definition at line 71 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_ab067f656599e91389e174a867b88148c}\label{sample_8cpp_ab067f656599e91389e174a867b88148c}} 
+\index{sample.cpp@{sample.cpp}!data\_img@{data\_img}}
+\index{data\_img@{data\_img}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{data\_img}{data\_img}}
+{\footnotesize\ttfamily float data\+\_\+img\mbox{[}50\mbox{]}\mbox{[}50\mbox{]}\mbox{[}3\mbox{]}}
+
+
+
+Definition at line 70 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a970cc9e126e5e2352773f2c279594e98}\label{sample_8cpp_a970cc9e126e5e2352773f2c279594e98}} 
+\index{sample.cpp@{sample.cpp}!do\_draw\_arrows@{do\_draw\_arrows}}
+\index{do\_draw\_arrows@{do\_draw\_arrows}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{do\_draw\_arrows}{do\_draw\_arrows}}
+{\footnotesize\ttfamily int do\+\_\+draw\+\_\+arrows = 0}
+
+
+
+Definition at line 92 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a9150bcccdb4fcac5c2009cadf1d0db6a}\label{sample_8cpp_a9150bcccdb4fcac5c2009cadf1d0db6a}} 
+\index{sample.cpp@{sample.cpp}!do\_draw\_streamlines@{do\_draw\_streamlines}}
+\index{do\_draw\_streamlines@{do\_draw\_streamlines}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{do\_draw\_streamlines}{do\_draw\_streamlines}}
+{\footnotesize\ttfamily int do\+\_\+draw\+\_\+streamlines = 0}
+
+
+
+Definition at line 92 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a8f0c39a256c530cecc270577d23e3af5}\label{sample_8cpp_a8f0c39a256c530cecc270577d23e3af5}} 
+\index{sample.cpp@{sample.cpp}!err\_avg@{err\_avg}}
+\index{err\_avg@{err\_avg}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{err\_avg}{err\_avg}}
+{\footnotesize\ttfamily float err\+\_\+avg = 0}
+
+
+
+Definition at line 89 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a4ac86f1e027de713b6cf7dcca798892c}\label{sample_8cpp_a4ac86f1e027de713b6cf7dcca798892c}} 
+\index{sample.cpp@{sample.cpp}!err\_max@{err\_max}}
+\index{err\_max@{err\_max}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{err\_max}{err\_max}}
+{\footnotesize\ttfamily float err\+\_\+max = -\/100000}
+
+
+
+Definition at line 89 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a7e1f32589990e1c663e3cea5ead9a0dd}\label{sample_8cpp_a7e1f32589990e1c663e3cea5ead9a0dd}} 
+\index{sample.cpp@{sample.cpp}!err\_min@{err\_min}}
+\index{err\_min@{err\_min}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{err\_min}{err\_min}}
+{\footnotesize\ttfamily float err\+\_\+min = 10000}
+
+
+
+Definition at line 89 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a6af64b1a744595bacce0bbb99e554aaf}\label{sample_8cpp_a6af64b1a744595bacce0bbb99e554aaf}} 
+\index{sample.cpp@{sample.cpp}!grid\_main@{grid\_main}}
+\index{grid\_main@{grid\_main}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{grid\_main}{grid\_main}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structnode__main}{node\+\_\+main}}$\ast$$\ast$ grid\+\_\+main = new \mbox{\hyperlink{structnode__main}{node\+\_\+main}} $\ast$ \mbox{[}50\mbox{]}}
+
+
+
+Definition at line 59 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}\label{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}} 
+\index{sample.cpp@{sample.cpp}!IMG\_RES@{IMG\_RES}}
+\index{IMG\_RES@{IMG\_RES}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{IMG\_RES}{IMG\_RES}}
+{\footnotesize\ttfamily const int I\+M\+G\+\_\+\+R\+ES = 512}
+
+
+
+Definition at line 67 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_ac172e4bdd6c3de8e5e09861978a89899}\label{sample_8cpp_ac172e4bdd6c3de8e5e09861978a89899}} 
+\index{sample.cpp@{sample.cpp}!LIC\_tex@{LIC\_tex}}
+\index{LIC\_tex@{LIC\_tex}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{LIC\_tex}{LIC\_tex}}
+{\footnotesize\ttfamily unsigned char L\+I\+C\+\_\+tex\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}3\mbox{]}}
+
+
+
+Definition at line 72 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_ab2be06ebaf4d7b87e9f0481d202e29dc}\label{sample_8cpp_ab2be06ebaf4d7b87e9f0481d202e29dc}} 
+\index{sample.cpp@{sample.cpp}!LIC\_tex\_backup@{LIC\_tex\_backup}}
+\index{LIC\_tex\_backup@{LIC\_tex\_backup}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{LIC\_tex\_backup}{LIC\_tex\_backup}}
+{\footnotesize\ttfamily unsigned char L\+I\+C\+\_\+tex\+\_\+backup\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}3\mbox{]}}
+
+
+
+Definition at line 73 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a0f10be3036b6f9bbd74ba87341d82276}\label{sample_8cpp_a0f10be3036b6f9bbd74ba87341d82276}} 
+\index{sample.cpp@{sample.cpp}!mag\_max@{mag\_max}}
+\index{mag\_max@{mag\_max}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{mag\_max}{mag\_max}}
+{\footnotesize\ttfamily float mag\+\_\+max = -\/1000000}
+
+
+
+Definition at line 75 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a85889afb94e9029b158d23915cf50d34}\label{sample_8cpp_a85889afb94e9029b158d23915cf50d34}} 
+\index{sample.cpp@{sample.cpp}!mag\_min@{mag\_min}}
+\index{mag\_min@{mag\_min}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{mag\_min}{mag\_min}}
+{\footnotesize\ttfamily float mag\+\_\+min = 1000000}
+
+
+
+Definition at line 75 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_ac75be3cc2373b762670e4be9509ee8ca}\label{sample_8cpp_ac75be3cc2373b762670e4be9509ee8ca}} 
+\index{sample.cpp@{sample.cpp}!max\_err\_dir\_offset@{max\_err\_dir\_offset}}
+\index{max\_err\_dir\_offset@{max\_err\_dir\_offset}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{max\_err\_dir\_offset}{max\_err\_dir\_offset}}
+{\footnotesize\ttfamily float max\+\_\+err\+\_\+dir\+\_\+offset = -\/100000}
+
+
+
+Definition at line 82 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a9a8c4d707d22ff45da76795453de28c2}\label{sample_8cpp_a9a8c4d707d22ff45da76795453de28c2}} 
+\index{sample.cpp@{sample.cpp}!max\_err\_dir\_sl@{max\_err\_dir\_sl}}
+\index{max\_err\_dir\_sl@{max\_err\_dir\_sl}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{max\_err\_dir\_sl}{max\_err\_dir\_sl}}
+{\footnotesize\ttfamily float max\+\_\+err\+\_\+dir\+\_\+sl = -\/100000}
+
+
+
+Definition at line 81 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_adb8a61b779bffcb2389cec831b99d360}\label{sample_8cpp_adb8a61b779bffcb2389cec831b99d360}} 
+\index{sample.cpp@{sample.cpp}!max\_err\_mag\_offset@{max\_err\_mag\_offset}}
+\index{max\_err\_mag\_offset@{max\_err\_mag\_offset}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{max\_err\_mag\_offset}{max\_err\_mag\_offset}}
+{\footnotesize\ttfamily float max\+\_\+err\+\_\+mag\+\_\+offset = -\/100000}
+
+
+
+Definition at line 80 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a9eb7dd824a714f043b50c53d5e143fde}\label{sample_8cpp_a9eb7dd824a714f043b50c53d5e143fde}} 
+\index{sample.cpp@{sample.cpp}!max\_err\_mag\_sl@{max\_err\_mag\_sl}}
+\index{max\_err\_mag\_sl@{max\_err\_mag\_sl}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{max\_err\_mag\_sl}{max\_err\_mag\_sl}}
+{\footnotesize\ttfamily float max\+\_\+err\+\_\+mag\+\_\+sl = -\/100000}
+
+
+
+Definition at line 79 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a6d492414c3e1bc696c1a5eef1cd6cc3c}\label{sample_8cpp_a6d492414c3e1bc696c1a5eef1cd6cc3c}} 
+\index{sample.cpp@{sample.cpp}!max\_err\_vx\_offset@{max\_err\_vx\_offset}}
+\index{max\_err\_vx\_offset@{max\_err\_vx\_offset}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{max\_err\_vx\_offset}{max\_err\_vx\_offset}}
+{\footnotesize\ttfamily float max\+\_\+err\+\_\+vx\+\_\+offset = -\/100000}
+
+
+
+Definition at line 85 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_ae6a1f4a2df9713b9c8c3a7efbfabb367}\label{sample_8cpp_ae6a1f4a2df9713b9c8c3a7efbfabb367}} 
+\index{sample.cpp@{sample.cpp}!max\_err\_vx\_sl@{max\_err\_vx\_sl}}
+\index{max\_err\_vx\_sl@{max\_err\_vx\_sl}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{max\_err\_vx\_sl}{max\_err\_vx\_sl}}
+{\footnotesize\ttfamily float max\+\_\+err\+\_\+vx\+\_\+sl = -\/100000}
+
+
+
+Definition at line 83 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_ae5ce35220d6bd547f3a96a1abf2fafb8}\label{sample_8cpp_ae5ce35220d6bd547f3a96a1abf2fafb8}} 
+\index{sample.cpp@{sample.cpp}!max\_err\_vxy\_sl@{max\_err\_vxy\_sl}}
+\index{max\_err\_vxy\_sl@{max\_err\_vxy\_sl}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{max\_err\_vxy\_sl}{max\_err\_vxy\_sl}}
+{\footnotesize\ttfamily float max\+\_\+err\+\_\+vxy\+\_\+sl = -\/100000}
+
+
+
+Definition at line 87 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a399dfaa265722e631a834ef7e23407f0}\label{sample_8cpp_a399dfaa265722e631a834ef7e23407f0}} 
+\index{sample.cpp@{sample.cpp}!max\_err\_vy\_offset@{max\_err\_vy\_offset}}
+\index{max\_err\_vy\_offset@{max\_err\_vy\_offset}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{max\_err\_vy\_offset}{max\_err\_vy\_offset}}
+{\footnotesize\ttfamily float max\+\_\+err\+\_\+vy\+\_\+offset = -\/100000}
+
+
+
+Definition at line 86 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_ab7a2a96b37103ea3a85c0b84c0677d82}\label{sample_8cpp_ab7a2a96b37103ea3a85c0b84c0677d82}} 
+\index{sample.cpp@{sample.cpp}!max\_err\_vy\_sl@{max\_err\_vy\_sl}}
+\index{max\_err\_vy\_sl@{max\_err\_vy\_sl}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{max\_err\_vy\_sl}{max\_err\_vy\_sl}}
+{\footnotesize\ttfamily float max\+\_\+err\+\_\+vy\+\_\+sl = -\/100000}
+
+
+
+Definition at line 84 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a33fc1006e11af17d0fe0126c57fdefeb}\label{sample_8cpp_a33fc1006e11af17d0fe0126c57fdefeb}} 
+\index{sample.cpp@{sample.cpp}!min\_err\_dir\_offset@{min\_err\_dir\_offset}}
+\index{min\_err\_dir\_offset@{min\_err\_dir\_offset}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{min\_err\_dir\_offset}{min\_err\_dir\_offset}}
+{\footnotesize\ttfamily float min\+\_\+err\+\_\+dir\+\_\+offset = 1000000}
+
+
+
+Definition at line 82 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a1336fc75a8ec5b6d037652ff13a2fae8}\label{sample_8cpp_a1336fc75a8ec5b6d037652ff13a2fae8}} 
+\index{sample.cpp@{sample.cpp}!min\_err\_dir\_sl@{min\_err\_dir\_sl}}
+\index{min\_err\_dir\_sl@{min\_err\_dir\_sl}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{min\_err\_dir\_sl}{min\_err\_dir\_sl}}
+{\footnotesize\ttfamily float min\+\_\+err\+\_\+dir\+\_\+sl = 1000000}
+
+
+
+Definition at line 81 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a7559c541644795c8a7881aa41bdcf4dc}\label{sample_8cpp_a7559c541644795c8a7881aa41bdcf4dc}} 
+\index{sample.cpp@{sample.cpp}!min\_err\_mag\_offset@{min\_err\_mag\_offset}}
+\index{min\_err\_mag\_offset@{min\_err\_mag\_offset}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{min\_err\_mag\_offset}{min\_err\_mag\_offset}}
+{\footnotesize\ttfamily float min\+\_\+err\+\_\+mag\+\_\+offset = 1000000}
+
+
+
+Definition at line 80 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_af74d825c4d3e537663594dfd64e79da9}\label{sample_8cpp_af74d825c4d3e537663594dfd64e79da9}} 
+\index{sample.cpp@{sample.cpp}!min\_err\_mag\_sl@{min\_err\_mag\_sl}}
+\index{min\_err\_mag\_sl@{min\_err\_mag\_sl}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{min\_err\_mag\_sl}{min\_err\_mag\_sl}}
+{\footnotesize\ttfamily float min\+\_\+err\+\_\+mag\+\_\+sl = 100000}
+
+
+
+Definition at line 79 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a72e88e289ab263f9afe7607393691e40}\label{sample_8cpp_a72e88e289ab263f9afe7607393691e40}} 
+\index{sample.cpp@{sample.cpp}!min\_err\_vx\_offset@{min\_err\_vx\_offset}}
+\index{min\_err\_vx\_offset@{min\_err\_vx\_offset}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{min\_err\_vx\_offset}{min\_err\_vx\_offset}}
+{\footnotesize\ttfamily float min\+\_\+err\+\_\+vx\+\_\+offset = 100000}
+
+
+
+Definition at line 85 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a9ebd803a296a6ddc0ebfe2bbf66fa263}\label{sample_8cpp_a9ebd803a296a6ddc0ebfe2bbf66fa263}} 
+\index{sample.cpp@{sample.cpp}!min\_err\_vx\_sl@{min\_err\_vx\_sl}}
+\index{min\_err\_vx\_sl@{min\_err\_vx\_sl}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{min\_err\_vx\_sl}{min\_err\_vx\_sl}}
+{\footnotesize\ttfamily float min\+\_\+err\+\_\+vx\+\_\+sl = 100000}
+
+
+
+Definition at line 83 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a27b46120619dd79fba6c59ed19d18fbe}\label{sample_8cpp_a27b46120619dd79fba6c59ed19d18fbe}} 
+\index{sample.cpp@{sample.cpp}!min\_err\_vxy\_sl@{min\_err\_vxy\_sl}}
+\index{min\_err\_vxy\_sl@{min\_err\_vxy\_sl}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{min\_err\_vxy\_sl}{min\_err\_vxy\_sl}}
+{\footnotesize\ttfamily float min\+\_\+err\+\_\+vxy\+\_\+sl = 100000}
+
+
+
+Definition at line 87 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_afc925da2c9037b988f9092cfb64bc600}\label{sample_8cpp_afc925da2c9037b988f9092cfb64bc600}} 
+\index{sample.cpp@{sample.cpp}!min\_err\_vy\_offset@{min\_err\_vy\_offset}}
+\index{min\_err\_vy\_offset@{min\_err\_vy\_offset}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{min\_err\_vy\_offset}{min\_err\_vy\_offset}}
+{\footnotesize\ttfamily float min\+\_\+err\+\_\+vy\+\_\+offset = 100000}
+
+
+
+Definition at line 86 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a7bdf9d1d4086f3b8f26be48d3b951fa6}\label{sample_8cpp_a7bdf9d1d4086f3b8f26be48d3b951fa6}} 
+\index{sample.cpp@{sample.cpp}!min\_err\_vy\_sl@{min\_err\_vy\_sl}}
+\index{min\_err\_vy\_sl@{min\_err\_vy\_sl}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{min\_err\_vy\_sl}{min\_err\_vy\_sl}}
+{\footnotesize\ttfamily float min\+\_\+err\+\_\+vy\+\_\+sl = 100000}
+
+
+
+Definition at line 84 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a842568517a44209b6c70a8685e30821c}\label{sample_8cpp_a842568517a44209b6c70a8685e30821c}} 
+\index{sample.cpp@{sample.cpp}!noise\_tex@{noise\_tex}}
+\index{noise\_tex@{noise\_tex}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{noise\_tex}{noise\_tex}}
+{\footnotesize\ttfamily unsigned char noise\+\_\+tex\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}3\mbox{]}}
+
+
+
+Definition at line 68 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_ac666475eaaf6ec7ae137394ca110f84b}\label{sample_8cpp_ac666475eaaf6ec7ae137394ca110f84b}} 
+\index{sample.cpp@{sample.cpp}!poly@{poly}}
+\index{poly@{poly}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{poly}{poly}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_polyhedron}{Polyhedron}}$\ast$ poly = N\+U\+LL}
+
+
+
+Definition at line 91 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a1db2831c417b57bc097286859a9e759c}\label{sample_8cpp_a1db2831c417b57bc097286859a9e759c}} 
+\index{sample.cpp@{sample.cpp}!segment\_starters@{segment\_starters}}
+\index{segment\_starters@{segment\_starters}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{segment\_starters}{segment\_starters}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structsegment}{segment}}$\ast$$>$ segment\+\_\+starters}
+
+
+
+Definition at line 62 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a3c581467559c6f7d5e94c51ed224488c}\label{sample_8cpp_a3c581467559c6f7d5e94c51ed224488c}} 
+\index{sample.cpp@{sample.cpp}!streamlines@{streamlines}}
+\index{streamlines@{streamlines}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{streamlines}{streamlines}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{structnode}{node}}$>$ $>$ streamlines}
+
+
+
+Definition at line 60 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_adea82e6b1be5e92aec33c83f779f0ad8}\label{sample_8cpp_adea82e6b1be5e92aec33c83f779f0ad8}} 
+\index{sample.cpp@{sample.cpp}!vec\_img@{vec\_img}}
+\index{vec\_img@{vec\_img}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{vec\_img}{vec\_img}}
+{\footnotesize\ttfamily unsigned char vec\+\_\+img\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}3\mbox{]}}
+
+
+
+Definition at line 69 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a1342a60c13f93e7bfa26a2f34d37723b}\label{sample_8cpp_a1342a60c13f93e7bfa26a2f34d37723b}} 
+\index{sample.cpp@{sample.cpp}!vis\_option@{vis\_option}}
+\index{vis\_option@{vis\_option}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{vis\_option}{vis\_option}}
+{\footnotesize\ttfamily int vis\+\_\+option = 0}
+
+
+
+Definition at line 92 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_abb49e8b1ebd4da1d7e8ea9b573e75849}\label{sample_8cpp_abb49e8b1ebd4da1d7e8ea9b573e75849}} 
+\index{sample.cpp@{sample.cpp}!vx\_max@{vx\_max}}
+\index{vx\_max@{vx\_max}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{vx\_max}{vx\_max}}
+{\footnotesize\ttfamily float vx\+\_\+max = -\/1000000}
+
+
+
+Definition at line 75 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a6d19a9b65e908e8594113f748d79336f}\label{sample_8cpp_a6d19a9b65e908e8594113f748d79336f}} 
+\index{sample.cpp@{sample.cpp}!vx\_min@{vx\_min}}
+\index{vx\_min@{vx\_min}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{vx\_min}{vx\_min}}
+{\footnotesize\ttfamily float vx\+\_\+min = 1000000}
+
+
+
+Definition at line 75 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_aec787e180c4448df8686a1c75cd52d79}\label{sample_8cpp_aec787e180c4448df8686a1c75cd52d79}} 
+\index{sample.cpp@{sample.cpp}!vy\_max@{vy\_max}}
+\index{vy\_max@{vy\_max}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{vy\_max}{vy\_max}}
+{\footnotesize\ttfamily float vy\+\_\+max = -\/1000000}
+
+
+
+Definition at line 76 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a8f76a33caf07b94d509d96cf2629d92c}\label{sample_8cpp_a8f76a33caf07b94d509d96cf2629d92c}} 
+\index{sample.cpp@{sample.cpp}!vy\_min@{vy\_min}}
+\index{vy\_min@{vy\_min}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{vy\_min}{vy\_min}}
+{\footnotesize\ttfamily float vy\+\_\+min = 1000000}
+
+
+
+Definition at line 76 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a73fc13d83638687d92d5ccf9e4fe1722}\label{sample_8cpp_a73fc13d83638687d92d5ccf9e4fe1722}} 
+\index{sample.cpp@{sample.cpp}!x\_max@{x\_max}}
+\index{x\_max@{x\_max}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{x\_max}{x\_max}}
+{\footnotesize\ttfamily float x\+\_\+max = -\/100000}
+
+
+
+Definition at line 77 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_ab56799f110a6fbd87dc59c9c171516dc}\label{sample_8cpp_ab56799f110a6fbd87dc59c9c171516dc}} 
+\index{sample.cpp@{sample.cpp}!x\_min@{x\_min}}
+\index{x\_min@{x\_min}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{x\_min}{x\_min}}
+{\footnotesize\ttfamily float x\+\_\+min = 1000000}
+
+
+
+Definition at line 77 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_af518e87d5d4659e5d34c34c39253be31}\label{sample_8cpp_af518e87d5d4659e5d34c34c39253be31}} 
+\index{sample.cpp@{sample.cpp}!y\_max@{y\_max}}
+\index{y\_max@{y\_max}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{y\_max}{y\_max}}
+{\footnotesize\ttfamily float y\+\_\+max = -\/100000}
+
+
+
+Definition at line 77 of file sample.\+cpp.
+
+\mbox{\Hypertarget{sample_8cpp_a82405015dd45042774ac84009224bfe0}\label{sample_8cpp_a82405015dd45042774ac84009224bfe0}} 
+\index{sample.cpp@{sample.cpp}!y\_min@{y\_min}}
+\index{y\_min@{y\_min}!sample.cpp@{sample.cpp}}
+\doxysubsubsection{\texorpdfstring{y\_min}{y\_min}}
+{\footnotesize\ttfamily float y\+\_\+min = 1000000}
+
+
+
+Definition at line 77 of file sample.\+cpp.
+

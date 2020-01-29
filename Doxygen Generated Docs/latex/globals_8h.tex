@@ -1,0 +1,667 @@
+\hypertarget{globals_8h}{}\doxysection{C\+:/\+Users/\+Mango/\+Downloads/\+Skeleton2017 (1) -\/ Copy/\+Skeleton2017\+\_\+new\+\_\+zip -\/ Copy/\+Skeleton2017/globals.h File Reference}
+\label{globals_8h}\index{C:/Users/Mango/Downloads/Skeleton2017 (1) -\/ Copy/Skeleton2017\_new\_zip -\/ Copy/Skeleton2017/globals.h@{C:/Users/Mango/Downloads/Skeleton2017 (1) -\/ Copy/Skeleton2017\_new\_zip -\/ Copy/Skeleton2017/globals.h}}
+
+
+Stores all of the extern references to global variables that other cpp files will need. Most of these references are initialized within the \mbox{\hyperlink{sample_8cpp}{sample.\+cpp}}.  
+
+
+{\ttfamily \#include \char`\"{}Skeleton.\+h\char`\"{}}\newline
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structnode__main}{node\+\_\+main}} $\ast$$\ast$ \mbox{\hyperlink{globals_8h_a6af64b1a744595bacce0bbb99e554aaf}{grid\+\_\+main}}
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$ $>$ \mbox{\hyperlink{globals_8h_a3c581467559c6f7d5e94c51ed224488c}{streamlines}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $\ast$ $>$ \mbox{\hyperlink{globals_8h_a5a45084c3cb1fe809e6380f04ccc3637}{bins}} \mbox{[}5\mbox{]}\mbox{[}5\mbox{]}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structsegment}{segment}} $\ast$ $>$ \mbox{\hyperlink{globals_8h_a1db2831c417b57bc097286859a9e759c}{segment\+\_\+starters}}
+\item 
+int \mbox{\hyperlink{globals_8h_a54ee41423892fb312495458f6797944b}{bin\+\_\+width\+\_\+segment}}
+\item 
+int \mbox{\hyperlink{globals_8h_ad5d030a0fd8d2e5ee811914c79799406}{bin\+\_\+num\+\_\+segment}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structsegment}{segment}} $\ast$ $>$ \mbox{\hyperlink{globals_8h_ac04afb1f730a2f8f62ae0def41bf5f6a}{bins\+\_\+segment}} \mbox{[}2\mbox{]}\mbox{[}2\mbox{]}
+\item 
+int \mbox{\hyperlink{globals_8h_aebed4e3c896eb98841a7cc461f87b399}{segment\+\_\+current}}
+\item 
+const int \mbox{\hyperlink{globals_8h_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}} = 512
+\item 
+unsigned char \mbox{\hyperlink{globals_8h_a842568517a44209b6c70a8685e30821c}{noise\+\_\+tex}} \mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}3\mbox{]}
+\item 
+unsigned char \mbox{\hyperlink{globals_8h_adea82e6b1be5e92aec33c83f779f0ad8}{vec\+\_\+img}} \mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}3\mbox{]}
+\item 
+float \mbox{\hyperlink{globals_8h_ab067f656599e91389e174a867b88148c}{data\+\_\+img}} \mbox{[}50\mbox{]}\mbox{[}50\mbox{]}\mbox{[}3\mbox{]}
+\item 
+bool \mbox{\hyperlink{globals_8h_a2a9c6652b2d2c83d61960ad22c791742}{data\+\_\+check}} \mbox{[}50\mbox{]}\mbox{[}50\mbox{]}
+\item 
+unsigned char \mbox{\hyperlink{globals_8h_ac172e4bdd6c3de8e5e09861978a89899}{L\+I\+C\+\_\+tex}} \mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}3\mbox{]}
+\item 
+unsigned char \mbox{\hyperlink{globals_8h_ab2be06ebaf4d7b87e9f0481d202e29dc}{L\+I\+C\+\_\+tex\+\_\+backup}} \mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}3\mbox{]}
+\item 
+float \mbox{\hyperlink{globals_8h_a0f10be3036b6f9bbd74ba87341d82276}{mag\+\_\+max}}
+\item 
+float \mbox{\hyperlink{globals_8h_a85889afb94e9029b158d23915cf50d34}{mag\+\_\+min}}
+\item 
+float \mbox{\hyperlink{globals_8h_a6d19a9b65e908e8594113f748d79336f}{vx\+\_\+min}}
+\item 
+float \mbox{\hyperlink{globals_8h_abb49e8b1ebd4da1d7e8ea9b573e75849}{vx\+\_\+max}}
+\item 
+float \mbox{\hyperlink{globals_8h_a8f76a33caf07b94d509d96cf2629d92c}{vy\+\_\+min}}
+\item 
+float \mbox{\hyperlink{globals_8h_aec787e180c4448df8686a1c75cd52d79}{vy\+\_\+max}}
+\item 
+float \mbox{\hyperlink{globals_8h_aaa229fb98b2719bb30048f42edc11582}{angle\+\_\+min}}
+\item 
+float \mbox{\hyperlink{globals_8h_a35544b86ef627f20a2ddfcc5b552c2ac}{angle\+\_\+max}}
+\item 
+float \mbox{\hyperlink{globals_8h_a73fc13d83638687d92d5ccf9e4fe1722}{x\+\_\+max}}
+\item 
+float \mbox{\hyperlink{globals_8h_ab56799f110a6fbd87dc59c9c171516dc}{x\+\_\+min}}
+\item 
+float \mbox{\hyperlink{globals_8h_af518e87d5d4659e5d34c34c39253be31}{y\+\_\+max}}
+\item 
+float \mbox{\hyperlink{globals_8h_a82405015dd45042774ac84009224bfe0}{y\+\_\+min}}
+\item 
+float \mbox{\hyperlink{globals_8h_aaccec13713886ae5ad8daf1041b07562}{grid\+\_\+offset\+\_\+x}}
+\item 
+float \mbox{\hyperlink{globals_8h_a63a6011bb45a0ad188225b4886b53e90}{grid\+\_\+offset\+\_\+y}}
+\item 
+float \mbox{\hyperlink{globals_8h_a9eb7dd824a714f043b50c53d5e143fde}{max\+\_\+err\+\_\+mag\+\_\+sl}}
+\item 
+float \mbox{\hyperlink{globals_8h_af74d825c4d3e537663594dfd64e79da9}{min\+\_\+err\+\_\+mag\+\_\+sl}}
+\item 
+float \mbox{\hyperlink{globals_8h_adb8a61b779bffcb2389cec831b99d360}{max\+\_\+err\+\_\+mag\+\_\+offset}}
+\item 
+float \mbox{\hyperlink{globals_8h_a7559c541644795c8a7881aa41bdcf4dc}{min\+\_\+err\+\_\+mag\+\_\+offset}}
+\item 
+float \mbox{\hyperlink{globals_8h_a9a8c4d707d22ff45da76795453de28c2}{max\+\_\+err\+\_\+dir\+\_\+sl}}
+\item 
+float \mbox{\hyperlink{globals_8h_a1336fc75a8ec5b6d037652ff13a2fae8}{min\+\_\+err\+\_\+dir\+\_\+sl}}
+\item 
+float \mbox{\hyperlink{globals_8h_ac75be3cc2373b762670e4be9509ee8ca}{max\+\_\+err\+\_\+dir\+\_\+offset}}
+\item 
+float \mbox{\hyperlink{globals_8h_a33fc1006e11af17d0fe0126c57fdefeb}{min\+\_\+err\+\_\+dir\+\_\+offset}}
+\item 
+float \mbox{\hyperlink{globals_8h_ae6a1f4a2df9713b9c8c3a7efbfabb367}{max\+\_\+err\+\_\+vx\+\_\+sl}}
+\item 
+float \mbox{\hyperlink{globals_8h_a9ebd803a296a6ddc0ebfe2bbf66fa263}{min\+\_\+err\+\_\+vx\+\_\+sl}}
+\item 
+float \mbox{\hyperlink{globals_8h_ab7a2a96b37103ea3a85c0b84c0677d82}{max\+\_\+err\+\_\+vy\+\_\+sl}}
+\item 
+float \mbox{\hyperlink{globals_8h_a7bdf9d1d4086f3b8f26be48d3b951fa6}{min\+\_\+err\+\_\+vy\+\_\+sl}}
+\item 
+float \mbox{\hyperlink{globals_8h_a6d492414c3e1bc696c1a5eef1cd6cc3c}{max\+\_\+err\+\_\+vx\+\_\+offset}}
+\item 
+float \mbox{\hyperlink{globals_8h_a72e88e289ab263f9afe7607393691e40}{min\+\_\+err\+\_\+vx\+\_\+offset}}
+\item 
+float \mbox{\hyperlink{globals_8h_a399dfaa265722e631a834ef7e23407f0}{max\+\_\+err\+\_\+vy\+\_\+offset}}
+\item 
+float \mbox{\hyperlink{globals_8h_afc925da2c9037b988f9092cfb64bc600}{min\+\_\+err\+\_\+vy\+\_\+offset}}
+\item 
+float \mbox{\hyperlink{globals_8h_ae5ce35220d6bd547f3a96a1abf2fafb8}{max\+\_\+err\+\_\+vxy\+\_\+sl}}
+\item 
+float \mbox{\hyperlink{globals_8h_a27b46120619dd79fba6c59ed19d18fbe}{min\+\_\+err\+\_\+vxy\+\_\+sl}}
+\item 
+int \mbox{\hyperlink{globals_8h_a677dcac25ea1ea075389d4617987d24a}{gridX}}
+\item 
+int \mbox{\hyperlink{globals_8h_ab5212fb9aab1c6fc1fb904b86b6e51ff}{gridY}}
+\item 
+\mbox{\hyperlink{class_polyhedron}{Polyhedron}} $\ast$ \mbox{\hyperlink{globals_8h_ac666475eaaf6ec7ae137394ca110f84b}{poly}}
+\item 
+int \mbox{\hyperlink{globals_8h_a970cc9e126e5e2352773f2c279594e98}{do\+\_\+draw\+\_\+arrows}}
+\item 
+int \mbox{\hyperlink{globals_8h_a1342a60c13f93e7bfa26a2f34d37723b}{vis\+\_\+option}}
+\item 
+int \mbox{\hyperlink{globals_8h_a9150bcccdb4fcac5c2009cadf1d0db6a}{do\+\_\+draw\+\_\+streamlines}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores all of the extern references to global variables that other cpp files will need. Most of these references are initialized within the \mbox{\hyperlink{sample_8cpp}{sample.\+cpp}}. 
+
+\begin{DoxyAuthor}{Author}
+your name (\href{mailto:you@domain.com}{\texttt{ you@domain.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2020-\/01-\/18
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{globals_8h_a35544b86ef627f20a2ddfcc5b552c2ac}\label{globals_8h_a35544b86ef627f20a2ddfcc5b552c2ac}} 
+\index{globals.h@{globals.h}!angle\_max@{angle\_max}}
+\index{angle\_max@{angle\_max}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{angle\_max}{angle\_max}}
+{\footnotesize\ttfamily float angle\+\_\+max}
+
+
+
+Definition at line 39 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_aaa229fb98b2719bb30048f42edc11582}\label{globals_8h_aaa229fb98b2719bb30048f42edc11582}} 
+\index{globals.h@{globals.h}!angle\_min@{angle\_min}}
+\index{angle\_min@{angle\_min}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{angle\_min}{angle\_min}}
+{\footnotesize\ttfamily float angle\+\_\+min}
+
+
+
+Definition at line 39 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_ad5d030a0fd8d2e5ee811914c79799406}\label{globals_8h_ad5d030a0fd8d2e5ee811914c79799406}} 
+\index{globals.h@{globals.h}!bin\_num\_segment@{bin\_num\_segment}}
+\index{bin\_num\_segment@{bin\_num\_segment}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{bin\_num\_segment}{bin\_num\_segment}}
+{\footnotesize\ttfamily int bin\+\_\+num\+\_\+segment}
+
+
+
+Definition at line 27 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a54ee41423892fb312495458f6797944b}\label{globals_8h_a54ee41423892fb312495458f6797944b}} 
+\index{globals.h@{globals.h}!bin\_width\_segment@{bin\_width\_segment}}
+\index{bin\_width\_segment@{bin\_width\_segment}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{bin\_width\_segment}{bin\_width\_segment}}
+{\footnotesize\ttfamily int bin\+\_\+width\+\_\+segment}
+
+
+
+Definition at line 63 of file sample.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a5a45084c3cb1fe809e6380f04ccc3637}\label{globals_8h_a5a45084c3cb1fe809e6380f04ccc3637}} 
+\index{globals.h@{globals.h}!bins@{bins}}
+\index{bins@{bins}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{bins}{bins}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structnode}{node}}$\ast$$>$ bins\mbox{[}5\mbox{]}\mbox{[}5\mbox{]}}
+
+
+
+Definition at line 61 of file sample.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_ac04afb1f730a2f8f62ae0def41bf5f6a}\label{globals_8h_ac04afb1f730a2f8f62ae0def41bf5f6a}} 
+\index{globals.h@{globals.h}!bins\_segment@{bins\_segment}}
+\index{bins\_segment@{bins\_segment}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{bins\_segment}{bins\_segment}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structsegment}{segment}}$\ast$$>$ bins\+\_\+segment\mbox{[}2\mbox{]}\mbox{[}2\mbox{]}}
+
+
+
+Definition at line 65 of file sample.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a2a9c6652b2d2c83d61960ad22c791742}\label{globals_8h_a2a9c6652b2d2c83d61960ad22c791742}} 
+\index{globals.h@{globals.h}!data\_check@{data\_check}}
+\index{data\_check@{data\_check}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{data\_check}{data\_check}}
+{\footnotesize\ttfamily bool data\+\_\+check\mbox{[}50\mbox{]}\mbox{[}50\mbox{]}}
+
+
+
+Definition at line 71 of file sample.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_ab067f656599e91389e174a867b88148c}\label{globals_8h_ab067f656599e91389e174a867b88148c}} 
+\index{globals.h@{globals.h}!data\_img@{data\_img}}
+\index{data\_img@{data\_img}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{data\_img}{data\_img}}
+{\footnotesize\ttfamily float data\+\_\+img\mbox{[}50\mbox{]}\mbox{[}50\mbox{]}\mbox{[}3\mbox{]}}
+
+
+
+Definition at line 70 of file sample.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a970cc9e126e5e2352773f2c279594e98}\label{globals_8h_a970cc9e126e5e2352773f2c279594e98}} 
+\index{globals.h@{globals.h}!do\_draw\_arrows@{do\_draw\_arrows}}
+\index{do\_draw\_arrows@{do\_draw\_arrows}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{do\_draw\_arrows}{do\_draw\_arrows}}
+{\footnotesize\ttfamily int do\+\_\+draw\+\_\+arrows}
+
+
+
+Definition at line 92 of file sample.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a9150bcccdb4fcac5c2009cadf1d0db6a}\label{globals_8h_a9150bcccdb4fcac5c2009cadf1d0db6a}} 
+\index{globals.h@{globals.h}!do\_draw\_streamlines@{do\_draw\_streamlines}}
+\index{do\_draw\_streamlines@{do\_draw\_streamlines}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{do\_draw\_streamlines}{do\_draw\_streamlines}}
+{\footnotesize\ttfamily int do\+\_\+draw\+\_\+streamlines}
+
+
+
+Definition at line 57 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a6af64b1a744595bacce0bbb99e554aaf}\label{globals_8h_a6af64b1a744595bacce0bbb99e554aaf}} 
+\index{globals.h@{globals.h}!grid\_main@{grid\_main}}
+\index{grid\_main@{grid\_main}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{grid\_main}{grid\_main}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structnode__main}{node\+\_\+main}}$\ast$$\ast$ grid\+\_\+main}
+
+
+
+Definition at line 59 of file sample.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_aaccec13713886ae5ad8daf1041b07562}\label{globals_8h_aaccec13713886ae5ad8daf1041b07562}} 
+\index{globals.h@{globals.h}!grid\_offset\_x@{grid\_offset\_x}}
+\index{grid\_offset\_x@{grid\_offset\_x}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{grid\_offset\_x}{grid\_offset\_x}}
+{\footnotesize\ttfamily float grid\+\_\+offset\+\_\+x}
+
+
+
+Definition at line 40 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a63a6011bb45a0ad188225b4886b53e90}\label{globals_8h_a63a6011bb45a0ad188225b4886b53e90}} 
+\index{globals.h@{globals.h}!grid\_offset\_y@{grid\_offset\_y}}
+\index{grid\_offset\_y@{grid\_offset\_y}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{grid\_offset\_y}{grid\_offset\_y}}
+{\footnotesize\ttfamily float grid\+\_\+offset\+\_\+y}
+
+
+
+Definition at line 40 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a677dcac25ea1ea075389d4617987d24a}\label{globals_8h_a677dcac25ea1ea075389d4617987d24a}} 
+\index{globals.h@{globals.h}!gridX@{gridX}}
+\index{gridX@{gridX}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{gridX}{gridX}}
+{\footnotesize\ttfamily int gridX}
+
+
+
+Definition at line 385 of file G\+U\+I.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_ab5212fb9aab1c6fc1fb904b86b6e51ff}\label{globals_8h_ab5212fb9aab1c6fc1fb904b86b6e51ff}} 
+\index{globals.h@{globals.h}!gridY@{gridY}}
+\index{gridY@{gridY}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{gridY}{gridY}}
+{\footnotesize\ttfamily int gridY}
+
+
+
+Definition at line 53 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a27824e97730aa7f7a38484f1480e3bac}\label{globals_8h_a27824e97730aa7f7a38484f1480e3bac}} 
+\index{globals.h@{globals.h}!IMG\_RES@{IMG\_RES}}
+\index{IMG\_RES@{IMG\_RES}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_RES}{IMG\_RES}}
+{\footnotesize\ttfamily const int I\+M\+G\+\_\+\+R\+ES = 512}
+
+
+
+Definition at line 30 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_ac172e4bdd6c3de8e5e09861978a89899}\label{globals_8h_ac172e4bdd6c3de8e5e09861978a89899}} 
+\index{globals.h@{globals.h}!LIC\_tex@{LIC\_tex}}
+\index{LIC\_tex@{LIC\_tex}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{LIC\_tex}{LIC\_tex}}
+{\footnotesize\ttfamily unsigned char L\+I\+C\+\_\+tex\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}3\mbox{]}}
+
+
+
+Definition at line 72 of file sample.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_ab2be06ebaf4d7b87e9f0481d202e29dc}\label{globals_8h_ab2be06ebaf4d7b87e9f0481d202e29dc}} 
+\index{globals.h@{globals.h}!LIC\_tex\_backup@{LIC\_tex\_backup}}
+\index{LIC\_tex\_backup@{LIC\_tex\_backup}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{LIC\_tex\_backup}{LIC\_tex\_backup}}
+{\footnotesize\ttfamily unsigned char L\+I\+C\+\_\+tex\+\_\+backup\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}3\mbox{]}}
+
+
+
+Definition at line 73 of file sample.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a0f10be3036b6f9bbd74ba87341d82276}\label{globals_8h_a0f10be3036b6f9bbd74ba87341d82276}} 
+\index{globals.h@{globals.h}!mag\_max@{mag\_max}}
+\index{mag\_max@{mag\_max}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{mag\_max}{mag\_max}}
+{\footnotesize\ttfamily float mag\+\_\+max}
+
+
+
+Definition at line 75 of file sample.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a85889afb94e9029b158d23915cf50d34}\label{globals_8h_a85889afb94e9029b158d23915cf50d34}} 
+\index{globals.h@{globals.h}!mag\_min@{mag\_min}}
+\index{mag\_min@{mag\_min}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{mag\_min}{mag\_min}}
+{\footnotesize\ttfamily float mag\+\_\+min}
+
+
+
+Definition at line 38 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_ac75be3cc2373b762670e4be9509ee8ca}\label{globals_8h_ac75be3cc2373b762670e4be9509ee8ca}} 
+\index{globals.h@{globals.h}!max\_err\_dir\_offset@{max\_err\_dir\_offset}}
+\index{max\_err\_dir\_offset@{max\_err\_dir\_offset}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{max\_err\_dir\_offset}{max\_err\_dir\_offset}}
+{\footnotesize\ttfamily float max\+\_\+err\+\_\+dir\+\_\+offset}
+
+
+
+Definition at line 46 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a9a8c4d707d22ff45da76795453de28c2}\label{globals_8h_a9a8c4d707d22ff45da76795453de28c2}} 
+\index{globals.h@{globals.h}!max\_err\_dir\_sl@{max\_err\_dir\_sl}}
+\index{max\_err\_dir\_sl@{max\_err\_dir\_sl}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{max\_err\_dir\_sl}{max\_err\_dir\_sl}}
+{\footnotesize\ttfamily float max\+\_\+err\+\_\+dir\+\_\+sl}
+
+
+
+Definition at line 45 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_adb8a61b779bffcb2389cec831b99d360}\label{globals_8h_adb8a61b779bffcb2389cec831b99d360}} 
+\index{globals.h@{globals.h}!max\_err\_mag\_offset@{max\_err\_mag\_offset}}
+\index{max\_err\_mag\_offset@{max\_err\_mag\_offset}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{max\_err\_mag\_offset}{max\_err\_mag\_offset}}
+{\footnotesize\ttfamily float max\+\_\+err\+\_\+mag\+\_\+offset}
+
+
+
+Definition at line 44 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a9eb7dd824a714f043b50c53d5e143fde}\label{globals_8h_a9eb7dd824a714f043b50c53d5e143fde}} 
+\index{globals.h@{globals.h}!max\_err\_mag\_sl@{max\_err\_mag\_sl}}
+\index{max\_err\_mag\_sl@{max\_err\_mag\_sl}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{max\_err\_mag\_sl}{max\_err\_mag\_sl}}
+{\footnotesize\ttfamily float max\+\_\+err\+\_\+mag\+\_\+sl}
+
+
+
+Definition at line 79 of file sample.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a6d492414c3e1bc696c1a5eef1cd6cc3c}\label{globals_8h_a6d492414c3e1bc696c1a5eef1cd6cc3c}} 
+\index{globals.h@{globals.h}!max\_err\_vx\_offset@{max\_err\_vx\_offset}}
+\index{max\_err\_vx\_offset@{max\_err\_vx\_offset}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{max\_err\_vx\_offset}{max\_err\_vx\_offset}}
+{\footnotesize\ttfamily float max\+\_\+err\+\_\+vx\+\_\+offset}
+
+
+
+Definition at line 49 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_ae6a1f4a2df9713b9c8c3a7efbfabb367}\label{globals_8h_ae6a1f4a2df9713b9c8c3a7efbfabb367}} 
+\index{globals.h@{globals.h}!max\_err\_vx\_sl@{max\_err\_vx\_sl}}
+\index{max\_err\_vx\_sl@{max\_err\_vx\_sl}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{max\_err\_vx\_sl}{max\_err\_vx\_sl}}
+{\footnotesize\ttfamily float max\+\_\+err\+\_\+vx\+\_\+sl}
+
+
+
+Definition at line 47 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_ae5ce35220d6bd547f3a96a1abf2fafb8}\label{globals_8h_ae5ce35220d6bd547f3a96a1abf2fafb8}} 
+\index{globals.h@{globals.h}!max\_err\_vxy\_sl@{max\_err\_vxy\_sl}}
+\index{max\_err\_vxy\_sl@{max\_err\_vxy\_sl}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{max\_err\_vxy\_sl}{max\_err\_vxy\_sl}}
+{\footnotesize\ttfamily float max\+\_\+err\+\_\+vxy\+\_\+sl}
+
+
+
+Definition at line 51 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a399dfaa265722e631a834ef7e23407f0}\label{globals_8h_a399dfaa265722e631a834ef7e23407f0}} 
+\index{globals.h@{globals.h}!max\_err\_vy\_offset@{max\_err\_vy\_offset}}
+\index{max\_err\_vy\_offset@{max\_err\_vy\_offset}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{max\_err\_vy\_offset}{max\_err\_vy\_offset}}
+{\footnotesize\ttfamily float max\+\_\+err\+\_\+vy\+\_\+offset}
+
+
+
+Definition at line 50 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_ab7a2a96b37103ea3a85c0b84c0677d82}\label{globals_8h_ab7a2a96b37103ea3a85c0b84c0677d82}} 
+\index{globals.h@{globals.h}!max\_err\_vy\_sl@{max\_err\_vy\_sl}}
+\index{max\_err\_vy\_sl@{max\_err\_vy\_sl}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{max\_err\_vy\_sl}{max\_err\_vy\_sl}}
+{\footnotesize\ttfamily float max\+\_\+err\+\_\+vy\+\_\+sl}
+
+
+
+Definition at line 48 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a33fc1006e11af17d0fe0126c57fdefeb}\label{globals_8h_a33fc1006e11af17d0fe0126c57fdefeb}} 
+\index{globals.h@{globals.h}!min\_err\_dir\_offset@{min\_err\_dir\_offset}}
+\index{min\_err\_dir\_offset@{min\_err\_dir\_offset}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{min\_err\_dir\_offset}{min\_err\_dir\_offset}}
+{\footnotesize\ttfamily float min\+\_\+err\+\_\+dir\+\_\+offset}
+
+
+
+Definition at line 46 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a1336fc75a8ec5b6d037652ff13a2fae8}\label{globals_8h_a1336fc75a8ec5b6d037652ff13a2fae8}} 
+\index{globals.h@{globals.h}!min\_err\_dir\_sl@{min\_err\_dir\_sl}}
+\index{min\_err\_dir\_sl@{min\_err\_dir\_sl}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{min\_err\_dir\_sl}{min\_err\_dir\_sl}}
+{\footnotesize\ttfamily float min\+\_\+err\+\_\+dir\+\_\+sl}
+
+
+
+Definition at line 45 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a7559c541644795c8a7881aa41bdcf4dc}\label{globals_8h_a7559c541644795c8a7881aa41bdcf4dc}} 
+\index{globals.h@{globals.h}!min\_err\_mag\_offset@{min\_err\_mag\_offset}}
+\index{min\_err\_mag\_offset@{min\_err\_mag\_offset}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{min\_err\_mag\_offset}{min\_err\_mag\_offset}}
+{\footnotesize\ttfamily float min\+\_\+err\+\_\+mag\+\_\+offset}
+
+
+
+Definition at line 44 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_af74d825c4d3e537663594dfd64e79da9}\label{globals_8h_af74d825c4d3e537663594dfd64e79da9}} 
+\index{globals.h@{globals.h}!min\_err\_mag\_sl@{min\_err\_mag\_sl}}
+\index{min\_err\_mag\_sl@{min\_err\_mag\_sl}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{min\_err\_mag\_sl}{min\_err\_mag\_sl}}
+{\footnotesize\ttfamily float min\+\_\+err\+\_\+mag\+\_\+sl}
+
+
+
+Definition at line 43 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a72e88e289ab263f9afe7607393691e40}\label{globals_8h_a72e88e289ab263f9afe7607393691e40}} 
+\index{globals.h@{globals.h}!min\_err\_vx\_offset@{min\_err\_vx\_offset}}
+\index{min\_err\_vx\_offset@{min\_err\_vx\_offset}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{min\_err\_vx\_offset}{min\_err\_vx\_offset}}
+{\footnotesize\ttfamily float min\+\_\+err\+\_\+vx\+\_\+offset}
+
+
+
+Definition at line 49 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a9ebd803a296a6ddc0ebfe2bbf66fa263}\label{globals_8h_a9ebd803a296a6ddc0ebfe2bbf66fa263}} 
+\index{globals.h@{globals.h}!min\_err\_vx\_sl@{min\_err\_vx\_sl}}
+\index{min\_err\_vx\_sl@{min\_err\_vx\_sl}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{min\_err\_vx\_sl}{min\_err\_vx\_sl}}
+{\footnotesize\ttfamily float min\+\_\+err\+\_\+vx\+\_\+sl}
+
+
+
+Definition at line 47 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a27b46120619dd79fba6c59ed19d18fbe}\label{globals_8h_a27b46120619dd79fba6c59ed19d18fbe}} 
+\index{globals.h@{globals.h}!min\_err\_vxy\_sl@{min\_err\_vxy\_sl}}
+\index{min\_err\_vxy\_sl@{min\_err\_vxy\_sl}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{min\_err\_vxy\_sl}{min\_err\_vxy\_sl}}
+{\footnotesize\ttfamily float min\+\_\+err\+\_\+vxy\+\_\+sl}
+
+
+
+Definition at line 51 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_afc925da2c9037b988f9092cfb64bc600}\label{globals_8h_afc925da2c9037b988f9092cfb64bc600}} 
+\index{globals.h@{globals.h}!min\_err\_vy\_offset@{min\_err\_vy\_offset}}
+\index{min\_err\_vy\_offset@{min\_err\_vy\_offset}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{min\_err\_vy\_offset}{min\_err\_vy\_offset}}
+{\footnotesize\ttfamily float min\+\_\+err\+\_\+vy\+\_\+offset}
+
+
+
+Definition at line 50 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a7bdf9d1d4086f3b8f26be48d3b951fa6}\label{globals_8h_a7bdf9d1d4086f3b8f26be48d3b951fa6}} 
+\index{globals.h@{globals.h}!min\_err\_vy\_sl@{min\_err\_vy\_sl}}
+\index{min\_err\_vy\_sl@{min\_err\_vy\_sl}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{min\_err\_vy\_sl}{min\_err\_vy\_sl}}
+{\footnotesize\ttfamily float min\+\_\+err\+\_\+vy\+\_\+sl}
+
+
+
+Definition at line 48 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a842568517a44209b6c70a8685e30821c}\label{globals_8h_a842568517a44209b6c70a8685e30821c}} 
+\index{globals.h@{globals.h}!noise\_tex@{noise\_tex}}
+\index{noise\_tex@{noise\_tex}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{noise\_tex}{noise\_tex}}
+{\footnotesize\ttfamily unsigned char noise\+\_\+tex\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}3\mbox{]}}
+
+
+
+Definition at line 68 of file sample.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_ac666475eaaf6ec7ae137394ca110f84b}\label{globals_8h_ac666475eaaf6ec7ae137394ca110f84b}} 
+\index{globals.h@{globals.h}!poly@{poly}}
+\index{poly@{poly}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{poly}{poly}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_polyhedron}{Polyhedron}}$\ast$ poly}
+
+
+
+Definition at line 91 of file sample.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_aebed4e3c896eb98841a7cc461f87b399}\label{globals_8h_aebed4e3c896eb98841a7cc461f87b399}} 
+\index{globals.h@{globals.h}!segment\_current@{segment\_current}}
+\index{segment\_current@{segment\_current}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{segment\_current}{segment\_current}}
+{\footnotesize\ttfamily int segment\+\_\+current}
+
+
+
+Definition at line 383 of file G\+U\+I.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a1db2831c417b57bc097286859a9e759c}\label{globals_8h_a1db2831c417b57bc097286859a9e759c}} 
+\index{globals.h@{globals.h}!segment\_starters@{segment\_starters}}
+\index{segment\_starters@{segment\_starters}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{segment\_starters}{segment\_starters}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structsegment}{segment}}$\ast$$>$ segment\+\_\+starters}
+
+
+
+Definition at line 62 of file sample.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a3c581467559c6f7d5e94c51ed224488c}\label{globals_8h_a3c581467559c6f7d5e94c51ed224488c}} 
+\index{globals.h@{globals.h}!streamlines@{streamlines}}
+\index{streamlines@{streamlines}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{streamlines}{streamlines}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{structnode}{node}}$>$ $>$ streamlines}
+
+
+
+Definition at line 60 of file sample.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_adea82e6b1be5e92aec33c83f779f0ad8}\label{globals_8h_adea82e6b1be5e92aec33c83f779f0ad8}} 
+\index{globals.h@{globals.h}!vec\_img@{vec\_img}}
+\index{vec\_img@{vec\_img}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{vec\_img}{vec\_img}}
+{\footnotesize\ttfamily unsigned char vec\+\_\+img\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}\mbox{\hyperlink{sample_8cpp_a27824e97730aa7f7a38484f1480e3bac}{I\+M\+G\+\_\+\+R\+ES}}\mbox{]}\mbox{[}3\mbox{]}}
+
+
+
+Definition at line 69 of file sample.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a1342a60c13f93e7bfa26a2f34d37723b}\label{globals_8h_a1342a60c13f93e7bfa26a2f34d37723b}} 
+\index{globals.h@{globals.h}!vis\_option@{vis\_option}}
+\index{vis\_option@{vis\_option}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{vis\_option}{vis\_option}}
+{\footnotesize\ttfamily int vis\+\_\+option}
+
+
+
+Definition at line 57 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_abb49e8b1ebd4da1d7e8ea9b573e75849}\label{globals_8h_abb49e8b1ebd4da1d7e8ea9b573e75849}} 
+\index{globals.h@{globals.h}!vx\_max@{vx\_max}}
+\index{vx\_max@{vx\_max}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{vx\_max}{vx\_max}}
+{\footnotesize\ttfamily float vx\+\_\+max}
+
+
+
+Definition at line 38 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a6d19a9b65e908e8594113f748d79336f}\label{globals_8h_a6d19a9b65e908e8594113f748d79336f}} 
+\index{globals.h@{globals.h}!vx\_min@{vx\_min}}
+\index{vx\_min@{vx\_min}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{vx\_min}{vx\_min}}
+{\footnotesize\ttfamily float vx\+\_\+min}
+
+
+
+Definition at line 38 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_aec787e180c4448df8686a1c75cd52d79}\label{globals_8h_aec787e180c4448df8686a1c75cd52d79}} 
+\index{globals.h@{globals.h}!vy\_max@{vy\_max}}
+\index{vy\_max@{vy\_max}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{vy\_max}{vy\_max}}
+{\footnotesize\ttfamily float vy\+\_\+max}
+
+
+
+Definition at line 39 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a8f76a33caf07b94d509d96cf2629d92c}\label{globals_8h_a8f76a33caf07b94d509d96cf2629d92c}} 
+\index{globals.h@{globals.h}!vy\_min@{vy\_min}}
+\index{vy\_min@{vy\_min}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{vy\_min}{vy\_min}}
+{\footnotesize\ttfamily float vy\+\_\+min}
+
+
+
+Definition at line 39 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a73fc13d83638687d92d5ccf9e4fe1722}\label{globals_8h_a73fc13d83638687d92d5ccf9e4fe1722}} 
+\index{globals.h@{globals.h}!x\_max@{x\_max}}
+\index{x\_max@{x\_max}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{x\_max}{x\_max}}
+{\footnotesize\ttfamily float x\+\_\+max}
+
+
+
+Definition at line 39 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_ab56799f110a6fbd87dc59c9c171516dc}\label{globals_8h_ab56799f110a6fbd87dc59c9c171516dc}} 
+\index{globals.h@{globals.h}!x\_min@{x\_min}}
+\index{x\_min@{x\_min}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{x\_min}{x\_min}}
+{\footnotesize\ttfamily float x\+\_\+min}
+
+
+
+Definition at line 39 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_af518e87d5d4659e5d34c34c39253be31}\label{globals_8h_af518e87d5d4659e5d34c34c39253be31}} 
+\index{globals.h@{globals.h}!y\_max@{y\_max}}
+\index{y\_max@{y\_max}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{y\_max}{y\_max}}
+{\footnotesize\ttfamily float y\+\_\+max}
+
+
+
+Definition at line 39 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a82405015dd45042774ac84009224bfe0}\label{globals_8h_a82405015dd45042774ac84009224bfe0}} 
+\index{globals.h@{globals.h}!y\_min@{y\_min}}
+\index{y\_min@{y\_min}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{y\_min}{y\_min}}
+{\footnotesize\ttfamily float y\+\_\+min}
+
+
+
+Definition at line 39 of file globals.\+h.
+

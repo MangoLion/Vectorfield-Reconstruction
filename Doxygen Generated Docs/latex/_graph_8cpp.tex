@@ -1,0 +1,291 @@
+\hypertarget{_graph_8cpp}{}\doxysection{C\+:/\+Users/\+Mango/\+Downloads/\+Skeleton2017 (1) -\/ Copy/\+Skeleton2017\+\_\+new\+\_\+zip -\/ Copy/\+Skeleton2017/\+Graph.cpp File Reference}
+\label{_graph_8cpp}\index{C:/Users/Mango/Downloads/Skeleton2017 (1) -\/ Copy/Skeleton2017\_new\_zip -\/ Copy/Skeleton2017/Graph.cpp@{C:/Users/Mango/Downloads/Skeleton2017 (1) -\/ Copy/Skeleton2017\_new\_zip -\/ Copy/Skeleton2017/Graph.cpp}}
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}G\+L\textbackslash{}include\textbackslash{}\+G\+L.\+H\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G\+L\textbackslash{}include\textbackslash{}glu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G\+L\textbackslash{}include\textbackslash{}glut.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G\+L\textbackslash{}include\textbackslash{}glui.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}Reader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{_graph_8cpp_a986ea032931d359131eb5d422d7fb8ec}{Det}} (double a, double b, double c, double d)
+\begin{DoxyCompactList}\small\item\em get the determinant of a 2x2 matrix \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_graph_8cpp_ad97b3483d0770b5b02207b0a0fa4ba11}{in\+Range}} (int low, int high, int x)
+\begin{DoxyCompactList}\small\item\em Returns true if x is in range \mbox{[}low..high\mbox{]}, else false. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_graph_8cpp_acf9a721e9798d8eefe435f986be05e8b}{Line\+Line\+Intersect}} (double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4, double \&ix\+Out, double \&iy\+Out)
+\begin{DoxyCompactList}\small\item\em Calculate intersection of two lines. \href{http://mathworld.wolfram.com/Line-LineIntersection.html}{\texttt{ http\+://mathworld.\+wolfram.\+com/\+Line-\/\+Line\+Intersection.\+html}}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structsegment}{segment}} $\ast$ $>$ $\ast$ \mbox{\hyperlink{_graph_8cpp_a71c08cb45dd3eacafc116db1dfa69c8a}{get\+\_\+segments\+\_\+in\+\_\+area}} (float x1, float y1, float x2, float y2)
+\begin{DoxyCompactList}\small\item\em Get the graph segments within a rectangular area. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_graph_8cpp_a3e36914b07d0a78e59cd1af91ea08060}{raycast\+\_\+segment}} (\mbox{\hyperlink{structsegment}{segment}} $\ast$s, int direction)
+\begin{DoxyCompactList}\small\item\em from the center of the segment, raycast into two perpendicular directions and check for intersections with surrounding segments \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_graph_8cpp_adeac0b87d4759367448b2311e4f8fd46}{update\+\_\+graph}} ()
+\begin{DoxyCompactList}\small\item\em loop through all segments (depend on the current segment resolution) to find their neighbors \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_graph_8cpp_ada05987f83f6a0835c37869b70617063}{draw\+\_\+segment\+\_\+matrix}} ()
+\begin{DoxyCompactList}\small\item\em draw segment matrix, only meant for very small resolution to confirm the accuracy of the neighbors finding algorithm \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_graph_8cpp_a75768eb968fbeb414bd7eaafd7f81aff}{draw\+\_\+line\+\_\+color}} (float x1, float y1, float x2, float y2, float $\ast$rgb)
+\item 
+void \mbox{\hyperlink{_graph_8cpp_a985c039a37d23385ca4732bdc7ebcfc5}{draw\+\_\+segment}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{_graph_8cpp_a3b042076b4997c36561eb86b2d4b12a7}{D\+I\+R\+\_\+\+L\+E\+FT}} = 0
+\begin{DoxyCompactList}\small\item\em direction constants, for 2D \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_graph_8cpp_a12cd911867d7964b7a6891164eca3317}{D\+I\+R\+\_\+\+R\+I\+G\+HT}} = 1
+\item 
+const int \mbox{\hyperlink{_graph_8cpp_ac03d51014d4142895b93f33c9ac0d270}{D\+I\+R\+\_\+\+NA}} = -\/1
+\item 
+const float \mbox{\hyperlink{_graph_8cpp_af3405b7caf3bf9105bc478549eaa6307}{search\+\_\+range}} = 3
+\begin{DoxyCompactList}\small\item\em constant for the search range of each graph node to find its neighbors \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_graph_8cpp_ad4126ad0764992ed216140e7678aea1c}{skip\+\_\+lines}} = 1
+\item 
+int \mbox{\hyperlink{_graph_8cpp_a003286629f1c5aa1d20a04d9691dd97f}{skip\+\_\+nodes}} = 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_graph_8cpp_a986ea032931d359131eb5d422d7fb8ec}\label{_graph_8cpp_a986ea032931d359131eb5d422d7fb8ec}} 
+\index{Graph.cpp@{Graph.cpp}!Det@{Det}}
+\index{Det@{Det}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{Det()}{Det()}}
+{\footnotesize\ttfamily double Det (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{double}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get the determinant of a 2x2 matrix 
+
+
+
+Definition at line 31 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a75768eb968fbeb414bd7eaafd7f81aff}\label{_graph_8cpp_a75768eb968fbeb414bd7eaafd7f81aff}} 
+\index{Graph.cpp@{Graph.cpp}!draw\_line\_color@{draw\_line\_color}}
+\index{draw\_line\_color@{draw\_line\_color}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{draw\_line\_color()}{draw\_line\_color()}}
+{\footnotesize\ttfamily void draw\+\_\+line\+\_\+color (\begin{DoxyParamCaption}\item[{float}]{x1,  }\item[{float}]{y1,  }\item[{float}]{x2,  }\item[{float}]{y2,  }\item[{float $\ast$}]{rgb }\end{DoxyParamCaption})}
+
+
+
+Definition at line 332 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a985c039a37d23385ca4732bdc7ebcfc5}\label{_graph_8cpp_a985c039a37d23385ca4732bdc7ebcfc5}} 
+\index{Graph.cpp@{Graph.cpp}!draw\_segment@{draw\_segment}}
+\index{draw\_segment@{draw\_segment}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{draw\_segment()}{draw\_segment()}}
+{\footnotesize\ttfamily void draw\+\_\+segment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 343 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ada05987f83f6a0835c37869b70617063}\label{_graph_8cpp_ada05987f83f6a0835c37869b70617063}} 
+\index{Graph.cpp@{Graph.cpp}!draw\_segment\_matrix@{draw\_segment\_matrix}}
+\index{draw\_segment\_matrix@{draw\_segment\_matrix}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{draw\_segment\_matrix()}{draw\_segment\_matrix()}}
+{\footnotesize\ttfamily void draw\+\_\+segment\+\_\+matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+draw segment matrix, only meant for very small resolution to confirm the accuracy of the neighbors finding algorithm 
+
+
+
+Definition at line 227 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a71c08cb45dd3eacafc116db1dfa69c8a}\label{_graph_8cpp_a71c08cb45dd3eacafc116db1dfa69c8a}} 
+\index{Graph.cpp@{Graph.cpp}!get\_segments\_in\_area@{get\_segments\_in\_area}}
+\index{get\_segments\_in\_area@{get\_segments\_in\_area}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_segments\_in\_area()}{get\_segments\_in\_area()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structsegment}{segment}}$\ast$$>$$\ast$ get\+\_\+segments\+\_\+in\+\_\+area (\begin{DoxyParamCaption}\item[{float}]{x1,  }\item[{float}]{y1,  }\item[{float}]{x2,  }\item[{float}]{y2 }\end{DoxyParamCaption})}
+
+
+
+Get the graph segments within a rectangular area. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & first x of the rect area \\
+\hline
+{\em y1} & first y of the rect area \\
+\hline
+{\em x2} & second x of the rect area \\
+\hline
+{\em y2} & second y of the rect area \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$segment$\ast$$>$$\ast$ 
+\end{DoxyReturn}
+
+
+Definition at line 103 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ad97b3483d0770b5b02207b0a0fa4ba11}\label{_graph_8cpp_ad97b3483d0770b5b02207b0a0fa4ba11}} 
+\index{Graph.cpp@{Graph.cpp}!inRange@{inRange}}
+\index{inRange@{inRange}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{inRange()}{inRange()}}
+{\footnotesize\ttfamily bool in\+Range (\begin{DoxyParamCaption}\item[{int}]{low,  }\item[{int}]{high,  }\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+Returns true if x is in range \mbox{[}low..high\mbox{]}, else false. 
+
+
+
+Definition at line 40 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_acf9a721e9798d8eefe435f986be05e8b}\label{_graph_8cpp_acf9a721e9798d8eefe435f986be05e8b}} 
+\index{Graph.cpp@{Graph.cpp}!LineLineIntersect@{LineLineIntersect}}
+\index{LineLineIntersect@{LineLineIntersect}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{LineLineIntersect()}{LineLineIntersect()}}
+{\footnotesize\ttfamily bool Line\+Line\+Intersect (\begin{DoxyParamCaption}\item[{double}]{x1,  }\item[{double}]{y1,  }\item[{double}]{x2,  }\item[{double}]{y2,  }\item[{double}]{x3,  }\item[{double}]{y3,  }\item[{double}]{x4,  }\item[{double}]{y4,  }\item[{double \&}]{ix\+Out,  }\item[{double \&}]{iy\+Out }\end{DoxyParamCaption})}
+
+
+
+Calculate intersection of two lines. \href{http://mathworld.wolfram.com/Line-LineIntersection.html}{\texttt{ http\+://mathworld.\+wolfram.\+com/\+Line-\/\+Line\+Intersection.\+html}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & Line 1 start \\
+\hline
+{\em y1} & Line 1 start \\
+\hline
+{\em x2} & Line 1 end \\
+\hline
+{\em y2} & Line 1 end \\
+\hline
+{\em x3} & Line 2 start \\
+\hline
+{\em y3} & Line 2 start \\
+\hline
+{\em x4} & Line 2 end \\
+\hline
+{\em y4} & Line 2 end \\
+\hline
+{\em ix\+Out} & intersection x result \\
+\hline
+{\em iy\+Out} & intersection y result \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if intersection is found 
+
+false if intersection is not found or error 
+\end{DoxyReturn}
+
+
+Definition at line 62 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a3e36914b07d0a78e59cd1af91ea08060}\label{_graph_8cpp_a3e36914b07d0a78e59cd1af91ea08060}} 
+\index{Graph.cpp@{Graph.cpp}!raycast\_segment@{raycast\_segment}}
+\index{raycast\_segment@{raycast\_segment}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{raycast\_segment()}{raycast\_segment()}}
+{\footnotesize\ttfamily void raycast\+\_\+segment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsegment}{segment}} $\ast$}]{s,  }\item[{int}]{direction }\end{DoxyParamCaption})}
+
+
+
+from the center of the segment, raycast into two perpendicular directions and check for intersections with surrounding segments 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \\
+\hline
+{\em direction} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 124 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_adeac0b87d4759367448b2311e4f8fd46}\label{_graph_8cpp_adeac0b87d4759367448b2311e4f8fd46}} 
+\index{Graph.cpp@{Graph.cpp}!update\_graph@{update\_graph}}
+\index{update\_graph@{update\_graph}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{update\_graph()}{update\_graph()}}
+{\footnotesize\ttfamily void update\+\_\+graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+loop through all segments (depend on the current segment resolution) to find their neighbors 
+
+
+
+Definition at line 199 of file Graph.\+cpp.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_graph_8cpp_a3b042076b4997c36561eb86b2d4b12a7}\label{_graph_8cpp_a3b042076b4997c36561eb86b2d4b12a7}} 
+\index{Graph.cpp@{Graph.cpp}!DIR\_LEFT@{DIR\_LEFT}}
+\index{DIR\_LEFT@{DIR\_LEFT}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{DIR\_LEFT}{DIR\_LEFT}}
+{\footnotesize\ttfamily const int D\+I\+R\+\_\+\+L\+E\+FT = 0}
+
+
+
+direction constants, for 2D 
+
+
+
+Definition at line 20 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ac03d51014d4142895b93f33c9ac0d270}\label{_graph_8cpp_ac03d51014d4142895b93f33c9ac0d270}} 
+\index{Graph.cpp@{Graph.cpp}!DIR\_NA@{DIR\_NA}}
+\index{DIR\_NA@{DIR\_NA}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{DIR\_NA}{DIR\_NA}}
+{\footnotesize\ttfamily const int D\+I\+R\+\_\+\+NA = -\/1}
+
+
+
+Definition at line 20 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a12cd911867d7964b7a6891164eca3317}\label{_graph_8cpp_a12cd911867d7964b7a6891164eca3317}} 
+\index{Graph.cpp@{Graph.cpp}!DIR\_RIGHT@{DIR\_RIGHT}}
+\index{DIR\_RIGHT@{DIR\_RIGHT}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{DIR\_RIGHT}{DIR\_RIGHT}}
+{\footnotesize\ttfamily const int D\+I\+R\+\_\+\+R\+I\+G\+HT = 1}
+
+
+
+Definition at line 20 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_af3405b7caf3bf9105bc478549eaa6307}\label{_graph_8cpp_af3405b7caf3bf9105bc478549eaa6307}} 
+\index{Graph.cpp@{Graph.cpp}!search\_range@{search\_range}}
+\index{search\_range@{search\_range}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{search\_range}{search\_range}}
+{\footnotesize\ttfamily const float search\+\_\+range = 3}
+
+
+
+constant for the search range of each graph node to find its neighbors 
+
+
+
+Definition at line 26 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ad4126ad0764992ed216140e7678aea1c}\label{_graph_8cpp_ad4126ad0764992ed216140e7678aea1c}} 
+\index{Graph.cpp@{Graph.cpp}!skip\_lines@{skip\_lines}}
+\index{skip\_lines@{skip\_lines}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{skip\_lines}{skip\_lines}}
+{\footnotesize\ttfamily int skip\+\_\+lines = 1}
+
+
+
+Definition at line 193 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a003286629f1c5aa1d20a04d9691dd97f}\label{_graph_8cpp_a003286629f1c5aa1d20a04d9691dd97f}} 
+\index{Graph.cpp@{Graph.cpp}!skip\_nodes@{skip\_nodes}}
+\index{skip\_nodes@{skip\_nodes}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{skip\_nodes}{skip\_nodes}}
+{\footnotesize\ttfamily int skip\+\_\+nodes = 1}
+
+
+
+Definition at line 193 of file Graph.\+cpp.
+

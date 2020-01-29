@@ -1,0 +1,35 @@
+\hypertarget{structures_8h}{}\doxysection{C\+:/\+Users/\+Mango/\+Downloads/\+Skeleton2017 (1) -\/ Copy/\+Skeleton2017\+\_\+new\+\_\+zip -\/ Copy/\+Skeleton2017/structures.h File Reference}
+\label{structures_8h}\index{C:/Users/Mango/Downloads/Skeleton2017 (1) -\/ Copy/Skeleton2017\_new\_zip -\/ Copy/Skeleton2017/structures.h@{C:/Users/Mango/Downloads/Skeleton2017 (1) -\/ Copy/Skeleton2017\_new\_zip -\/ Copy/Skeleton2017/structures.h}}
+
+
+Store the global initialization of needed structs by all cpp files.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structneighbor}{neighbor}}
+\item 
+struct \mbox{\hyperlink{structsegment}{segment}}
+\begin{DoxyCompactList}\small\item\em main unit of the graph representation, stire two streamline nodes and the list of neighboring nodes to the segment \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structnode__main}{node\+\_\+main}}
+\begin{DoxyCompactList}\small\item\em a \mbox{\hyperlink{structnode__main}{node\+\_\+main}} is a basic struct that represents a point on the vector field. This struct stores all values needed in the reconstructed field, including error values, vector value of the original vector field point, and of the reconstructed value \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structnode}{node}}
+\begin{DoxyCompactList}\small\item\em Simple node struct that only sture the vector value on the field. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structstreamlet}{streamlet}}
+\begin{DoxyCompactList}\small\item\em Used to trace L\+IC texture, one streamlet backward and one forward. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Store the global initialization of needed structs by all cpp files. 
+
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2020-\/01-\/18
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020 
+\end{DoxyCopyright}

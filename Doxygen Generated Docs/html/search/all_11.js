@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['radar_5frange_403',['radar_range',['../_g_u_i_8cpp.html#a5d5f4110f3ae993a1a78dd0267769c0d',1,'GUI.cpp']]],
+  ['radius_404',['radius',['../class_polyhedron.html#a2b1a989707a0abafb97b8e891891e978',1,'Polyhedron']]],
+  ['radius_5ffactor_405',['radius_factor',['../_g_u_i_8cpp.html#add4b096bfb81e3c9edd2f665384e7af6',1,'GUI.cpp']]],
+  ['rainbow_5fcolor_406',['rainbow_color',['../_g_u_i_8cpp.html#ac86fb50cebf47451040803db4dea37cf',1,'rainbow_color(float s, float s_max, float s_min, float rgb[3]):&#160;GUI.cpp'],['../_g_u_i_8h.html#ac86fb50cebf47451040803db4dea37cf',1,'rainbow_color(float s, float s_max, float s_min, float rgb[3]):&#160;GUI.cpp']]],
+  ['random_5frule_407',['RANDOM_RULE',['../ply_8h.html#a8ee5711246b0286fc1fd733b9c965921',1,'ply.h']]],
+  ['range_408',['range',['../_g_u_i_8cpp.html#a3930d1e8af0848833f4de0e0e9517dca',1,'GUI.cpp']]],
+  ['raycast_5fsegment_409',['raycast_segment',['../_graph_8cpp.html#a3e36914b07d0a78e59cd1af91ea08060',1,'raycast_segment(segment *s, int direction):&#160;Graph.cpp'],['../_graph_8h.html#a3e36914b07d0a78e59cd1af91ea08060',1,'raycast_segment(segment *s, int direction):&#160;Graph.cpp']]],
+  ['read_5fply_410',['read_ply',['../ply_8cpp.html#aa2c261de622a99ed2ebddbc123c32233',1,'read_ply(FILE *fp):&#160;ply.cpp'],['../ply_8h.html#a76f13165e506ed3c8ebb3134c6df61ac',1,'read_ply(FILE *):&#160;ply.cpp']]],
+  ['read_5fstreamline_411',['read_streamline',['../_reader_8cpp.html#a70b443365696adc0c2a2583434d1d281',1,'read_streamline(std::string fname):&#160;Reader.cpp'],['../_reader_8h.html#a70b443365696adc0c2a2583434d1d281',1,'read_streamline(std::string fname):&#160;Reader.cpp']]],
+  ['reader_2ecpp_412',['Reader.cpp',['../_reader_8cpp.html',1,'']]],
+  ['reader_2eh_413',['Reader.h',['../_reader_8h.html',1,'']]],
+  ['reconstruction_2eh_414',['Reconstruction.h',['../_reconstruction_8h.html',1,'']]],
+  ['recreate_5fcommand_5fline_415',['recreate_command_line',['../ply_8cpp.html#aef39c9532ca3cbef828b70aa1b031bf2',1,'recreate_command_line(int argc, char *argv[]):&#160;ply.cpp'],['../ply_8h.html#ab8faf6b0ea645482b76b33bee4a7f0c3',1,'recreate_command_line(int, char *argv[]):&#160;ply.cpp']]],
+  ['red_416',['RED',['../_g_u_i_8cpp.html#a55ecd4f2ec2ebfe8d5b0163e4ac2a967af80f9a890089d211842d59625e561f88',1,'GUI.cpp']]],
+  ['render_5fvec_5fimg_417',['render_vec_img',['../_l_i_c_8cpp.html#aa2300c2a0e0a396711be37f08d412eef',1,'render_vec_img(Polyhedron *this_poly):&#160;LIC.cpp'],['../_l_i_c_8h.html#aa2300c2a0e0a396711be37f08d412eef',1,'render_vec_img(Polyhedron *this_poly):&#160;LIC.cpp']]],
+  ['reset_418',['RESET',['../_g_u_i_8cpp.html#a5b809c00f492c581019a13b66d9658fea589b7d94a3d91d145720e2fed0eb3a05',1,'RESET():&#160;GUI.cpp'],['../_g_u_i_8cpp.html#aed19948be38e80a0af0f88a8ef598706',1,'Reset(void):&#160;GUI.cpp'],['../_g_u_i_8h.html#aed19948be38e80a0af0f88a8ef598706',1,'Reset(void):&#160;GUI.cpp']]],
+  ['resize_419',['Resize',['../_g_u_i_8cpp.html#acbf85ad570d2cd8b0f1b36f6474712d2',1,'GUI.cpp']]],
+  ['right_420',['RIGHT',['../_g_u_i_8cpp.html#a088fe0153a918af361dc8f4e775d020e',1,'GUI.cpp']]],
+  ['rightmultiply_421',['rightMultiply',['../classic_matrix2x2.html#a8ddc9e343dc4d0865f9b464222d9a78e',1,'icMatrix2x2::rightMultiply()'],['../classic_matrix3x3.html#a315964803db851c41e3259445f137cbc',1,'icMatrix3x3::rightMultiply()']]],
+  ['rotate_422',['ROTATE',['../_g_u_i_8cpp.html#adfe2f0ef8da517b3f0e87cbf0cb31b9aa3dcfe0046eb5876e287dbf0914819b16',1,'GUI.cpp']]],
+  ['rotmatrix_423',['RotMatrix',['../_g_u_i_8cpp.html#ac74379ae664e44137c9de92efa519f18',1,'GUI.cpp']]],
+  ['rule_5flist_424',['rule_list',['../struct_ply_prop_rules.html#a54a21f9c73d1d38270399c9ced0195b0',1,'PlyPropRules::rule_list()'],['../struct_ply_file.html#a0d2e8894a83e75be4e5d89334362674e',1,'PlyFile::rule_list()']]],
+  ['rule_5fname_5flist_425',['rule_name_list',['../ply_8cpp.html#a314c82e9bd943b5bf2ac4e54eb401f86',1,'ply.cpp']]],
+  ['rulename_426',['RuleName',['../struct_rule_name.html',1,'RuleName'],['../ply_8cpp.html#abea3cb149de5a0a3f1893e63394ba063',1,'RuleName():&#160;ply.cpp']]]
+];

@@ -1,0 +1,127 @@
+\hypertarget{structsegment}{}\doxysection{segment Struct Reference}
+\label{structsegment}\index{segment@{segment}}
+
+
+main unit of the graph representation, stire two streamline nodes and the list of neighboring nodes to the segment  
+
+
+
+
+{\ttfamily \#include $<$structures.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structnode}{node}} $\ast$ \mbox{\hyperlink{structsegment_adb397cee21abe49e8092353d6369011b}{start}}
+\item 
+\mbox{\hyperlink{structnode}{node}} $\ast$ \mbox{\hyperlink{structsegment_a2755eaa9629435750a2c21f6845e74a1}{end}}
+\item 
+\mbox{\hyperlink{structnode}{node}} $\ast$ \mbox{\hyperlink{structsegment_a614d0ffe304037b67eb05b85e41b0ad2}{middle}}
+\item 
+\mbox{\hyperlink{structsegment}{segment}} $\ast$ \mbox{\hyperlink{structsegment_af7286d78742f6978ae113baab8d5282b}{previous}} = nullptr
+\item 
+\mbox{\hyperlink{structsegment}{segment}} $\ast$ \mbox{\hyperlink{structsegment_ae0ef82125374394df87997fb6d53ca9a}{next}} = nullptr
+\item 
+int \mbox{\hyperlink{structsegment_a8e3656adc53b56f117d0778a1a6bef83}{streamline\+\_\+index}}
+\item 
+int \mbox{\hyperlink{structsegment_a15f74bb6ac477006e3902ce283961e47}{streamline\+\_\+segment\+\_\+index}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structneighbor}{neighbor}} $\ast$ $>$ \mbox{\hyperlink{structsegment_ada526a8e478f409d21ecedb12bed2142}{neighbors}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+main unit of the graph representation, stire two streamline nodes and the list of neighboring nodes to the segment 
+
+
+
+Definition at line 31 of file structures.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structsegment_a2755eaa9629435750a2c21f6845e74a1}\label{structsegment_a2755eaa9629435750a2c21f6845e74a1}} 
+\index{segment@{segment}!end@{end}}
+\index{end@{end}!segment@{segment}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structnode}{node}} $\ast$ segment\+::end}
+
+
+
+Definition at line 32 of file structures.\+h.
+
+\mbox{\Hypertarget{structsegment_a614d0ffe304037b67eb05b85e41b0ad2}\label{structsegment_a614d0ffe304037b67eb05b85e41b0ad2}} 
+\index{segment@{segment}!middle@{middle}}
+\index{middle@{middle}!segment@{segment}}
+\doxysubsubsection{\texorpdfstring{middle}{middle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structnode}{node}} $\ast$ segment\+::middle}
+
+
+
+Definition at line 32 of file structures.\+h.
+
+\mbox{\Hypertarget{structsegment_ada526a8e478f409d21ecedb12bed2142}\label{structsegment_ada526a8e478f409d21ecedb12bed2142}} 
+\index{segment@{segment}!neighbors@{neighbors}}
+\index{neighbors@{neighbors}!segment@{segment}}
+\doxysubsubsection{\texorpdfstring{neighbors}{neighbors}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structneighbor}{neighbor}}$\ast$$>$ segment\+::neighbors}
+
+
+
+Definition at line 35 of file structures.\+h.
+
+\mbox{\Hypertarget{structsegment_ae0ef82125374394df87997fb6d53ca9a}\label{structsegment_ae0ef82125374394df87997fb6d53ca9a}} 
+\index{segment@{segment}!next@{next}}
+\index{next@{next}!segment@{segment}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsegment}{segment}} $\ast$ segment\+::next = nullptr}
+
+
+
+Definition at line 33 of file structures.\+h.
+
+\mbox{\Hypertarget{structsegment_af7286d78742f6978ae113baab8d5282b}\label{structsegment_af7286d78742f6978ae113baab8d5282b}} 
+\index{segment@{segment}!previous@{previous}}
+\index{previous@{previous}!segment@{segment}}
+\doxysubsubsection{\texorpdfstring{previous}{previous}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsegment}{segment}}$\ast$ segment\+::previous = nullptr}
+
+
+
+Definition at line 33 of file structures.\+h.
+
+\mbox{\Hypertarget{structsegment_adb397cee21abe49e8092353d6369011b}\label{structsegment_adb397cee21abe49e8092353d6369011b}} 
+\index{segment@{segment}!start@{start}}
+\index{start@{start}!segment@{segment}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structnode}{node}}$\ast$ segment\+::start}
+
+
+
+Definition at line 32 of file structures.\+h.
+
+\mbox{\Hypertarget{structsegment_a8e3656adc53b56f117d0778a1a6bef83}\label{structsegment_a8e3656adc53b56f117d0778a1a6bef83}} 
+\index{segment@{segment}!streamline\_index@{streamline\_index}}
+\index{streamline\_index@{streamline\_index}!segment@{segment}}
+\doxysubsubsection{\texorpdfstring{streamline\_index}{streamline\_index}}
+{\footnotesize\ttfamily int segment\+::streamline\+\_\+index}
+
+
+
+Definition at line 34 of file structures.\+h.
+
+\mbox{\Hypertarget{structsegment_a15f74bb6ac477006e3902ce283961e47}\label{structsegment_a15f74bb6ac477006e3902ce283961e47}} 
+\index{segment@{segment}!streamline\_segment\_index@{streamline\_segment\_index}}
+\index{streamline\_segment\_index@{streamline\_segment\_index}!segment@{segment}}
+\doxysubsubsection{\texorpdfstring{streamline\_segment\_index}{streamline\_segment\_index}}
+{\footnotesize\ttfamily int segment\+::streamline\+\_\+segment\+\_\+index}
+
+
+
+Definition at line 34 of file structures.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Mango/\+Downloads/\+Skeleton2017 (1) -\/ Copy/\+Skeleton2017\+\_\+new\+\_\+zip -\/ Copy/\+Skeleton2017/\mbox{\hyperlink{structures_8h}{structures.\+h}}\end{DoxyCompactItemize}

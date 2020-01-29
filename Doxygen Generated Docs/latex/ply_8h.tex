@@ -1,0 +1,955 @@
+\hypertarget{ply_8h}{}\doxysection{C\+:/\+Users/\+Mango/\+Downloads/\+Skeleton2017 (1) -\/ Copy/\+Skeleton2017\+\_\+new\+\_\+zip -\/ Copy/\+Skeleton2017/ply.h File Reference}
+\label{ply_8h}\index{C:/Users/Mango/Downloads/Skeleton2017 (1) -\/ Copy/Skeleton2017\_new\_zip -\/ Copy/Skeleton2017/ply.h@{C:/Users/Mango/Downloads/Skeleton2017 (1) -\/ Copy/Skeleton2017\_new\_zip -\/ Copy/Skeleton2017/ply.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_ply_property}{Ply\+Property}}
+\item 
+struct \mbox{\hyperlink{struct_ply_element}{Ply\+Element}}
+\item 
+struct \mbox{\hyperlink{struct_ply_other_prop}{Ply\+Other\+Prop}}
+\item 
+struct \mbox{\hyperlink{struct_other_data}{Other\+Data}}
+\item 
+struct \mbox{\hyperlink{struct_other_elem}{Other\+Elem}}
+\item 
+struct \mbox{\hyperlink{struct_ply_other_elems}{Ply\+Other\+Elems}}
+\item 
+struct \mbox{\hyperlink{struct_ply_prop_rules}{Ply\+Prop\+Rules}}
+\item 
+struct \mbox{\hyperlink{struct_ply_rule_list}{Ply\+Rule\+List}}
+\item 
+struct \mbox{\hyperlink{struct_ply_file}{Ply\+File}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ply_8h_a32019d70967ee13ed10e25da90303ea8}{\+\_\+\+\_\+\+P\+L\+Y\+\_\+\+H\+\_\+\+\_\+}}
+\item 
+\#define \mbox{\hyperlink{ply_8h_a52e6dde3ac4a3d076af046ed610ed3da}{P\+L\+Y\+\_\+\+A\+S\+C\+II}}~1        /$\ast$ ascii P\+LY file $\ast$/
+\item 
+\#define \mbox{\hyperlink{ply_8h_ac21ee30aee359d6b7c65c99ce55c58d5}{P\+L\+Y\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+BE}}~2        /$\ast$ binary P\+LY file, big endian $\ast$/
+\item 
+\#define \mbox{\hyperlink{ply_8h_a8314c8f69b28c54c87428e7defbd24e1}{P\+L\+Y\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+LE}}~3        /$\ast$ binary P\+LY file, little endian $\ast$/
+\item 
+\#define \mbox{\hyperlink{ply_8h_a500f6ccac1d2cbb0b52886bf60b30b71}{P\+L\+Y\+\_\+\+O\+K\+AY}}~0           /$\ast$ ply routine worked okay $\ast$/
+\item 
+\#define \mbox{\hyperlink{ply_8h_aa3508c3d9ff421c9b9772a6776916c27}{P\+L\+Y\+\_\+\+E\+R\+R\+OR}}~-\/1           /$\ast$ error in ply routine $\ast$/
+\item 
+\#define \mbox{\hyperlink{ply_8h_a94fb140b12c8d938d896ca3ab6971dda}{Start\+Type}}~0
+\item 
+\#define \mbox{\hyperlink{ply_8h_a8f7c73011aaacd338c5a2af707a2a57f}{Int8}}~1
+\item 
+\#define \mbox{\hyperlink{ply_8h_a9c8fb24ed11abb940eda20e773aefd6d}{Int16}}~2
+\item 
+\#define \mbox{\hyperlink{ply_8h_ad5f21f1f9531f246cfd36212b5b8c4ca}{Int32}}~3
+\item 
+\#define \mbox{\hyperlink{ply_8h_a57d127553ce5a94c80965a209900ad91}{Uint8}}~4
+\item 
+\#define \mbox{\hyperlink{ply_8h_a749163d49d607ff6ede6c10b0f3e7469}{Uint16}}~5
+\item 
+\#define \mbox{\hyperlink{ply_8h_aa0de2dc666494eb49a2a2e72911e43c3}{Uint32}}~6
+\item 
+\#define \mbox{\hyperlink{ply_8h_a5f07cf1930b2420ba229ae15987843d7}{Float32}}~7
+\item 
+\#define \mbox{\hyperlink{ply_8h_a24bc250f47ea3d6f84d9f4681a7dea6a}{Float64}}~8
+\item 
+\#define \mbox{\hyperlink{ply_8h_ac32d0270ab7df92da207367f4a883286}{End\+Type}}~9
+\item 
+\#define \mbox{\hyperlink{ply_8h_a457492e38597e91dc051d1eec93022ab}{P\+L\+Y\+\_\+\+S\+C\+A\+L\+AR}}~0
+\item 
+\#define \mbox{\hyperlink{ply_8h_a1a55523e2e3b45ad1cf58f2512945e85}{P\+L\+Y\+\_\+\+L\+I\+ST}}~1
+\item 
+\#define \mbox{\hyperlink{ply_8h_afe3971acff0034d2d00abae1ba1c3b63}{P\+L\+Y\+\_\+\+S\+T\+R\+I\+NG}}~2
+\item 
+\#define \mbox{\hyperlink{ply_8h_aee4db83b2bb02e76552980aa7a19602b}{A\+V\+E\+R\+A\+G\+E\+\_\+\+R\+U\+LE}}~1
+\item 
+\#define \mbox{\hyperlink{ply_8h_a1b76cbbd8c36a8e3743a76336af8c65b}{M\+A\+J\+O\+R\+I\+T\+Y\+\_\+\+R\+U\+LE}}~2
+\item 
+\#define \mbox{\hyperlink{ply_8h_a13649e6bd34c75d2761f0afbadbfe0f8}{M\+I\+N\+I\+M\+U\+M\+\_\+\+R\+U\+LE}}~3
+\item 
+\#define \mbox{\hyperlink{ply_8h_a75f4bc4f181e30bf6b4db3b21299068b}{M\+A\+X\+I\+M\+U\+M\+\_\+\+R\+U\+LE}}~4
+\item 
+\#define \mbox{\hyperlink{ply_8h_a369081acb1b53446015d2d2a93c6c172}{S\+A\+M\+E\+\_\+\+R\+U\+LE}}~5
+\item 
+\#define \mbox{\hyperlink{ply_8h_a8ee5711246b0286fc1fd733b9c965921}{R\+A\+N\+D\+O\+M\+\_\+\+R\+U\+LE}}~6
+\item 
+\#define \mbox{\hyperlink{ply_8h_a63a66598e264179cd8920e0beb1814f2}{myalloc}}(mem\+\_\+size)~my\+\_\+alloc((mem\+\_\+size), \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_ply_property}{Ply\+Property}} \mbox{\hyperlink{ply_8h_aaf949c0a3b5d044a1ff24c582a94bc23}{Ply\+Property}}
+\item 
+typedef struct \mbox{\hyperlink{struct_ply_element}{Ply\+Element}} \mbox{\hyperlink{ply_8h_ad142d9982df8c00382ed282904bbd122}{Ply\+Element}}
+\item 
+typedef struct \mbox{\hyperlink{struct_ply_other_prop}{Ply\+Other\+Prop}} \mbox{\hyperlink{ply_8h_a2ce4438fc3b8bcacf4be4b727c9d94f2}{Ply\+Other\+Prop}}
+\item 
+typedef struct \mbox{\hyperlink{struct_other_data}{Other\+Data}} \mbox{\hyperlink{ply_8h_a39dbc3e813ded14848e59ea32ad6980f}{Other\+Data}}
+\item 
+typedef struct \mbox{\hyperlink{struct_other_elem}{Other\+Elem}} \mbox{\hyperlink{ply_8h_a720ce37a47e3b6f1beeb744bb5dee795}{Other\+Elem}}
+\item 
+typedef struct \mbox{\hyperlink{struct_ply_other_elems}{Ply\+Other\+Elems}} \mbox{\hyperlink{ply_8h_ab3d03532b10fc69399a706ea03310ba9}{Ply\+Other\+Elems}}
+\item 
+typedef struct \mbox{\hyperlink{struct_ply_prop_rules}{Ply\+Prop\+Rules}} \mbox{\hyperlink{ply_8h_a65b4787c19662309e4f19774fe3bb1f3}{Ply\+Prop\+Rules}}
+\item 
+typedef struct \mbox{\hyperlink{struct_ply_rule_list}{Ply\+Rule\+List}} \mbox{\hyperlink{ply_8h_aee38b00f8a7118707dc8dcaf0fd9b81c}{Ply\+Rule\+List}}
+\item 
+typedef struct \mbox{\hyperlink{struct_ply_file}{Ply\+File}} \mbox{\hyperlink{ply_8h_a2cff52595cce1d85fc534fa607b4cf03}{Ply\+File}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ply_8h_a67ce1fa4d355bdb5f00e60fc69c6a559}{ply\+\_\+describe\+\_\+property}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, char $\ast$, \mbox{\hyperlink{struct_ply_property}{Ply\+Property}} $\ast$)
+\item 
+void \mbox{\hyperlink{ply_8h_ad8a336361a39ef56e16d66a2e519a8b0}{ply\+\_\+get\+\_\+property}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, char $\ast$, \mbox{\hyperlink{struct_ply_property}{Ply\+Property}} $\ast$)
+\item 
+void \mbox{\hyperlink{ply_8h_ab5087b8b10ba27abefae1fb0059253be}{ply\+\_\+get\+\_\+element}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, void $\ast$)
+\item 
+\mbox{\hyperlink{struct_ply_other_elems}{Ply\+Other\+Elems}} $\ast$ \mbox{\hyperlink{ply_8h_a26ddfc1f6e7dde24017ef6aace38a297}{get\+\_\+other\+\_\+element\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$)
+\item 
+\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$ \mbox{\hyperlink{ply_8h_a76f13165e506ed3c8ebb3134c6df61ac}{read\+\_\+ply}} (F\+I\+LE $\ast$)
+\item 
+\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$ \mbox{\hyperlink{ply_8h_aefb556b25a564f034721b3b53385c811}{write\+\_\+ply}} (F\+I\+LE $\ast$, int, char $\ast$$\ast$, int)
+\item 
+\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$ \mbox{\hyperlink{ply_8h_ab039a91f178eda621a30ad100cd454f2}{open\+\_\+for\+\_\+writing\+\_\+ply}} (char $\ast$, int, char $\ast$$\ast$, int)
+\item 
+void \mbox{\hyperlink{ply_8h_a16b27b6a52e72cd3d0424cc62ac9110f}{close\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$)
+\item 
+void \mbox{\hyperlink{ply_8h_a57b5e432c2f12aa6c03b097773575fbb}{free\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$)
+\item 
+void \mbox{\hyperlink{ply_8h_ad33a721299b0e84dd7c4e83dc65056ca}{get\+\_\+info\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, float $\ast$, int $\ast$)
+\item 
+void \mbox{\hyperlink{ply_8h_a05db68903bc19da1cc8a369609e59e04}{free\+\_\+other\+\_\+elements\+\_\+ply}} (\mbox{\hyperlink{struct_ply_other_elems}{Ply\+Other\+Elems}} $\ast$)
+\item 
+void \mbox{\hyperlink{ply_8h_aa9a80aebf88e564c3aaa2c2e6e7e059b}{append\+\_\+comment\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, char $\ast$)
+\item 
+void \mbox{\hyperlink{ply_8h_a2f3f88c65d4e7c1134b233a47e63ff57}{append\+\_\+obj\+\_\+info\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, char $\ast$)
+\item 
+void \mbox{\hyperlink{ply_8h_ac660123767b077c08492860961849dfe}{copy\+\_\+comments\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, \mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$)
+\item 
+void \mbox{\hyperlink{ply_8h_a5ef48bc77699ca15ec4f0532b7f6caf7}{copy\+\_\+obj\+\_\+info\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, \mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$)
+\item 
+char $\ast$$\ast$ \mbox{\hyperlink{ply_8h_a51b37f050bc61d0f44b4021c3a78dfbe}{get\+\_\+comments\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, int $\ast$)
+\item 
+char $\ast$$\ast$ \mbox{\hyperlink{ply_8h_afd9c641b6d2f53fdbf288a13ad92d68d}{get\+\_\+obj\+\_\+info\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, int $\ast$)
+\item 
+char $\ast$$\ast$ \mbox{\hyperlink{ply_8h_a2394bd6ae64572a6e82796e6dfc08817}{get\+\_\+element\+\_\+list\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, int $\ast$)
+\item 
+void \mbox{\hyperlink{ply_8h_a269f42f2dbad3948de8dcfda4fc22d49}{setup\+\_\+property\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, \mbox{\hyperlink{struct_ply_property}{Ply\+Property}} $\ast$)
+\item 
+void \mbox{\hyperlink{ply_8h_a439fae39641ac36e0dcf0a2a12abcb14}{get\+\_\+element\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, void $\ast$)
+\item 
+char $\ast$ \mbox{\hyperlink{ply_8h_a76d419cfa7a0ef7c7b519edb3dd382bd}{setup\+\_\+element\+\_\+read\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, int, int $\ast$)
+\item 
+\mbox{\hyperlink{struct_ply_other_prop}{Ply\+Other\+Prop}} $\ast$ \mbox{\hyperlink{ply_8h_ae0afe827b0d20cfe659076e7f60b23e4}{get\+\_\+other\+\_\+properties\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, int)
+\item 
+void \mbox{\hyperlink{ply_8h_aa3844c2a6f2e3fec633de7c077c46f87}{element\+\_\+count\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, char $\ast$, int)
+\item 
+void \mbox{\hyperlink{ply_8h_ae24380ad711a1b099225abbe3458ce96}{describe\+\_\+element\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, char $\ast$, int)
+\item 
+void \mbox{\hyperlink{ply_8h_af8770de529889d9035a3aee370b8c0b1}{describe\+\_\+property\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, \mbox{\hyperlink{struct_ply_property}{Ply\+Property}} $\ast$)
+\item 
+void \mbox{\hyperlink{ply_8h_aaec20a78f9dc910e271c69b43949dfb9}{describe\+\_\+other\+\_\+properties\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, \mbox{\hyperlink{struct_ply_other_prop}{Ply\+Other\+Prop}} $\ast$, int)
+\item 
+void \mbox{\hyperlink{ply_8h_a23f1d6a2d42ecd367b4e09c571ed82f8}{describe\+\_\+other\+\_\+elements\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, \mbox{\hyperlink{struct_ply_other_elems}{Ply\+Other\+Elems}} $\ast$)
+\item 
+void \mbox{\hyperlink{ply_8h_aadc41034a621dbb6234fb914025ea7f0}{get\+\_\+element\+\_\+setup\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, char $\ast$, int, \mbox{\hyperlink{struct_ply_property}{Ply\+Property}} $\ast$)
+\item 
+\mbox{\hyperlink{struct_ply_property}{Ply\+Property}} $\ast$$\ast$ \mbox{\hyperlink{ply_8h_a6cdad0b86f6f3b2de8fd01458c1293ee}{get\+\_\+element\+\_\+description\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, char $\ast$, int $\ast$, int $\ast$)
+\item 
+void \mbox{\hyperlink{ply_8h_a881cb23eca54f4135afc22276d185a94}{element\+\_\+layout\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, char $\ast$, int, int, \mbox{\hyperlink{struct_ply_property}{Ply\+Property}} $\ast$)
+\item 
+void \mbox{\hyperlink{ply_8h_a305ab168d03db3c985c9e079ed2daa79}{header\+\_\+complete\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$)
+\item 
+void \mbox{\hyperlink{ply_8h_ad10f74656cb5efb157e316756e96a020}{put\+\_\+element\+\_\+setup\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, char $\ast$)
+\item 
+void \mbox{\hyperlink{ply_8h_aa41856321252c6c50506f4781ad622e8}{put\+\_\+element\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, void $\ast$)
+\item 
+void \mbox{\hyperlink{ply_8h_a90c7deda1818105ae8e35402820bb899}{put\+\_\+other\+\_\+elements\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$)
+\item 
+\mbox{\hyperlink{struct_ply_prop_rules}{Ply\+Prop\+Rules}} $\ast$ \mbox{\hyperlink{ply_8h_aa1e766e65c97022b7446408a43a0ada4}{init\+\_\+rule\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, char $\ast$)
+\item 
+void \mbox{\hyperlink{ply_8h_ab5096e9b5e003b0112915f3ba34ead2a}{modify\+\_\+rule\+\_\+ply}} (\mbox{\hyperlink{struct_ply_prop_rules}{Ply\+Prop\+Rules}} $\ast$, char $\ast$, int)
+\item 
+void \mbox{\hyperlink{ply_8h_aa0a50337568156218086b13d1a6252cb}{start\+\_\+props\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, \mbox{\hyperlink{struct_ply_prop_rules}{Ply\+Prop\+Rules}} $\ast$)
+\item 
+void \mbox{\hyperlink{ply_8h_ac390c4a8c1daac4ad423516bf114baf0}{weight\+\_\+props\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, float, void $\ast$)
+\item 
+void $\ast$ \mbox{\hyperlink{ply_8h_a40540d03d694ea0d574bc9e10b123b14}{get\+\_\+new\+\_\+props\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$)
+\item 
+void \mbox{\hyperlink{ply_8h_a9dc713b8c97299d357e1bedad3d23671}{set\+\_\+prop\+\_\+rules\+\_\+ply}} (\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$, \mbox{\hyperlink{struct_ply_rule_list}{Ply\+Rule\+List}} $\ast$)
+\item 
+\mbox{\hyperlink{struct_ply_rule_list}{Ply\+Rule\+List}} $\ast$ \mbox{\hyperlink{ply_8h_a61b62a56ce9c9ddd0a8d3d78b2e5b6e8}{append\+\_\+prop\+\_\+rule}} (\mbox{\hyperlink{struct_ply_rule_list}{Ply\+Rule\+List}} $\ast$, char $\ast$, char $\ast$)
+\item 
+int \mbox{\hyperlink{ply_8h_abd3222acea9c873866c232113f042e34}{matches\+\_\+rule\+\_\+name}} (char $\ast$)
+\item 
+int \mbox{\hyperlink{ply_8h_a6f7b29cc8bcd79aefba1571d5afc5672}{equal\+\_\+strings}} (char $\ast$, char $\ast$)
+\item 
+char $\ast$ \mbox{\hyperlink{ply_8h_ab8faf6b0ea645482b76b33bee4a7f0c3}{recreate\+\_\+command\+\_\+line}} (int, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ply_8h_a32019d70967ee13ed10e25da90303ea8}\label{ply_8h_a32019d70967ee13ed10e25da90303ea8}} 
+\index{ply.h@{ply.h}!\_\_PLY\_H\_\_@{\_\_PLY\_H\_\_}}
+\index{\_\_PLY\_H\_\_@{\_\_PLY\_H\_\_}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{\_\_PLY\_H\_\_}{\_\_PLY\_H\_\_}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+P\+L\+Y\+\_\+\+H\+\_\+\+\_\+}
+
+
+
+Definition at line 36 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_aee4db83b2bb02e76552980aa7a19602b}\label{ply_8h_aee4db83b2bb02e76552980aa7a19602b}} 
+\index{ply.h@{ply.h}!AVERAGE\_RULE@{AVERAGE\_RULE}}
+\index{AVERAGE\_RULE@{AVERAGE\_RULE}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{AVERAGE\_RULE}{AVERAGE\_RULE}}
+{\footnotesize\ttfamily \#define A\+V\+E\+R\+A\+G\+E\+\_\+\+R\+U\+LE~1}
+
+
+
+Definition at line 118 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_ac32d0270ab7df92da207367f4a883286}\label{ply_8h_ac32d0270ab7df92da207367f4a883286}} 
+\index{ply.h@{ply.h}!EndType@{EndType}}
+\index{EndType@{EndType}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{EndType}{EndType}}
+{\footnotesize\ttfamily \#define End\+Type~9}
+
+
+
+Definition at line 63 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_a5f07cf1930b2420ba229ae15987843d7}\label{ply_8h_a5f07cf1930b2420ba229ae15987843d7}} 
+\index{ply.h@{ply.h}!Float32@{Float32}}
+\index{Float32@{Float32}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{Float32}{Float32}}
+{\footnotesize\ttfamily \#define Float32~7}
+
+
+
+Definition at line 61 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_a24bc250f47ea3d6f84d9f4681a7dea6a}\label{ply_8h_a24bc250f47ea3d6f84d9f4681a7dea6a}} 
+\index{ply.h@{ply.h}!Float64@{Float64}}
+\index{Float64@{Float64}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{Float64}{Float64}}
+{\footnotesize\ttfamily \#define Float64~8}
+
+
+
+Definition at line 62 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_a9c8fb24ed11abb940eda20e773aefd6d}\label{ply_8h_a9c8fb24ed11abb940eda20e773aefd6d}} 
+\index{ply.h@{ply.h}!Int16@{Int16}}
+\index{Int16@{Int16}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{Int16}{Int16}}
+{\footnotesize\ttfamily \#define Int16~2}
+
+
+
+Definition at line 56 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_ad5f21f1f9531f246cfd36212b5b8c4ca}\label{ply_8h_ad5f21f1f9531f246cfd36212b5b8c4ca}} 
+\index{ply.h@{ply.h}!Int32@{Int32}}
+\index{Int32@{Int32}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{Int32}{Int32}}
+{\footnotesize\ttfamily \#define Int32~3}
+
+
+
+Definition at line 57 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_a8f7c73011aaacd338c5a2af707a2a57f}\label{ply_8h_a8f7c73011aaacd338c5a2af707a2a57f}} 
+\index{ply.h@{ply.h}!Int8@{Int8}}
+\index{Int8@{Int8}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{Int8}{Int8}}
+{\footnotesize\ttfamily \#define Int8~1}
+
+
+
+Definition at line 55 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_a1b76cbbd8c36a8e3743a76336af8c65b}\label{ply_8h_a1b76cbbd8c36a8e3743a76336af8c65b}} 
+\index{ply.h@{ply.h}!MAJORITY\_RULE@{MAJORITY\_RULE}}
+\index{MAJORITY\_RULE@{MAJORITY\_RULE}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{MAJORITY\_RULE}{MAJORITY\_RULE}}
+{\footnotesize\ttfamily \#define M\+A\+J\+O\+R\+I\+T\+Y\+\_\+\+R\+U\+LE~2}
+
+
+
+Definition at line 119 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_a75f4bc4f181e30bf6b4db3b21299068b}\label{ply_8h_a75f4bc4f181e30bf6b4db3b21299068b}} 
+\index{ply.h@{ply.h}!MAXIMUM\_RULE@{MAXIMUM\_RULE}}
+\index{MAXIMUM\_RULE@{MAXIMUM\_RULE}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{MAXIMUM\_RULE}{MAXIMUM\_RULE}}
+{\footnotesize\ttfamily \#define M\+A\+X\+I\+M\+U\+M\+\_\+\+R\+U\+LE~4}
+
+
+
+Definition at line 121 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_a13649e6bd34c75d2761f0afbadbfe0f8}\label{ply_8h_a13649e6bd34c75d2761f0afbadbfe0f8}} 
+\index{ply.h@{ply.h}!MINIMUM\_RULE@{MINIMUM\_RULE}}
+\index{MINIMUM\_RULE@{MINIMUM\_RULE}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{MINIMUM\_RULE}{MINIMUM\_RULE}}
+{\footnotesize\ttfamily \#define M\+I\+N\+I\+M\+U\+M\+\_\+\+R\+U\+LE~3}
+
+
+
+Definition at line 120 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_a63a66598e264179cd8920e0beb1814f2}\label{ply_8h_a63a66598e264179cd8920e0beb1814f2}} 
+\index{ply.h@{ply.h}!myalloc@{myalloc}}
+\index{myalloc@{myalloc}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{myalloc}{myalloc}}
+{\footnotesize\ttfamily \#define myalloc(\begin{DoxyParamCaption}\item[{}]{mem\+\_\+size }\end{DoxyParamCaption})~my\+\_\+alloc((mem\+\_\+size), \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+)}
+
+
+
+Definition at line 161 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_a52e6dde3ac4a3d076af046ed610ed3da}\label{ply_8h_a52e6dde3ac4a3d076af046ed610ed3da}} 
+\index{ply.h@{ply.h}!PLY\_ASCII@{PLY\_ASCII}}
+\index{PLY\_ASCII@{PLY\_ASCII}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{PLY\_ASCII}{PLY\_ASCII}}
+{\footnotesize\ttfamily \#define P\+L\+Y\+\_\+\+A\+S\+C\+II~1        /$\ast$ ascii P\+LY file $\ast$/}
+
+
+
+Definition at line 45 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_ac21ee30aee359d6b7c65c99ce55c58d5}\label{ply_8h_ac21ee30aee359d6b7c65c99ce55c58d5}} 
+\index{ply.h@{ply.h}!PLY\_BINARY\_BE@{PLY\_BINARY\_BE}}
+\index{PLY\_BINARY\_BE@{PLY\_BINARY\_BE}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{PLY\_BINARY\_BE}{PLY\_BINARY\_BE}}
+{\footnotesize\ttfamily \#define P\+L\+Y\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+BE~2        /$\ast$ binary P\+LY file, big endian $\ast$/}
+
+
+
+Definition at line 46 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_a8314c8f69b28c54c87428e7defbd24e1}\label{ply_8h_a8314c8f69b28c54c87428e7defbd24e1}} 
+\index{ply.h@{ply.h}!PLY\_BINARY\_LE@{PLY\_BINARY\_LE}}
+\index{PLY\_BINARY\_LE@{PLY\_BINARY\_LE}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{PLY\_BINARY\_LE}{PLY\_BINARY\_LE}}
+{\footnotesize\ttfamily \#define P\+L\+Y\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+LE~3        /$\ast$ binary P\+LY file, little endian $\ast$/}
+
+
+
+Definition at line 47 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_aa3508c3d9ff421c9b9772a6776916c27}\label{ply_8h_aa3508c3d9ff421c9b9772a6776916c27}} 
+\index{ply.h@{ply.h}!PLY\_ERROR@{PLY\_ERROR}}
+\index{PLY\_ERROR@{PLY\_ERROR}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{PLY\_ERROR}{PLY\_ERROR}}
+{\footnotesize\ttfamily \#define P\+L\+Y\+\_\+\+E\+R\+R\+OR~-\/1           /$\ast$ error in ply routine $\ast$/}
+
+
+
+Definition at line 50 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_a1a55523e2e3b45ad1cf58f2512945e85}\label{ply_8h_a1a55523e2e3b45ad1cf58f2512945e85}} 
+\index{ply.h@{ply.h}!PLY\_LIST@{PLY\_LIST}}
+\index{PLY\_LIST@{PLY\_LIST}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{PLY\_LIST}{PLY\_LIST}}
+{\footnotesize\ttfamily \#define P\+L\+Y\+\_\+\+L\+I\+ST~1}
+
+
+
+Definition at line 66 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_a500f6ccac1d2cbb0b52886bf60b30b71}\label{ply_8h_a500f6ccac1d2cbb0b52886bf60b30b71}} 
+\index{ply.h@{ply.h}!PLY\_OKAY@{PLY\_OKAY}}
+\index{PLY\_OKAY@{PLY\_OKAY}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{PLY\_OKAY}{PLY\_OKAY}}
+{\footnotesize\ttfamily \#define P\+L\+Y\+\_\+\+O\+K\+AY~0           /$\ast$ ply routine worked okay $\ast$/}
+
+
+
+Definition at line 49 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_a457492e38597e91dc051d1eec93022ab}\label{ply_8h_a457492e38597e91dc051d1eec93022ab}} 
+\index{ply.h@{ply.h}!PLY\_SCALAR@{PLY\_SCALAR}}
+\index{PLY\_SCALAR@{PLY\_SCALAR}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{PLY\_SCALAR}{PLY\_SCALAR}}
+{\footnotesize\ttfamily \#define P\+L\+Y\+\_\+\+S\+C\+A\+L\+AR~0}
+
+
+
+Definition at line 65 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_afe3971acff0034d2d00abae1ba1c3b63}\label{ply_8h_afe3971acff0034d2d00abae1ba1c3b63}} 
+\index{ply.h@{ply.h}!PLY\_STRING@{PLY\_STRING}}
+\index{PLY\_STRING@{PLY\_STRING}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{PLY\_STRING}{PLY\_STRING}}
+{\footnotesize\ttfamily \#define P\+L\+Y\+\_\+\+S\+T\+R\+I\+NG~2}
+
+
+
+Definition at line 67 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_a8ee5711246b0286fc1fd733b9c965921}\label{ply_8h_a8ee5711246b0286fc1fd733b9c965921}} 
+\index{ply.h@{ply.h}!RANDOM\_RULE@{RANDOM\_RULE}}
+\index{RANDOM\_RULE@{RANDOM\_RULE}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{RANDOM\_RULE}{RANDOM\_RULE}}
+{\footnotesize\ttfamily \#define R\+A\+N\+D\+O\+M\+\_\+\+R\+U\+LE~6}
+
+
+
+Definition at line 123 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_a369081acb1b53446015d2d2a93c6c172}\label{ply_8h_a369081acb1b53446015d2d2a93c6c172}} 
+\index{ply.h@{ply.h}!SAME\_RULE@{SAME\_RULE}}
+\index{SAME\_RULE@{SAME\_RULE}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{SAME\_RULE}{SAME\_RULE}}
+{\footnotesize\ttfamily \#define S\+A\+M\+E\+\_\+\+R\+U\+LE~5}
+
+
+
+Definition at line 122 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_a94fb140b12c8d938d896ca3ab6971dda}\label{ply_8h_a94fb140b12c8d938d896ca3ab6971dda}} 
+\index{ply.h@{ply.h}!StartType@{StartType}}
+\index{StartType@{StartType}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{StartType}{StartType}}
+{\footnotesize\ttfamily \#define Start\+Type~0}
+
+
+
+Definition at line 54 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_a749163d49d607ff6ede6c10b0f3e7469}\label{ply_8h_a749163d49d607ff6ede6c10b0f3e7469}} 
+\index{ply.h@{ply.h}!Uint16@{Uint16}}
+\index{Uint16@{Uint16}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{Uint16}{Uint16}}
+{\footnotesize\ttfamily \#define Uint16~5}
+
+
+
+Definition at line 59 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_aa0de2dc666494eb49a2a2e72911e43c3}\label{ply_8h_aa0de2dc666494eb49a2a2e72911e43c3}} 
+\index{ply.h@{ply.h}!Uint32@{Uint32}}
+\index{Uint32@{Uint32}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{Uint32}{Uint32}}
+{\footnotesize\ttfamily \#define Uint32~6}
+
+
+
+Definition at line 60 of file ply.\+h.
+
+\mbox{\Hypertarget{ply_8h_a57d127553ce5a94c80965a209900ad91}\label{ply_8h_a57d127553ce5a94c80965a209900ad91}} 
+\index{ply.h@{ply.h}!Uint8@{Uint8}}
+\index{Uint8@{Uint8}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{Uint8}{Uint8}}
+{\footnotesize\ttfamily \#define Uint8~4}
+
+
+
+Definition at line 58 of file ply.\+h.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{ply_8h_a39dbc3e813ded14848e59ea32ad6980f}\label{ply_8h_a39dbc3e813ded14848e59ea32ad6980f}} 
+\index{ply.h@{ply.h}!OtherData@{OtherData}}
+\index{OtherData@{OtherData}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{OtherData}{OtherData}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_other_data}{Other\+Data}} \mbox{\hyperlink{struct_other_data}{Other\+Data}}}
+
+\mbox{\Hypertarget{ply_8h_a720ce37a47e3b6f1beeb744bb5dee795}\label{ply_8h_a720ce37a47e3b6f1beeb744bb5dee795}} 
+\index{ply.h@{ply.h}!OtherElem@{OtherElem}}
+\index{OtherElem@{OtherElem}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{OtherElem}{OtherElem}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_other_elem}{Other\+Elem}} \mbox{\hyperlink{struct_other_elem}{Other\+Elem}}}
+
+\mbox{\Hypertarget{ply_8h_ad142d9982df8c00382ed282904bbd122}\label{ply_8h_ad142d9982df8c00382ed282904bbd122}} 
+\index{ply.h@{ply.h}!PlyElement@{PlyElement}}
+\index{PlyElement@{PlyElement}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{PlyElement}{PlyElement}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_ply_element}{Ply\+Element}} \mbox{\hyperlink{struct_ply_element}{Ply\+Element}}}
+
+\mbox{\Hypertarget{ply_8h_a2cff52595cce1d85fc534fa607b4cf03}\label{ply_8h_a2cff52595cce1d85fc534fa607b4cf03}} 
+\index{ply.h@{ply.h}!PlyFile@{PlyFile}}
+\index{PlyFile@{PlyFile}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{PlyFile}{PlyFile}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_ply_file}{Ply\+File}} \mbox{\hyperlink{struct_ply_file}{Ply\+File}}}
+
+\mbox{\Hypertarget{ply_8h_ab3d03532b10fc69399a706ea03310ba9}\label{ply_8h_ab3d03532b10fc69399a706ea03310ba9}} 
+\index{ply.h@{ply.h}!PlyOtherElems@{PlyOtherElems}}
+\index{PlyOtherElems@{PlyOtherElems}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{PlyOtherElems}{PlyOtherElems}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_ply_other_elems}{Ply\+Other\+Elems}} \mbox{\hyperlink{struct_ply_other_elems}{Ply\+Other\+Elems}}}
+
+\mbox{\Hypertarget{ply_8h_a2ce4438fc3b8bcacf4be4b727c9d94f2}\label{ply_8h_a2ce4438fc3b8bcacf4be4b727c9d94f2}} 
+\index{ply.h@{ply.h}!PlyOtherProp@{PlyOtherProp}}
+\index{PlyOtherProp@{PlyOtherProp}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{PlyOtherProp}{PlyOtherProp}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_ply_other_prop}{Ply\+Other\+Prop}} \mbox{\hyperlink{struct_ply_other_prop}{Ply\+Other\+Prop}}}
+
+\mbox{\Hypertarget{ply_8h_aaf949c0a3b5d044a1ff24c582a94bc23}\label{ply_8h_aaf949c0a3b5d044a1ff24c582a94bc23}} 
+\index{ply.h@{ply.h}!PlyProperty@{PlyProperty}}
+\index{PlyProperty@{PlyProperty}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{PlyProperty}{PlyProperty}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_ply_property}{Ply\+Property}} \mbox{\hyperlink{struct_ply_property}{Ply\+Property}}}
+
+\mbox{\Hypertarget{ply_8h_a65b4787c19662309e4f19774fe3bb1f3}\label{ply_8h_a65b4787c19662309e4f19774fe3bb1f3}} 
+\index{ply.h@{ply.h}!PlyPropRules@{PlyPropRules}}
+\index{PlyPropRules@{PlyPropRules}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{PlyPropRules}{PlyPropRules}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_ply_prop_rules}{Ply\+Prop\+Rules}} \mbox{\hyperlink{struct_ply_prop_rules}{Ply\+Prop\+Rules}}}
+
+\mbox{\Hypertarget{ply_8h_aee38b00f8a7118707dc8dcaf0fd9b81c}\label{ply_8h_aee38b00f8a7118707dc8dcaf0fd9b81c}} 
+\index{ply.h@{ply.h}!PlyRuleList@{PlyRuleList}}
+\index{PlyRuleList@{PlyRuleList}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{PlyRuleList}{PlyRuleList}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_ply_rule_list}{Ply\+Rule\+List}} \mbox{\hyperlink{struct_ply_rule_list}{Ply\+Rule\+List}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ply_8h_aa9a80aebf88e564c3aaa2c2e6e7e059b}\label{ply_8h_aa9a80aebf88e564c3aaa2c2e6e7e059b}} 
+\index{ply.h@{ply.h}!append\_comment\_ply@{append\_comment\_ply}}
+\index{append\_comment\_ply@{append\_comment\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{append\_comment\_ply()}{append\_comment\_ply()}}
+{\footnotesize\ttfamily void append\+\_\+comment\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2549 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_a2f3f88c65d4e7c1134b233a47e63ff57}\label{ply_8h_a2f3f88c65d4e7c1134b233a47e63ff57}} 
+\index{ply.h@{ply.h}!append\_obj\_info\_ply@{append\_obj\_info\_ply}}
+\index{append\_obj\_info\_ply@{append\_obj\_info\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{append\_obj\_info\_ply()}{append\_obj\_info\_ply()}}
+{\footnotesize\ttfamily void append\+\_\+obj\+\_\+info\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2589 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_a61b62a56ce9c9ddd0a8d3d78b2e5b6e8}\label{ply_8h_a61b62a56ce9c9ddd0a8d3d78b2e5b6e8}} 
+\index{ply.h@{ply.h}!append\_prop\_rule@{append\_prop\_rule}}
+\index{append\_prop\_rule@{append\_prop\_rule}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{append\_prop\_rule()}{append\_prop\_rule()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_ply_rule_list}{Ply\+Rule\+List}}$\ast$ append\+\_\+prop\+\_\+rule (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_rule_list}{Ply\+Rule\+List}} $\ast$}]{,  }\item[{char $\ast$}]{,  }\item[{char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3260 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_a16b27b6a52e72cd3d0424cc62ac9110f}\label{ply_8h_a16b27b6a52e72cd3d0424cc62ac9110f}} 
+\index{ply.h@{ply.h}!close\_ply@{close\_ply}}
+\index{close\_ply@{close\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{close\_ply()}{close\_ply()}}
+{\footnotesize\ttfamily void close\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2628 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_ac660123767b077c08492860961849dfe}\label{ply_8h_ac660123767b077c08492860961849dfe}} 
+\index{ply.h@{ply.h}!copy\_comments\_ply@{copy\_comments\_ply}}
+\index{copy\_comments\_ply@{copy\_comments\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{copy\_comments\_ply()}{copy\_comments\_ply()}}
+{\footnotesize\ttfamily void copy\+\_\+comments\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2572 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_a5ef48bc77699ca15ec4f0532b7f6caf7}\label{ply_8h_a5ef48bc77699ca15ec4f0532b7f6caf7}} 
+\index{ply.h@{ply.h}!copy\_obj\_info\_ply@{copy\_obj\_info\_ply}}
+\index{copy\_obj\_info\_ply@{copy\_obj\_info\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{copy\_obj\_info\_ply()}{copy\_obj\_info\_ply()}}
+{\footnotesize\ttfamily void copy\+\_\+obj\+\_\+info\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2612 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_ae24380ad711a1b099225abbe3458ce96}\label{ply_8h_ae24380ad711a1b099225abbe3458ce96}} 
+\index{ply.h@{ply.h}!describe\_element\_ply@{describe\_element\_ply}}
+\index{describe\_element\_ply@{describe\_element\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{describe\_element\_ply()}{describe\_element\_ply()}}
+{\footnotesize\ttfamily void describe\+\_\+element\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{char $\ast$}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2772 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_a23f1d6a2d42ecd367b4e09c571ed82f8}\label{ply_8h_a23f1d6a2d42ecd367b4e09c571ed82f8}} 
+\index{ply.h@{ply.h}!describe\_other\_elements\_ply@{describe\_other\_elements\_ply}}
+\index{describe\_other\_elements\_ply@{describe\_other\_elements\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{describe\_other\_elements\_ply()}{describe\_other\_elements\_ply()}}
+{\footnotesize\ttfamily void describe\+\_\+other\+\_\+elements\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{\mbox{\hyperlink{struct_ply_other_elems}{Ply\+Other\+Elems}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2903 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_aaec20a78f9dc910e271c69b43949dfb9}\label{ply_8h_aaec20a78f9dc910e271c69b43949dfb9}} 
+\index{ply.h@{ply.h}!describe\_other\_properties\_ply@{describe\_other\_properties\_ply}}
+\index{describe\_other\_properties\_ply@{describe\_other\_properties\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{describe\_other\_properties\_ply()}{describe\_other\_properties\_ply()}}
+{\footnotesize\ttfamily void describe\+\_\+other\+\_\+properties\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{\mbox{\hyperlink{struct_ply_other_prop}{Ply\+Other\+Prop}} $\ast$}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2843 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_af8770de529889d9035a3aee370b8c0b1}\label{ply_8h_af8770de529889d9035a3aee370b8c0b1}} 
+\index{ply.h@{ply.h}!describe\_property\_ply@{describe\_property\_ply}}
+\index{describe\_property\_ply@{describe\_property\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{describe\_property\_ply()}{describe\_property\_ply()}}
+{\footnotesize\ttfamily void describe\+\_\+property\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{\mbox{\hyperlink{struct_ply_property}{Ply\+Property}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2804 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_aa3844c2a6f2e3fec633de7c077c46f87}\label{ply_8h_aa3844c2a6f2e3fec633de7c077c46f87}} 
+\index{ply.h@{ply.h}!element\_count\_ply@{element\_count\_ply}}
+\index{element\_count\_ply@{element\_count\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{element\_count\_ply()}{element\_count\_ply()}}
+{\footnotesize\ttfamily void element\+\_\+count\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{char $\ast$}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 344 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_a881cb23eca54f4135afc22276d185a94}\label{ply_8h_a881cb23eca54f4135afc22276d185a94}} 
+\index{ply.h@{ply.h}!element\_layout\_ply@{element\_layout\_ply}}
+\index{element\_layout\_ply@{element\_layout\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{element\_layout\_ply()}{element\_layout\_ply()}}
+{\footnotesize\ttfamily void element\+\_\+layout\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{char $\ast$}]{,  }\item[{int}]{,  }\item[{int}]{,  }\item[{\mbox{\hyperlink{struct_ply_property}{Ply\+Property}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 249 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_a6f7b29cc8bcd79aefba1571d5afc5672}\label{ply_8h_a6f7b29cc8bcd79aefba1571d5afc5672}} 
+\index{ply.h@{ply.h}!equal\_strings@{equal\_strings}}
+\index{equal\_strings@{equal\_strings}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{equal\_strings()}{equal\_strings()}}
+{\footnotesize\ttfamily int equal\+\_\+strings (\begin{DoxyParamCaption}\item[{char $\ast$}]{,  }\item[{char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1319 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_a05db68903bc19da1cc8a369609e59e04}\label{ply_8h_a05db68903bc19da1cc8a369609e59e04}} 
+\index{ply.h@{ply.h}!free\_other\_elements\_ply@{free\_other\_elements\_ply}}
+\index{free\_other\_elements\_ply@{free\_other\_elements\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{free\_other\_elements\_ply()}{free\_other\_elements\_ply()}}
+{\footnotesize\ttfamily void free\+\_\+other\+\_\+elements\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_other_elems}{Ply\+Other\+Elems}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1265 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_a57b5e432c2f12aa6c03b097773575fbb}\label{ply_8h_a57b5e432c2f12aa6c03b097773575fbb}} 
+\index{ply.h@{ply.h}!free\_ply@{free\_ply}}
+\index{free\_ply@{free\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{free\_ply()}{free\_ply()}}
+{\footnotesize\ttfamily void free\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2641 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_a51b37f050bc61d0f44b4021c3a78dfbe}\label{ply_8h_a51b37f050bc61d0f44b4021c3a78dfbe}} 
+\index{ply.h@{ply.h}!get\_comments\_ply@{get\_comments\_ply}}
+\index{get\_comments\_ply@{get\_comments\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{get\_comments\_ply()}{get\_comments\_ply()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ get\+\_\+comments\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{int $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 943 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_a6cdad0b86f6f3b2de8fd01458c1293ee}\label{ply_8h_a6cdad0b86f6f3b2de8fd01458c1293ee}} 
+\index{ply.h@{ply.h}!get\_element\_description\_ply@{get\_element\_description\_ply}}
+\index{get\_element\_description\_ply@{get\_element\_description\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{get\_element\_description\_ply()}{get\_element\_description\_ply()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_ply_property}{Ply\+Property}}$\ast$$\ast$ get\+\_\+element\+\_\+description\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{char $\ast$}]{,  }\item[{int $\ast$}]{,  }\item[{int $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 786 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_a2394bd6ae64572a6e82796e6dfc08817}\label{ply_8h_a2394bd6ae64572a6e82796e6dfc08817}} 
+\index{ply.h@{ply.h}!get\_element\_list\_ply@{get\_element\_list\_ply}}
+\index{get\_element\_list\_ply@{get\_element\_list\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{get\_element\_list\_ply()}{get\_element\_list\_ply()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ get\+\_\+element\+\_\+list\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{int $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2524 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_a439fae39641ac36e0dcf0a2a12abcb14}\label{ply_8h_a439fae39641ac36e0dcf0a2a12abcb14}} 
+\index{ply.h@{ply.h}!get\_element\_ply@{get\_element\_ply}}
+\index{get\_element\_ply@{get\_element\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{get\_element\_ply()}{get\_element\_ply()}}
+{\footnotesize\ttfamily void get\+\_\+element\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{void $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2690 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_aadc41034a621dbb6234fb914025ea7f0}\label{ply_8h_aadc41034a621dbb6234fb914025ea7f0}} 
+\index{ply.h@{ply.h}!get\_element\_setup\_ply@{get\_element\_setup\_ply}}
+\index{get\_element\_setup\_ply@{get\_element\_setup\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{get\_element\_setup\_ply()}{get\_element\_setup\_ply()}}
+{\footnotesize\ttfamily void get\+\_\+element\+\_\+setup\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{char $\ast$}]{,  }\item[{int}]{,  }\item[{\mbox{\hyperlink{struct_ply_property}{Ply\+Property}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 830 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_ad33a721299b0e84dd7c4e83dc65056ca}\label{ply_8h_ad33a721299b0e84dd7c4e83dc65056ca}} 
+\index{ply.h@{ply.h}!get\_info\_ply@{get\_info\_ply}}
+\index{get\_info\_ply@{get\_info\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{get\_info\_ply()}{get\_info\_ply()}}
+{\footnotesize\ttfamily void get\+\_\+info\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{float $\ast$}]{,  }\item[{int $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1305 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_a40540d03d694ea0d574bc9e10b123b14}\label{ply_8h_a40540d03d694ea0d574bc9e10b123b14}} 
+\index{ply.h@{ply.h}!get\_new\_props\_ply@{get\_new\_props\_ply}}
+\index{get\_new\_props\_ply@{get\_new\_props\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{get\_new\_props\_ply()}{get\_new\_props\_ply()}}
+{\footnotesize\ttfamily void$\ast$ get\+\_\+new\+\_\+props\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3118 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_afd9c641b6d2f53fdbf288a13ad92d68d}\label{ply_8h_afd9c641b6d2f53fdbf288a13ad92d68d}} 
+\index{ply.h@{ply.h}!get\_obj\_info\_ply@{get\_obj\_info\_ply}}
+\index{get\_obj\_info\_ply@{get\_obj\_info\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{get\_obj\_info\_ply()}{get\_obj\_info\_ply()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ get\+\_\+obj\+\_\+info\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{int $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 962 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_a26ddfc1f6e7dde24017ef6aace38a297}\label{ply_8h_a26ddfc1f6e7dde24017ef6aace38a297}} 
+\index{ply.h@{ply.h}!get\_other\_element\_ply@{get\_other\_element\_ply}}
+\index{get\_other\_element\_ply@{get\_other\_element\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{get\_other\_element\_ply()}{get\_other\_element\_ply()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_ply_other_elems}{Ply\+Other\+Elems}}$\ast$ get\+\_\+other\+\_\+element\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1171 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_ae0afe827b0d20cfe659076e7f60b23e4}\label{ply_8h_ae0afe827b0d20cfe659076e7f60b23e4}} 
+\index{ply.h@{ply.h}!get\_other\_properties\_ply@{get\_other\_properties\_ply}}
+\index{get\_other\_properties\_ply@{get\_other\_properties\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{get\_other\_properties\_ply()}{get\_other\_properties\_ply()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_ply_other_prop}{Ply\+Other\+Prop}}$\ast$ get\+\_\+other\+\_\+properties\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2750 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_a305ab168d03db3c985c9e079ed2daa79}\label{ply_8h_a305ab168d03db3c985c9e079ed2daa79}} 
+\index{ply.h@{ply.h}!header\_complete\_ply@{header\_complete\_ply}}
+\index{header\_complete\_ply@{header\_complete\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{header\_complete\_ply()}{header\_complete\_ply()}}
+{\footnotesize\ttfamily void header\+\_\+complete\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 373 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_aa1e766e65c97022b7446408a43a0ada4}\label{ply_8h_aa1e766e65c97022b7446408a43a0ada4}} 
+\index{ply.h@{ply.h}!init\_rule\_ply@{init\_rule\_ply}}
+\index{init\_rule\_ply@{init\_rule\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{init\_rule\_ply()}{init\_rule\_ply()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_ply_prop_rules}{Ply\+Prop\+Rules}}$\ast$ init\+\_\+rule\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2962 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_abd3222acea9c873866c232113f042e34}\label{ply_8h_abd3222acea9c873866c232113f042e34}} 
+\index{ply.h@{ply.h}!matches\_rule\_name@{matches\_rule\_name}}
+\index{matches\_rule\_name@{matches\_rule\_name}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{matches\_rule\_name()}{matches\_rule\_name()}}
+{\footnotesize\ttfamily int matches\+\_\+rule\+\_\+name (\begin{DoxyParamCaption}\item[{char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3319 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_ab5096e9b5e003b0112915f3ba34ead2a}\label{ply_8h_ab5096e9b5e003b0112915f3ba34ead2a}} 
+\index{ply.h@{ply.h}!modify\_rule\_ply@{modify\_rule\_ply}}
+\index{modify\_rule\_ply@{modify\_rule\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{modify\_rule\_ply()}{modify\_rule\_ply()}}
+{\footnotesize\ttfamily void modify\+\_\+rule\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_prop_rules}{Ply\+Prop\+Rules}} $\ast$}]{,  }\item[{char $\ast$}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3033 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_ab039a91f178eda621a30ad100cd454f2}\label{ply_8h_ab039a91f178eda621a30ad100cd454f2}} 
+\index{ply.h@{ply.h}!open\_for\_writing\_ply@{open\_for\_writing\_ply}}
+\index{open\_for\_writing\_ply@{open\_for\_writing\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{open\_for\_writing\_ply()}{open\_for\_writing\_ply()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_ply_file}{Ply\+File}}$\ast$ open\+\_\+for\+\_\+writing\+\_\+ply (\begin{DoxyParamCaption}\item[{char $\ast$}]{,  }\item[{int}]{,  }\item[{char $\ast$$\ast$}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 198 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_a67ce1fa4d355bdb5f00e60fc69c6a559}\label{ply_8h_a67ce1fa4d355bdb5f00e60fc69c6a559}} 
+\index{ply.h@{ply.h}!ply\_describe\_property@{ply\_describe\_property}}
+\index{ply\_describe\_property@{ply\_describe\_property}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{ply\_describe\_property()}{ply\_describe\_property()}}
+{\footnotesize\ttfamily void ply\+\_\+describe\+\_\+property (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{char $\ast$}]{,  }\item[{\mbox{\hyperlink{struct_ply_property}{Ply\+Property}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 294 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_ab5087b8b10ba27abefae1fb0059253be}\label{ply_8h_ab5087b8b10ba27abefae1fb0059253be}} 
+\index{ply.h@{ply.h}!ply\_get\_element@{ply\_get\_element}}
+\index{ply\_get\_element@{ply\_get\_element}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{ply\_get\_element()}{ply\_get\_element()}}
+{\footnotesize\ttfamily void ply\+\_\+get\+\_\+element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{void $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 923 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_ad8a336361a39ef56e16d66a2e519a8b0}\label{ply_8h_ad8a336361a39ef56e16d66a2e519a8b0}} 
+\index{ply.h@{ply.h}!ply\_get\_property@{ply\_get\_property}}
+\index{ply\_get\_property@{ply\_get\_property}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{ply\_get\_property()}{ply\_get\_property()}}
+{\footnotesize\ttfamily void ply\+\_\+get\+\_\+property (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{char $\ast$}]{,  }\item[{\mbox{\hyperlink{struct_ply_property}{Ply\+Property}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 881 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_aa41856321252c6c50506f4781ad622e8}\label{ply_8h_aa41856321252c6c50506f4781ad622e8}} 
+\index{ply.h@{ply.h}!put\_element\_ply@{put\_element\_ply}}
+\index{put\_element\_ply@{put\_element\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{put\_element\_ply()}{put\_element\_ply()}}
+{\footnotesize\ttfamily void put\+\_\+element\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{void $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 474 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_ad10f74656cb5efb157e316756e96a020}\label{ply_8h_ad10f74656cb5efb157e316756e96a020}} 
+\index{ply.h@{ply.h}!put\_element\_setup\_ply@{put\_element\_setup\_ply}}
+\index{put\_element\_setup\_ply@{put\_element\_setup\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{put\_element\_setup\_ply()}{put\_element\_setup\_ply()}}
+{\footnotesize\ttfamily void put\+\_\+element\+\_\+setup\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 450 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_a90c7deda1818105ae8e35402820bb899}\label{ply_8h_a90c7deda1818105ae8e35402820bb899}} 
+\index{ply.h@{ply.h}!put\_other\_elements\_ply@{put\_other\_elements\_ply}}
+\index{put\_other\_elements\_ply@{put\_other\_elements\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{put\_other\_elements\_ply()}{put\_other\_elements\_ply()}}
+{\footnotesize\ttfamily void put\+\_\+other\+\_\+elements\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1235 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_a76f13165e506ed3c8ebb3134c6df61ac}\label{ply_8h_a76f13165e506ed3c8ebb3134c6df61ac}} 
+\index{ply.h@{ply.h}!read\_ply@{read\_ply}}
+\index{read\_ply@{read\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{read\_ply()}{read\_ply()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_ply_file}{Ply\+File}}$\ast$ read\+\_\+ply (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2473 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_ab8faf6b0ea645482b76b33bee4a7f0c3}\label{ply_8h_ab8faf6b0ea645482b76b33bee4a7f0c3}} 
+\index{ply.h@{ply.h}!recreate\_command\_line@{recreate\_command\_line}}
+\index{recreate\_command\_line@{recreate\_command\_line}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{recreate\_command\_line()}{recreate\_command\_line()}}
+{\footnotesize\ttfamily char$\ast$ recreate\+\_\+command\+\_\+line (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1342 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_a9dc713b8c97299d357e1bedad3d23671}\label{ply_8h_a9dc713b8c97299d357e1bedad3d23671}} 
+\index{ply.h@{ply.h}!set\_prop\_rules\_ply@{set\_prop\_rules\_ply}}
+\index{set\_prop\_rules\_ply@{set\_prop\_rules\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{set\_prop\_rules\_ply()}{set\_prop\_rules\_ply()}}
+{\footnotesize\ttfamily void set\+\_\+prop\+\_\+rules\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{\mbox{\hyperlink{struct_ply_rule_list}{Ply\+Rule\+List}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3242 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_a76d419cfa7a0ef7c7b519edb3dd382bd}\label{ply_8h_a76d419cfa7a0ef7c7b519edb3dd382bd}} 
+\index{ply.h@{ply.h}!setup\_element\_read\_ply@{setup\_element\_read\_ply}}
+\index{setup\_element\_read\_ply@{setup\_element\_read\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{setup\_element\_read\_ply()}{setup\_element\_read\_ply()}}
+{\footnotesize\ttfamily char$\ast$ setup\+\_\+element\+\_\+read\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{int}]{,  }\item[{int $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2660 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_a269f42f2dbad3948de8dcfda4fc22d49}\label{ply_8h_a269f42f2dbad3948de8dcfda4fc22d49}} 
+\index{ply.h@{ply.h}!setup\_property\_ply@{setup\_property\_ply}}
+\index{setup\_property\_ply@{setup\_property\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{setup\_property\_ply()}{setup\_property\_ply()}}
+{\footnotesize\ttfamily void setup\+\_\+property\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{\mbox{\hyperlink{struct_ply_property}{Ply\+Property}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2709 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_aa0a50337568156218086b13d1a6252cb}\label{ply_8h_aa0a50337568156218086b13d1a6252cb}} 
+\index{ply.h@{ply.h}!start\_props\_ply@{start\_props\_ply}}
+\index{start\_props\_ply@{start\_props\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{start\_props\_ply()}{start\_props\_ply()}}
+{\footnotesize\ttfamily void start\+\_\+props\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{\mbox{\hyperlink{struct_ply_prop_rules}{Ply\+Prop\+Rules}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3060 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_ac390c4a8c1daac4ad423516bf114baf0}\label{ply_8h_ac390c4a8c1daac4ad423516bf114baf0}} 
+\index{ply.h@{ply.h}!weight\_props\_ply@{weight\_props\_ply}}
+\index{weight\_props\_ply@{weight\_props\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{weight\_props\_ply()}{weight\_props\_ply()}}
+{\footnotesize\ttfamily void weight\+\_\+props\+\_\+ply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ply_file}{Ply\+File}} $\ast$}]{,  }\item[{float}]{,  }\item[{void $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3083 of file ply.\+cpp.
+
+\mbox{\Hypertarget{ply_8h_aefb556b25a564f034721b3b53385c811}\label{ply_8h_aefb556b25a564f034721b3b53385c811}} 
+\index{ply.h@{ply.h}!write\_ply@{write\_ply}}
+\index{write\_ply@{write\_ply}!ply.h@{ply.h}}
+\doxysubsubsection{\texorpdfstring{write\_ply()}{write\_ply()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_ply_file}{Ply\+File}}$\ast$ write\+\_\+ply (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{,  }\item[{int}]{,  }\item[{char $\ast$$\ast$}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2498 of file ply.\+cpp.
+
