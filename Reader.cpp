@@ -6,6 +6,8 @@
 #include "Graph.h"
 #include "structures.h"
 #include "globals.h"
+#include <cmath>
+
 
 /**
  * @brief Read the streamline file, populate the streamlines vetor and put streamline nodes into bins
@@ -25,21 +27,37 @@ void read_streamline(std::string fname) {
 		strealine_segment_index = 0;
 
 	int total_nodes = 0;
-	int skip_line = 0;
+	int skip_line = 0, skip_node = 0;
+	bool adaptive_read = true;
 	//flag to add third node only, since first node has no vx vy
 
 	while (std::getline(file, line)) {
 		node* last_n = nullptr;
-		segment* last_s = nullptr;
 		skip_line++;
 		int scounter = 0;
 		if (skip_line % 2 != 0)
 			continue;
-		bool new_segment_start = true;
 		std::vector<node>streamline;
 		std::stringstream ss(line);
 		float temp;
+		float dvx, dvy;
+		int dvx_sign, dvy_sign;
+		bool start_read = true,
+			crit_point = false;
+		//indicator of the sign of the last derivative value, used to detect a change in direction (+ to - or vice versa)
+		int dv_sign;
+		int n_index = 0, last_added_index = 0;
+
+		//temporary save nodes between feature points, used for adaptive SL reading
+		std::vector<node>node_cache;
 		while (ss >> temp) {
+			counter++;
+			if (counter < skip_node) {
+				continue;
+			}
+			
+			counter = 0;
+
 			node* n = new node();
 			n->x = temp;
 			ss >> n->y;
@@ -57,53 +75,63 @@ void read_streamline(std::string fname) {
 			if (last_n != nullptr) {
 				n->vx = n->x - last_n->x;
 				n->vy = n->y - last_n->y;
+
+				if (adaptive_read)
+					if (start_read) {
+						start_read = false;
+						bins[binx][biny].push_back(n);
+						streamline.push_back(*n);
+						node_cache.push_back(*n);
+
+						dvx = n->vx;
+						dvy = n->vy;
+						dvx_sign = dvx / dvx;
+						dvy_sign = dvy / dvy;
+					}
+					else {
+						dvx = n->vx - dvx;
+						dvy = n->vy - dvy;
+						int new_dvx_sign = dvx / dvx,
+							new_dvy_sign = dvy / dvy;
+						if (dvx_sign != new_dvx_sign || dvy_sign != new_dvy_sign) {
+							crit_point = true;
+						}
+
+						dvx_sign = new_dvx_sign;
+						dvy_sign = new_dvy_sign;
+					
+					}
+
 				average_step += sqrt(n->vx * n->vx + n->vy * n->vy);
 				nodes++;
 
-
-				if (counter > 0) {
+				if (!adaptive_read) {
 					bins[binx][biny].push_back(n);
 					streamline.push_back(*n);
-					counter = 0;
-					if (streamline.size() > 2) {
-						segment* s = new segment;
-						s->start = last_n;
-						//std::cout << s->start->x << std::endl;
-						s->end = n;
-						s->streamline_index = streamline_index;
-						s->streamline_segment_index = strealine_segment_index;
+					
+				}
+				else {
+					n_index++;
+					node_cache.push_back(*n);
+					if (crit_point) {
+						std::cout << "crit!" << std::endl;
+						crit_point = false;
+						//add the middle node between this feature point and the last node that was added
+						node* middle_n = (&node_cache[(n_index - last_added_index)/2]);
+						bins[binx][biny].push_back(middle_n);
+						streamline.push_back(*middle_n);
 
-						node* n_middle = new node;
-						n_middle->x = last_n->x + last_n->vx / 2;
-						n_middle->y = last_n->y + last_n->vy / 2;
-						n_middle->vx = last_n->vx;
-						n_middle->vy = last_n->vy;
+						//add this feature node
+						bins[binx][biny].push_back(n);
+						streamline.push_back(*n);
 
-						s->middle = n_middle;
-						if (last_s != nullptr) {
-							s->previous = last_s;
-							last_s->next = s;
-							last_s = s;
-							scounter++;
-							total_nodes++;
-						}
-						strealine_segment_index++;
-						if (new_segment_start) {
-							segment_starters.push_back(s);
-							new_segment_start = false;
-							last_s = s;
-						}
-
-						//add to bin
-						binx = (int)n->x % bin_width_segment;
-						biny = (int)n->y % bin_width_segment;
-						bins_segment[binx][biny].push_back(s);
+						last_added_index = n_index;
+						node_cache.clear();
 					}
 				}
-				counter++;
 			}
 			last_n = n;
-
+			
 		}
 		/*node* n1 = &streamline[0],
 			* n3 = &streamline[streamline.size()/2],

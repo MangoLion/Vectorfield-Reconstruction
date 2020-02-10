@@ -91,6 +91,8 @@ float err_min = 10000, err_max = -100000, err_avg = 0;
 Polyhedron* poly = NULL;
 int do_draw_arrows = 0, vis_option = 0, do_draw_streamlines = 0;
 
+int GRAPH_RESOLUTION = 1;
+
 int main(int argc, char* argv[])
 {
 	// turn on the glut package:

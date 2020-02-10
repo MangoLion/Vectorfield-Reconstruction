@@ -193,10 +193,83 @@ void raycast_segment(segment* s, int direction) {
 int skip_lines = 1, skip_nodes = 1;
 
 /**
+ * @brief loop through all streamlines, add segment based on the GRAPH_RESOLUTION
+ *
+ */
+void read_segments_from_sl() {
+	//clear previous segments
+	for (int i = 0; i < segment_starters.size(); i++) {
+		segment* s = segment_starters[i];
+		while (s != nullptr) {
+			delete s;
+			s = s->next;
+		}
+	}
+	segment_starters.clear();
+
+	segment* last_s = nullptr;
+	int total_nodes = 0;
+	for (int i = 0; i < streamlines.size(); i ++) {
+		std::vector<node> * streamline = (&streamlines[i]);
+
+		//skip if streamline only has one node
+		if (streamline->size() < 2)
+			continue;
+
+		//loop through each node in sl
+		for (int n = 0; n != streamline->size()-1;) {
+			//get next streamline node index based on GRAPH_RESOLUTION
+			int next_n = n + GRAPH_RESOLUTION;
+			if (next_n > streamline->size() - 1) {
+				next_n = streamline->size() - 1;
+			}
+
+
+			segment* s = new segment;
+			if (n == 0)
+				segment_starters.push_back(s);
+
+			s->start = &(*streamline)[n];
+			s->end = &(*streamline)[next_n];
+
+			s->streamline_index = i;
+			s->streamline_segment_index = n;
+
+			//increment node index!
+			n = next_n;
+
+			node* n_middle = new node;
+			n_middle->x = s->start->x + s->start->vx / 2;
+			n_middle->y = s->start->y + s->start->vy / 2;
+			n_middle->vx = s->start->vx;
+			n_middle->vy = s->start->vy;
+
+			s->middle = n_middle;
+			if (last_s != nullptr) {
+				s->previous = last_s;
+				last_s->next = s;
+				last_s = s;
+				total_nodes++;
+			}
+			int binx = (int)n_middle->x % 5,
+				biny = (int)n_middle->y % 5;
+
+			//add to bin
+			binx = (int)n_middle->x % bin_width_segment;
+			biny = (int)n_middle->y % bin_width_segment;
+			bins_segment[binx][biny].push_back(s);
+
+		}
+	}
+}
+
+/**
  * @brief loop through all segments (depend on the current segment resolution) to find their neighbors
  * 
  */
 void update_graph() {
+	read_segments_from_sl();
+
 	int counter = 0;
 	//#pragma omp parallel for
 	for (int i = 0; i < segment_starters.size(); i++) {

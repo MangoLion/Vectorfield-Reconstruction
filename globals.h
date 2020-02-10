@@ -55,4 +55,6 @@ extern int gridX, gridY;
 extern Polyhedron* poly;
 
 extern int do_draw_arrows, vis_option, do_draw_streamlines;
+
+extern int GRAPH_RESOLUTION;
 #endif // !vec_globals
