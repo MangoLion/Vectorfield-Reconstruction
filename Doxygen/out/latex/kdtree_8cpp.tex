@@ -1,0 +1,291 @@
+\hypertarget{kdtree_8cpp}{}\doxysection{D\+:/\+Academic/\+VReconstruction/src/\+Unused/kdtree.cpp File Reference}
+\label{kdtree_8cpp}\index{D:/Academic/VReconstruction/src/Unused/kdtree.cpp@{D:/Academic/VReconstruction/src/Unused/kdtree.cpp}}
+{\ttfamily \#include \char`\"{}kdtree.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{kdtree_8cpp_a435569c42a5df606d298562cdeebe3d9}{compare}} (const \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} \&p, const \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} \&q, int \mbox{\hyperlink{kdtree_8h_ae6fa959b9e8f9c638e0d82bf2c7dc5e7}{dim}})
+\item 
+bool \mbox{\hyperlink{kdtree_8cpp_ab829d8d9142d1ce48c7cd8cb7978b714}{compare\+\_\+x}} (const int p, const int q)
+\item 
+bool \mbox{\hyperlink{kdtree_8cpp_a1be0f10e4860f8f97974e6c4a2d9904d}{compare\+\_\+y}} (const int p, const int q)
+\item 
+bool \mbox{\hyperlink{kdtree_8cpp_ae391e3da5ca9c6f7d64f69a1f5d2823e}{comparept\+\_\+x}} (const \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} \&p, const \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} \&q)
+\item 
+bool \mbox{\hyperlink{kdtree_8cpp_acbda16462e4f819ae1f7df7c51690016}{comparept\+\_\+y}} (const \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} \&p, const \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} \&q)
+\item 
+double \mbox{\hyperlink{kdtree_8cpp_aa580a39d1bdd6f1d8e72a23fc605ac9c}{distance\+\_\+2d}} (\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} one, \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} two)
+\item 
+\mbox{\hyperlink{kdtree_8h_a7c65c3f47c1a2772149a2b15ce44ea35}{kdnode\+\_\+t}} $\ast$ \mbox{\hyperlink{kdtree_8cpp_a91b4119dd0f9b18db89e4b6a17c4f493}{make\+KDNode}} (double x, double y, int \mbox{\hyperlink{kdtree_8h_ae6fa959b9e8f9c638e0d82bf2c7dc5e7}{dim}}, int count)
+\item 
+\mbox{\hyperlink{kdtree_8h_aedef97c021942abd178beaab2e7ce1f4}{stnode\+\_\+t}} $\ast$ \mbox{\hyperlink{kdtree_8cpp_a136a4f45d7b56aa286680113d25f40d5}{make\+STNode}} (int first, int last, \mbox{\hyperlink{kdtree_8h_a7c65c3f47c1a2772149a2b15ce44ea35}{kdnode\+\_\+t}} $\ast$\mbox{\hyperlink{structnode}{node}}, bool child, int \mbox{\hyperlink{kdtree_8h_ae6fa959b9e8f9c638e0d82bf2c7dc5e7}{dim}})
+\item 
+void \mbox{\hyperlink{kdtree_8cpp_a4bec14fed5f2c97359b25b48cd4755a2}{build\+KDTree}} (std\+::vector$<$ int $>$ \&indexes, int \mbox{\hyperlink{kdtree_8h_ae6fa959b9e8f9c638e0d82bf2c7dc5e7}{dim}}, \mbox{\hyperlink{kdtree_8h_a7c65c3f47c1a2772149a2b15ce44ea35}{kdnode\+\_\+t}} $\ast$$\ast$root)
+\item 
+\mbox{\hyperlink{kdtree_8h_a7c65c3f47c1a2772149a2b15ce44ea35}{kdnode\+\_\+t}} $\ast$ \mbox{\hyperlink{kdtree_8cpp_af8fc5e963c6a34d13c4d834ead42fcf7}{build\+KDTree\+\_\+recurse}} (std\+::vector$<$ \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} $>$ \&\mbox{\hyperlink{kdtree_8h_aa6405c068358538ae9683035e6fa48ec}{pvec}}, int \mbox{\hyperlink{kdtree_8h_ae6fa959b9e8f9c638e0d82bf2c7dc5e7}{dim}})
+\item 
+void \mbox{\hyperlink{kdtree_8cpp_a8716ef05263fcc8ac47c9e6c9f8b0d36}{query}} (\mbox{\hyperlink{kdtree_8h_a7c65c3f47c1a2772149a2b15ce44ea35}{kdnode\+\_\+t}} $\ast$\mbox{\hyperlink{structnode}{node}}, double xmin, double xmax, double ymin, double ymax, std\+::vector$<$ \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} $>$ \&result)
+\item 
+void \mbox{\hyperlink{kdtree_8cpp_a083a699e9ef4e62a4a11ce5e69f86ee2}{rectangle\+\_\+query}} (\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} point\+\_\+one, \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} point\+\_\+two, \mbox{\hyperlink{class_k_d_tree}{KDTree}} kd, std\+::vector$<$ \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} $>$ \&result)
+\item 
+unsigned long \mbox{\hyperlink{kdtree_8cpp_a75b6f15a47e8f8756de4cc4cadf32b87}{rectangle\+\_\+count}} (\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} point\+\_\+one, \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} point\+\_\+two, \mbox{\hyperlink{class_k_d_tree}{KDTree}} kd)
+\item 
+void \mbox{\hyperlink{kdtree_8cpp_a88094208dc9ee923beeef5b594243bfa}{circle\+\_\+query}} (\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} point\+\_\+one, double radius, \mbox{\hyperlink{class_k_d_tree}{KDTree}} kd, std\+::vector$<$ \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} $>$ \&result)
+\item 
+unsigned long \mbox{\hyperlink{kdtree_8cpp_adae5ad8a0b3649e0f2fd11d9058cc6b5}{circle\+\_\+count}} (\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} point\+\_\+one, double radius, \mbox{\hyperlink{class_k_d_tree}{KDTree}} kd)
+\item 
+bool \mbox{\hyperlink{kdtree_8cpp_abc040ce8594931ac68fd030d0ee473a8}{find}} (\mbox{\hyperlink{kdtree_8h_a7c65c3f47c1a2772149a2b15ce44ea35}{kdnode\+\_\+t}} $\ast$curr, \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} p, int \mbox{\hyperlink{kdtree_8h_ae6fa959b9e8f9c638e0d82bf2c7dc5e7}{dim}})
+\item 
+bool \mbox{\hyperlink{kdtree_8cpp_a6b4e8c5fb2804533a94c511a86276712}{is\+Present}} (\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} p, \mbox{\hyperlink{class_k_d_tree}{KDTree}} kd)
+\item 
+double \mbox{\hyperlink{kdtree_8cpp_a9be572a10649a625403b95d82279c9b7}{find\+\_\+near\+\_\+temp}} (\mbox{\hyperlink{kdtree_8h_a7c65c3f47c1a2772149a2b15ce44ea35}{kdnode\+\_\+t}} $\ast$curr, \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} p, int \mbox{\hyperlink{kdtree_8h_ae6fa959b9e8f9c638e0d82bf2c7dc5e7}{dim}})
+\item 
+void \mbox{\hyperlink{kdtree_8cpp_ac6f9710357af0835bc31f445a46dfd29}{find\+\_\+nearest}} (\mbox{\hyperlink{kdtree_8h_a7c65c3f47c1a2772149a2b15ce44ea35}{kdnode\+\_\+t}} $\ast$curr, \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} p, int \mbox{\hyperlink{kdtree_8h_ae6fa959b9e8f9c638e0d82bf2c7dc5e7}{dim}}, double \&min, \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} $\ast$pt)
+\item 
+\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} $\ast$ \mbox{\hyperlink{kdtree_8cpp_a017777d5f5419e900e2c49cf25105d62}{nearest}} (\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} p, \mbox{\hyperlink{class_k_d_tree}{KDTree}} kd)
+\item 
+void \mbox{\hyperlink{kdtree_8cpp_ab484a542b0853966ba381e167fe4f32f}{traversal}} (\mbox{\hyperlink{class_k_d_tree}{KDTree}} kd)
+\item 
+void \mbox{\hyperlink{kdtree_8cpp_ace6660c9fcffca88bd0e28f48f773b65}{print\+\_\+pvec}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} $>$ \mbox{\hyperlink{kdtree_8cpp_aa6405c068358538ae9683035e6fa48ec}{pvec}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{kdtree_8cpp_a4bec14fed5f2c97359b25b48cd4755a2}\label{kdtree_8cpp_a4bec14fed5f2c97359b25b48cd4755a2}} 
+\index{kdtree.cpp@{kdtree.cpp}!buildKDTree@{buildKDTree}}
+\index{buildKDTree@{buildKDTree}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{buildKDTree()}{buildKDTree()}}
+{\footnotesize\ttfamily void build\+KDTree (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$ \&}]{indexes,  }\item[{int}]{dim,  }\item[{\mbox{\hyperlink{kdtree_8h_a7c65c3f47c1a2772149a2b15ce44ea35}{kdnode\+\_\+t}} $\ast$$\ast$}]{root }\end{DoxyParamCaption})}
+
+
+
+Definition at line 81 of file kdtree.\+cpp.
+
+\mbox{\Hypertarget{kdtree_8cpp_af8fc5e963c6a34d13c4d834ead42fcf7}\label{kdtree_8cpp_af8fc5e963c6a34d13c4d834ead42fcf7}} 
+\index{kdtree.cpp@{kdtree.cpp}!buildKDTree\_recurse@{buildKDTree\_recurse}}
+\index{buildKDTree\_recurse@{buildKDTree\_recurse}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{buildKDTree\_recurse()}{buildKDTree\_recurse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{kdtree_8h_a7c65c3f47c1a2772149a2b15ce44ea35}{kdnode\+\_\+t}}$\ast$ build\+KDTree\+\_\+recurse (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} $>$ \&}]{pvec,  }\item[{int}]{dim }\end{DoxyParamCaption})}
+
+
+
+Definition at line 161 of file kdtree.\+cpp.
+
+\mbox{\Hypertarget{kdtree_8cpp_adae5ad8a0b3649e0f2fd11d9058cc6b5}\label{kdtree_8cpp_adae5ad8a0b3649e0f2fd11d9058cc6b5}} 
+\index{kdtree.cpp@{kdtree.cpp}!circle\_count@{circle\_count}}
+\index{circle\_count@{circle\_count}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{circle\_count()}{circle\_count()}}
+{\footnotesize\ttfamily unsigned long circle\+\_\+count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}}}]{point\+\_\+one,  }\item[{double}]{radius,  }\item[{\mbox{\hyperlink{class_k_d_tree}{KDTree}}}]{kd }\end{DoxyParamCaption})}
+
+
+
+Definition at line 286 of file kdtree.\+cpp.
+
+\mbox{\Hypertarget{kdtree_8cpp_a88094208dc9ee923beeef5b594243bfa}\label{kdtree_8cpp_a88094208dc9ee923beeef5b594243bfa}} 
+\index{kdtree.cpp@{kdtree.cpp}!circle\_query@{circle\_query}}
+\index{circle\_query@{circle\_query}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{circle\_query()}{circle\_query()}}
+{\footnotesize\ttfamily void circle\+\_\+query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}}}]{point\+\_\+one,  }\item[{double}]{radius,  }\item[{\mbox{\hyperlink{class_k_d_tree}{KDTree}}}]{kd,  }\item[{std\+::vector$<$ \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} $>$ \&}]{result }\end{DoxyParamCaption})}
+
+
+
+Definition at line 267 of file kdtree.\+cpp.
+
+\mbox{\Hypertarget{kdtree_8cpp_a435569c42a5df606d298562cdeebe3d9}\label{kdtree_8cpp_a435569c42a5df606d298562cdeebe3d9}} 
+\index{kdtree.cpp@{kdtree.cpp}!compare@{compare}}
+\index{compare@{compare}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily double compare (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} \&}]{p,  }\item[{const \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} \&}]{q,  }\item[{int}]{dim }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file kdtree.\+cpp.
+
+\mbox{\Hypertarget{kdtree_8cpp_ab829d8d9142d1ce48c7cd8cb7978b714}\label{kdtree_8cpp_ab829d8d9142d1ce48c7cd8cb7978b714}} 
+\index{kdtree.cpp@{kdtree.cpp}!compare\_x@{compare\_x}}
+\index{compare\_x@{compare\_x}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{compare\_x()}{compare\_x()}}
+{\footnotesize\ttfamily bool compare\+\_\+x (\begin{DoxyParamCaption}\item[{const int}]{p,  }\item[{const int}]{q }\end{DoxyParamCaption})}
+
+
+
+Definition at line 16 of file kdtree.\+cpp.
+
+\mbox{\Hypertarget{kdtree_8cpp_a1be0f10e4860f8f97974e6c4a2d9904d}\label{kdtree_8cpp_a1be0f10e4860f8f97974e6c4a2d9904d}} 
+\index{kdtree.cpp@{kdtree.cpp}!compare\_y@{compare\_y}}
+\index{compare\_y@{compare\_y}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{compare\_y()}{compare\_y()}}
+{\footnotesize\ttfamily bool compare\+\_\+y (\begin{DoxyParamCaption}\item[{const int}]{p,  }\item[{const int}]{q }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file kdtree.\+cpp.
+
+\mbox{\Hypertarget{kdtree_8cpp_ae391e3da5ca9c6f7d64f69a1f5d2823e}\label{kdtree_8cpp_ae391e3da5ca9c6f7d64f69a1f5d2823e}} 
+\index{kdtree.cpp@{kdtree.cpp}!comparept\_x@{comparept\_x}}
+\index{comparept\_x@{comparept\_x}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{comparept\_x()}{comparept\_x()}}
+{\footnotesize\ttfamily bool comparept\+\_\+x (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} \&}]{p,  }\item[{const \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} \&}]{q }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file kdtree.\+cpp.
+
+\mbox{\Hypertarget{kdtree_8cpp_acbda16462e4f819ae1f7df7c51690016}\label{kdtree_8cpp_acbda16462e4f819ae1f7df7c51690016}} 
+\index{kdtree.cpp@{kdtree.cpp}!comparept\_y@{comparept\_y}}
+\index{comparept\_y@{comparept\_y}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{comparept\_y()}{comparept\_y()}}
+{\footnotesize\ttfamily bool comparept\+\_\+y (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} \&}]{p,  }\item[{const \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} \&}]{q }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file kdtree.\+cpp.
+
+\mbox{\Hypertarget{kdtree_8cpp_aa580a39d1bdd6f1d8e72a23fc605ac9c}\label{kdtree_8cpp_aa580a39d1bdd6f1d8e72a23fc605ac9c}} 
+\index{kdtree.cpp@{kdtree.cpp}!distance\_2d@{distance\_2d}}
+\index{distance\_2d@{distance\_2d}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{distance\_2d()}{distance\_2d()}}
+{\footnotesize\ttfamily double distance\+\_\+2d (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}}}]{one,  }\item[{\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}}}]{two }\end{DoxyParamCaption})}
+
+
+
+Definition at line 33 of file kdtree.\+cpp.
+
+\mbox{\Hypertarget{kdtree_8cpp_abc040ce8594931ac68fd030d0ee473a8}\label{kdtree_8cpp_abc040ce8594931ac68fd030d0ee473a8}} 
+\index{kdtree.cpp@{kdtree.cpp}!find@{find}}
+\index{find@{find}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily bool find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kdtree_8h_a7c65c3f47c1a2772149a2b15ce44ea35}{kdnode\+\_\+t}} $\ast$}]{curr,  }\item[{\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}}}]{p,  }\item[{int}]{dim }\end{DoxyParamCaption})}
+
+
+
+Definition at line 294 of file kdtree.\+cpp.
+
+\mbox{\Hypertarget{kdtree_8cpp_a9be572a10649a625403b95d82279c9b7}\label{kdtree_8cpp_a9be572a10649a625403b95d82279c9b7}} 
+\index{kdtree.cpp@{kdtree.cpp}!find\_near\_temp@{find\_near\_temp}}
+\index{find\_near\_temp@{find\_near\_temp}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{find\_near\_temp()}{find\_near\_temp()}}
+{\footnotesize\ttfamily double find\+\_\+near\+\_\+temp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kdtree_8h_a7c65c3f47c1a2772149a2b15ce44ea35}{kdnode\+\_\+t}} $\ast$}]{curr,  }\item[{\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}}}]{p,  }\item[{int}]{dim }\end{DoxyParamCaption})}
+
+
+
+Definition at line 327 of file kdtree.\+cpp.
+
+\mbox{\Hypertarget{kdtree_8cpp_ac6f9710357af0835bc31f445a46dfd29}\label{kdtree_8cpp_ac6f9710357af0835bc31f445a46dfd29}} 
+\index{kdtree.cpp@{kdtree.cpp}!find\_nearest@{find\_nearest}}
+\index{find\_nearest@{find\_nearest}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{find\_nearest()}{find\_nearest()}}
+{\footnotesize\ttfamily void find\+\_\+nearest (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kdtree_8h_a7c65c3f47c1a2772149a2b15ce44ea35}{kdnode\+\_\+t}} $\ast$}]{curr,  }\item[{\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}}}]{p,  }\item[{int}]{dim,  }\item[{double \&}]{min,  }\item[{\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} $\ast$}]{pt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 352 of file kdtree.\+cpp.
+
+\mbox{\Hypertarget{kdtree_8cpp_a6b4e8c5fb2804533a94c511a86276712}\label{kdtree_8cpp_a6b4e8c5fb2804533a94c511a86276712}} 
+\index{kdtree.cpp@{kdtree.cpp}!isPresent@{isPresent}}
+\index{isPresent@{isPresent}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{isPresent()}{isPresent()}}
+{\footnotesize\ttfamily bool is\+Present (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}}}]{p,  }\item[{\mbox{\hyperlink{class_k_d_tree}{KDTree}}}]{kd }\end{DoxyParamCaption})}
+
+
+
+Definition at line 318 of file kdtree.\+cpp.
+
+\mbox{\Hypertarget{kdtree_8cpp_a91b4119dd0f9b18db89e4b6a17c4f493}\label{kdtree_8cpp_a91b4119dd0f9b18db89e4b6a17c4f493}} 
+\index{kdtree.cpp@{kdtree.cpp}!makeKDNode@{makeKDNode}}
+\index{makeKDNode@{makeKDNode}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{makeKDNode()}{makeKDNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{kdtree_8h_a7c65c3f47c1a2772149a2b15ce44ea35}{kdnode\+\_\+t}}$\ast$ make\+KDNode (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{int}]{dim,  }\item[{int}]{count }\end{DoxyParamCaption})}
+
+
+
+Definition at line 39 of file kdtree.\+cpp.
+
+\mbox{\Hypertarget{kdtree_8cpp_a136a4f45d7b56aa286680113d25f40d5}\label{kdtree_8cpp_a136a4f45d7b56aa286680113d25f40d5}} 
+\index{kdtree.cpp@{kdtree.cpp}!makeSTNode@{makeSTNode}}
+\index{makeSTNode@{makeSTNode}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{makeSTNode()}{makeSTNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{kdtree_8h_aedef97c021942abd178beaab2e7ce1f4}{stnode\+\_\+t}}$\ast$ make\+STNode (\begin{DoxyParamCaption}\item[{int}]{first,  }\item[{int}]{last,  }\item[{\mbox{\hyperlink{kdtree_8h_a7c65c3f47c1a2772149a2b15ce44ea35}{kdnode\+\_\+t}} $\ast$}]{node,  }\item[{bool}]{child,  }\item[{int}]{dim }\end{DoxyParamCaption})}
+
+
+
+Definition at line 52 of file kdtree.\+cpp.
+
+\mbox{\Hypertarget{kdtree_8cpp_a017777d5f5419e900e2c49cf25105d62}\label{kdtree_8cpp_a017777d5f5419e900e2c49cf25105d62}} 
+\index{kdtree.cpp@{kdtree.cpp}!nearest@{nearest}}
+\index{nearest@{nearest}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{nearest()}{nearest()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}}$\ast$ nearest (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}}}]{p,  }\item[{\mbox{\hyperlink{class_k_d_tree}{KDTree}}}]{kd }\end{DoxyParamCaption})}
+
+
+
+Definition at line 382 of file kdtree.\+cpp.
+
+\mbox{\Hypertarget{kdtree_8cpp_ace6660c9fcffca88bd0e28f48f773b65}\label{kdtree_8cpp_ace6660c9fcffca88bd0e28f48f773b65}} 
+\index{kdtree.cpp@{kdtree.cpp}!print\_pvec@{print\_pvec}}
+\index{print\_pvec@{print\_pvec}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_pvec()}{print\_pvec()}}
+{\footnotesize\ttfamily void print\+\_\+pvec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 416 of file kdtree.\+cpp.
+
+\mbox{\Hypertarget{kdtree_8cpp_a8716ef05263fcc8ac47c9e6c9f8b0d36}\label{kdtree_8cpp_a8716ef05263fcc8ac47c9e6c9f8b0d36}} 
+\index{kdtree.cpp@{kdtree.cpp}!query@{query}}
+\index{query@{query}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}}
+{\footnotesize\ttfamily void query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kdtree_8h_a7c65c3f47c1a2772149a2b15ce44ea35}{kdnode\+\_\+t}} $\ast$}]{node,  }\item[{double}]{xmin,  }\item[{double}]{xmax,  }\item[{double}]{ymin,  }\item[{double}]{ymax,  }\item[{std\+::vector$<$ \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} $>$ \&}]{result }\end{DoxyParamCaption})}
+
+
+
+Definition at line 212 of file kdtree.\+cpp.
+
+\mbox{\Hypertarget{kdtree_8cpp_a75b6f15a47e8f8756de4cc4cadf32b87}\label{kdtree_8cpp_a75b6f15a47e8f8756de4cc4cadf32b87}} 
+\index{kdtree.cpp@{kdtree.cpp}!rectangle\_count@{rectangle\_count}}
+\index{rectangle\_count@{rectangle\_count}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{rectangle\_count()}{rectangle\_count()}}
+{\footnotesize\ttfamily unsigned long rectangle\+\_\+count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}}}]{point\+\_\+one,  }\item[{\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}}}]{point\+\_\+two,  }\item[{\mbox{\hyperlink{class_k_d_tree}{KDTree}}}]{kd }\end{DoxyParamCaption})}
+
+
+
+Definition at line 259 of file kdtree.\+cpp.
+
+\mbox{\Hypertarget{kdtree_8cpp_a083a699e9ef4e62a4a11ce5e69f86ee2}\label{kdtree_8cpp_a083a699e9ef4e62a4a11ce5e69f86ee2}} 
+\index{kdtree.cpp@{kdtree.cpp}!rectangle\_query@{rectangle\_query}}
+\index{rectangle\_query@{rectangle\_query}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{rectangle\_query()}{rectangle\_query()}}
+{\footnotesize\ttfamily void rectangle\+\_\+query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}}}]{point\+\_\+one,  }\item[{\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}}}]{point\+\_\+two,  }\item[{\mbox{\hyperlink{class_k_d_tree}{KDTree}}}]{kd,  }\item[{std\+::vector$<$ \mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}} $>$ \&}]{result }\end{DoxyParamCaption})}
+
+
+
+Definition at line 246 of file kdtree.\+cpp.
+
+\mbox{\Hypertarget{kdtree_8cpp_ab484a542b0853966ba381e167fe4f32f}\label{kdtree_8cpp_ab484a542b0853966ba381e167fe4f32f}} 
+\index{kdtree.cpp@{kdtree.cpp}!traversal@{traversal}}
+\index{traversal@{traversal}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{traversal()}{traversal()}}
+{\footnotesize\ttfamily void traversal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_k_d_tree}{KDTree}}}]{kd }\end{DoxyParamCaption})}
+
+
+
+Definition at line 399 of file kdtree.\+cpp.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{kdtree_8cpp_aa6405c068358538ae9683035e6fa48ec}\label{kdtree_8cpp_aa6405c068358538ae9683035e6fa48ec}} 
+\index{kdtree.cpp@{kdtree.cpp}!pvec@{pvec}}
+\index{pvec@{pvec}!kdtree.cpp@{kdtree.cpp}}
+\doxysubsubsection{\texorpdfstring{pvec}{pvec}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{kdtree_8h_a9dab6ddc135308622c152a63549e5656}{point\+\_\+t}}$>$ pvec}
+
+
+
+Definition at line 4 of file kdtree.\+cpp.
+

@@ -1,0 +1,93 @@
+\hypertarget{kd_tree_helper_01copy_8cpp}{}\doxysection{D\+:/\+Academic/\+VReconstruction/src/\+Point\+Locator/kd\+Tree\+Helper copy.\+cpp File Reference}
+\label{kd_tree_helper_01copy_8cpp}\index{D:/Academic/VReconstruction/src/PointLocator/kdTreeHelper copy.cpp@{D:/Academic/VReconstruction/src/PointLocator/kdTreeHelper copy.cpp}}
+{\ttfamily \#include $<$vtk\+Actor.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Camera.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Poly\+Data\+Mapper.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Property.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Render\+Window.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Render\+Window\+Interactor.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Renderer.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Cell\+Array.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Double\+Array.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Point\+Data.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Point\+Source.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Points.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Id\+List.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Incremental\+Octree\+Point\+Locator.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Data\+Set.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Smart\+Pointer.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Lookup\+Table.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Named\+Colors.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}kd\+Tree\+Helper.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{kd_tree_helper_01copy_8cpp_a9b39a3c36f6b66584b9ad17c91c6fb9a}{set\+Kd\+Tree\+Dataset}} (vtk\+Smart\+Pointer$<$ vtk\+Data\+Set $>$ poly\+Data)
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Id\+List $>$ \mbox{\hyperlink{kd_tree_helper_01copy_8cpp_aaed2ac7662b5a462b1f69ad1e5d07829}{Kd\+Tree\+Find\+Points\+Within\+Radius}} (double radius, double $\ast$pt)
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Id\+List $>$ \mbox{\hyperlink{kd_tree_helper_01copy_8cpp_adc631595b35a00305e9660153c71cfa9}{Kd\+Tree\+Find\+Closest\+KPoints}} (int k, double $\ast$pt)
+\item 
+vtk\+Id\+Type \mbox{\hyperlink{kd_tree_helper_01copy_8cpp_a9387bbcb8ea027f47f616352f7f3f256}{Kd\+Tree\+Find\+Closest\+Point}} (double $\ast$pt)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{kd_tree_helper_01copy_8cpp_a5fc740097f35c0d5c4a79cc71815ff7b}{CRITICAL\+\_\+\+EXCEPTION}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{kd_tree_helper_01copy_8cpp_adc631595b35a00305e9660153c71cfa9}\label{kd_tree_helper_01copy_8cpp_adc631595b35a00305e9660153c71cfa9}} 
+\index{kdTreeHelper copy.cpp@{kdTreeHelper copy.cpp}!KdTreeFindClosestKPoints@{KdTreeFindClosestKPoints}}
+\index{KdTreeFindClosestKPoints@{KdTreeFindClosestKPoints}!kdTreeHelper copy.cpp@{kdTreeHelper copy.cpp}}
+\doxysubsubsection{\texorpdfstring{KdTreeFindClosestKPoints()}{KdTreeFindClosestKPoints()}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Id\+List$>$ Kd\+Tree\+Find\+Closest\+KPoints (\begin{DoxyParamCaption}\item[{int}]{k,  }\item[{double $\ast$}]{pt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 43 of file kd\+Tree\+Helper copy.\+cpp.
+
+\mbox{\Hypertarget{kd_tree_helper_01copy_8cpp_a9387bbcb8ea027f47f616352f7f3f256}\label{kd_tree_helper_01copy_8cpp_a9387bbcb8ea027f47f616352f7f3f256}} 
+\index{kdTreeHelper copy.cpp@{kdTreeHelper copy.cpp}!KdTreeFindClosestPoint@{KdTreeFindClosestPoint}}
+\index{KdTreeFindClosestPoint@{KdTreeFindClosestPoint}!kdTreeHelper copy.cpp@{kdTreeHelper copy.cpp}}
+\doxysubsubsection{\texorpdfstring{KdTreeFindClosestPoint()}{KdTreeFindClosestPoint()}}
+{\footnotesize\ttfamily vtk\+Id\+Type Kd\+Tree\+Find\+Closest\+Point (\begin{DoxyParamCaption}\item[{double $\ast$}]{pt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 51 of file kd\+Tree\+Helper copy.\+cpp.
+
+\mbox{\Hypertarget{kd_tree_helper_01copy_8cpp_aaed2ac7662b5a462b1f69ad1e5d07829}\label{kd_tree_helper_01copy_8cpp_aaed2ac7662b5a462b1f69ad1e5d07829}} 
+\index{kdTreeHelper copy.cpp@{kdTreeHelper copy.cpp}!KdTreeFindPointsWithinRadius@{KdTreeFindPointsWithinRadius}}
+\index{KdTreeFindPointsWithinRadius@{KdTreeFindPointsWithinRadius}!kdTreeHelper copy.cpp@{kdTreeHelper copy.cpp}}
+\doxysubsubsection{\texorpdfstring{KdTreeFindPointsWithinRadius()}{KdTreeFindPointsWithinRadius()}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Id\+List$>$ Kd\+Tree\+Find\+Points\+Within\+Radius (\begin{DoxyParamCaption}\item[{double}]{radius,  }\item[{double $\ast$}]{pt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file kd\+Tree\+Helper copy.\+cpp.
+
+\mbox{\Hypertarget{kd_tree_helper_01copy_8cpp_a9b39a3c36f6b66584b9ad17c91c6fb9a}\label{kd_tree_helper_01copy_8cpp_a9b39a3c36f6b66584b9ad17c91c6fb9a}} 
+\index{kdTreeHelper copy.cpp@{kdTreeHelper copy.cpp}!setKdTreeDataset@{setKdTreeDataset}}
+\index{setKdTreeDataset@{setKdTreeDataset}!kdTreeHelper copy.cpp@{kdTreeHelper copy.cpp}}
+\doxysubsubsection{\texorpdfstring{setKdTreeDataset()}{setKdTreeDataset()}}
+{\footnotesize\ttfamily void set\+Kd\+Tree\+Dataset (\begin{DoxyParamCaption}\item[{vtk\+Smart\+Pointer$<$ vtk\+Data\+Set $>$}]{poly\+Data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 28 of file kd\+Tree\+Helper copy.\+cpp.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{kd_tree_helper_01copy_8cpp_a5fc740097f35c0d5c4a79cc71815ff7b}\label{kd_tree_helper_01copy_8cpp_a5fc740097f35c0d5c4a79cc71815ff7b}} 
+\index{kdTreeHelper copy.cpp@{kdTreeHelper copy.cpp}!CRITICAL\_EXCEPTION@{CRITICAL\_EXCEPTION}}
+\index{CRITICAL\_EXCEPTION@{CRITICAL\_EXCEPTION}!kdTreeHelper copy.cpp@{kdTreeHelper copy.cpp}}
+\doxysubsubsection{\texorpdfstring{CRITICAL\_EXCEPTION}{CRITICAL\_EXCEPTION}}
+{\footnotesize\ttfamily bool CRITICAL\+\_\+\+EXCEPTION = false}
+
+
+
+Definition at line 25 of file kd\+Tree\+Helper copy.\+cpp.
+

@@ -1,0 +1,507 @@
+\hypertarget{globals_8h}{}\doxysection{D\+:/\+Academic/\+VReconstruction/src/globals.h File Reference}
+\label{globals_8h}\index{D:/Academic/VReconstruction/src/globals.h@{D:/Academic/VReconstruction/src/globals.h}}
+{\ttfamily \#include \char`\"{}Unused/\+Skeleton.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Unused/kdtree.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vtk\+Structured\+Points.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{globals_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}}~3.\+14159265358979323846
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$ $>$ \mbox{\hyperlink{globals_8h_a3c581467559c6f7d5e94c51ed224488c}{streamlines}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structsegment}{segment}} $\ast$ $>$ \mbox{\hyperlink{globals_8h_ac7498a51543de6df85754add7616524a}{segment\+\_\+starters}}
+\item 
+\mbox{\hyperlink{structsegment}{segment}} $\ast$$\ast$ \mbox{\hyperlink{globals_8h_af9e2a3a397dcf1838f3280d62efbb368}{all\+\_\+segments}}
+\item 
+int \mbox{\hyperlink{globals_8h_ac0148c423a5b3eaaa40ea9e0450f85a4}{total\+\_\+nodes}}
+\item 
+float \mbox{\hyperlink{globals_8h_a0a8d61e6c17c6e1b3e37e783ee86e792}{matrix\+\_\+region\+\_\+x1}}
+\item 
+float \mbox{\hyperlink{globals_8h_a59816c4f666c2c347067cf5d41d0ba3b}{matrix\+\_\+region\+\_\+x2}}
+\item 
+float \mbox{\hyperlink{globals_8h_aea00a1e6fb3e9e23968dc5df9e55d811}{matrix\+\_\+region\+\_\+y1}}
+\item 
+float \mbox{\hyperlink{globals_8h_a241aec6ac1e6dfaf502007fc513e7da4}{matrix\+\_\+region\+\_\+y2}}
+\item 
+float \mbox{\hyperlink{globals_8h_a5e4753aa51186eda91a7d7e28de76359}{matrix\+\_\+region\+\_\+z1}}
+\item 
+float \mbox{\hyperlink{globals_8h_a4416c6df1243c6b4935f42d30e02449b}{matrix\+\_\+region\+\_\+z2}}
+\item 
+float \mbox{\hyperlink{globals_8h_aab64cb526a8b2a329a53e1051ca83e04}{SL\+\_\+\+LENGTH}}
+\item 
+\mbox{\hyperlink{structsegment}{segment}} \mbox{\hyperlink{globals_8h_aa17390f047a29394466558ec9ed04637}{seg\+\_\+base}}
+\item 
+\mbox{\hyperlink{structsegment}{segment}} $\ast$ \mbox{\hyperlink{globals_8h_a737fdc7f9a6146e2844d350d8af36df8}{seg\+\_\+neighbors}}
+\item 
+int \mbox{\hyperlink{globals_8h_aa8115d2efbe70fe88ce65698a7c822f0}{seg\+\_\+neighbors\+\_\+num}}
+\item 
+bool \mbox{\hyperlink{globals_8h_aee307a2d9d317ccd673d146589e7dfa8}{RECON\+\_\+\+USE\+\_\+\+NEIGHBORS}}
+\begin{DoxyCompactList}\small\item\em global parameters for use in all reconstruction methods \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{globals_8h_a892dbb74461d98d321131a20881ec844}{RECON\+\_\+\+RECOUNT\+\_\+\+AVG}}
+\item 
+int \mbox{\hyperlink{globals_8h_abff99f1494024375d99d2d27118cd054}{RECON\+\_\+\+K\+\_\+\+NEIGHBORS}}
+\item 
+int \mbox{\hyperlink{globals_8h_a2c757ebd52181149111fba35bc34672d}{RECON\+\_\+\+EXCLUDED}}
+\item 
+float \mbox{\hyperlink{globals_8h_abf94e534975e96343192f5fbd8890bd6}{RECON\+\_\+\+EXCLUDE\+\_\+\+THRESHOLD}}
+\item 
+float \mbox{\hyperlink{globals_8h_ad369ab96ebde4b09102c400562c9ada2}{v\+\_\+diff\+\_\+average}}
+\begin{DoxyCompactList}\small\item\em trackers for average difference in vector values \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{globals_8h_a48dc64fa95d54b85644d5c92c38f6066}{v\+\_\+diff\+\_\+counter}}
+\item 
+float \mbox{\hyperlink{globals_8h_a81ac4748f1246bc220bf660cedfd305e}{angle\+\_\+diff\+\_\+avg}}
+\item 
+int \mbox{\hyperlink{globals_8h_af32f9602c942000569f30253221e73f0}{angle\+\_\+diff\+\_\+c}}
+\item 
+int \mbox{\hyperlink{globals_8h_aff9b26ec95fe7c3951b7b75125e6ece8}{avg\+\_\+angle\+\_\+diff}}
+\item 
+int \mbox{\hyperlink{globals_8h_a10e0b1ea070ec97ad7b40ac0d6037d6c}{angle\+\_\+diff\+\_\+counter}}
+\item 
+float \mbox{\hyperlink{globals_8h_a25ab2a94f0f1b95742d2aae361c3c267}{stdev\+\_\+global}}
+\item 
+float \mbox{\hyperlink{globals_8h_a65905ef4b5038304e3defa0a868b12b5}{P\+\_\+\+RADAR}}
+\item 
+float \mbox{\hyperlink{globals_8h_ae734d665af90304a12b1985d89ef8944}{P\+\_\+\+RADAR\+\_\+\+LEVEL}}
+\item 
+bool \mbox{\hyperlink{globals_8h_a6f3ec8184718760a10041561bba7079a}{P\+\_\+\+NORMALIZE}}
+\item 
+float \mbox{\hyperlink{globals_8h_aff7a36cee9847894a080b75b67de15e3}{P\+\_\+\+THRESHOLD\+\_\+\+ANGLE}}
+\item 
+float \mbox{\hyperlink{globals_8h_ab63a1a51a6de9f2d69b50befb960ef56}{P\+\_\+\+THRESHOLD\+\_\+\+VELOCITY}}
+\item 
+bool \mbox{\hyperlink{globals_8h_acbb824d8e99bb888004ec6a57c2c9cd7}{P\+\_\+\+USE\+\_\+\+SEGMENTS}}
+\item 
+int \mbox{\hyperlink{globals_8h_aa1ec3315000133e08b718647998fc556}{P\+\_\+\+SKIPLINES}}
+\item 
+int \mbox{\hyperlink{globals_8h_a6e98757f9ba7bcacaa918a0358787565}{P\+\_\+\+SKIPNODES}}
+\item 
+std\+::string \mbox{\hyperlink{globals_8h_a6a3fd764d4562c642a4237ac986f4072}{P\+\_\+\+DATASET}}
+\item 
+std\+::string \mbox{\hyperlink{globals_8h_a7126b42d43966130269899f0c75fb057}{P\+\_\+\+TESTID}}
+\item 
+std\+::string \mbox{\hyperlink{globals_8h_a5f8d2b4ce2b5afd3a06f27c0b92174d0}{P\+\_\+\+TESTPARAMS}}
+\item 
+float \mbox{\hyperlink{globals_8h_a8a371f37d10006ffee1455a2ca260450}{debug\+A\+\_\+xyz}} \mbox{[}3\mbox{]}
+\item 
+float \mbox{\hyperlink{globals_8h_a3e83175648ef788c874b1310573bfe1a}{debug\+B\+\_\+xyz}} \mbox{[}3\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{globals_8h_ae71449b1cc6e6250b91f539153a7a0d3}\label{globals_8h_ae71449b1cc6e6250b91f539153a7a0d3}} 
+\index{globals.h@{globals.h}!M\_PI@{M\_PI}}
+\index{M\_PI@{M\_PI}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{M\_PI}{M\_PI}}
+{\footnotesize\ttfamily \#define M\+\_\+\+PI~3.\+14159265358979323846}
+
+
+
+Definition at line 46 of file globals.\+h.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{globals_8h_af9e2a3a397dcf1838f3280d62efbb368}\label{globals_8h_af9e2a3a397dcf1838f3280d62efbb368}} 
+\index{globals.h@{globals.h}!all\_segments@{all\_segments}}
+\index{all\_segments@{all\_segments}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{all\_segments}{all\_segments}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsegment}{segment}}$\ast$$\ast$ all\+\_\+segments\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 67 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a81ac4748f1246bc220bf660cedfd305e}\label{globals_8h_a81ac4748f1246bc220bf660cedfd305e}} 
+\index{globals.h@{globals.h}!angle\_diff\_avg@{angle\_diff\_avg}}
+\index{angle\_diff\_avg@{angle\_diff\_avg}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{angle\_diff\_avg}{angle\_diff\_avg}}
+{\footnotesize\ttfamily float angle\+\_\+diff\+\_\+avg}
+
+
+
+Definition at line 25 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_af32f9602c942000569f30253221e73f0}\label{globals_8h_af32f9602c942000569f30253221e73f0}} 
+\index{globals.h@{globals.h}!angle\_diff\_c@{angle\_diff\_c}}
+\index{angle\_diff\_c@{angle\_diff\_c}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{angle\_diff\_c}{angle\_diff\_c}}
+{\footnotesize\ttfamily int angle\+\_\+diff\+\_\+c\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 9 of file globals.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a10e0b1ea070ec97ad7b40ac0d6037d6c}\label{globals_8h_a10e0b1ea070ec97ad7b40ac0d6037d6c}} 
+\index{globals.h@{globals.h}!angle\_diff\_counter@{angle\_diff\_counter}}
+\index{angle\_diff\_counter@{angle\_diff\_counter}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{angle\_diff\_counter}{angle\_diff\_counter}}
+{\footnotesize\ttfamily int angle\+\_\+diff\+\_\+counter}
+
+
+
+Definition at line 26 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_aff9b26ec95fe7c3951b7b75125e6ece8}\label{globals_8h_aff9b26ec95fe7c3951b7b75125e6ece8}} 
+\index{globals.h@{globals.h}!avg\_angle\_diff@{avg\_angle\_diff}}
+\index{avg\_angle\_diff@{avg\_angle\_diff}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{avg\_angle\_diff}{avg\_angle\_diff}}
+{\footnotesize\ttfamily int avg\+\_\+angle\+\_\+diff}
+
+
+
+Definition at line 26 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a8a371f37d10006ffee1455a2ca260450}\label{globals_8h_a8a371f37d10006ffee1455a2ca260450}} 
+\index{globals.h@{globals.h}!debugA\_xyz@{debugA\_xyz}}
+\index{debugA\_xyz@{debugA\_xyz}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{debugA\_xyz}{debugA\_xyz}}
+{\footnotesize\ttfamily float debug\+A\+\_\+xyz\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 35 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a3e83175648ef788c874b1310573bfe1a}\label{globals_8h_a3e83175648ef788c874b1310573bfe1a}} 
+\index{globals.h@{globals.h}!debugB\_xyz@{debugB\_xyz}}
+\index{debugB\_xyz@{debugB\_xyz}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{debugB\_xyz}{debugB\_xyz}}
+{\footnotesize\ttfamily float debug\+B\+\_\+xyz\mbox{[}3\mbox{]}}
+
+
+
+Definition at line 44 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a0a8d61e6c17c6e1b3e37e783ee86e792}\label{globals_8h_a0a8d61e6c17c6e1b3e37e783ee86e792}} 
+\index{globals.h@{globals.h}!matrix\_region\_x1@{matrix\_region\_x1}}
+\index{matrix\_region\_x1@{matrix\_region\_x1}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{matrix\_region\_x1}{matrix\_region\_x1}}
+{\footnotesize\ttfamily float matrix\+\_\+region\+\_\+x1\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 42 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a59816c4f666c2c347067cf5d41d0ba3b}\label{globals_8h_a59816c4f666c2c347067cf5d41d0ba3b}} 
+\index{globals.h@{globals.h}!matrix\_region\_x2@{matrix\_region\_x2}}
+\index{matrix\_region\_x2@{matrix\_region\_x2}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{matrix\_region\_x2}{matrix\_region\_x2}}
+{\footnotesize\ttfamily float matrix\+\_\+region\+\_\+x2}
+
+
+
+Definition at line 12 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_aea00a1e6fb3e9e23968dc5df9e55d811}\label{globals_8h_aea00a1e6fb3e9e23968dc5df9e55d811}} 
+\index{globals.h@{globals.h}!matrix\_region\_y1@{matrix\_region\_y1}}
+\index{matrix\_region\_y1@{matrix\_region\_y1}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{matrix\_region\_y1}{matrix\_region\_y1}}
+{\footnotesize\ttfamily float matrix\+\_\+region\+\_\+y1}
+
+
+
+Definition at line 12 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a241aec6ac1e6dfaf502007fc513e7da4}\label{globals_8h_a241aec6ac1e6dfaf502007fc513e7da4}} 
+\index{globals.h@{globals.h}!matrix\_region\_y2@{matrix\_region\_y2}}
+\index{matrix\_region\_y2@{matrix\_region\_y2}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{matrix\_region\_y2}{matrix\_region\_y2}}
+{\footnotesize\ttfamily float matrix\+\_\+region\+\_\+y2}
+
+
+
+Definition at line 12 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a5e4753aa51186eda91a7d7e28de76359}\label{globals_8h_a5e4753aa51186eda91a7d7e28de76359}} 
+\index{globals.h@{globals.h}!matrix\_region\_z1@{matrix\_region\_z1}}
+\index{matrix\_region\_z1@{matrix\_region\_z1}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{matrix\_region\_z1}{matrix\_region\_z1}}
+{\footnotesize\ttfamily float matrix\+\_\+region\+\_\+z1}
+
+
+
+Definition at line 12 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a4416c6df1243c6b4935f42d30e02449b}\label{globals_8h_a4416c6df1243c6b4935f42d30e02449b}} 
+\index{globals.h@{globals.h}!matrix\_region\_z2@{matrix\_region\_z2}}
+\index{matrix\_region\_z2@{matrix\_region\_z2}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{matrix\_region\_z2}{matrix\_region\_z2}}
+{\footnotesize\ttfamily float matrix\+\_\+region\+\_\+z2}
+
+
+
+Definition at line 12 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a6a3fd764d4562c642a4237ac986f4072}\label{globals_8h_a6a3fd764d4562c642a4237ac986f4072}} 
+\index{globals.h@{globals.h}!P\_DATASET@{P\_DATASET}}
+\index{P\_DATASET@{P\_DATASET}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{P\_DATASET}{P\_DATASET}}
+{\footnotesize\ttfamily std\+::string P\+\_\+\+DATASET\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 25 of file globals.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a6f3ec8184718760a10041561bba7079a}\label{globals_8h_a6f3ec8184718760a10041561bba7079a}} 
+\index{globals.h@{globals.h}!P\_NORMALIZE@{P\_NORMALIZE}}
+\index{P\_NORMALIZE@{P\_NORMALIZE}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{P\_NORMALIZE}{P\_NORMALIZE}}
+{\footnotesize\ttfamily bool P\+\_\+\+NORMALIZE\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 20 of file globals.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a65905ef4b5038304e3defa0a868b12b5}\label{globals_8h_a65905ef4b5038304e3defa0a868b12b5}} 
+\index{globals.h@{globals.h}!P\_RADAR@{P\_RADAR}}
+\index{P\_RADAR@{P\_RADAR}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{P\_RADAR}{P\_RADAR}}
+{\footnotesize\ttfamily float P\+\_\+\+RADAR\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 19 of file globals.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_ae734d665af90304a12b1985d89ef8944}\label{globals_8h_ae734d665af90304a12b1985d89ef8944}} 
+\index{globals.h@{globals.h}!P\_RADAR\_LEVEL@{P\_RADAR\_LEVEL}}
+\index{P\_RADAR\_LEVEL@{P\_RADAR\_LEVEL}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{P\_RADAR\_LEVEL}{P\_RADAR\_LEVEL}}
+{\footnotesize\ttfamily float P\+\_\+\+RADAR\+\_\+\+LEVEL}
+
+
+
+Definition at line 29 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_aa1ec3315000133e08b718647998fc556}\label{globals_8h_aa1ec3315000133e08b718647998fc556}} 
+\index{globals.h@{globals.h}!P\_SKIPLINES@{P\_SKIPLINES}}
+\index{P\_SKIPLINES@{P\_SKIPLINES}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{P\_SKIPLINES}{P\_SKIPLINES}}
+{\footnotesize\ttfamily int P\+\_\+\+SKIPLINES\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 24 of file globals.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a6e98757f9ba7bcacaa918a0358787565}\label{globals_8h_a6e98757f9ba7bcacaa918a0358787565}} 
+\index{globals.h@{globals.h}!P\_SKIPNODES@{P\_SKIPNODES}}
+\index{P\_SKIPNODES@{P\_SKIPNODES}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{P\_SKIPNODES}{P\_SKIPNODES}}
+{\footnotesize\ttfamily int P\+\_\+\+SKIPNODES}
+
+
+
+Definition at line 34 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_a7126b42d43966130269899f0c75fb057}\label{globals_8h_a7126b42d43966130269899f0c75fb057}} 
+\index{globals.h@{globals.h}!P\_TESTID@{P\_TESTID}}
+\index{P\_TESTID@{P\_TESTID}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{P\_TESTID}{P\_TESTID}}
+{\footnotesize\ttfamily std\+::string P\+\_\+\+TESTID\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 26 of file globals.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a5f8d2b4ce2b5afd3a06f27c0b92174d0}\label{globals_8h_a5f8d2b4ce2b5afd3a06f27c0b92174d0}} 
+\index{globals.h@{globals.h}!P\_TESTPARAMS@{P\_TESTPARAMS}}
+\index{P\_TESTPARAMS@{P\_TESTPARAMS}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{P\_TESTPARAMS}{P\_TESTPARAMS}}
+{\footnotesize\ttfamily std\+::string P\+\_\+\+TESTPARAMS}
+
+
+
+Definition at line 37 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_aff7a36cee9847894a080b75b67de15e3}\label{globals_8h_aff7a36cee9847894a080b75b67de15e3}} 
+\index{globals.h@{globals.h}!P\_THRESHOLD\_ANGLE@{P\_THRESHOLD\_ANGLE}}
+\index{P\_THRESHOLD\_ANGLE@{P\_THRESHOLD\_ANGLE}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{P\_THRESHOLD\_ANGLE}{P\_THRESHOLD\_ANGLE}}
+{\footnotesize\ttfamily float P\+\_\+\+THRESHOLD\+\_\+\+ANGLE\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 21 of file globals.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_ab63a1a51a6de9f2d69b50befb960ef56}\label{globals_8h_ab63a1a51a6de9f2d69b50befb960ef56}} 
+\index{globals.h@{globals.h}!P\_THRESHOLD\_VELOCITY@{P\_THRESHOLD\_VELOCITY}}
+\index{P\_THRESHOLD\_VELOCITY@{P\_THRESHOLD\_VELOCITY}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{P\_THRESHOLD\_VELOCITY}{P\_THRESHOLD\_VELOCITY}}
+{\footnotesize\ttfamily float P\+\_\+\+THRESHOLD\+\_\+\+VELOCITY\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 22 of file globals.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_acbb824d8e99bb888004ec6a57c2c9cd7}\label{globals_8h_acbb824d8e99bb888004ec6a57c2c9cd7}} 
+\index{globals.h@{globals.h}!P\_USE\_SEGMENTS@{P\_USE\_SEGMENTS}}
+\index{P\_USE\_SEGMENTS@{P\_USE\_SEGMENTS}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{P\_USE\_SEGMENTS}{P\_USE\_SEGMENTS}}
+{\footnotesize\ttfamily bool P\+\_\+\+USE\+\_\+\+SEGMENTS\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 23 of file globals.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_abf94e534975e96343192f5fbd8890bd6}\label{globals_8h_abf94e534975e96343192f5fbd8890bd6}} 
+\index{globals.h@{globals.h}!RECON\_EXCLUDE\_THRESHOLD@{RECON\_EXCLUDE\_THRESHOLD}}
+\index{RECON\_EXCLUDE\_THRESHOLD@{RECON\_EXCLUDE\_THRESHOLD}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{RECON\_EXCLUDE\_THRESHOLD}{RECON\_EXCLUDE\_THRESHOLD}}
+{\footnotesize\ttfamily float RECON\+\_\+\+EXCLUDE\+\_\+\+THRESHOLD\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 18 of file globals.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a2c757ebd52181149111fba35bc34672d}\label{globals_8h_a2c757ebd52181149111fba35bc34672d}} 
+\index{globals.h@{globals.h}!RECON\_EXCLUDED@{RECON\_EXCLUDED}}
+\index{RECON\_EXCLUDED@{RECON\_EXCLUDED}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{RECON\_EXCLUDED}{RECON\_EXCLUDED}}
+{\footnotesize\ttfamily int RECON\+\_\+\+EXCLUDED}
+
+
+
+Definition at line 21 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_abff99f1494024375d99d2d27118cd054}\label{globals_8h_abff99f1494024375d99d2d27118cd054}} 
+\index{globals.h@{globals.h}!RECON\_K\_NEIGHBORS@{RECON\_K\_NEIGHBORS}}
+\index{RECON\_K\_NEIGHBORS@{RECON\_K\_NEIGHBORS}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{RECON\_K\_NEIGHBORS}{RECON\_K\_NEIGHBORS}}
+{\footnotesize\ttfamily int RECON\+\_\+\+K\+\_\+\+NEIGHBORS\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 17 of file globals.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a892dbb74461d98d321131a20881ec844}\label{globals_8h_a892dbb74461d98d321131a20881ec844}} 
+\index{globals.h@{globals.h}!RECON\_RECOUNT\_AVG@{RECON\_RECOUNT\_AVG}}
+\index{RECON\_RECOUNT\_AVG@{RECON\_RECOUNT\_AVG}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{RECON\_RECOUNT\_AVG}{RECON\_RECOUNT\_AVG}}
+{\footnotesize\ttfamily bool RECON\+\_\+\+RECOUNT\+\_\+\+AVG}
+
+
+
+Definition at line 20 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_aee307a2d9d317ccd673d146589e7dfa8}\label{globals_8h_aee307a2d9d317ccd673d146589e7dfa8}} 
+\index{globals.h@{globals.h}!RECON\_USE\_NEIGHBORS@{RECON\_USE\_NEIGHBORS}}
+\index{RECON\_USE\_NEIGHBORS@{RECON\_USE\_NEIGHBORS}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{RECON\_USE\_NEIGHBORS}{RECON\_USE\_NEIGHBORS}}
+{\footnotesize\ttfamily bool RECON\+\_\+\+USE\+\_\+\+NEIGHBORS\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+global parameters for use in all reconstruction methods 
+
+
+
+Definition at line 15 of file globals.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_aa17390f047a29394466558ec9ed04637}\label{globals_8h_aa17390f047a29394466558ec9ed04637}} 
+\index{globals.h@{globals.h}!seg\_base@{seg\_base}}
+\index{seg\_base@{seg\_base}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{seg\_base}{seg\_base}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsegment}{segment}} seg\+\_\+base\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 39 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a737fdc7f9a6146e2844d350d8af36df8}\label{globals_8h_a737fdc7f9a6146e2844d350d8af36df8}} 
+\index{globals.h@{globals.h}!seg\_neighbors@{seg\_neighbors}}
+\index{seg\_neighbors@{seg\_neighbors}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{seg\_neighbors}{seg\_neighbors}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsegment}{segment}} $\ast$ seg\+\_\+neighbors}
+
+
+
+Definition at line 16 of file globals.\+h.
+
+\mbox{\Hypertarget{globals_8h_aa8115d2efbe70fe88ce65698a7c822f0}\label{globals_8h_aa8115d2efbe70fe88ce65698a7c822f0}} 
+\index{globals.h@{globals.h}!seg\_neighbors\_num@{seg\_neighbors\_num}}
+\index{seg\_neighbors\_num@{seg\_neighbors\_num}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{seg\_neighbors\_num}{seg\_neighbors\_num}}
+{\footnotesize\ttfamily int seg\+\_\+neighbors\+\_\+num\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 40 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_ac7498a51543de6df85754add7616524a}\label{globals_8h_ac7498a51543de6df85754add7616524a}} 
+\index{globals.h@{globals.h}!segment\_starters@{segment\_starters}}
+\index{segment\_starters@{segment\_starters}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{segment\_starters}{segment\_starters}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structsegment}{segment}} $\ast$$>$ segment\+\_\+starters\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 30 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_aab64cb526a8b2a329a53e1051ca83e04}\label{globals_8h_aab64cb526a8b2a329a53e1051ca83e04}} 
+\index{globals.h@{globals.h}!SL\_LENGTH@{SL\_LENGTH}}
+\index{SL\_LENGTH@{SL\_LENGTH}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{SL\_LENGTH}{SL\_LENGTH}}
+{\footnotesize\ttfamily float SL\+\_\+\+LENGTH\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 45 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a25ab2a94f0f1b95742d2aae361c3c267}\label{globals_8h_a25ab2a94f0f1b95742d2aae361c3c267}} 
+\index{globals.h@{globals.h}!stdev\_global@{stdev\_global}}
+\index{stdev\_global@{stdev\_global}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{stdev\_global}{stdev\_global}}
+{\footnotesize\ttfamily float stdev\+\_\+global\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 10 of file globals.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a3c581467559c6f7d5e94c51ed224488c}\label{globals_8h_a3c581467559c6f7d5e94c51ed224488c}} 
+\index{globals.h@{globals.h}!streamlines@{streamlines}}
+\index{streamlines@{streamlines}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{streamlines}{streamlines}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{structnode}{node}}$>$ $>$ streamlines\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 28 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_ac0148c423a5b3eaaa40ea9e0450f85a4}\label{globals_8h_ac0148c423a5b3eaaa40ea9e0450f85a4}} 
+\index{globals.h@{globals.h}!total\_nodes@{total\_nodes}}
+\index{total\_nodes@{total\_nodes}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{total\_nodes}{total\_nodes}}
+{\footnotesize\ttfamily int total\+\_\+nodes\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 1801 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_ad369ab96ebde4b09102c400562c9ada2}\label{globals_8h_ad369ab96ebde4b09102c400562c9ada2}} 
+\index{globals.h@{globals.h}!v\_diff\_average@{v\_diff\_average}}
+\index{v\_diff\_average@{v\_diff\_average}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{v\_diff\_average}{v\_diff\_average}}
+{\footnotesize\ttfamily float v\+\_\+diff\+\_\+average\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+trackers for average difference in vector values 
+
+~\newline
+ 
+
+Definition at line 8 of file globals.\+cpp.
+
+\mbox{\Hypertarget{globals_8h_a48dc64fa95d54b85644d5c92c38f6066}\label{globals_8h_a48dc64fa95d54b85644d5c92c38f6066}} 
+\index{globals.h@{globals.h}!v\_diff\_counter@{v\_diff\_counter}}
+\index{v\_diff\_counter@{v\_diff\_counter}!globals.h@{globals.h}}
+\doxysubsubsection{\texorpdfstring{v\_diff\_counter}{v\_diff\_counter}}
+{\footnotesize\ttfamily float v\+\_\+diff\+\_\+counter}
+
+
+
+Definition at line 25 of file globals.\+h.
+

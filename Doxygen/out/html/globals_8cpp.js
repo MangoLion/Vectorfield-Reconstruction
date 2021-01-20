@@ -1,0 +1,26 @@
+var globals_8cpp =
+[
+    [ "angle_diff_avg", "globals_8cpp.html#a81ac4748f1246bc220bf660cedfd305e", null ],
+    [ "angle_diff_c", "globals_8cpp.html#af32f9602c942000569f30253221e73f0", null ],
+    [ "angle_diff_counter", "globals_8cpp.html#a10e0b1ea070ec97ad7b40ac0d6037d6c", null ],
+    [ "avg_angle_diff", "globals_8cpp.html#aff9b26ec95fe7c3951b7b75125e6ece8", null ],
+    [ "P_DATASET", "globals_8cpp.html#a6a3fd764d4562c642a4237ac986f4072", null ],
+    [ "P_NORMALIZE", "globals_8cpp.html#a6f3ec8184718760a10041561bba7079a", null ],
+    [ "P_RADAR", "globals_8cpp.html#a65905ef4b5038304e3defa0a868b12b5", null ],
+    [ "P_RADAR_LEVEL", "globals_8cpp.html#ae734d665af90304a12b1985d89ef8944", null ],
+    [ "P_SKIPLINES", "globals_8cpp.html#aa1ec3315000133e08b718647998fc556", null ],
+    [ "P_SKIPNODES", "globals_8cpp.html#a6e98757f9ba7bcacaa918a0358787565", null ],
+    [ "P_TESTID", "globals_8cpp.html#a7126b42d43966130269899f0c75fb057", null ],
+    [ "P_TESTPARAMS", "globals_8cpp.html#a5f8d2b4ce2b5afd3a06f27c0b92174d0", null ],
+    [ "P_THRESHOLD_ANGLE", "globals_8cpp.html#aff7a36cee9847894a080b75b67de15e3", null ],
+    [ "P_THRESHOLD_VELOCITY", "globals_8cpp.html#ab63a1a51a6de9f2d69b50befb960ef56", null ],
+    [ "P_USE_SEGMENTS", "globals_8cpp.html#acbb824d8e99bb888004ec6a57c2c9cd7", null ],
+    [ "RECON_EXCLUDE_THRESHOLD", "globals_8cpp.html#abf94e534975e96343192f5fbd8890bd6", null ],
+    [ "RECON_EXCLUDED", "globals_8cpp.html#a2c757ebd52181149111fba35bc34672d", null ],
+    [ "RECON_K_NEIGHBORS", "globals_8cpp.html#abff99f1494024375d99d2d27118cd054", null ],
+    [ "RECON_RECOUNT_AVG", "globals_8cpp.html#a892dbb74461d98d321131a20881ec844", null ],
+    [ "RECON_USE_NEIGHBORS", "globals_8cpp.html#aee307a2d9d317ccd673d146589e7dfa8", null ],
+    [ "stdev_global", "globals_8cpp.html#a25ab2a94f0f1b95742d2aae361c3c267", null ],
+    [ "v_diff_average", "globals_8cpp.html#ad369ab96ebde4b09102c400562c9ada2", null ],
+    [ "v_diff_counter", "globals_8cpp.html#a48dc64fa95d54b85644d5c92c38f6066", null ]
+];

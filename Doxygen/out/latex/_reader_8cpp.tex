@@ -1,0 +1,246 @@
+\hypertarget{_reader_8cpp}{}\doxysection{D\+:/\+Academic/\+VReconstruction/src/\+Data\+Readers/\+Reader.cpp File Reference}
+\label{_reader_8cpp}\index{D:/Academic/VReconstruction/src/DataReaders/Reader.cpp@{D:/Academic/VReconstruction/src/DataReaders/Reader.cpp}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Neighbor\+Graph/\+Graph.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Reader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Unused/kdtree.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Sample\+Datasets/tornado.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Sample\+Datasets/bernard.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Duong/\+Steady3\+D.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structprofile}{profile}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_reader_8cpp_ad33b9d6a68d97f4decececed6298ee5f}{read\+Streamlines}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$$>$ \&\mbox{\hyperlink{_graphbu_8cpp_a3c581467559c6f7d5e94c51ed224488c}{streamlines}}, std\+::string name, int skip\+Nodes, int skip\+Lines)
+\item 
+void \mbox{\hyperlink{_reader_8cpp_a875ae3ff1db4f2c0c1c781b2be57e601}{read\+Streamlines}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$$>$ \&\mbox{\hyperlink{_graphbu_8cpp_a3c581467559c6f7d5e94c51ed224488c}{streamlines}}, vector$<$ vector$<$ Vector3f $>$$>$ streamlines\+V3)
+\item 
+void \mbox{\hyperlink{_reader_8cpp_a934b847ab723acededfaee1b7ccd9965}{change\+\_\+profile}} (int index)
+\item 
+void \mbox{\hyperlink{_reader_8cpp_af9212eed237f5ab1ed0aae4907bd5510}{get\+\_\+vector\+\_\+field1}} (float x, float y, float z, float \&vxp, float \&vyp, float \&vzp)
+\item 
+void \mbox{\hyperlink{_reader_8cpp_aa4c3cf1d4efcad1f7402a679a9451807}{get\+\_\+vector\+\_\+field}} (float x, float y, float z, float \&vxp, float \&vyp, float \&vzp)
+\item 
+void \mbox{\hyperlink{_reader_8cpp_afd63efcfc82d996774216a1b00c38b38}{draw\+\_\+traced\+\_\+sl}} (float x, float y, float z, float stepsize, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$$>$ \&\mbox{\hyperlink{_graphbu_8cpp_a3c581467559c6f7d5e94c51ed224488c}{streamlines}})
+\item 
+void \mbox{\hyperlink{_reader_8cpp_a44fb0e5dc2f938f7695516bba5e5bffd}{uniform\+\_\+seeding}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$$>$ \&\mbox{\hyperlink{_graphbu_8cpp_a3c581467559c6f7d5e94c51ed224488c}{streamlines}})
+\item 
+void \mbox{\hyperlink{_reader_8cpp_a73a7e1bc43907af97123167e652f62dc}{trace\+\_\+sample\+\_\+streamline}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$$>$ \&\mbox{\hyperlink{_graphbu_8cpp_a3c581467559c6f7d5e94c51ed224488c}{streamlines}})
+\item 
+void \mbox{\hyperlink{_reader_8cpp_a4ba366ad307c819412ffa5b7277f2f52}{read\+\_\+streamline2}} (std\+::string fname)
+\begin{DoxyCompactList}\small\item\em Read the streamline file, populate the streamlines vetor and put streamline nodes into bins. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{_reader_8cpp_a4ea18e550d3eb8794b48509265fbfecb}{PROFILE\+\_\+\+TORNADO}} = 0
+\item 
+const int \mbox{\hyperlink{_reader_8cpp_a405c98fb5a2aa4e702e832e79a98ccb7}{PROFILE\+\_\+\+BERNARD}} = 1
+\item 
+\mbox{\hyperlink{structprofile}{profile}} \mbox{\hyperlink{_reader_8cpp_a164ee330fe1426d8ae0517d51a0377b9}{profile\+\_\+tornado}} = \{\mbox{\hyperlink{_reader_8cpp_a4ea18e550d3eb8794b48509265fbfecb}{PROFILE\+\_\+\+TORNADO}}, 1 / 10., 1 / 5.\+5\}
+\item 
+\mbox{\hyperlink{structprofile}{profile}} \mbox{\hyperlink{_reader_8cpp_a04762ae6adfd17491256b684395d6ebc}{profile\+\_\+bernard}} = \{\mbox{\hyperlink{_reader_8cpp_a405c98fb5a2aa4e702e832e79a98ccb7}{PROFILE\+\_\+\+BERNARD}}, 1 / 100., 1 / 4.\}
+\item 
+\mbox{\hyperlink{structprofile}{profile}} \mbox{\hyperlink{_reader_8cpp_a9cde2a8bc378bc44b85c1e833301f68e}{profile\+\_\+current}} = \mbox{\hyperlink{_reader_8cpp_a164ee330fe1426d8ae0517d51a0377b9}{profile\+\_\+tornado}}
+\item 
+int \mbox{\hyperlink{_reader_8cpp_adc5aa3097051758c2814b66f5159fd72}{SL\+\_\+\+LIMIT}} = 10
+\item 
+int \mbox{\hyperlink{_reader_8cpp_af9c7ef64b15be773a9b934d94416478b}{n\+\_\+index}} = 0
+\item 
+int \mbox{\hyperlink{_reader_8cpp_a2492dde2207047686de16b7e9dc3831d}{last\+\_\+added\+\_\+index}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_reader_8cpp_a934b847ab723acededfaee1b7ccd9965}\label{_reader_8cpp_a934b847ab723acededfaee1b7ccd9965}} 
+\index{Reader.cpp@{Reader.cpp}!change\_profile@{change\_profile}}
+\index{change\_profile@{change\_profile}!Reader.cpp@{Reader.cpp}}
+\doxysubsubsection{\texorpdfstring{change\_profile()}{change\_profile()}}
+{\footnotesize\ttfamily void change\+\_\+profile (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 117 of file Reader.\+cpp.
+
+\mbox{\Hypertarget{_reader_8cpp_afd63efcfc82d996774216a1b00c38b38}\label{_reader_8cpp_afd63efcfc82d996774216a1b00c38b38}} 
+\index{Reader.cpp@{Reader.cpp}!draw\_traced\_sl@{draw\_traced\_sl}}
+\index{draw\_traced\_sl@{draw\_traced\_sl}!Reader.cpp@{Reader.cpp}}
+\doxysubsubsection{\texorpdfstring{draw\_traced\_sl()}{draw\_traced\_sl()}}
+{\footnotesize\ttfamily void draw\+\_\+traced\+\_\+sl (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z,  }\item[{float}]{stepsize,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$$>$ \&}]{streamlines }\end{DoxyParamCaption})}
+
+
+
+Definition at line 153 of file Reader.\+cpp.
+
+\mbox{\Hypertarget{_reader_8cpp_aa4c3cf1d4efcad1f7402a679a9451807}\label{_reader_8cpp_aa4c3cf1d4efcad1f7402a679a9451807}} 
+\index{Reader.cpp@{Reader.cpp}!get\_vector\_field@{get\_vector\_field}}
+\index{get\_vector\_field@{get\_vector\_field}!Reader.cpp@{Reader.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_vector\_field()}{get\_vector\_field()}}
+{\footnotesize\ttfamily void get\+\_\+vector\+\_\+field (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z,  }\item[{float \&}]{vxp,  }\item[{float \&}]{vyp,  }\item[{float \&}]{vzp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 136 of file Reader.\+cpp.
+
+\mbox{\Hypertarget{_reader_8cpp_af9212eed237f5ab1ed0aae4907bd5510}\label{_reader_8cpp_af9212eed237f5ab1ed0aae4907bd5510}} 
+\index{Reader.cpp@{Reader.cpp}!get\_vector\_field1@{get\_vector\_field1}}
+\index{get\_vector\_field1@{get\_vector\_field1}!Reader.cpp@{Reader.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_vector\_field1()}{get\_vector\_field1()}}
+{\footnotesize\ttfamily void get\+\_\+vector\+\_\+field1 (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z,  }\item[{float \&}]{vxp,  }\item[{float \&}]{vyp,  }\item[{float \&}]{vzp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 130 of file Reader.\+cpp.
+
+\mbox{\Hypertarget{_reader_8cpp_a4ba366ad307c819412ffa5b7277f2f52}\label{_reader_8cpp_a4ba366ad307c819412ffa5b7277f2f52}} 
+\index{Reader.cpp@{Reader.cpp}!read\_streamline2@{read\_streamline2}}
+\index{read\_streamline2@{read\_streamline2}!Reader.cpp@{Reader.cpp}}
+\doxysubsubsection{\texorpdfstring{read\_streamline2()}{read\_streamline2()}}
+{\footnotesize\ttfamily void read\+\_\+streamline2 (\begin{DoxyParamCaption}\item[{std\+::string}]{fname }\end{DoxyParamCaption})}
+
+
+
+Read the streamline file, populate the streamlines vetor and put streamline nodes into bins. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fname} & file name \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 222 of file Reader.\+cpp.
+
+\mbox{\Hypertarget{_reader_8cpp_ad33b9d6a68d97f4decececed6298ee5f}\label{_reader_8cpp_ad33b9d6a68d97f4decececed6298ee5f}} 
+\index{Reader.cpp@{Reader.cpp}!readStreamlines@{readStreamlines}}
+\index{readStreamlines@{readStreamlines}!Reader.cpp@{Reader.cpp}}
+\doxysubsubsection{\texorpdfstring{readStreamlines()}{readStreamlines()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void read\+Streamlines (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$$>$ \&}]{streamlines,  }\item[{std\+::string}]{name,  }\item[{int}]{skip\+Nodes,  }\item[{int}]{skip\+Lines }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file Reader.\+cpp.
+
+\mbox{\Hypertarget{_reader_8cpp_a875ae3ff1db4f2c0c1c781b2be57e601}\label{_reader_8cpp_a875ae3ff1db4f2c0c1c781b2be57e601}} 
+\index{Reader.cpp@{Reader.cpp}!readStreamlines@{readStreamlines}}
+\index{readStreamlines@{readStreamlines}!Reader.cpp@{Reader.cpp}}
+\doxysubsubsection{\texorpdfstring{readStreamlines()}{readStreamlines()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void read\+Streamlines (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$$>$ \&}]{streamlines,  }\item[{vector$<$ vector$<$ Vector3f $>$$>$}]{streamlines\+V3 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 76 of file Reader.\+cpp.
+
+\mbox{\Hypertarget{_reader_8cpp_a73a7e1bc43907af97123167e652f62dc}\label{_reader_8cpp_a73a7e1bc43907af97123167e652f62dc}} 
+\index{Reader.cpp@{Reader.cpp}!trace\_sample\_streamline@{trace\_sample\_streamline}}
+\index{trace\_sample\_streamline@{trace\_sample\_streamline}!Reader.cpp@{Reader.cpp}}
+\doxysubsubsection{\texorpdfstring{trace\_sample\_streamline()}{trace\_sample\_streamline()}}
+{\footnotesize\ttfamily void trace\+\_\+sample\+\_\+streamline (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$$>$ \&}]{streamlines }\end{DoxyParamCaption})}
+
+
+
+Definition at line 211 of file Reader.\+cpp.
+
+\mbox{\Hypertarget{_reader_8cpp_a44fb0e5dc2f938f7695516bba5e5bffd}\label{_reader_8cpp_a44fb0e5dc2f938f7695516bba5e5bffd}} 
+\index{Reader.cpp@{Reader.cpp}!uniform\_seeding@{uniform\_seeding}}
+\index{uniform\_seeding@{uniform\_seeding}!Reader.cpp@{Reader.cpp}}
+\doxysubsubsection{\texorpdfstring{uniform\_seeding()}{uniform\_seeding()}}
+{\footnotesize\ttfamily void uniform\+\_\+seeding (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$$>$ \&}]{streamlines }\end{DoxyParamCaption})}
+
+
+
+Definition at line 193 of file Reader.\+cpp.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_reader_8cpp_a2492dde2207047686de16b7e9dc3831d}\label{_reader_8cpp_a2492dde2207047686de16b7e9dc3831d}} 
+\index{Reader.cpp@{Reader.cpp}!last\_added\_index@{last\_added\_index}}
+\index{last\_added\_index@{last\_added\_index}!Reader.cpp@{Reader.cpp}}
+\doxysubsubsection{\texorpdfstring{last\_added\_index}{last\_added\_index}}
+{\footnotesize\ttfamily int last\+\_\+added\+\_\+index = 0}
+
+
+
+Definition at line 192 of file Reader.\+cpp.
+
+\mbox{\Hypertarget{_reader_8cpp_af9c7ef64b15be773a9b934d94416478b}\label{_reader_8cpp_af9c7ef64b15be773a9b934d94416478b}} 
+\index{Reader.cpp@{Reader.cpp}!n\_index@{n\_index}}
+\index{n\_index@{n\_index}!Reader.cpp@{Reader.cpp}}
+\doxysubsubsection{\texorpdfstring{n\_index}{n\_index}}
+{\footnotesize\ttfamily int n\+\_\+index = 0}
+
+
+
+Definition at line 192 of file Reader.\+cpp.
+
+\mbox{\Hypertarget{_reader_8cpp_a405c98fb5a2aa4e702e832e79a98ccb7}\label{_reader_8cpp_a405c98fb5a2aa4e702e832e79a98ccb7}} 
+\index{Reader.cpp@{Reader.cpp}!PROFILE\_BERNARD@{PROFILE\_BERNARD}}
+\index{PROFILE\_BERNARD@{PROFILE\_BERNARD}!Reader.cpp@{Reader.cpp}}
+\doxysubsubsection{\texorpdfstring{PROFILE\_BERNARD}{PROFILE\_BERNARD}}
+{\footnotesize\ttfamily const int PROFILE\+\_\+\+BERNARD = 1}
+
+
+
+Definition at line 23 of file Reader.\+cpp.
+
+\mbox{\Hypertarget{_reader_8cpp_a04762ae6adfd17491256b684395d6ebc}\label{_reader_8cpp_a04762ae6adfd17491256b684395d6ebc}} 
+\index{Reader.cpp@{Reader.cpp}!profile\_bernard@{profile\_bernard}}
+\index{profile\_bernard@{profile\_bernard}!Reader.cpp@{Reader.cpp}}
+\doxysubsubsection{\texorpdfstring{profile\_bernard}{profile\_bernard}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structprofile}{profile}} profile\+\_\+bernard = \{\mbox{\hyperlink{_reader_8cpp_a405c98fb5a2aa4e702e832e79a98ccb7}{PROFILE\+\_\+\+BERNARD}}, 1 / 100., 1 / 4.\}}
+
+
+
+Definition at line 114 of file Reader.\+cpp.
+
+\mbox{\Hypertarget{_reader_8cpp_a9cde2a8bc378bc44b85c1e833301f68e}\label{_reader_8cpp_a9cde2a8bc378bc44b85c1e833301f68e}} 
+\index{Reader.cpp@{Reader.cpp}!profile\_current@{profile\_current}}
+\index{profile\_current@{profile\_current}!Reader.cpp@{Reader.cpp}}
+\doxysubsubsection{\texorpdfstring{profile\_current}{profile\_current}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structprofile}{profile}} profile\+\_\+current = \mbox{\hyperlink{_reader_8cpp_a164ee330fe1426d8ae0517d51a0377b9}{profile\+\_\+tornado}}}
+
+
+
+Definition at line 115 of file Reader.\+cpp.
+
+\mbox{\Hypertarget{_reader_8cpp_a4ea18e550d3eb8794b48509265fbfecb}\label{_reader_8cpp_a4ea18e550d3eb8794b48509265fbfecb}} 
+\index{Reader.cpp@{Reader.cpp}!PROFILE\_TORNADO@{PROFILE\_TORNADO}}
+\index{PROFILE\_TORNADO@{PROFILE\_TORNADO}!Reader.cpp@{Reader.cpp}}
+\doxysubsubsection{\texorpdfstring{PROFILE\_TORNADO}{PROFILE\_TORNADO}}
+{\footnotesize\ttfamily const int PROFILE\+\_\+\+TORNADO = 0}
+
+
+
+Definition at line 22 of file Reader.\+cpp.
+
+\mbox{\Hypertarget{_reader_8cpp_a164ee330fe1426d8ae0517d51a0377b9}\label{_reader_8cpp_a164ee330fe1426d8ae0517d51a0377b9}} 
+\index{Reader.cpp@{Reader.cpp}!profile\_tornado@{profile\_tornado}}
+\index{profile\_tornado@{profile\_tornado}!Reader.cpp@{Reader.cpp}}
+\doxysubsubsection{\texorpdfstring{profile\_tornado}{profile\_tornado}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structprofile}{profile}} profile\+\_\+tornado = \{\mbox{\hyperlink{_reader_8cpp_a4ea18e550d3eb8794b48509265fbfecb}{PROFILE\+\_\+\+TORNADO}}, 1 / 10., 1 / 5.\+5\}}
+
+
+
+Definition at line 113 of file Reader.\+cpp.
+
+\mbox{\Hypertarget{_reader_8cpp_adc5aa3097051758c2814b66f5159fd72}\label{_reader_8cpp_adc5aa3097051758c2814b66f5159fd72}} 
+\index{Reader.cpp@{Reader.cpp}!SL\_LIMIT@{SL\_LIMIT}}
+\index{SL\_LIMIT@{SL\_LIMIT}!Reader.cpp@{Reader.cpp}}
+\doxysubsubsection{\texorpdfstring{SL\_LIMIT}{SL\_LIMIT}}
+{\footnotesize\ttfamily int SL\+\_\+\+LIMIT = 10}
+
+
+
+Definition at line 152 of file Reader.\+cpp.
+

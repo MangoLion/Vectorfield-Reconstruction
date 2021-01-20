@@ -1,0 +1,57 @@
+\hypertarget{_reader_8h}{}\doxysection{D\+:/\+Academic/\+VReconstruction/src/\+Data\+Readers/\+Reader.h File Reference}
+\label{_reader_8h}\index{D:/Academic/VReconstruction/src/DataReaders/Reader.h@{D:/Academic/VReconstruction/src/DataReaders/Reader.h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Dense$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Eigenvalues$>$}\newline
+{\ttfamily \#include \char`\"{}../structures.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_reader_8h_a73a7e1bc43907af97123167e652f62dc}{trace\+\_\+sample\+\_\+streamline}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$$>$ \&\mbox{\hyperlink{_graphbu_8cpp_a3c581467559c6f7d5e94c51ed224488c}{streamlines}})
+\item 
+void \mbox{\hyperlink{_reader_8h_a934b847ab723acededfaee1b7ccd9965}{change\+\_\+profile}} (int index)
+\item 
+void \mbox{\hyperlink{_reader_8h_ad33b9d6a68d97f4decececed6298ee5f}{read\+Streamlines}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$$>$ \&\mbox{\hyperlink{_graphbu_8cpp_a3c581467559c6f7d5e94c51ed224488c}{streamlines}}, std\+::string name, int skip\+Nodes, int skip\+Lines)
+\item 
+void \mbox{\hyperlink{_reader_8h_adaa320d8fcb6a3a55a6d88f1dd08390c}{read\+Streamlines}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$$>$ \&\mbox{\hyperlink{_graphbu_8cpp_a3c581467559c6f7d5e94c51ed224488c}{streamlines}}, std\+::vector$<$ std\+::vector$<$ Vector3f $>$$>$ streamlines\+V3)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_reader_8h_a934b847ab723acededfaee1b7ccd9965}\label{_reader_8h_a934b847ab723acededfaee1b7ccd9965}} 
+\index{Reader.h@{Reader.h}!change\_profile@{change\_profile}}
+\index{change\_profile@{change\_profile}!Reader.h@{Reader.h}}
+\doxysubsubsection{\texorpdfstring{change\_profile()}{change\_profile()}}
+{\footnotesize\ttfamily void change\+\_\+profile (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 117 of file Reader.\+cpp.
+
+\mbox{\Hypertarget{_reader_8h_ad33b9d6a68d97f4decececed6298ee5f}\label{_reader_8h_ad33b9d6a68d97f4decececed6298ee5f}} 
+\index{Reader.h@{Reader.h}!readStreamlines@{readStreamlines}}
+\index{readStreamlines@{readStreamlines}!Reader.h@{Reader.h}}
+\doxysubsubsection{\texorpdfstring{readStreamlines()}{readStreamlines()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void read\+Streamlines (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$$>$ \&}]{streamlines,  }\item[{std\+::string}]{name,  }\item[{int}]{skip\+Nodes,  }\item[{int}]{skip\+Lines }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file Reader.\+cpp.
+
+\mbox{\Hypertarget{_reader_8h_adaa320d8fcb6a3a55a6d88f1dd08390c}\label{_reader_8h_adaa320d8fcb6a3a55a6d88f1dd08390c}} 
+\index{Reader.h@{Reader.h}!readStreamlines@{readStreamlines}}
+\index{readStreamlines@{readStreamlines}!Reader.h@{Reader.h}}
+\doxysubsubsection{\texorpdfstring{readStreamlines()}{readStreamlines()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void read\+Streamlines (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$$>$ \&}]{streamlines,  }\item[{std\+::vector$<$ std\+::vector$<$ Vector3f $>$$>$}]{streamlines\+V3 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_reader_8h_a73a7e1bc43907af97123167e652f62dc}\label{_reader_8h_a73a7e1bc43907af97123167e652f62dc}} 
+\index{Reader.h@{Reader.h}!trace\_sample\_streamline@{trace\_sample\_streamline}}
+\index{trace\_sample\_streamline@{trace\_sample\_streamline}!Reader.h@{Reader.h}}
+\doxysubsubsection{\texorpdfstring{trace\_sample\_streamline()}{trace\_sample\_streamline()}}
+{\footnotesize\ttfamily void trace\+\_\+sample\+\_\+streamline (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$$>$ \&}]{streamlines }\end{DoxyParamCaption})}
+
+
+
+Definition at line 211 of file Reader.\+cpp.
+

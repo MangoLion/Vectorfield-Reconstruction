@@ -1,0 +1,337 @@
+\hypertarget{class_polyhedron}{}\doxysection{Polyhedron Class Reference}
+\label{class_polyhedron}\index{Polyhedron@{Polyhedron}}
+
+
+{\ttfamily \#include $<$Skeleton.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_polyhedron_aebdf7ee85eb636069bf93afb4e6a483f}{Polyhedron}} ()
+\item 
+\mbox{\hyperlink{class_polyhedron_a01f84250911ecb5ef9904ee576462ed3}{Polyhedron}} (FILE $\ast$)
+\item 
+void \mbox{\hyperlink{class_polyhedron_a97de5d874455815931312ef2a5189cff}{average\+\_\+normals}} ()
+\item 
+void \mbox{\hyperlink{class_polyhedron_a24d582080227457eb7bbeeb5f13eaa2a}{create\+\_\+edge}} (\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$, \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$)
+\item 
+void \mbox{\hyperlink{class_polyhedron_a4f16eff745778f6c170572ce5008ea68}{create\+\_\+edges}} ()
+\item 
+int \mbox{\hyperlink{class_polyhedron_a4b0954da465561a7396134dec1aefabe}{face\+\_\+to\+\_\+vertex\+\_\+ref}} (\mbox{\hyperlink{class_triangle}{Triangle}} $\ast$, \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$)
+\item 
+void \mbox{\hyperlink{class_polyhedron_ab1e6319483e331c51a91fc2da454b876}{order\+\_\+vertex\+\_\+to\+\_\+tri\+\_\+ptrs}} (\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$)
+\item 
+void \mbox{\hyperlink{class_polyhedron_a5e15c6195ad9761f055044d636d76865}{vertex\+\_\+to\+\_\+tri\+\_\+ptrs}} ()
+\item 
+\mbox{\hyperlink{class_triangle}{Triangle}} $\ast$ \mbox{\hyperlink{class_polyhedron_a6feb64ae50fe89780e9c131030d35912}{find\+\_\+common\+\_\+edge}} (\mbox{\hyperlink{class_triangle}{Triangle}} $\ast$, \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$, \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$)
+\item 
+\mbox{\hyperlink{class_triangle}{Triangle}} $\ast$ \mbox{\hyperlink{class_polyhedron_ae76bd0cca0e49f1c012388f1708c4536}{other\+\_\+triangle}} (\mbox{\hyperlink{class_edge}{Edge}} $\ast$, \mbox{\hyperlink{class_triangle}{Triangle}} $\ast$)
+\item 
+void \mbox{\hyperlink{class_polyhedron_a553726a181e137f850909f9b55b47cf6}{calc\+\_\+bounding\+\_\+sphere}} ()
+\item 
+void \mbox{\hyperlink{class_polyhedron_a68bdc1503ff92992c96fbb7351625467}{calc\+\_\+face\+\_\+normals\+\_\+and\+\_\+area}} ()
+\item 
+void \mbox{\hyperlink{class_polyhedron_abb6f61f38bde5164c51de0f1229b0abe}{calc\+\_\+edge\+\_\+length}} ()
+\item 
+void \mbox{\hyperlink{class_polyhedron_a450f52bbaa7258530713013cec21dba7}{write\+\_\+file}} (FILE $\ast$)
+\item 
+void \mbox{\hyperlink{class_polyhedron_a09ece04218f111c57371f1da4e8a6a96}{create\+\_\+pointers}} ()
+\item 
+void \mbox{\hyperlink{class_polyhedron_a314c7a722035eaaf8212f1293ebc2efc}{initialize}} ()
+\item 
+void \mbox{\hyperlink{class_polyhedron_ae4d967e0d23aa4733af8247615fe3fd5}{finalize}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_polyhedron_a5227089d987f59ad7742307c976529eb}{index}}
+\item 
+\mbox{\hyperlink{class_triangle}{Triangle}} $\ast$$\ast$ \mbox{\hyperlink{class_polyhedron_ae94414ff0ae184b549e0433148959dd2}{tlist}}
+\item 
+int \mbox{\hyperlink{class_polyhedron_ac8b375cc8d17d4ce54118a7e75a4abff}{ntris}}
+\item 
+int \mbox{\hyperlink{class_polyhedron_aab4b8561989547ffec8411f0c9260a70}{max\+\_\+tris}}
+\item 
+\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$$\ast$ \mbox{\hyperlink{class_polyhedron_af47e6b7320434a0e3a2c9d89ea1db4be}{vlist}}
+\item 
+int \mbox{\hyperlink{class_polyhedron_ad29550ffbfaeb51cc30d21979457bf5f}{nverts}}
+\item 
+int \mbox{\hyperlink{class_polyhedron_af0770d9a79eb920358bf40e604591aa6}{max\+\_\+verts}}
+\item 
+\mbox{\hyperlink{class_edge}{Edge}} $\ast$$\ast$ \mbox{\hyperlink{class_polyhedron_ab4f93b55229106f554e719056c796379}{elist}}
+\item 
+int \mbox{\hyperlink{class_polyhedron_aabb1ecf7bb025bd6843d042d4e1eabe9}{nedges}}
+\item 
+int \mbox{\hyperlink{class_polyhedron_a8bea6b3ec893e580e3059bea99eddb71}{max\+\_\+edges}}
+\item 
+\mbox{\hyperlink{classic_vector3}{ic\+Vector3}} \mbox{\hyperlink{class_polyhedron_a3e216d05c75ea80c1337679011cf6694}{center}}
+\item 
+double \mbox{\hyperlink{class_polyhedron_a2b1a989707a0abafb97b8e891891e978}{radius}}
+\item 
+double \mbox{\hyperlink{class_polyhedron_ab14bfc4432c904fa57fbfbcf8fdacd14}{area}}
+\item 
+int \mbox{\hyperlink{class_polyhedron_ab27693126ca130c50a8d544e2331f0cd}{seed}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 185 of file Skeleton.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_polyhedron_aebdf7ee85eb636069bf93afb4e6a483f}\label{class_polyhedron_aebdf7ee85eb636069bf93afb4e6a483f}} 
+\index{Polyhedron@{Polyhedron}!Polyhedron@{Polyhedron}}
+\index{Polyhedron@{Polyhedron}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{Polyhedron()}{Polyhedron()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Polyhedron\+::\+Polyhedron (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_polyhedron_a01f84250911ecb5ef9904ee576462ed3}\label{class_polyhedron_a01f84250911ecb5ef9904ee576462ed3}} 
+\index{Polyhedron@{Polyhedron}!Polyhedron@{Polyhedron}}
+\index{Polyhedron@{Polyhedron}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{Polyhedron()}{Polyhedron()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Polyhedron\+::\+Polyhedron (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_polyhedron_a97de5d874455815931312ef2a5189cff}\label{class_polyhedron_a97de5d874455815931312ef2a5189cff}} 
+\index{Polyhedron@{Polyhedron}!average\_normals@{average\_normals}}
+\index{average\_normals@{average\_normals}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{average\_normals()}{average\_normals()}}
+{\footnotesize\ttfamily void Polyhedron\+::average\+\_\+normals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_polyhedron_a553726a181e137f850909f9b55b47cf6}\label{class_polyhedron_a553726a181e137f850909f9b55b47cf6}} 
+\index{Polyhedron@{Polyhedron}!calc\_bounding\_sphere@{calc\_bounding\_sphere}}
+\index{calc\_bounding\_sphere@{calc\_bounding\_sphere}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{calc\_bounding\_sphere()}{calc\_bounding\_sphere()}}
+{\footnotesize\ttfamily void Polyhedron\+::calc\+\_\+bounding\+\_\+sphere (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_polyhedron_abb6f61f38bde5164c51de0f1229b0abe}\label{class_polyhedron_abb6f61f38bde5164c51de0f1229b0abe}} 
+\index{Polyhedron@{Polyhedron}!calc\_edge\_length@{calc\_edge\_length}}
+\index{calc\_edge\_length@{calc\_edge\_length}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{calc\_edge\_length()}{calc\_edge\_length()}}
+{\footnotesize\ttfamily void Polyhedron\+::calc\+\_\+edge\+\_\+length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_polyhedron_a68bdc1503ff92992c96fbb7351625467}\label{class_polyhedron_a68bdc1503ff92992c96fbb7351625467}} 
+\index{Polyhedron@{Polyhedron}!calc\_face\_normals\_and\_area@{calc\_face\_normals\_and\_area}}
+\index{calc\_face\_normals\_and\_area@{calc\_face\_normals\_and\_area}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{calc\_face\_normals\_and\_area()}{calc\_face\_normals\_and\_area()}}
+{\footnotesize\ttfamily void Polyhedron\+::calc\+\_\+face\+\_\+normals\+\_\+and\+\_\+area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_polyhedron_a24d582080227457eb7bbeeb5f13eaa2a}\label{class_polyhedron_a24d582080227457eb7bbeeb5f13eaa2a}} 
+\index{Polyhedron@{Polyhedron}!create\_edge@{create\_edge}}
+\index{create\_edge@{create\_edge}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{create\_edge()}{create\_edge()}}
+{\footnotesize\ttfamily void Polyhedron\+::create\+\_\+edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_polyhedron_a4f16eff745778f6c170572ce5008ea68}\label{class_polyhedron_a4f16eff745778f6c170572ce5008ea68}} 
+\index{Polyhedron@{Polyhedron}!create\_edges@{create\_edges}}
+\index{create\_edges@{create\_edges}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{create\_edges()}{create\_edges()}}
+{\footnotesize\ttfamily void Polyhedron\+::create\+\_\+edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_polyhedron_a09ece04218f111c57371f1da4e8a6a96}\label{class_polyhedron_a09ece04218f111c57371f1da4e8a6a96}} 
+\index{Polyhedron@{Polyhedron}!create\_pointers@{create\_pointers}}
+\index{create\_pointers@{create\_pointers}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{create\_pointers()}{create\_pointers()}}
+{\footnotesize\ttfamily void Polyhedron\+::create\+\_\+pointers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_polyhedron_a4b0954da465561a7396134dec1aefabe}\label{class_polyhedron_a4b0954da465561a7396134dec1aefabe}} 
+\index{Polyhedron@{Polyhedron}!face\_to\_vertex\_ref@{face\_to\_vertex\_ref}}
+\index{face\_to\_vertex\_ref@{face\_to\_vertex\_ref}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{face\_to\_vertex\_ref()}{face\_to\_vertex\_ref()}}
+{\footnotesize\ttfamily int Polyhedron\+::face\+\_\+to\+\_\+vertex\+\_\+ref (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_triangle}{Triangle}} $\ast$}]{,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_polyhedron_ae4d967e0d23aa4733af8247615fe3fd5}\label{class_polyhedron_ae4d967e0d23aa4733af8247615fe3fd5}} 
+\index{Polyhedron@{Polyhedron}!finalize@{finalize}}
+\index{finalize@{finalize}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{finalize()}{finalize()}}
+{\footnotesize\ttfamily void Polyhedron\+::finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_polyhedron_a6feb64ae50fe89780e9c131030d35912}\label{class_polyhedron_a6feb64ae50fe89780e9c131030d35912}} 
+\index{Polyhedron@{Polyhedron}!find\_common\_edge@{find\_common\_edge}}
+\index{find\_common\_edge@{find\_common\_edge}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{find\_common\_edge()}{find\_common\_edge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_triangle}{Triangle}}$\ast$ Polyhedron\+::find\+\_\+common\+\_\+edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_triangle}{Triangle}} $\ast$}]{,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_polyhedron_a314c7a722035eaaf8212f1293ebc2efc}\label{class_polyhedron_a314c7a722035eaaf8212f1293ebc2efc}} 
+\index{Polyhedron@{Polyhedron}!initialize@{initialize}}
+\index{initialize@{initialize}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Polyhedron\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_polyhedron_ab1e6319483e331c51a91fc2da454b876}\label{class_polyhedron_ab1e6319483e331c51a91fc2da454b876}} 
+\index{Polyhedron@{Polyhedron}!order\_vertex\_to\_tri\_ptrs@{order\_vertex\_to\_tri\_ptrs}}
+\index{order\_vertex\_to\_tri\_ptrs@{order\_vertex\_to\_tri\_ptrs}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{order\_vertex\_to\_tri\_ptrs()}{order\_vertex\_to\_tri\_ptrs()}}
+{\footnotesize\ttfamily void Polyhedron\+::order\+\_\+vertex\+\_\+to\+\_\+tri\+\_\+ptrs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_polyhedron_ae76bd0cca0e49f1c012388f1708c4536}\label{class_polyhedron_ae76bd0cca0e49f1c012388f1708c4536}} 
+\index{Polyhedron@{Polyhedron}!other\_triangle@{other\_triangle}}
+\index{other\_triangle@{other\_triangle}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{other\_triangle()}{other\_triangle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_triangle}{Triangle}}$\ast$ Polyhedron\+::other\+\_\+triangle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_edge}{Edge}} $\ast$}]{,  }\item[{\mbox{\hyperlink{class_triangle}{Triangle}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_polyhedron_a5e15c6195ad9761f055044d636d76865}\label{class_polyhedron_a5e15c6195ad9761f055044d636d76865}} 
+\index{Polyhedron@{Polyhedron}!vertex\_to\_tri\_ptrs@{vertex\_to\_tri\_ptrs}}
+\index{vertex\_to\_tri\_ptrs@{vertex\_to\_tri\_ptrs}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{vertex\_to\_tri\_ptrs()}{vertex\_to\_tri\_ptrs()}}
+{\footnotesize\ttfamily void Polyhedron\+::vertex\+\_\+to\+\_\+tri\+\_\+ptrs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_polyhedron_a450f52bbaa7258530713013cec21dba7}\label{class_polyhedron_a450f52bbaa7258530713013cec21dba7}} 
+\index{Polyhedron@{Polyhedron}!write\_file@{write\_file}}
+\index{write\_file@{write\_file}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{write\_file()}{write\_file()}}
+{\footnotesize\ttfamily void Polyhedron\+::write\+\_\+file (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_polyhedron_ab14bfc4432c904fa57fbfbcf8fdacd14}\label{class_polyhedron_ab14bfc4432c904fa57fbfbcf8fdacd14}} 
+\index{Polyhedron@{Polyhedron}!area@{area}}
+\index{area@{area}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{area}{area}}
+{\footnotesize\ttfamily double Polyhedron\+::area}
+
+
+
+Definition at line 204 of file Skeleton.\+h.
+
+\mbox{\Hypertarget{class_polyhedron_a3e216d05c75ea80c1337679011cf6694}\label{class_polyhedron_a3e216d05c75ea80c1337679011cf6694}} 
+\index{Polyhedron@{Polyhedron}!center@{center}}
+\index{center@{center}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{center}{center}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classic_vector3}{ic\+Vector3}} Polyhedron\+::center}
+
+
+
+Definition at line 202 of file Skeleton.\+h.
+
+\mbox{\Hypertarget{class_polyhedron_ab4f93b55229106f554e719056c796379}\label{class_polyhedron_ab4f93b55229106f554e719056c796379}} 
+\index{Polyhedron@{Polyhedron}!elist@{elist}}
+\index{elist@{elist}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{elist}{elist}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_edge}{Edge}}$\ast$$\ast$ Polyhedron\+::elist}
+
+
+
+Definition at line 198 of file Skeleton.\+h.
+
+\mbox{\Hypertarget{class_polyhedron_a5227089d987f59ad7742307c976529eb}\label{class_polyhedron_a5227089d987f59ad7742307c976529eb}} 
+\index{Polyhedron@{Polyhedron}!index@{index}}
+\index{index@{index}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily int Polyhedron\+::index}
+
+
+
+Definition at line 188 of file Skeleton.\+h.
+
+\mbox{\Hypertarget{class_polyhedron_a8bea6b3ec893e580e3059bea99eddb71}\label{class_polyhedron_a8bea6b3ec893e580e3059bea99eddb71}} 
+\index{Polyhedron@{Polyhedron}!max\_edges@{max\_edges}}
+\index{max\_edges@{max\_edges}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{max\_edges}{max\_edges}}
+{\footnotesize\ttfamily int Polyhedron\+::max\+\_\+edges}
+
+
+
+Definition at line 200 of file Skeleton.\+h.
+
+\mbox{\Hypertarget{class_polyhedron_aab4b8561989547ffec8411f0c9260a70}\label{class_polyhedron_aab4b8561989547ffec8411f0c9260a70}} 
+\index{Polyhedron@{Polyhedron}!max\_tris@{max\_tris}}
+\index{max\_tris@{max\_tris}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{max\_tris}{max\_tris}}
+{\footnotesize\ttfamily int Polyhedron\+::max\+\_\+tris}
+
+
+
+Definition at line 192 of file Skeleton.\+h.
+
+\mbox{\Hypertarget{class_polyhedron_af0770d9a79eb920358bf40e604591aa6}\label{class_polyhedron_af0770d9a79eb920358bf40e604591aa6}} 
+\index{Polyhedron@{Polyhedron}!max\_verts@{max\_verts}}
+\index{max\_verts@{max\_verts}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{max\_verts}{max\_verts}}
+{\footnotesize\ttfamily int Polyhedron\+::max\+\_\+verts}
+
+
+
+Definition at line 196 of file Skeleton.\+h.
+
+\mbox{\Hypertarget{class_polyhedron_aabb1ecf7bb025bd6843d042d4e1eabe9}\label{class_polyhedron_aabb1ecf7bb025bd6843d042d4e1eabe9}} 
+\index{Polyhedron@{Polyhedron}!nedges@{nedges}}
+\index{nedges@{nedges}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{nedges}{nedges}}
+{\footnotesize\ttfamily int Polyhedron\+::nedges}
+
+
+
+Definition at line 199 of file Skeleton.\+h.
+
+\mbox{\Hypertarget{class_polyhedron_ac8b375cc8d17d4ce54118a7e75a4abff}\label{class_polyhedron_ac8b375cc8d17d4ce54118a7e75a4abff}} 
+\index{Polyhedron@{Polyhedron}!ntris@{ntris}}
+\index{ntris@{ntris}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{ntris}{ntris}}
+{\footnotesize\ttfamily int Polyhedron\+::ntris}
+
+
+
+Definition at line 191 of file Skeleton.\+h.
+
+\mbox{\Hypertarget{class_polyhedron_ad29550ffbfaeb51cc30d21979457bf5f}\label{class_polyhedron_ad29550ffbfaeb51cc30d21979457bf5f}} 
+\index{Polyhedron@{Polyhedron}!nverts@{nverts}}
+\index{nverts@{nverts}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{nverts}{nverts}}
+{\footnotesize\ttfamily int Polyhedron\+::nverts}
+
+
+
+Definition at line 195 of file Skeleton.\+h.
+
+\mbox{\Hypertarget{class_polyhedron_a2b1a989707a0abafb97b8e891891e978}\label{class_polyhedron_a2b1a989707a0abafb97b8e891891e978}} 
+\index{Polyhedron@{Polyhedron}!radius@{radius}}
+\index{radius@{radius}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{radius}{radius}}
+{\footnotesize\ttfamily double Polyhedron\+::radius}
+
+
+
+Definition at line 203 of file Skeleton.\+h.
+
+\mbox{\Hypertarget{class_polyhedron_ab27693126ca130c50a8d544e2331f0cd}\label{class_polyhedron_ab27693126ca130c50a8d544e2331f0cd}} 
+\index{Polyhedron@{Polyhedron}!seed@{seed}}
+\index{seed@{seed}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{seed}{seed}}
+{\footnotesize\ttfamily int Polyhedron\+::seed}
+
+
+
+Definition at line 206 of file Skeleton.\+h.
+
+\mbox{\Hypertarget{class_polyhedron_ae94414ff0ae184b549e0433148959dd2}\label{class_polyhedron_ae94414ff0ae184b549e0433148959dd2}} 
+\index{Polyhedron@{Polyhedron}!tlist@{tlist}}
+\index{tlist@{tlist}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{tlist}{tlist}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_triangle}{Triangle}}$\ast$$\ast$ Polyhedron\+::tlist}
+
+
+
+Definition at line 190 of file Skeleton.\+h.
+
+\mbox{\Hypertarget{class_polyhedron_af47e6b7320434a0e3a2c9d89ea1db4be}\label{class_polyhedron_af47e6b7320434a0e3a2c9d89ea1db4be}} 
+\index{Polyhedron@{Polyhedron}!vlist@{vlist}}
+\index{vlist@{vlist}!Polyhedron@{Polyhedron}}
+\doxysubsubsection{\texorpdfstring{vlist}{vlist}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vertex}{Vertex}}$\ast$$\ast$ Polyhedron\+::vlist}
+
+
+
+Definition at line 194 of file Skeleton.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Academic/\+VReconstruction/src/\+Unused/\mbox{\hyperlink{_skeleton_8h}{Skeleton.\+h}}\end{DoxyCompactItemize}

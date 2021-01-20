@@ -1,0 +1,120 @@
+\hypertarget{_reconstruction_current_8cpp}{}\doxysection{D\+:/\+Academic/\+VReconstruction/src/\+Recon\+Methods/\+Reconstruction\+Current.cpp File Reference}
+\label{_reconstruction_current_8cpp}\index{D:/Academic/VReconstruction/src/ReconMethods/ReconstructionCurrent.cpp@{D:/Academic/VReconstruction/src/ReconMethods/ReconstructionCurrent.cpp}}
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Data\+Readers/\+Reader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Unused/\+Skeleton.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}vtk\+Points.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Point\+Locator/kd\+Tree\+Helper.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{_reconstruction_current_8cpp_ae84ee4edbe1f75e9a5197e57c06b3149}{get\+Absolute\+Diff3\+Angles}} (float x1, float y1, float z1, float x2, float y2, float z2)
+\item 
+float \mbox{\hyperlink{_reconstruction_current_8cpp_ab7336c0d0f82e8163ea3e0f3cda140a9}{dot\+\_\+product}} (float v1\mbox{[}3\mbox{]}, float v2\mbox{[}3\mbox{]})
+\item 
+float \mbox{\hyperlink{_reconstruction_current_8cpp_a9404b69a5b02f7a73c85b0e1827ffa34}{recon\+\_\+get\+\_\+stdev}} (double p\mbox{[}3\mbox{]}, float radar)
+\item 
+float \mbox{\hyperlink{_reconstruction_current_8cpp_a157f10ce01a5460c1ccd28ef799ca299}{interpolate\+\_\+streamline\+\_\+selective\+\_\+weighted\+\_\+sum\+\_\+stdev}} (float \&stdev, float xx, float yy, float zz, float \&vx, float \&vy, float \&vz)
+\begin{DoxyCompactList}\small\item\em reconstruct the vector value of the point (xx,yy) on the vector field by using the Selective Weighed Sum method, this method provides the most reliable reconstruction it first uses the nearest streamline node\textquotesingle{}s vector value as the base, then it finds the next closest node and compare the vector value, if the difference is below the average threshold then it computes the weighted sum between two nodes, if the diff is too large then it discard the second node. The process is repeated untill all nodes within radar range is processed \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_reconstruction_current_8cpp_ab6df0cba10195405e4a112d5c3d76c68}{interpolate\+\_\+streamline\+\_\+selective\+\_\+weighted\+\_\+sum}} (float xx, float yy, float zz, float \&vx, float \&vy, float \&vz)
+\begin{DoxyCompactList}\small\item\em reconstruct the vector value of the point (xx,yy) on the vector field by using the Selective Weighed Sum method, this method provides the most reliable reconstruction it first uses the nearest streamline node\textquotesingle{}s vector value as the base, then it finds the next closest node and compare the vector value, if the difference is below the average threshold then it computes the weighted sum between two nodes, if the diff is too large then it discard the second node. The process is repeated untill all nodes within radar range is processed \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_reconstruction_current_8cpp_ab7336c0d0f82e8163ea3e0f3cda140a9}\label{_reconstruction_current_8cpp_ab7336c0d0f82e8163ea3e0f3cda140a9}} 
+\index{ReconstructionCurrent.cpp@{ReconstructionCurrent.cpp}!dot\_product@{dot\_product}}
+\index{dot\_product@{dot\_product}!ReconstructionCurrent.cpp@{ReconstructionCurrent.cpp}}
+\doxysubsubsection{\texorpdfstring{dot\_product()}{dot\_product()}}
+{\footnotesize\ttfamily float dot\+\_\+product (\begin{DoxyParamCaption}\item[{float}]{v1\mbox{[}3\mbox{]},  }\item[{float}]{v2\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+Returns dot product between 2 3d angles 
+
+Definition at line 40 of file Reconstruction\+Current.\+cpp.
+
+\mbox{\Hypertarget{_reconstruction_current_8cpp_ae84ee4edbe1f75e9a5197e57c06b3149}\label{_reconstruction_current_8cpp_ae84ee4edbe1f75e9a5197e57c06b3149}} 
+\index{ReconstructionCurrent.cpp@{ReconstructionCurrent.cpp}!getAbsoluteDiff3Angles@{getAbsoluteDiff3Angles}}
+\index{getAbsoluteDiff3Angles@{getAbsoluteDiff3Angles}!ReconstructionCurrent.cpp@{ReconstructionCurrent.cpp}}
+\doxysubsubsection{\texorpdfstring{getAbsoluteDiff3Angles()}{getAbsoluteDiff3Angles()}}
+{\footnotesize\ttfamily double get\+Absolute\+Diff3\+Angles (\begin{DoxyParamCaption}\item[{float}]{x1,  }\item[{float}]{y1,  }\item[{float}]{z1,  }\item[{float}]{x2,  }\item[{float}]{y2,  }\item[{float}]{z2 }\end{DoxyParamCaption})}
+
+Return difference between 2 3d angles, value is between 0 and PI 
+
+Definition at line 18 of file Reconstruction\+Current.\+cpp.
+
+\mbox{\Hypertarget{_reconstruction_current_8cpp_ab6df0cba10195405e4a112d5c3d76c68}\label{_reconstruction_current_8cpp_ab6df0cba10195405e4a112d5c3d76c68}} 
+\index{ReconstructionCurrent.cpp@{ReconstructionCurrent.cpp}!interpolate\_streamline\_selective\_weighted\_sum@{interpolate\_streamline\_selective\_weighted\_sum}}
+\index{interpolate\_streamline\_selective\_weighted\_sum@{interpolate\_streamline\_selective\_weighted\_sum}!ReconstructionCurrent.cpp@{ReconstructionCurrent.cpp}}
+\doxysubsubsection{\texorpdfstring{interpolate\_streamline\_selective\_weighted\_sum()}{interpolate\_streamline\_selective\_weighted\_sum()}}
+{\footnotesize\ttfamily int interpolate\+\_\+streamline\+\_\+selective\+\_\+weighted\+\_\+sum (\begin{DoxyParamCaption}\item[{float}]{xx,  }\item[{float}]{yy,  }\item[{float}]{zz,  }\item[{float \&}]{vx,  }\item[{float \&}]{vy,  }\item[{float \&}]{vz }\end{DoxyParamCaption})}
+
+
+
+reconstruct the vector value of the point (xx,yy) on the vector field by using the Selective Weighed Sum method, this method provides the most reliable reconstruction it first uses the nearest streamline node\textquotesingle{}s vector value as the base, then it finds the next closest node and compare the vector value, if the difference is below the average threshold then it computes the weighted sum between two nodes, if the diff is too large then it discard the second node. The process is repeated untill all nodes within radar range is processed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xx} & x coord of the point on the vector field \\
+\hline
+{\em yy} & y coord of the point on the vector field \\
+\hline
+{\em vx} & the resulting vx value after reconstruction \\
+\hline
+{\em vy} & the resulting vy value after reconstruction \\
+\hline
+{\em radar} & the radar diameter to scan for surrounding streamline nodes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int how many streamline nodes where found within the radar range, used for recursion. If the result is too few then increase radar range and vice versa 
+\end{DoxyReturn}
+
+
+Definition at line 473 of file Reconstruction\+Current.\+cpp.
+
+\mbox{\Hypertarget{_reconstruction_current_8cpp_a157f10ce01a5460c1ccd28ef799ca299}\label{_reconstruction_current_8cpp_a157f10ce01a5460c1ccd28ef799ca299}} 
+\index{ReconstructionCurrent.cpp@{ReconstructionCurrent.cpp}!interpolate\_streamline\_selective\_weighted\_sum\_stdev@{interpolate\_streamline\_selective\_weighted\_sum\_stdev}}
+\index{interpolate\_streamline\_selective\_weighted\_sum\_stdev@{interpolate\_streamline\_selective\_weighted\_sum\_stdev}!ReconstructionCurrent.cpp@{ReconstructionCurrent.cpp}}
+\doxysubsubsection{\texorpdfstring{interpolate\_streamline\_selective\_weighted\_sum\_stdev()}{interpolate\_streamline\_selective\_weighted\_sum\_stdev()}}
+{\footnotesize\ttfamily float interpolate\+\_\+streamline\+\_\+selective\+\_\+weighted\+\_\+sum\+\_\+stdev (\begin{DoxyParamCaption}\item[{float \&}]{stdev,  }\item[{float}]{xx,  }\item[{float}]{yy,  }\item[{float}]{zz,  }\item[{float \&}]{vx,  }\item[{float \&}]{vy,  }\item[{float \&}]{vz }\end{DoxyParamCaption})}
+
+
+
+reconstruct the vector value of the point (xx,yy) on the vector field by using the Selective Weighed Sum method, this method provides the most reliable reconstruction it first uses the nearest streamline node\textquotesingle{}s vector value as the base, then it finds the next closest node and compare the vector value, if the difference is below the average threshold then it computes the weighted sum between two nodes, if the diff is too large then it discard the second node. The process is repeated untill all nodes within radar range is processed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xx} & x coord of the point on the vector field \\
+\hline
+{\em yy} & y coord of the point on the vector field \\
+\hline
+{\em vx} & the resulting vx value after reconstruction \\
+\hline
+{\em vy} & the resulting vy value after reconstruction \\
+\hline
+{\em radar} & the radar diameter to scan for surrounding streamline nodes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int how many streamline nodes where found within the radar range, used for recursion. If the result is too few then increase radar range and vice versa 
+\end{DoxyReturn}
+
+
+Definition at line 189 of file Reconstruction\+Current.\+cpp.
+
+\mbox{\Hypertarget{_reconstruction_current_8cpp_a9404b69a5b02f7a73c85b0e1827ffa34}\label{_reconstruction_current_8cpp_a9404b69a5b02f7a73c85b0e1827ffa34}} 
+\index{ReconstructionCurrent.cpp@{ReconstructionCurrent.cpp}!recon\_get\_stdev@{recon\_get\_stdev}}
+\index{recon\_get\_stdev@{recon\_get\_stdev}!ReconstructionCurrent.cpp@{ReconstructionCurrent.cpp}}
+\doxysubsubsection{\texorpdfstring{recon\_get\_stdev()}{recon\_get\_stdev()}}
+{\footnotesize\ttfamily float recon\+\_\+get\+\_\+stdev (\begin{DoxyParamCaption}\item[{double}]{p\mbox{[}3\mbox{]},  }\item[{float}]{radar }\end{DoxyParamCaption})}
+
+Returns the standard deviation value for the current point p in the original vectorfield. We compute the standard devation of all angles that are neighbors to the closest segment to p 
+
+Definition at line 55 of file Reconstruction\+Current.\+cpp.
+

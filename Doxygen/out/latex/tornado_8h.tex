@@ -1,0 +1,56 @@
+\hypertarget{tornado_8h}{}\doxysection{D\+:/\+Academic/\+VReconstruction/src/\+Sample\+Datasets/tornado.h File Reference}
+\label{tornado_8h}\index{D:/Academic/VReconstruction/src/SampleDatasets/tornado.h@{D:/Academic/VReconstruction/src/SampleDatasets/tornado.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{tornado_8h_a9e470ce01de763bf32ebe85e1d8e6d71}{tornado\+\_\+data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{tornado_8h_a9e7aaa4cc9bf13728e6a7d9a85f20770}{gen\+\_\+tornado}} (int xs, int ys, int zs, int time)
+\item 
+void \mbox{\hyperlink{tornado_8h_abfaf030e014aad7d7f0ced16a34641cc}{get\+Tornado\+Vec}} (float xx, float yy, float zz, float \&vx, float \&vy, float \&vz)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{tornado_8h_a9e470ce01de763bf32ebe85e1d8e6d71}\label{tornado_8h_a9e470ce01de763bf32ebe85e1d8e6d71}} 
+\index{tornado.h@{tornado.h}!tornado\_data@{tornado\_data}}
+\index{tornado\_data@{tornado\_data}!tornado.h@{tornado.h}}
+\doxysubsubsection{\texorpdfstring{tornado\_data}{tornado\_data}}
+{\footnotesize\ttfamily \#define tornado\+\_\+data}
+
+
+
+Definition at line 3 of file tornado.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tornado_8h_a9e7aaa4cc9bf13728e6a7d9a85f20770}\label{tornado_8h_a9e7aaa4cc9bf13728e6a7d9a85f20770}} 
+\index{tornado.h@{tornado.h}!gen\_tornado@{gen\_tornado}}
+\index{gen\_tornado@{gen\_tornado}!tornado.h@{tornado.h}}
+\doxysubsubsection{\texorpdfstring{gen\_tornado()}{gen\_tornado()}}
+{\footnotesize\ttfamily void gen\+\_\+tornado (\begin{DoxyParamCaption}\item[{int}]{xs,  }\item[{int}]{ys,  }\item[{int}]{zs,  }\item[{int}]{time }\end{DoxyParamCaption})}
+
+Gen\+\_\+\+Tornado creates a vector field of dimension \mbox{[}xs,ys,zs,3\mbox{]} from a proceedural function. By passing in different time arguements, a slightly different and rotating field is created.
+
+The magnitude of the vector field is highest at some funnel shape and values range from 0.\+0 to around 0.\+4 (I think).
+
+I just wrote these comments, 8 years after I wrote the function.
+
+Developed by Roger A. Crawfis, The Ohio State University 
+
+Definition at line 47 of file tornado.\+cpp.
+
+\mbox{\Hypertarget{tornado_8h_abfaf030e014aad7d7f0ced16a34641cc}\label{tornado_8h_abfaf030e014aad7d7f0ced16a34641cc}} 
+\index{tornado.h@{tornado.h}!getTornadoVec@{getTornadoVec}}
+\index{getTornadoVec@{getTornadoVec}!tornado.h@{tornado.h}}
+\doxysubsubsection{\texorpdfstring{getTornadoVec()}{getTornadoVec()}}
+{\footnotesize\ttfamily void get\+Tornado\+Vec (\begin{DoxyParamCaption}\item[{float}]{xx,  }\item[{float}]{yy,  }\item[{float}]{zz,  }\item[{float \&}]{vx,  }\item[{float \&}]{vy,  }\item[{float \&}]{vz }\end{DoxyParamCaption})}
+
+
+
+Definition at line 99 of file tornado.\+cpp.
+

@@ -1,0 +1,358 @@
+\hypertarget{class_steady3_d}{}\doxysection{Steady3D Class Reference}
+\label{class_steady3_d}\index{Steady3D@{Steady3D}}
+
+
+{\ttfamily \#include $<$Steady3\+D.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_steady3_d_a9331d9c23348cdad5690e82eff86183d}{Steady3D}} ()
+\item 
+\mbox{\hyperlink{class_steady3_d_a707ee6710fa7358033689ce737d03ddb}{$\sim$\+Steady3D}} ()
+\item 
+void \mbox{\hyperlink{class_steady3_d_a20e67c8be6af329fd0bdd1011b6ce5a8}{set\+Data}} (float $\ast$\+\_\+vf\+Data)
+\item 
+void \mbox{\hyperlink{class_steady3_d_a4540306c64e5bb247e516673f3d7424d}{read\+Data\+From\+File}} ()
+\item 
+void \mbox{\hyperlink{class_steady3_d_a2ec8ace93aeab644d8f43c16d3437152}{get\+\_\+vector\+\_\+at}} (const float x, const float y, const float z, float \&vx, float \&vy, float \&vz)
+\item 
+void \mbox{\hyperlink{class_steady3_d_ad52ec0a82eafb193f7b001c0d289c49a}{get\+Jacobian}} (const float x, const float y, const float z, Matrix3f \&jac)
+\item 
+void \mbox{\hyperlink{class_steady3_d_a1765c9ea7463bd4d3fcb4f1814d90700}{get\+\_\+field\+\_\+at}} (float x, float y, float z, \mbox{\hyperlink{_steady3_d_8h_a07f05a6053b729c023b9ca40e5a4ed07}{Field\+ID}} field\+Id, float \&output\+Value)
+\item 
+int \mbox{\hyperlink{class_steady3_d_a139034ff1867b384acd68919049d39a9}{get\+Tuple\+Idx}} (int i, int j, int k, int field\+ID)
+\item 
+void \mbox{\hyperlink{class_steady3_d_a9f7cbdf533eb04b04bf26e44b743ff75}{set\+Domain\+Dimension}} (const int \+\_\+dims\mbox{[}3\mbox{]})
+\item 
+void \mbox{\hyperlink{class_steady3_d_a24f4e760aa0ea8947bbf137a9d9d6719}{get\+Domain\+Dimension}} (int \+\_\+dims\mbox{[}3\mbox{]})
+\item 
+void \mbox{\hyperlink{class_steady3_d_ae091f5f0d2c82d6c6c7071bd29bbec69}{set\+Data\+Space}} (const float \+\_\+spacing\mbox{[}3\mbox{]})
+\item 
+void \mbox{\hyperlink{class_steady3_d_ad21d1e63ecfa93cf01a19e4279746d56}{set\+Data\+Space}} (const double \+\_\+spacing\mbox{[}3\mbox{]})
+\item 
+void \mbox{\hyperlink{class_steady3_d_ad64126a284922a9b42851f9271418e51}{get\+Data\+Space}} (float \+\_\+spacing\mbox{[}3\mbox{]})
+\item 
+void \mbox{\hyperlink{class_steady3_d_a64eb681f7bf8914b9b0548d9b072e32e}{set\+Origin}} (const float \+\_\+origin\mbox{[}3\mbox{]})
+\item 
+void \mbox{\hyperlink{class_steady3_d_afef6aaa9a742880f4a8b1b9c36da0e48}{set\+Origin}} (const double \+\_\+origin\mbox{[}3\mbox{]})
+\item 
+void \mbox{\hyperlink{class_steady3_d_a7a1b8a5519acdd4f77220ba2d0d514d3}{get\+Origin}} (float \+\_\+origin\mbox{[}3\mbox{]})
+\item 
+void \mbox{\hyperlink{class_steady3_d_a9d1d1031e666a89dbc8323c970ffb08c}{get\+XRange}} (float \+\_\+x\+Range\mbox{[}2\mbox{]})
+\item 
+void \mbox{\hyperlink{class_steady3_d_abf97fdf899e86ef3a8a5689add2499a3}{get\+YRange}} (float \+\_\+y\+Range\mbox{[}2\mbox{]})
+\item 
+void \mbox{\hyperlink{class_steady3_d_a81e27fbae4b7d25e9407724923ba7265}{get\+ZRange}} (float \+\_\+z\+Range\mbox{[}2\mbox{]})
+\item 
+void \mbox{\hyperlink{class_steady3_d_ab32ee91e48c11f1e054f25bb81e541fd}{set\+Data\+Range}} (float \+\_\+range\mbox{[}6\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_steady3_d_a6479cd69f696902b45c7ec7a4187b46c}{dims}} \mbox{[}3\mbox{]}
+\item 
+float \mbox{\hyperlink{class_steady3_d_aef0f296aa8cf06178d183ae260dc4d26}{x\+Range}} \mbox{[}2\mbox{]}
+\item 
+float \mbox{\hyperlink{class_steady3_d_a3ef5354e7266fe77f2ee6bc67e952abf}{y\+Range}} \mbox{[}2\mbox{]}
+\item 
+float \mbox{\hyperlink{class_steady3_d_ad2210aaac3cf7ccf202841b569029fa1}{z\+Range}} \mbox{[}2\mbox{]}
+\item 
+double \mbox{\hyperlink{class_steady3_d_a16c58ed4cc8f2d3da361d3322c2bc771}{spacing}} \mbox{[}3\mbox{]}
+\item 
+double \mbox{\hyperlink{class_steady3_d_aa271511650bae7ca2688c78affa7b31b}{origin}} \mbox{[}3\mbox{]}
+\item 
+float $\ast$ \mbox{\hyperlink{class_steady3_d_ab87f3fd044ce8696a41d241c307ed0ed}{vf\+Data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 19 of file Steady3\+D.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_steady3_d_a9331d9c23348cdad5690e82eff86183d}\label{class_steady3_d_a9331d9c23348cdad5690e82eff86183d}} 
+\index{Steady3D@{Steady3D}!Steady3D@{Steady3D}}
+\index{Steady3D@{Steady3D}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{Steady3D()}{Steady3D()}}
+{\footnotesize\ttfamily Steady3\+D\+::\+Steady3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file Steady3\+D.\+cpp.
+
+\mbox{\Hypertarget{class_steady3_d_a707ee6710fa7358033689ce737d03ddb}\label{class_steady3_d_a707ee6710fa7358033689ce737d03ddb}} 
+\index{Steady3D@{Steady3D}!````~Steady3D@{$\sim$Steady3D}}
+\index{````~Steady3D@{$\sim$Steady3D}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{$\sim$Steady3D()}{~Steady3D()}}
+{\footnotesize\ttfamily Steady3\+D\+::$\sim$\+Steady3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 12 of file Steady3\+D.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_steady3_d_a1765c9ea7463bd4d3fcb4f1814d90700}\label{class_steady3_d_a1765c9ea7463bd4d3fcb4f1814d90700}} 
+\index{Steady3D@{Steady3D}!get\_field\_at@{get\_field\_at}}
+\index{get\_field\_at@{get\_field\_at}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{get\_field\_at()}{get\_field\_at()}}
+{\footnotesize\ttfamily void Steady3\+D\+::get\+\_\+field\+\_\+at (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z,  }\item[{\mbox{\hyperlink{_steady3_d_8h_a07f05a6053b729c023b9ca40e5a4ed07}{Field\+ID}}}]{field\+Id,  }\item[{float \&}]{output\+Value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 23 of file Steady3\+D.\+cpp.
+
+\mbox{\Hypertarget{class_steady3_d_a2ec8ace93aeab644d8f43c16d3437152}\label{class_steady3_d_a2ec8ace93aeab644d8f43c16d3437152}} 
+\index{Steady3D@{Steady3D}!get\_vector\_at@{get\_vector\_at}}
+\index{get\_vector\_at@{get\_vector\_at}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{get\_vector\_at()}{get\_vector\_at()}}
+{\footnotesize\ttfamily void Steady3\+D\+::get\+\_\+vector\+\_\+at (\begin{DoxyParamCaption}\item[{const float}]{x,  }\item[{const float}]{y,  }\item[{const float}]{z,  }\item[{float \&}]{vx,  }\item[{float \&}]{vy,  }\item[{float \&}]{vz }\end{DoxyParamCaption})}
+
+
+
+Definition at line 81 of file Steady3\+D.\+cpp.
+
+\mbox{\Hypertarget{class_steady3_d_ad64126a284922a9b42851f9271418e51}\label{class_steady3_d_ad64126a284922a9b42851f9271418e51}} 
+\index{Steady3D@{Steady3D}!getDataSpace@{getDataSpace}}
+\index{getDataSpace@{getDataSpace}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{getDataSpace()}{getDataSpace()}}
+{\footnotesize\ttfamily void Steady3\+D\+::get\+Data\+Space (\begin{DoxyParamCaption}\item[{float}]{\+\_\+spacing\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 226 of file Steady3\+D.\+cpp.
+
+\mbox{\Hypertarget{class_steady3_d_a24f4e760aa0ea8947bbf137a9d9d6719}\label{class_steady3_d_a24f4e760aa0ea8947bbf137a9d9d6719}} 
+\index{Steady3D@{Steady3D}!getDomainDimension@{getDomainDimension}}
+\index{getDomainDimension@{getDomainDimension}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{getDomainDimension()}{getDomainDimension()}}
+{\footnotesize\ttfamily void Steady3\+D\+::get\+Domain\+Dimension (\begin{DoxyParamCaption}\item[{int}]{\+\_\+dims\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 205 of file Steady3\+D.\+cpp.
+
+\mbox{\Hypertarget{class_steady3_d_ad52ec0a82eafb193f7b001c0d289c49a}\label{class_steady3_d_ad52ec0a82eafb193f7b001c0d289c49a}} 
+\index{Steady3D@{Steady3D}!getJacobian@{getJacobian}}
+\index{getJacobian@{getJacobian}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{getJacobian()}{getJacobian()}}
+{\footnotesize\ttfamily void Steady3\+D\+::get\+Jacobian (\begin{DoxyParamCaption}\item[{const float}]{x,  }\item[{const float}]{y,  }\item[{const float}]{z,  }\item[{Matrix3f \&}]{jac }\end{DoxyParamCaption})}
+
+
+
+Definition at line 89 of file Steady3\+D.\+cpp.
+
+\mbox{\Hypertarget{class_steady3_d_a7a1b8a5519acdd4f77220ba2d0d514d3}\label{class_steady3_d_a7a1b8a5519acdd4f77220ba2d0d514d3}} 
+\index{Steady3D@{Steady3D}!getOrigin@{getOrigin}}
+\index{getOrigin@{getOrigin}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{getOrigin()}{getOrigin()}}
+{\footnotesize\ttfamily void Steady3\+D\+::get\+Origin (\begin{DoxyParamCaption}\item[{float}]{\+\_\+origin\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 247 of file Steady3\+D.\+cpp.
+
+\mbox{\Hypertarget{class_steady3_d_a139034ff1867b384acd68919049d39a9}\label{class_steady3_d_a139034ff1867b384acd68919049d39a9}} 
+\index{Steady3D@{Steady3D}!getTupleIdx@{getTupleIdx}}
+\index{getTupleIdx@{getTupleIdx}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{getTupleIdx()}{getTupleIdx()}}
+{\footnotesize\ttfamily int Steady3\+D\+::get\+Tuple\+Idx (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{k,  }\item[{int}]{field\+ID }\end{DoxyParamCaption})}
+
+
+
+Definition at line 17 of file Steady3\+D.\+cpp.
+
+\mbox{\Hypertarget{class_steady3_d_a9d1d1031e666a89dbc8323c970ffb08c}\label{class_steady3_d_a9d1d1031e666a89dbc8323c970ffb08c}} 
+\index{Steady3D@{Steady3D}!getXRange@{getXRange}}
+\index{getXRange@{getXRange}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{getXRange()}{getXRange()}}
+{\footnotesize\ttfamily void Steady3\+D\+::get\+XRange (\begin{DoxyParamCaption}\item[{float}]{\+\_\+x\+Range\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 254 of file Steady3\+D.\+cpp.
+
+\mbox{\Hypertarget{class_steady3_d_abf97fdf899e86ef3a8a5689add2499a3}\label{class_steady3_d_abf97fdf899e86ef3a8a5689add2499a3}} 
+\index{Steady3D@{Steady3D}!getYRange@{getYRange}}
+\index{getYRange@{getYRange}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{getYRange()}{getYRange()}}
+{\footnotesize\ttfamily void Steady3\+D\+::get\+YRange (\begin{DoxyParamCaption}\item[{float}]{\+\_\+y\+Range\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 260 of file Steady3\+D.\+cpp.
+
+\mbox{\Hypertarget{class_steady3_d_a81e27fbae4b7d25e9407724923ba7265}\label{class_steady3_d_a81e27fbae4b7d25e9407724923ba7265}} 
+\index{Steady3D@{Steady3D}!getZRange@{getZRange}}
+\index{getZRange@{getZRange}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{getZRange()}{getZRange()}}
+{\footnotesize\ttfamily void Steady3\+D\+::get\+ZRange (\begin{DoxyParamCaption}\item[{float}]{\+\_\+z\+Range\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 266 of file Steady3\+D.\+cpp.
+
+\mbox{\Hypertarget{class_steady3_d_a4540306c64e5bb247e516673f3d7424d}\label{class_steady3_d_a4540306c64e5bb247e516673f3d7424d}} 
+\index{Steady3D@{Steady3D}!readDataFromFile@{readDataFromFile}}
+\index{readDataFromFile@{readDataFromFile}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{readDataFromFile()}{readDataFromFile()}}
+{\footnotesize\ttfamily void Steady3\+D\+::read\+Data\+From\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 36 of file Steady3\+D.\+h.
+
+\mbox{\Hypertarget{class_steady3_d_a20e67c8be6af329fd0bdd1011b6ce5a8}\label{class_steady3_d_a20e67c8be6af329fd0bdd1011b6ce5a8}} 
+\index{Steady3D@{Steady3D}!setData@{setData}}
+\index{setData@{setData}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}}
+{\footnotesize\ttfamily void Steady3\+D\+::set\+Data (\begin{DoxyParamCaption}\item[{float $\ast$}]{\+\_\+vf\+Data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file Steady3\+D.\+cpp.
+
+\mbox{\Hypertarget{class_steady3_d_ab32ee91e48c11f1e054f25bb81e541fd}\label{class_steady3_d_ab32ee91e48c11f1e054f25bb81e541fd}} 
+\index{Steady3D@{Steady3D}!setDataRange@{setDataRange}}
+\index{setDataRange@{setDataRange}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{setDataRange()}{setDataRange()}}
+{\footnotesize\ttfamily void Steady3\+D\+::set\+Data\+Range (\begin{DoxyParamCaption}\item[{float}]{\+\_\+range\mbox{[}6\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 272 of file Steady3\+D.\+cpp.
+
+\mbox{\Hypertarget{class_steady3_d_ad21d1e63ecfa93cf01a19e4279746d56}\label{class_steady3_d_ad21d1e63ecfa93cf01a19e4279746d56}} 
+\index{Steady3D@{Steady3D}!setDataSpace@{setDataSpace}}
+\index{setDataSpace@{setDataSpace}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{setDataSpace()}{setDataSpace()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Steady3\+D\+::set\+Data\+Space (\begin{DoxyParamCaption}\item[{const double}]{\+\_\+spacing\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 219 of file Steady3\+D.\+cpp.
+
+\mbox{\Hypertarget{class_steady3_d_ae091f5f0d2c82d6c6c7071bd29bbec69}\label{class_steady3_d_ae091f5f0d2c82d6c6c7071bd29bbec69}} 
+\index{Steady3D@{Steady3D}!setDataSpace@{setDataSpace}}
+\index{setDataSpace@{setDataSpace}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{setDataSpace()}{setDataSpace()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Steady3\+D\+::set\+Data\+Space (\begin{DoxyParamCaption}\item[{const float}]{\+\_\+spacing\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 212 of file Steady3\+D.\+cpp.
+
+\mbox{\Hypertarget{class_steady3_d_a9f7cbdf533eb04b04bf26e44b743ff75}\label{class_steady3_d_a9f7cbdf533eb04b04bf26e44b743ff75}} 
+\index{Steady3D@{Steady3D}!setDomainDimension@{setDomainDimension}}
+\index{setDomainDimension@{setDomainDimension}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{setDomainDimension()}{setDomainDimension()}}
+{\footnotesize\ttfamily void Steady3\+D\+::set\+Domain\+Dimension (\begin{DoxyParamCaption}\item[{const int}]{\+\_\+dims\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 198 of file Steady3\+D.\+cpp.
+
+\mbox{\Hypertarget{class_steady3_d_afef6aaa9a742880f4a8b1b9c36da0e48}\label{class_steady3_d_afef6aaa9a742880f4a8b1b9c36da0e48}} 
+\index{Steady3D@{Steady3D}!setOrigin@{setOrigin}}
+\index{setOrigin@{setOrigin}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{setOrigin()}{setOrigin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Steady3\+D\+::set\+Origin (\begin{DoxyParamCaption}\item[{const double}]{\+\_\+origin\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 240 of file Steady3\+D.\+cpp.
+
+\mbox{\Hypertarget{class_steady3_d_a64eb681f7bf8914b9b0548d9b072e32e}\label{class_steady3_d_a64eb681f7bf8914b9b0548d9b072e32e}} 
+\index{Steady3D@{Steady3D}!setOrigin@{setOrigin}}
+\index{setOrigin@{setOrigin}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{setOrigin()}{setOrigin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Steady3\+D\+::set\+Origin (\begin{DoxyParamCaption}\item[{const float}]{\+\_\+origin\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 233 of file Steady3\+D.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_steady3_d_a6479cd69f696902b45c7ec7a4187b46c}\label{class_steady3_d_a6479cd69f696902b45c7ec7a4187b46c}} 
+\index{Steady3D@{Steady3D}!dims@{dims}}
+\index{dims@{dims}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{dims}{dims}}
+{\footnotesize\ttfamily int Steady3\+D\+::dims\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 22 of file Steady3\+D.\+h.
+
+\mbox{\Hypertarget{class_steady3_d_aa271511650bae7ca2688c78affa7b31b}\label{class_steady3_d_aa271511650bae7ca2688c78affa7b31b}} 
+\index{Steady3D@{Steady3D}!origin@{origin}}
+\index{origin@{origin}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{origin}{origin}}
+{\footnotesize\ttfamily double Steady3\+D\+::origin\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 27 of file Steady3\+D.\+h.
+
+\mbox{\Hypertarget{class_steady3_d_a16c58ed4cc8f2d3da361d3322c2bc771}\label{class_steady3_d_a16c58ed4cc8f2d3da361d3322c2bc771}} 
+\index{Steady3D@{Steady3D}!spacing@{spacing}}
+\index{spacing@{spacing}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{spacing}{spacing}}
+{\footnotesize\ttfamily double Steady3\+D\+::spacing\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 26 of file Steady3\+D.\+h.
+
+\mbox{\Hypertarget{class_steady3_d_ab87f3fd044ce8696a41d241c307ed0ed}\label{class_steady3_d_ab87f3fd044ce8696a41d241c307ed0ed}} 
+\index{Steady3D@{Steady3D}!vfData@{vfData}}
+\index{vfData@{vfData}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{vfData}{vfData}}
+{\footnotesize\ttfamily float$\ast$ Steady3\+D\+::vf\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 28 of file Steady3\+D.\+h.
+
+\mbox{\Hypertarget{class_steady3_d_aef0f296aa8cf06178d183ae260dc4d26}\label{class_steady3_d_aef0f296aa8cf06178d183ae260dc4d26}} 
+\index{Steady3D@{Steady3D}!xRange@{xRange}}
+\index{xRange@{xRange}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{xRange}{xRange}}
+{\footnotesize\ttfamily float Steady3\+D\+::x\+Range\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 23 of file Steady3\+D.\+h.
+
+\mbox{\Hypertarget{class_steady3_d_a3ef5354e7266fe77f2ee6bc67e952abf}\label{class_steady3_d_a3ef5354e7266fe77f2ee6bc67e952abf}} 
+\index{Steady3D@{Steady3D}!yRange@{yRange}}
+\index{yRange@{yRange}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{yRange}{yRange}}
+{\footnotesize\ttfamily float Steady3\+D\+::y\+Range\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 24 of file Steady3\+D.\+h.
+
+\mbox{\Hypertarget{class_steady3_d_ad2210aaac3cf7ccf202841b569029fa1}\label{class_steady3_d_ad2210aaac3cf7ccf202841b569029fa1}} 
+\index{Steady3D@{Steady3D}!zRange@{zRange}}
+\index{zRange@{zRange}!Steady3D@{Steady3D}}
+\doxysubsubsection{\texorpdfstring{zRange}{zRange}}
+{\footnotesize\ttfamily float Steady3\+D\+::z\+Range\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 25 of file Steady3\+D.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Academic/\+VReconstruction/src/\+Duong/\mbox{\hyperlink{_steady3_d_8h}{Steady3\+D.\+h}}\item 
+D\+:/\+Academic/\+VReconstruction/src/\+Duong/\mbox{\hyperlink{_steady3_d_8cpp}{Steady3\+D.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,121 @@
+\hypertarget{bernard_8cpp}{}\doxysection{D\+:/\+Academic/\+VReconstruction/src/\+Sample\+Datasets/bernard.cpp File Reference}
+\label{bernard_8cpp}\index{D:/Academic/VReconstruction/src/SampleDatasets/bernard.cpp@{D:/Academic/VReconstruction/src/SampleDatasets/bernard.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{bernard_8cpp_a9f8fa9e74963be16662a9c93cd6de809}{locate\+Sub\+String}} (const char $\ast$input\+String, const char $\ast$search\+String)
+\item 
+void \mbox{\hyperlink{bernard_8cpp_a6401da19b98658771a115afc73894e8e}{load\+Bernard\+Dataset}} ()
+\item 
+void \mbox{\hyperlink{bernard_8cpp_ae7eebad2684d92532e375213a958c045}{get\+Bernard\+Vec}} (float xx, float yy, float zz, float \&vx, float \&vy, float \&vz)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{bernard_8cpp_ab50d78e97b1a967920ba339adbfda0ee}{resolutionZ}} = 64
+\item 
+const int \mbox{\hyperlink{bernard_8cpp_a11683009d72b65320fb2b81a2fc42a49}{resolutionY}} = 32
+\item 
+const int \mbox{\hyperlink{bernard_8cpp_a21095b444999c34f0f85f0709ac5d697}{resolutionX}} = 128
+\item 
+float \mbox{\hyperlink{bernard_8cpp_aab6a78da1e99caf051a94b9b049c0027}{loaded\+Data}} \mbox{[}\mbox{\hyperlink{bernard_8cpp_a21095b444999c34f0f85f0709ac5d697}{resolutionX}}\mbox{]}\mbox{[}\mbox{\hyperlink{bernard_8cpp_a11683009d72b65320fb2b81a2fc42a49}{resolutionY}}\mbox{]}\mbox{[}\mbox{\hyperlink{bernard_8cpp_ab50d78e97b1a967920ba339adbfda0ee}{resolutionZ}}\mbox{]}\mbox{[}3\mbox{]}
+\item 
+bool \mbox{\hyperlink{bernard_8cpp_a50300ba6e38ec30121edcc07ebac42c6}{init}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{bernard_8cpp_ae7eebad2684d92532e375213a958c045}\label{bernard_8cpp_ae7eebad2684d92532e375213a958c045}} 
+\index{bernard.cpp@{bernard.cpp}!getBernardVec@{getBernardVec}}
+\index{getBernardVec@{getBernardVec}!bernard.cpp@{bernard.cpp}}
+\doxysubsubsection{\texorpdfstring{getBernardVec()}{getBernardVec()}}
+{\footnotesize\ttfamily void get\+Bernard\+Vec (\begin{DoxyParamCaption}\item[{float}]{xx,  }\item[{float}]{yy,  }\item[{float}]{zz,  }\item[{float \&}]{vx,  }\item[{float \&}]{vy,  }\item[{float \&}]{vz }\end{DoxyParamCaption})}
+
+
+
+Definition at line 107 of file bernard.\+cpp.
+
+\mbox{\Hypertarget{bernard_8cpp_a6401da19b98658771a115afc73894e8e}\label{bernard_8cpp_a6401da19b98658771a115afc73894e8e}} 
+\index{bernard.cpp@{bernard.cpp}!loadBernardDataset@{loadBernardDataset}}
+\index{loadBernardDataset@{loadBernardDataset}!bernard.cpp@{bernard.cpp}}
+\doxysubsubsection{\texorpdfstring{loadBernardDataset()}{loadBernardDataset()}}
+{\footnotesize\ttfamily void load\+Bernard\+Dataset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Read the raw Bernard data file and store in the uniform rectilinear grid array loaded\+Data 
+
+Definition at line 40 of file bernard.\+cpp.
+
+\mbox{\Hypertarget{bernard_8cpp_a9f8fa9e74963be16662a9c93cd6de809}\label{bernard_8cpp_a9f8fa9e74963be16662a9c93cd6de809}} 
+\index{bernard.cpp@{bernard.cpp}!locateSubString@{locateSubString}}
+\index{locateSubString@{locateSubString}!bernard.cpp@{bernard.cpp}}
+\doxysubsubsection{\texorpdfstring{locateSubString()}{locateSubString()}}
+{\footnotesize\ttfamily const char$\ast$ locate\+Sub\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{input\+String,  }\item[{const char $\ast$}]{search\+String }\end{DoxyParamCaption})}
+
+Find a substring in a string \begin{DoxyReturn}{Returns}
+a pointer to the first occurrence of search\+String in the input\+String 
+\end{DoxyReturn}
+
+
+Definition at line 30 of file bernard.\+cpp.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{bernard_8cpp_a50300ba6e38ec30121edcc07ebac42c6}\label{bernard_8cpp_a50300ba6e38ec30121edcc07ebac42c6}} 
+\index{bernard.cpp@{bernard.cpp}!init@{init}}
+\index{init@{init}!bernard.cpp@{bernard.cpp}}
+\doxysubsubsection{\texorpdfstring{init}{init}}
+{\footnotesize\ttfamily bool init = false}
+
+
+
+Definition at line 106 of file bernard.\+cpp.
+
+\mbox{\Hypertarget{bernard_8cpp_aab6a78da1e99caf051a94b9b049c0027}\label{bernard_8cpp_aab6a78da1e99caf051a94b9b049c0027}} 
+\index{bernard.cpp@{bernard.cpp}!loadedData@{loadedData}}
+\index{loadedData@{loadedData}!bernard.cpp@{bernard.cpp}}
+\doxysubsubsection{\texorpdfstring{loadedData}{loadedData}}
+{\footnotesize\ttfamily float loaded\+Data\mbox{[}\mbox{\hyperlink{bernard_8cpp_a21095b444999c34f0f85f0709ac5d697}{resolutionX}}\mbox{]}\mbox{[}\mbox{\hyperlink{bernard_8cpp_a11683009d72b65320fb2b81a2fc42a49}{resolutionY}}\mbox{]}\mbox{[}\mbox{\hyperlink{bernard_8cpp_ab50d78e97b1a967920ba339adbfda0ee}{resolutionZ}}\mbox{]}\mbox{[}3\mbox{]}}
+
+To make the code simple, the entire dataset will be loaded in this array loaded\+Data\mbox{[}i\mbox{]}\mbox{[}j\mbox{]}\mbox{[}k\mbox{]}\mbox{[}0\mbox{]} = vx at the cell (i,j,k) loaded\+Data\mbox{[}i\mbox{]}\mbox{[}j\mbox{]}\mbox{[}k\mbox{]}\mbox{[}1\mbox{]} = vy at the cell (i,j,k) loaded\+Data\mbox{[}i\mbox{]}\mbox{[}j\mbox{]}\mbox{[}k\mbox{]}\mbox{[}2\mbox{]} = vz at the cell (i,j,k) 
+
+Definition at line 23 of file bernard.\+cpp.
+
+\mbox{\Hypertarget{bernard_8cpp_a21095b444999c34f0f85f0709ac5d697}\label{bernard_8cpp_a21095b444999c34f0f85f0709ac5d697}} 
+\index{bernard.cpp@{bernard.cpp}!resolutionX@{resolutionX}}
+\index{resolutionX@{resolutionX}!bernard.cpp@{bernard.cpp}}
+\doxysubsubsection{\texorpdfstring{resolutionX}{resolutionX}}
+{\footnotesize\ttfamily const int resolutionX = 128}
+
+
+
+Definition at line 15 of file bernard.\+cpp.
+
+\mbox{\Hypertarget{bernard_8cpp_a11683009d72b65320fb2b81a2fc42a49}\label{bernard_8cpp_a11683009d72b65320fb2b81a2fc42a49}} 
+\index{bernard.cpp@{bernard.cpp}!resolutionY@{resolutionY}}
+\index{resolutionY@{resolutionY}!bernard.cpp@{bernard.cpp}}
+\doxysubsubsection{\texorpdfstring{resolutionY}{resolutionY}}
+{\footnotesize\ttfamily const int resolutionY = 32}
+
+
+
+Definition at line 14 of file bernard.\+cpp.
+
+\mbox{\Hypertarget{bernard_8cpp_ab50d78e97b1a967920ba339adbfda0ee}\label{bernard_8cpp_ab50d78e97b1a967920ba339adbfda0ee}} 
+\index{bernard.cpp@{bernard.cpp}!resolutionZ@{resolutionZ}}
+\index{resolutionZ@{resolutionZ}!bernard.cpp@{bernard.cpp}}
+\doxysubsubsection{\texorpdfstring{resolutionZ}{resolutionZ}}
+{\footnotesize\ttfamily const int resolutionZ = 64}
+
+
+
+Definition at line 13 of file bernard.\+cpp.
+

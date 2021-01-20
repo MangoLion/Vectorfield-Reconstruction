@@ -1,0 +1,197 @@
+\hypertarget{_stream_lines_8cxx}{}\doxysection{D\+:/\+Academic/\+VReconstruction/src/\+Duong/\+Stream\+Lines.cxx File Reference}
+\label{_stream_lines_8cxx}\index{D:/Academic/VReconstruction/src/Duong/StreamLines.cxx@{D:/Academic/VReconstruction/src/Duong/StreamLines.cxx}}
+{\ttfamily \#include $<$vtk\+Smart\+Pointer.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Stream\+Tracer.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Named\+Colors.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Actor.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Multi\+Block\+PLOT3\+DReader.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Multi\+Block\+Data\+Set.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Plane\+Source.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Poly\+Data\+Mapper.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Render\+Window.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Render\+Window\+Interactor.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Renderer.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Interactor\+Style\+Trackball\+Camera.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Structured\+Grid\+Outline\+Filter.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Property.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Image\+Data.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Interactor\+Style\+Image.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Image\+Mapper.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Image\+Slice\+Mapper.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Image\+Slice.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Image\+Property.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Camera.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Cell\+Array.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Cell\+Data.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Double\+Array.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Line.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Points.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Poly\+Data.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}../globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Streamlines.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Neighbor\+Graph/\+Graph.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vtk\+Point\+Picker.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Object\+Factory.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Coordinate.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Renderer\+Collection.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Unsigned\+Char\+Array.\+h$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_mouse_interactor_style3}{Mouse\+Interactor\+Style3}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_stream_lines_8cxx_aa15b48b5ec65983dad81078706024274}{update\+Image}} (vtk\+Image\+Data $\ast$image, const unsigned int dimension, std\+::vector$<$ \mbox{\hyperlink{structmatrix__entry}{matrix\+\_\+entry}} $>$ \mbox{\hyperlink{legacy_viewer_8cpp_aeec4234ceebc14c51e8c12db72a71715}{matrix}})
+\item 
+void \mbox{\hyperlink{_stream_lines_8cxx_ac440e44f43711be863fb40dd05e0e9c7}{filter\+Neighbors}} (int index, vtk\+Smart\+Pointer$<$ vtk\+Unsigned\+Char\+Array $>$ \&\mbox{\hyperlink{legacy_viewer_8cpp_ae4bfdfb366103fb260194edb3ee72fda}{cell\+Data}})
+\item 
+void \mbox{\hyperlink{_stream_lines_8cxx_a8fc35c3ac54cd25bc5d32fbd549853a5}{render\+Matrix}} (vtk\+Smart\+Pointer$<$ vtk\+Unsigned\+Char\+Array $>$ \&\mbox{\hyperlink{legacy_viewer_8cpp_ae4bfdfb366103fb260194edb3ee72fda}{cell\+Data}}, int \mbox{\hyperlink{kdtree_8h_ae6fa959b9e8f9c638e0d82bf2c7dc5e7}{dim}}, std\+::vector$<$ \mbox{\hyperlink{structmatrix__entry}{matrix\+\_\+entry}} $>$ \&\mbox{\hyperlink{legacy_viewer_8cpp_aeec4234ceebc14c51e8c12db72a71715}{matrix}})
+\item 
+\mbox{\hyperlink{_stream_lines_8cxx_a7eb36a73968ed780a330a8daea8eb524}{vtk\+Standard\+New\+Macro}} (\mbox{\hyperlink{class_mouse_interactor_style3}{Mouse\+Interactor\+Style3}})
+\item 
+void \mbox{\hyperlink{_stream_lines_8cxx_aeae6c71b4009b4974dc6a53adee55bd0}{start\+\_\+visualizer}} ()
+\item 
+void \mbox{\hyperlink{_stream_lines_8cxx_a494ed2e2fa34424a2a35471463f18520}{Create\+Random\+Image}} (vtk\+Image\+Data $\ast$image, const unsigned int dimension, std\+::vector$<$ \mbox{\hyperlink{structmatrix__entry}{matrix\+\_\+entry}} $>$ \&\mbox{\hyperlink{legacy_viewer_8cpp_aeec4234ceebc14c51e8c12db72a71715}{matrix}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{_stream_lines_8cxx_a8071ffaec437cd4026c3a4940ecf1575}{radar\+\_\+range}} = 1
+\item 
+int \mbox{\hyperlink{_stream_lines_8cxx_a48ef8ef7d0f88989000b9b51c3f51fb6}{clickX}} = -\/1
+\item 
+int \mbox{\hyperlink{_stream_lines_8cxx_a2be8d51ddd0e3d605c1bb8e61e9e6f7b}{clickY}} = -\/1
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Renderer $>$ \mbox{\hyperlink{_stream_lines_8cxx_a769e2ef3b29b6582fbd8bf800e364cf7}{renderer}}
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data\+Mapper $>$ \mbox{\hyperlink{_stream_lines_8cxx_a795f670367f5839313d0af23ba9a5215}{mapper}}
+\item 
+std\+::vector$<$ vtk\+Smart\+Pointer$<$ vtk\+Render\+Window\+Interactor $>$ $>$ \mbox{\hyperlink{_stream_lines_8cxx_a95462e51fb475e5811a66129cb722422}{interactors}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_stream_lines_8cxx_a494ed2e2fa34424a2a35471463f18520}\label{_stream_lines_8cxx_a494ed2e2fa34424a2a35471463f18520}} 
+\index{StreamLines.cxx@{StreamLines.cxx}!CreateRandomImage@{CreateRandomImage}}
+\index{CreateRandomImage@{CreateRandomImage}!StreamLines.cxx@{StreamLines.cxx}}
+\doxysubsubsection{\texorpdfstring{CreateRandomImage()}{CreateRandomImage()}}
+{\footnotesize\ttfamily void Create\+Random\+Image (\begin{DoxyParamCaption}\item[{vtk\+Image\+Data $\ast$}]{image,  }\item[{const unsigned int}]{dimension,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structmatrix__entry}{matrix\+\_\+entry}} $>$ \&}]{matrix }\end{DoxyParamCaption})}
+
+
+
+Definition at line 434 of file Stream\+Lines.\+cxx.
+
+\mbox{\Hypertarget{_stream_lines_8cxx_ac440e44f43711be863fb40dd05e0e9c7}\label{_stream_lines_8cxx_ac440e44f43711be863fb40dd05e0e9c7}} 
+\index{StreamLines.cxx@{StreamLines.cxx}!filterNeighbors@{filterNeighbors}}
+\index{filterNeighbors@{filterNeighbors}!StreamLines.cxx@{StreamLines.cxx}}
+\doxysubsubsection{\texorpdfstring{filterNeighbors()}{filterNeighbors()}}
+{\footnotesize\ttfamily void filter\+Neighbors (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{vtk\+Smart\+Pointer$<$ vtk\+Unsigned\+Char\+Array $>$ \&}]{cell\+Data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 134 of file Stream\+Lines.\+cxx.
+
+\mbox{\Hypertarget{_stream_lines_8cxx_a8fc35c3ac54cd25bc5d32fbd549853a5}\label{_stream_lines_8cxx_a8fc35c3ac54cd25bc5d32fbd549853a5}} 
+\index{StreamLines.cxx@{StreamLines.cxx}!renderMatrix@{renderMatrix}}
+\index{renderMatrix@{renderMatrix}!StreamLines.cxx@{StreamLines.cxx}}
+\doxysubsubsection{\texorpdfstring{renderMatrix()}{renderMatrix()}}
+{\footnotesize\ttfamily void render\+Matrix (\begin{DoxyParamCaption}\item[{vtk\+Smart\+Pointer$<$ vtk\+Unsigned\+Char\+Array $>$ \&}]{cell\+Data,  }\item[{int}]{dim,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structmatrix__entry}{matrix\+\_\+entry}} $>$ \&}]{matrix }\end{DoxyParamCaption})}
+
+
+
+Definition at line 354 of file Stream\+Lines.\+cxx.
+
+\mbox{\Hypertarget{_stream_lines_8cxx_aeae6c71b4009b4974dc6a53adee55bd0}\label{_stream_lines_8cxx_aeae6c71b4009b4974dc6a53adee55bd0}} 
+\index{StreamLines.cxx@{StreamLines.cxx}!start\_visualizer@{start\_visualizer}}
+\index{start\_visualizer@{start\_visualizer}!StreamLines.cxx@{StreamLines.cxx}}
+\doxysubsubsection{\texorpdfstring{start\_visualizer()}{start\_visualizer()}}
+{\footnotesize\ttfamily void start\+\_\+visualizer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 217 of file Stream\+Lines.\+cxx.
+
+\mbox{\Hypertarget{_stream_lines_8cxx_aa15b48b5ec65983dad81078706024274}\label{_stream_lines_8cxx_aa15b48b5ec65983dad81078706024274}} 
+\index{StreamLines.cxx@{StreamLines.cxx}!updateImage@{updateImage}}
+\index{updateImage@{updateImage}!StreamLines.cxx@{StreamLines.cxx}}
+\doxysubsubsection{\texorpdfstring{updateImage()}{updateImage()}}
+{\footnotesize\ttfamily void update\+Image (\begin{DoxyParamCaption}\item[{vtk\+Image\+Data $\ast$}]{image,  }\item[{const unsigned int}]{dimension,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structmatrix__entry}{matrix\+\_\+entry}} $>$}]{matrix }\end{DoxyParamCaption})}
+
+
+
+Definition at line 389 of file Stream\+Lines.\+cxx.
+
+\mbox{\Hypertarget{_stream_lines_8cxx_a7eb36a73968ed780a330a8daea8eb524}\label{_stream_lines_8cxx_a7eb36a73968ed780a330a8daea8eb524}} 
+\index{StreamLines.cxx@{StreamLines.cxx}!vtkStandardNewMacro@{vtkStandardNewMacro}}
+\index{vtkStandardNewMacro@{vtkStandardNewMacro}!StreamLines.cxx@{StreamLines.cxx}}
+\doxysubsubsection{\texorpdfstring{vtkStandardNewMacro()}{vtkStandardNewMacro()}}
+{\footnotesize\ttfamily vtk\+Standard\+New\+Macro (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mouse_interactor_style3}{Mouse\+Interactor\+Style3}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_stream_lines_8cxx_a48ef8ef7d0f88989000b9b51c3f51fb6}\label{_stream_lines_8cxx_a48ef8ef7d0f88989000b9b51c3f51fb6}} 
+\index{StreamLines.cxx@{StreamLines.cxx}!clickX@{clickX}}
+\index{clickX@{clickX}!StreamLines.cxx@{StreamLines.cxx}}
+\doxysubsubsection{\texorpdfstring{clickX}{clickX}}
+{\footnotesize\ttfamily int clickX = -\/1}
+
+
+
+Definition at line 62 of file Stream\+Lines.\+cxx.
+
+\mbox{\Hypertarget{_stream_lines_8cxx_a2be8d51ddd0e3d605c1bb8e61e9e6f7b}\label{_stream_lines_8cxx_a2be8d51ddd0e3d605c1bb8e61e9e6f7b}} 
+\index{StreamLines.cxx@{StreamLines.cxx}!clickY@{clickY}}
+\index{clickY@{clickY}!StreamLines.cxx@{StreamLines.cxx}}
+\doxysubsubsection{\texorpdfstring{clickY}{clickY}}
+{\footnotesize\ttfamily int clickY = -\/1}
+
+
+
+Definition at line 62 of file Stream\+Lines.\+cxx.
+
+\mbox{\Hypertarget{_stream_lines_8cxx_a95462e51fb475e5811a66129cb722422}\label{_stream_lines_8cxx_a95462e51fb475e5811a66129cb722422}} 
+\index{StreamLines.cxx@{StreamLines.cxx}!interactors@{interactors}}
+\index{interactors@{interactors}!StreamLines.cxx@{StreamLines.cxx}}
+\doxysubsubsection{\texorpdfstring{interactors}{interactors}}
+{\footnotesize\ttfamily std\+::vector$<$vtk\+Smart\+Pointer$<$vtk\+Render\+Window\+Interactor$>$ $>$ interactors}
+
+
+
+Definition at line 214 of file Stream\+Lines.\+cxx.
+
+\mbox{\Hypertarget{_stream_lines_8cxx_a795f670367f5839313d0af23ba9a5215}\label{_stream_lines_8cxx_a795f670367f5839313d0af23ba9a5215}} 
+\index{StreamLines.cxx@{StreamLines.cxx}!mapper@{mapper}}
+\index{mapper@{mapper}!StreamLines.cxx@{StreamLines.cxx}}
+\doxysubsubsection{\texorpdfstring{mapper}{mapper}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Poly\+Data\+Mapper$>$ mapper}
+
+
+
+Definition at line 64 of file Stream\+Lines.\+cxx.
+
+\mbox{\Hypertarget{_stream_lines_8cxx_a8071ffaec437cd4026c3a4940ecf1575}\label{_stream_lines_8cxx_a8071ffaec437cd4026c3a4940ecf1575}} 
+\index{StreamLines.cxx@{StreamLines.cxx}!radar\_range@{radar\_range}}
+\index{radar\_range@{radar\_range}!StreamLines.cxx@{StreamLines.cxx}}
+\doxysubsubsection{\texorpdfstring{radar\_range}{radar\_range}}
+{\footnotesize\ttfamily float radar\+\_\+range = 1}
+
+
+
+Definition at line 61 of file Stream\+Lines.\+cxx.
+
+\mbox{\Hypertarget{_stream_lines_8cxx_a769e2ef3b29b6582fbd8bf800e364cf7}\label{_stream_lines_8cxx_a769e2ef3b29b6582fbd8bf800e364cf7}} 
+\index{StreamLines.cxx@{StreamLines.cxx}!renderer@{renderer}}
+\index{renderer@{renderer}!StreamLines.cxx@{StreamLines.cxx}}
+\doxysubsubsection{\texorpdfstring{renderer}{renderer}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Renderer$>$ renderer}
+
+
+
+Definition at line 63 of file Stream\+Lines.\+cxx.
+

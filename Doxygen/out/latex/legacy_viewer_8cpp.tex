@@ -1,0 +1,147 @@
+\hypertarget{legacy_viewer_8cpp}{}\doxysection{D\+:/\+Academic/\+VReconstruction/src/legacy\+Viewer.cpp File Reference}
+\label{legacy_viewer_8cpp}\index{D:/Academic/VReconstruction/src/legacyViewer.cpp@{D:/Academic/VReconstruction/src/legacyViewer.cpp}}
+{\ttfamily \#include $<$vtk\+Smart\+Pointer.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Stream\+Tracer.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Named\+Colors.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Actor.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Multi\+Block\+PLOT3\+DReader.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Multi\+Block\+Data\+Set.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Plane\+Source.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Poly\+Data\+Mapper.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Render\+Window.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Render\+Window\+Interactor.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Renderer.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Interactor\+Style\+Trackball\+Camera.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Structured\+Grid\+Outline\+Filter.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Property.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Image\+Data.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Interactor\+Style\+Image.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Image\+Mapper.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Image\+Slice\+Mapper.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Image\+Slice.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Image\+Property.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Camera.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Cell\+Array.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Cell\+Data.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Double\+Array.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Line.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Points.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Poly\+Data.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Duong/\+Streamlines.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Neighbor\+Graph/\+Graph.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vtk\+Point\+Picker.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Object\+Factory.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Coordinate.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Renderer\+Collection.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_mouse_interactor_style3}{Mouse\+Interactor\+Style3}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{legacy_viewer_8cpp_a7eb36a73968ed780a330a8daea8eb524}{vtk\+Standard\+New\+Macro}} (\mbox{\hyperlink{class_mouse_interactor_style3}{Mouse\+Interactor\+Style3}})
+\item 
+void \mbox{\hyperlink{legacy_viewer_8cpp_a120d928756f18915d453d5cb3923aa5d}{filter\+Neighbors}} (int index)
+\item 
+void \mbox{\hyperlink{legacy_viewer_8cpp_a7ddfa65fcf7179de0f9134085c397b58}{render\+Matrix}} ()
+\item 
+void \mbox{\hyperlink{legacy_viewer_8cpp_aeae6c71b4009b4974dc6a53adee55bd0}{start\+\_\+visualizer}} ()
+\item 
+void \mbox{\hyperlink{legacy_viewer_8cpp_abb30210b9a1099d6dd06396edc5a175c}{Create\+Random\+Image}} (vtk\+Image\+Data $\ast$image, const unsigned int dimension)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Unsigned\+Char\+Array $>$ \mbox{\hyperlink{legacy_viewer_8cpp_ae4bfdfb366103fb260194edb3ee72fda}{cell\+Data}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structmatrix__entry}{matrix\+\_\+entry}} $>$ \mbox{\hyperlink{legacy_viewer_8cpp_aeec4234ceebc14c51e8c12db72a71715}{matrix}}
+\item 
+std\+::vector$<$ vtk\+Smart\+Pointer$<$ vtk\+Render\+Window\+Interactor $>$ $>$ \mbox{\hyperlink{legacy_viewer_8cpp_a95462e51fb475e5811a66129cb722422}{interactors}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{legacy_viewer_8cpp_abb30210b9a1099d6dd06396edc5a175c}\label{legacy_viewer_8cpp_abb30210b9a1099d6dd06396edc5a175c}} 
+\index{legacyViewer.cpp@{legacyViewer.cpp}!CreateRandomImage@{CreateRandomImage}}
+\index{CreateRandomImage@{CreateRandomImage}!legacyViewer.cpp@{legacyViewer.cpp}}
+\doxysubsubsection{\texorpdfstring{CreateRandomImage()}{CreateRandomImage()}}
+{\footnotesize\ttfamily void Create\+Random\+Image (\begin{DoxyParamCaption}\item[{vtk\+Image\+Data $\ast$}]{image,  }\item[{const unsigned int}]{dimension }\end{DoxyParamCaption})}
+
+
+
+Definition at line 280 of file legacy\+Viewer.\+cpp.
+
+\mbox{\Hypertarget{legacy_viewer_8cpp_a120d928756f18915d453d5cb3923aa5d}\label{legacy_viewer_8cpp_a120d928756f18915d453d5cb3923aa5d}} 
+\index{legacyViewer.cpp@{legacyViewer.cpp}!filterNeighbors@{filterNeighbors}}
+\index{filterNeighbors@{filterNeighbors}!legacyViewer.cpp@{legacyViewer.cpp}}
+\doxysubsubsection{\texorpdfstring{filterNeighbors()}{filterNeighbors()}}
+{\footnotesize\ttfamily void filter\+Neighbors (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 90 of file legacy\+Viewer.\+cpp.
+
+\mbox{\Hypertarget{legacy_viewer_8cpp_a7ddfa65fcf7179de0f9134085c397b58}\label{legacy_viewer_8cpp_a7ddfa65fcf7179de0f9134085c397b58}} 
+\index{legacyViewer.cpp@{legacyViewer.cpp}!renderMatrix@{renderMatrix}}
+\index{renderMatrix@{renderMatrix}!legacyViewer.cpp@{legacyViewer.cpp}}
+\doxysubsubsection{\texorpdfstring{renderMatrix()}{renderMatrix()}}
+{\footnotesize\ttfamily void render\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 244 of file legacy\+Viewer.\+cpp.
+
+\mbox{\Hypertarget{legacy_viewer_8cpp_aeae6c71b4009b4974dc6a53adee55bd0}\label{legacy_viewer_8cpp_aeae6c71b4009b4974dc6a53adee55bd0}} 
+\index{legacyViewer.cpp@{legacyViewer.cpp}!start\_visualizer@{start\_visualizer}}
+\index{start\_visualizer@{start\_visualizer}!legacyViewer.cpp@{legacyViewer.cpp}}
+\doxysubsubsection{\texorpdfstring{start\_visualizer()}{start\_visualizer()}}
+{\footnotesize\ttfamily void start\+\_\+visualizer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 127 of file legacy\+Viewer.\+cpp.
+
+\mbox{\Hypertarget{legacy_viewer_8cpp_a7eb36a73968ed780a330a8daea8eb524}\label{legacy_viewer_8cpp_a7eb36a73968ed780a330a8daea8eb524}} 
+\index{legacyViewer.cpp@{legacyViewer.cpp}!vtkStandardNewMacro@{vtkStandardNewMacro}}
+\index{vtkStandardNewMacro@{vtkStandardNewMacro}!legacyViewer.cpp@{legacyViewer.cpp}}
+\doxysubsubsection{\texorpdfstring{vtkStandardNewMacro()}{vtkStandardNewMacro()}}
+{\footnotesize\ttfamily vtk\+Standard\+New\+Macro (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mouse_interactor_style3}{Mouse\+Interactor\+Style3}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{legacy_viewer_8cpp_ae4bfdfb366103fb260194edb3ee72fda}\label{legacy_viewer_8cpp_ae4bfdfb366103fb260194edb3ee72fda}} 
+\index{legacyViewer.cpp@{legacyViewer.cpp}!cellData@{cellData}}
+\index{cellData@{cellData}!legacyViewer.cpp@{legacyViewer.cpp}}
+\doxysubsubsection{\texorpdfstring{cellData}{cellData}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Unsigned\+Char\+Array$>$ cell\+Data}
+
+
+
+Definition at line 59 of file legacy\+Viewer.\+cpp.
+
+\mbox{\Hypertarget{legacy_viewer_8cpp_a95462e51fb475e5811a66129cb722422}\label{legacy_viewer_8cpp_a95462e51fb475e5811a66129cb722422}} 
+\index{legacyViewer.cpp@{legacyViewer.cpp}!interactors@{interactors}}
+\index{interactors@{interactors}!legacyViewer.cpp@{legacyViewer.cpp}}
+\doxysubsubsection{\texorpdfstring{interactors}{interactors}}
+{\footnotesize\ttfamily std\+::vector$<$vtk\+Smart\+Pointer$<$vtk\+Render\+Window\+Interactor$>$ $>$ interactors}
+
+
+
+Definition at line 123 of file legacy\+Viewer.\+cpp.
+
+\mbox{\Hypertarget{legacy_viewer_8cpp_aeec4234ceebc14c51e8c12db72a71715}\label{legacy_viewer_8cpp_aeec4234ceebc14c51e8c12db72a71715}} 
+\index{legacyViewer.cpp@{legacyViewer.cpp}!matrix@{matrix}}
+\index{matrix@{matrix}!legacyViewer.cpp@{legacyViewer.cpp}}
+\doxysubsubsection{\texorpdfstring{matrix}{matrix}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structmatrix__entry}{matrix\+\_\+entry}}$>$ matrix}
+
+
+
+Definition at line 60 of file legacy\+Viewer.\+cpp.
+

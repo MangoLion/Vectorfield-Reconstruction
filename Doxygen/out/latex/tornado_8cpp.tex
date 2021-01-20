@@ -1,0 +1,172 @@
+\hypertarget{tornado_8cpp}{}\doxysection{D\+:/\+Academic/\+VReconstruction/src/\+Sample\+Datasets/tornado.cpp File Reference}
+\label{tornado_8cpp}\index{D:/Academic/VReconstruction/src/SampleDatasets/tornado.cpp@{D:/Academic/VReconstruction/src/SampleDatasets/tornado.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{tornado_8cpp_a9e7aaa4cc9bf13728e6a7d9a85f20770}{gen\+\_\+tornado}} (int xs, int ys, int zs, int time)
+\item 
+void \mbox{\hyperlink{tornado_8cpp_abfaf030e014aad7d7f0ced16a34641cc}{get\+Tornado\+Vec}} (float xx, float yy, float zz, float \&vx, float \&vy, float \&vz)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const float \mbox{\hyperlink{tornado_8cpp_aa74ac4e5d0817fdc09b785fc216cf459}{GRIDXMIN}} = 0.f
+\item 
+const float \mbox{\hyperlink{tornado_8cpp_a2b39f6d154fb945507b720655991f3ba}{GRIDYMIN}} = 0.f
+\item 
+const float \mbox{\hyperlink{tornado_8cpp_a0d6fc81cf43aa6378cf99d79a6997c3a}{GRIDZMIN}} = 0.f
+\item 
+const float \mbox{\hyperlink{tornado_8cpp_ab5d4139d871a2a0e1b27404d14b2bbfb}{GRIDXMAX}} = 1.f
+\item 
+const float \mbox{\hyperlink{tornado_8cpp_a787f2aa730d78e51bd345989d6799352}{GRIDYMAX}} = 1.f
+\item 
+const float \mbox{\hyperlink{tornado_8cpp_a4e4ce96e7b5d19a3781bcc8a3bf6e5b5}{GRIDZMAX}} = 1.f
+\item 
+const int \mbox{\hyperlink{tornado_8cpp_a3d4e5a81f5ab41a08e52678d5edec18c}{GRIDXNUM}} = 128
+\item 
+const int \mbox{\hyperlink{tornado_8cpp_a1b3fc3d32a44c4aba53888b6c4c41480}{GRIDYNUM}} = 128
+\item 
+const int \mbox{\hyperlink{tornado_8cpp_a62775f7a1cb149fc14c2ff792fed4829}{GRIDZNUM}} = 128
+\item 
+float \mbox{\hyperlink{tornado_8cpp_a9563aceabd9cf069192b11b4213e1e92}{tornado\+\_\+data}} \mbox{[}\mbox{\hyperlink{tornado_8cpp_a3d4e5a81f5ab41a08e52678d5edec18c}{GRIDXNUM}}\mbox{]}\mbox{[}\mbox{\hyperlink{tornado_8cpp_a1b3fc3d32a44c4aba53888b6c4c41480}{GRIDYNUM}}\mbox{]}\mbox{[}\mbox{\hyperlink{tornado_8cpp_a62775f7a1cb149fc14c2ff792fed4829}{GRIDZNUM}}\mbox{]}\mbox{[}3\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tornado_8cpp_a9e7aaa4cc9bf13728e6a7d9a85f20770}\label{tornado_8cpp_a9e7aaa4cc9bf13728e6a7d9a85f20770}} 
+\index{tornado.cpp@{tornado.cpp}!gen\_tornado@{gen\_tornado}}
+\index{gen\_tornado@{gen\_tornado}!tornado.cpp@{tornado.cpp}}
+\doxysubsubsection{\texorpdfstring{gen\_tornado()}{gen\_tornado()}}
+{\footnotesize\ttfamily void gen\+\_\+tornado (\begin{DoxyParamCaption}\item[{int}]{xs,  }\item[{int}]{ys,  }\item[{int}]{zs,  }\item[{int}]{time }\end{DoxyParamCaption})}
+
+Gen\+\_\+\+Tornado creates a vector field of dimension \mbox{[}xs,ys,zs,3\mbox{]} from a proceedural function. By passing in different time arguements, a slightly different and rotating field is created.
+
+The magnitude of the vector field is highest at some funnel shape and values range from 0.\+0 to around 0.\+4 (I think).
+
+I just wrote these comments, 8 years after I wrote the function.
+
+Developed by Roger A. Crawfis, The Ohio State University 
+
+Definition at line 47 of file tornado.\+cpp.
+
+\mbox{\Hypertarget{tornado_8cpp_abfaf030e014aad7d7f0ced16a34641cc}\label{tornado_8cpp_abfaf030e014aad7d7f0ced16a34641cc}} 
+\index{tornado.cpp@{tornado.cpp}!getTornadoVec@{getTornadoVec}}
+\index{getTornadoVec@{getTornadoVec}!tornado.cpp@{tornado.cpp}}
+\doxysubsubsection{\texorpdfstring{getTornadoVec()}{getTornadoVec()}}
+{\footnotesize\ttfamily void get\+Tornado\+Vec (\begin{DoxyParamCaption}\item[{float}]{xx,  }\item[{float}]{yy,  }\item[{float}]{zz,  }\item[{float \&}]{vx,  }\item[{float \&}]{vy,  }\item[{float \&}]{vz }\end{DoxyParamCaption})}
+
+
+
+Definition at line 99 of file tornado.\+cpp.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{tornado_8cpp_ab5d4139d871a2a0e1b27404d14b2bbfb}\label{tornado_8cpp_ab5d4139d871a2a0e1b27404d14b2bbfb}} 
+\index{tornado.cpp@{tornado.cpp}!GRIDXMAX@{GRIDXMAX}}
+\index{GRIDXMAX@{GRIDXMAX}!tornado.cpp@{tornado.cpp}}
+\doxysubsubsection{\texorpdfstring{GRIDXMAX}{GRIDXMAX}}
+{\footnotesize\ttfamily const float GRIDXMAX = 1.f}
+
+
+
+Definition at line 17 of file tornado.\+cpp.
+
+\mbox{\Hypertarget{tornado_8cpp_aa74ac4e5d0817fdc09b785fc216cf459}\label{tornado_8cpp_aa74ac4e5d0817fdc09b785fc216cf459}} 
+\index{tornado.cpp@{tornado.cpp}!GRIDXMIN@{GRIDXMIN}}
+\index{GRIDXMIN@{GRIDXMIN}!tornado.cpp@{tornado.cpp}}
+\doxysubsubsection{\texorpdfstring{GRIDXMIN}{GRIDXMIN}}
+{\footnotesize\ttfamily const float GRIDXMIN = 0.f}
+
+
+
+Definition at line 14 of file tornado.\+cpp.
+
+\mbox{\Hypertarget{tornado_8cpp_a3d4e5a81f5ab41a08e52678d5edec18c}\label{tornado_8cpp_a3d4e5a81f5ab41a08e52678d5edec18c}} 
+\index{tornado.cpp@{tornado.cpp}!GRIDXNUM@{GRIDXNUM}}
+\index{GRIDXNUM@{GRIDXNUM}!tornado.cpp@{tornado.cpp}}
+\doxysubsubsection{\texorpdfstring{GRIDXNUM}{GRIDXNUM}}
+{\footnotesize\ttfamily const int GRIDXNUM = 128}
+
+
+
+Definition at line 20 of file tornado.\+cpp.
+
+\mbox{\Hypertarget{tornado_8cpp_a787f2aa730d78e51bd345989d6799352}\label{tornado_8cpp_a787f2aa730d78e51bd345989d6799352}} 
+\index{tornado.cpp@{tornado.cpp}!GRIDYMAX@{GRIDYMAX}}
+\index{GRIDYMAX@{GRIDYMAX}!tornado.cpp@{tornado.cpp}}
+\doxysubsubsection{\texorpdfstring{GRIDYMAX}{GRIDYMAX}}
+{\footnotesize\ttfamily const float GRIDYMAX = 1.f}
+
+
+
+Definition at line 18 of file tornado.\+cpp.
+
+\mbox{\Hypertarget{tornado_8cpp_a2b39f6d154fb945507b720655991f3ba}\label{tornado_8cpp_a2b39f6d154fb945507b720655991f3ba}} 
+\index{tornado.cpp@{tornado.cpp}!GRIDYMIN@{GRIDYMIN}}
+\index{GRIDYMIN@{GRIDYMIN}!tornado.cpp@{tornado.cpp}}
+\doxysubsubsection{\texorpdfstring{GRIDYMIN}{GRIDYMIN}}
+{\footnotesize\ttfamily const float GRIDYMIN = 0.f}
+
+
+
+Definition at line 15 of file tornado.\+cpp.
+
+\mbox{\Hypertarget{tornado_8cpp_a1b3fc3d32a44c4aba53888b6c4c41480}\label{tornado_8cpp_a1b3fc3d32a44c4aba53888b6c4c41480}} 
+\index{tornado.cpp@{tornado.cpp}!GRIDYNUM@{GRIDYNUM}}
+\index{GRIDYNUM@{GRIDYNUM}!tornado.cpp@{tornado.cpp}}
+\doxysubsubsection{\texorpdfstring{GRIDYNUM}{GRIDYNUM}}
+{\footnotesize\ttfamily const int GRIDYNUM = 128}
+
+
+
+Definition at line 21 of file tornado.\+cpp.
+
+\mbox{\Hypertarget{tornado_8cpp_a4e4ce96e7b5d19a3781bcc8a3bf6e5b5}\label{tornado_8cpp_a4e4ce96e7b5d19a3781bcc8a3bf6e5b5}} 
+\index{tornado.cpp@{tornado.cpp}!GRIDZMAX@{GRIDZMAX}}
+\index{GRIDZMAX@{GRIDZMAX}!tornado.cpp@{tornado.cpp}}
+\doxysubsubsection{\texorpdfstring{GRIDZMAX}{GRIDZMAX}}
+{\footnotesize\ttfamily const float GRIDZMAX = 1.f}
+
+
+
+Definition at line 19 of file tornado.\+cpp.
+
+\mbox{\Hypertarget{tornado_8cpp_a0d6fc81cf43aa6378cf99d79a6997c3a}\label{tornado_8cpp_a0d6fc81cf43aa6378cf99d79a6997c3a}} 
+\index{tornado.cpp@{tornado.cpp}!GRIDZMIN@{GRIDZMIN}}
+\index{GRIDZMIN@{GRIDZMIN}!tornado.cpp@{tornado.cpp}}
+\doxysubsubsection{\texorpdfstring{GRIDZMIN}{GRIDZMIN}}
+{\footnotesize\ttfamily const float GRIDZMIN = 0.f}
+
+
+
+Definition at line 16 of file tornado.\+cpp.
+
+\mbox{\Hypertarget{tornado_8cpp_a62775f7a1cb149fc14c2ff792fed4829}\label{tornado_8cpp_a62775f7a1cb149fc14c2ff792fed4829}} 
+\index{tornado.cpp@{tornado.cpp}!GRIDZNUM@{GRIDZNUM}}
+\index{GRIDZNUM@{GRIDZNUM}!tornado.cpp@{tornado.cpp}}
+\doxysubsubsection{\texorpdfstring{GRIDZNUM}{GRIDZNUM}}
+{\footnotesize\ttfamily const int GRIDZNUM = 128}
+
+
+
+Definition at line 22 of file tornado.\+cpp.
+
+\mbox{\Hypertarget{tornado_8cpp_a9563aceabd9cf069192b11b4213e1e92}\label{tornado_8cpp_a9563aceabd9cf069192b11b4213e1e92}} 
+\index{tornado.cpp@{tornado.cpp}!tornado\_data@{tornado\_data}}
+\index{tornado\_data@{tornado\_data}!tornado.cpp@{tornado.cpp}}
+\doxysubsubsection{\texorpdfstring{tornado\_data}{tornado\_data}}
+{\footnotesize\ttfamily float tornado\+\_\+data\mbox{[}\mbox{\hyperlink{tornado_8cpp_a3d4e5a81f5ab41a08e52678d5edec18c}{GRIDXNUM}}\mbox{]}\mbox{[}\mbox{\hyperlink{tornado_8cpp_a1b3fc3d32a44c4aba53888b6c4c41480}{GRIDYNUM}}\mbox{]}\mbox{[}\mbox{\hyperlink{tornado_8cpp_a62775f7a1cb149fc14c2ff792fed4829}{GRIDZNUM}}\mbox{]}\mbox{[}3\mbox{]}}
+
+To make the code simple, the entire dataset will be loaded in this array loaded\+Data\mbox{[}i\mbox{]}\mbox{[}j\mbox{]}\mbox{[}k\mbox{]}\mbox{[}0\mbox{]} = vx at the cell (i,j,k) loaded\+Data\mbox{[}i\mbox{]}\mbox{[}j\mbox{]}\mbox{[}k\mbox{]}\mbox{[}1\mbox{]} = vy at the cell (i,j,k) loaded\+Data\mbox{[}i\mbox{]}\mbox{[}j\mbox{]}\mbox{[}k\mbox{]}\mbox{[}2\mbox{]} = vz at the cell (i,j,k) 
+
+Definition at line 31 of file tornado.\+cpp.
+

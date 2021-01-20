@@ -1,0 +1,619 @@
+\hypertarget{main_8cpp}{}\doxysection{D\+:/\+Academic/\+VReconstruction/src/main.cpp File Reference}
+\label{main_8cpp}\index{D:/Academic/VReconstruction/src/main.cpp@{D:/Academic/VReconstruction/src/main.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Unused/\+Skeleton.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Data\+Readers/\+Reader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Neighbor\+Graph/\+Graph.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Data\+Readers/\+Vector\+Field.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Unused/kdtree.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Duong/\+Streamlines.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Recon\+Methods/\+Reconstruction\+Current.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vtk\+Smart\+Pointer.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Poly\+Data.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Structured\+Points\+Reader.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Structured\+Points.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Data\+Array.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Image\+Data.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Double\+Array.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Short\+Array.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Int\+Array.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Point\+Data.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Stream\+Tracer.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Poly\+Data\+Reader.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Id\+Type\+Array.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Id\+List.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Float\+Array.\+h$>$}\newline
+{\ttfamily \#include $<$omp.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Point\+Locator/kd\+Tree\+Helper.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vtk\+Cell\+Array.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Cell\+Data.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Line.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Duong/\+Steady3\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Duong/\+Streamline\+Tracer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vtk\+Point\+Set.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include \char`\"{}./\+Data\+Readers/\+Test\+Reader.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$experimental/filesystem$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8cpp_a525335710b53cb064ca56b936120431e}{\+\_\+\+USE\+\_\+\+MATH\+\_\+\+DEFINES}}
+\begin{DoxyCompactList}\small\item\em test \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{main_8cpp_aab6af62131aad81d17d3b4afd9db334f}{\+\_\+\+SILENCE\+\_\+\+EXPERIMENTAL\+\_\+\+FILESYSTEM\+\_\+\+DEPRECATION\+\_\+\+WARNING}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_a366a77c4ae031b3aa15a820b1a6f6594}{clear\+Dataset}} ()
+\begin{DoxyCompactList}\small\item\em free up vtk structured grid memory \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_ab65825df0ed35a7ab5f5ae74b238fd12}{read\+VTK}} (std\+::string vtk\+File)
+\begin{DoxyCompactList}\small\item\em Reads a vtk structured grid file and save the resulting vtk object to original\+VF (a global vtk structured grid object) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a4c3370970e51709994d38fb261bb4f0f}{build\+Segments\+Poly\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Convert the current set of all streamline nodes into a set of vtk\+Polydata points. Then build a vtk\+Point\+Locator with the set of points (currently using \mbox{\hyperlink{class_k_d_tree}{KDTree}}) \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ \mbox{\hyperlink{main_8cpp_add08e1badff1fda4abd10358e64cbc3d}{build\+Streamlines\+Poly\+Data}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$$>$ \mbox{\hyperlink{_graphbu_8cpp_a3c581467559c6f7d5e94c51ed224488c}{streamlines}})
+\begin{DoxyCompactList}\small\item\em Convert the current set of all streamline nodes into a set of vtk\+Polydata points. Then build a vtk\+Point\+Locator with the set of points (currently using \mbox{\hyperlink{class_k_d_tree}{KDTree}}) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a964bbf087670fdbf44548d69081ed087}{compare\+Streamlines}} (std\+::string sl\+File1, std\+::string sl\+File2)
+\item 
+void \mbox{\hyperlink{main_8cpp_ad118e73f2c824df3c231a2e48aea92b1}{compare\+Streamlines}} (std\+::vector$<$ std\+::vector$<$ Vector3f $>$$>$ org\+SL, std\+::vector$<$ std\+::vector$<$ Vector3f $>$$>$ comp\+SL, std\+::string name, bool write\+Org)
+\item 
+std\+::vector$<$ Vector3f $>$ \mbox{\hyperlink{main_8cpp_a1fa131c63db0fe9b2f3b9cb8c361a09d}{build\+Random\+Seeding\+Curve}} (\mbox{\hyperlink{class_steady3_d}{Steady3D}} \&s\+\_\+org, int num\+SL)
+\begin{DoxyCompactList}\small\item\em return a random seeding curve from the vectorfield \end{DoxyCompactList}\item 
+std\+::vector$<$ Vector3f $>$ \mbox{\hyperlink{main_8cpp_a21d94e0ce09d8760c550f39bb185ea8c}{segment\+Startersto\+Seeding\+Points}} ()
+\item 
+std\+::vector$<$ std\+::vector$<$ Vector3f $>$ $>$ \mbox{\hyperlink{main_8cpp_a7c8ccbde9eff4c016a62948f2954f83e}{trace\+SL}} (\mbox{\hyperlink{class_steady3_d}{Steady3D}} \&vector\+Field, std\+::vector$<$ Vector3f $>$ seeding\+Curve)
+\begin{DoxyCompactList}\small\item\em trace streamline from the vectorfield \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_steady3_d}{Steady3D}} \mbox{\hyperlink{main_8cpp_a087f2dd06a6d6119bb102dbfb43aa0e0}{build\+Steady3D}} (const vtk\+Smart\+Pointer$<$ vtk\+Structured\+Points $>$ \&\mbox{\hyperlink{main_8cpp_aa287d9a959841ad85de92632d291499e}{original\+VF}})
+\begin{DoxyCompactList}\small\item\em Returns a \mbox{\hyperlink{class_steady3_d}{Steady3D}} field from the vtk structured grid for streamline tracing \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a332cf2ef7369b2aa36e5b4ad755c0325}{test\+Error\+Stdev}} (float threshold\+Size, float max\+Threshold, vtk\+Smart\+Pointer$<$ vtk\+Structured\+Points $>$ \mbox{\hyperlink{main_8cpp_aa287d9a959841ad85de92632d291499e}{original\+VF}}, vtk\+Smart\+Pointer$<$ vtk\+Structured\+Points $>$ \mbox{\hyperlink{main_8cpp_a924dc665470972a6335b0d6f439643da}{recon\+VF}}, int skip\+Lines, int skip\+Nodes, std\+::string testid, std\+::string test\+Categories)
+\begin{DoxyCompactList}\small\item\em Main reconstruction method using the latest method. Keep track of average error values and log them accordingly \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a4dc6d1f459bd86bfa07219b0da821708}{create\+Test\+Folder}} (string dir)
+\item 
+void \mbox{\hyperlink{main_8cpp_a889831ec4828d5dcd3e57c159cfeafb1}{get\+Batch\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Have the user input the test ID then create the directory and subdirectories if needed \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_ad43ca6580195dbb92a7edda49b1a873c}{ask\+Reset\+Test}} ()
+\item 
+void \mbox{\hyperlink{main_8cpp_ac6f782f4d3d7738c4d70706f054a54c0}{create\+Tests\+Latest}} ()
+\begin{DoxyCompactList}\small\item\em Create a list of tests using the latest reconstruction method, save this list to $<$testid$>$/tests/tests\+\_\+latest.tsv \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_adcd331059dce9847b575378bbdbe6ee9}{create\+Tests\+Legacy}} ()
+\begin{DoxyCompactList}\small\item\em Create a list of tests using the legacy reconstruction method, save this list to $<$testid$>$/tests/tests\+\_\+legacy.tsv \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a64dc4c33b951b3618d3638bccfb9ed9d}{run\+Tests\+Latest}} ()
+\begin{DoxyCompactList}\small\item\em Run tests using latest reconstruction method, first generated by the create\+Test\+Latest() method \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_ad5313bbacd8a40c3b1267eaa8a2938ae}{run\+Tests\+Legacy}} ()
+\begin{DoxyCompactList}\small\item\em Run Legacy Tests generated by create\+Legacy\+Tests() \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a9fe6e2d06c49ed3e4f8d5615dbccc786}{show\+Basic\+Menu}} ()
+\item 
+int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{main_8cpp_a878b095993c14a258092392effc8083e}{save\+Errors\+To\+CSV}} (std\+::string testid, std\+::string test\+Categories, float \&err\+\_\+angle, float \&err\+\_\+mag, float \&err\+\_\+vx, float \&err\+\_\+vy, float \&err\+\_\+vz, int skip\+Lines, int skip\+Nodes)
+\begin{DoxyCompactList}\small\item\em Append all errors of a single test to the next ling of the logs\+ID.\+csv \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a0786b8a85c94348648106e3edb7f7cf0}{test\+Error\+Legacy}} (vtk\+Smart\+Pointer$<$ vtk\+Structured\+Points $>$ \mbox{\hyperlink{main_8cpp_aa287d9a959841ad85de92632d291499e}{original\+VF}}, vtk\+Smart\+Pointer$<$ vtk\+Structured\+Points $>$ \mbox{\hyperlink{main_8cpp_a924dc665470972a6335b0d6f439643da}{recon\+VF}}, bool do\+Normalize\+Check, bool do\+Normalize\+Recon, float threshold\+Angle, float threshold\+Velocity, bool use\+Segment, float radar, float \&err\+\_\+angle, float \&err\+\_\+dot, float \&err\+\_\+mag, float \&err\+\_\+vx, float \&err\+\_\+vy, float \&err\+\_\+vz, int skip\+Lines, int skip\+Nodes, std\+::string testid, std\+::string test\+Categories)
+\begin{DoxyCompactList}\small\item\em Running legacy reconstruction method and keep track of average errors,then log TODO\+: NEED FIX. Currently unused as legacy method is being called from the newer test function! \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{main_8cpp_a93964d79b9e913c8f07d4675090c4aca}{random\+\_\+range}} (float LO, float HI)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{main_8cpp_a25354111d7542df7e4e21a5271b3eb72}{DATASET\+\_\+\+DIR}} = \char`\"{}D\+:/Academic/VReconstruction/datasets/\char`\"{}
+\item 
+std\+::string \mbox{\hyperlink{main_8cpp_ac785d6bd2e210b6fb928489b48741e91}{DIRECTORY}} = \char`\"{}F\+:/academic/Vector\+Recon/\char`\"{}
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Structured\+Points $>$ \mbox{\hyperlink{main_8cpp_aa287d9a959841ad85de92632d291499e}{original\+VF}}
+\begin{DoxyCompactList}\small\item\em Original Vectorfield \end{DoxyCompactList}\item 
+vtk\+Smart\+Pointer$<$ vtk\+Structured\+Points $>$ \mbox{\hyperlink{main_8cpp_a924dc665470972a6335b0d6f439643da}{recon\+VF}}
+\begin{DoxyCompactList}\small\item\em Reconstructed Vectorfield \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{main_8cpp_aff9a2523f2975f5feab7ae5b61a451b6}{NUM\+\_\+\+THREADS}} = 11
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{main_8cpp_aab6af62131aad81d17d3b4afd9db334f}\label{main_8cpp_aab6af62131aad81d17d3b4afd9db334f}} 
+\index{main.cpp@{main.cpp}!\_SILENCE\_EXPERIMENTAL\_FILESYSTEM\_DEPRECATION\_WARNING@{\_SILENCE\_EXPERIMENTAL\_FILESYSTEM\_DEPRECATION\_WARNING}}
+\index{\_SILENCE\_EXPERIMENTAL\_FILESYSTEM\_DEPRECATION\_WARNING@{\_SILENCE\_EXPERIMENTAL\_FILESYSTEM\_DEPRECATION\_WARNING}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{\_SILENCE\_EXPERIMENTAL\_FILESYSTEM\_DEPRECATION\_WARNING}{\_SILENCE\_EXPERIMENTAL\_FILESYSTEM\_DEPRECATION\_WARNING}}
+{\footnotesize\ttfamily \#define \+\_\+\+SILENCE\+\_\+\+EXPERIMENTAL\+\_\+\+FILESYSTEM\+\_\+\+DEPRECATION\+\_\+\+WARNING}
+
+
+
+Definition at line 59 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a525335710b53cb064ca56b936120431e}\label{main_8cpp_a525335710b53cb064ca56b936120431e}} 
+\index{main.cpp@{main.cpp}!\_USE\_MATH\_DEFINES@{\_USE\_MATH\_DEFINES}}
+\index{\_USE\_MATH\_DEFINES@{\_USE\_MATH\_DEFINES}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{\_USE\_MATH\_DEFINES}{\_USE\_MATH\_DEFINES}}
+{\footnotesize\ttfamily \#define \+\_\+\+USE\+\_\+\+MATH\+\_\+\+DEFINES}
+
+
+
+test 
+
+
+
+Definition at line 11 of file main.\+cpp.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_ad43ca6580195dbb92a7edda49b1a873c}\label{main_8cpp_ad43ca6580195dbb92a7edda49b1a873c}} 
+\index{main.cpp@{main.cpp}!askResetTest@{askResetTest}}
+\index{askResetTest@{askResetTest}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{askResetTest()}{askResetTest()}}
+{\footnotesize\ttfamily void ask\+Reset\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 127 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a1fa131c63db0fe9b2f3b9cb8c361a09d}\label{main_8cpp_a1fa131c63db0fe9b2f3b9cb8c361a09d}} 
+\index{main.cpp@{main.cpp}!buildRandomSeedingCurve@{buildRandomSeedingCurve}}
+\index{buildRandomSeedingCurve@{buildRandomSeedingCurve}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{buildRandomSeedingCurve()}{buildRandomSeedingCurve()}}
+{\footnotesize\ttfamily std\+::vector$<$ Vector3f $>$ build\+Random\+Seeding\+Curve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_steady3_d}{Steady3D}} \&}]{s\+\_\+org,  }\item[{int}]{num\+SL }\end{DoxyParamCaption})}
+
+
+
+return a random seeding curve from the vectorfield 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s\+\_\+org} & the original vectorfield\\
+\hline
+{\em num\+SL} & number of streamlines\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 1447 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a4c3370970e51709994d38fb261bb4f0f}\label{main_8cpp_a4c3370970e51709994d38fb261bb4f0f}} 
+\index{main.cpp@{main.cpp}!buildSegmentsPolyData@{buildSegmentsPolyData}}
+\index{buildSegmentsPolyData@{buildSegmentsPolyData}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{buildSegmentsPolyData()}{buildSegmentsPolyData()}}
+{\footnotesize\ttfamily void build\+Segments\+Poly\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Convert the current set of all streamline nodes into a set of vtk\+Polydata points. Then build a vtk\+Point\+Locator with the set of points (currently using \mbox{\hyperlink{class_k_d_tree}{KDTree}}) 
+
+
+
+Definition at line 639 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a087f2dd06a6d6119bb102dbfb43aa0e0}\label{main_8cpp_a087f2dd06a6d6119bb102dbfb43aa0e0}} 
+\index{main.cpp@{main.cpp}!buildSteady3D@{buildSteady3D}}
+\index{buildSteady3D@{buildSteady3D}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{buildSteady3D()}{buildSteady3D()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_steady3_d}{Steady3D}} build\+Steady3D (\begin{DoxyParamCaption}\item[{const vtk\+Smart\+Pointer$<$ vtk\+Structured\+Points $>$ \&}]{original\+VF }\end{DoxyParamCaption})}
+
+
+
+Returns a \mbox{\hyperlink{class_steady3_d}{Steady3D}} field from the vtk structured grid for streamline tracing 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original\+VF} & original vtk structured grid\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 507 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_add08e1badff1fda4abd10358e64cbc3d}\label{main_8cpp_add08e1badff1fda4abd10358e64cbc3d}} 
+\index{main.cpp@{main.cpp}!buildStreamlinesPolyData@{buildStreamlinesPolyData}}
+\index{buildStreamlinesPolyData@{buildStreamlinesPolyData}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{buildStreamlinesPolyData()}{buildStreamlinesPolyData()}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ build\+Streamlines\+Poly\+Data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$$>$}]{streamlines }\end{DoxyParamCaption})}
+
+
+
+Convert the current set of all streamline nodes into a set of vtk\+Polydata points. Then build a vtk\+Point\+Locator with the set of points (currently using \mbox{\hyperlink{class_k_d_tree}{KDTree}}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em streamlines} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 661 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a366a77c4ae031b3aa15a820b1a6f6594}\label{main_8cpp_a366a77c4ae031b3aa15a820b1a6f6594}} 
+\index{main.cpp@{main.cpp}!clearDataset@{clearDataset}}
+\index{clearDataset@{clearDataset}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{clearDataset()}{clearDataset()}}
+{\footnotesize\ttfamily void clear\+Dataset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+free up vtk structured grid memory 
+
+
+
+Definition at line 496 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a964bbf087670fdbf44548d69081ed087}\label{main_8cpp_a964bbf087670fdbf44548d69081ed087}} 
+\index{main.cpp@{main.cpp}!compareStreamlines@{compareStreamlines}}
+\index{compareStreamlines@{compareStreamlines}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{compareStreamlines()}{compareStreamlines()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void compare\+Streamlines (\begin{DoxyParamCaption}\item[{std\+::string}]{sl\+File1,  }\item[{std\+::string}]{sl\+File2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 711 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_ad118e73f2c824df3c231a2e48aea92b1}\label{main_8cpp_ad118e73f2c824df3c231a2e48aea92b1}} 
+\index{main.cpp@{main.cpp}!compareStreamlines@{compareStreamlines}}
+\index{compareStreamlines@{compareStreamlines}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{compareStreamlines()}{compareStreamlines()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void compare\+Streamlines (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ Vector3f $>$$>$}]{org\+SL,  }\item[{std\+::vector$<$ std\+::vector$<$ Vector3f $>$$>$}]{comp\+SL,  }\item[{std\+::string}]{name,  }\item[{bool}]{write\+Org = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 845 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a4dc6d1f459bd86bfa07219b0da821708}\label{main_8cpp_a4dc6d1f459bd86bfa07219b0da821708}} 
+\index{main.cpp@{main.cpp}!createTestFolder@{createTestFolder}}
+\index{createTestFolder@{createTestFolder}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{createTestFolder()}{createTestFolder()}}
+{\footnotesize\ttfamily void create\+Test\+Folder (\begin{DoxyParamCaption}\item[{string}]{dir }\end{DoxyParamCaption})}
+
+
+
+Definition at line 107 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_ac6f782f4d3d7738c4d70706f054a54c0}\label{main_8cpp_ac6f782f4d3d7738c4d70706f054a54c0}} 
+\index{main.cpp@{main.cpp}!createTestsLatest@{createTestsLatest}}
+\index{createTestsLatest@{createTestsLatest}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{createTestsLatest()}{createTestsLatest()}}
+{\footnotesize\ttfamily void create\+Tests\+Latest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a list of tests using the latest reconstruction method, save this list to $<$testid$>$/tests/tests\+\_\+latest.tsv 
+
+
+
+Definition at line 143 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_adcd331059dce9847b575378bbdbe6ee9}\label{main_8cpp_adcd331059dce9847b575378bbdbe6ee9}} 
+\index{main.cpp@{main.cpp}!createTestsLegacy@{createTestsLegacy}}
+\index{createTestsLegacy@{createTestsLegacy}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{createTestsLegacy()}{createTestsLegacy()}}
+{\footnotesize\ttfamily void create\+Tests\+Legacy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a list of tests using the legacy reconstruction method, save this list to $<$testid$>$/tests/tests\+\_\+legacy.tsv 
+
+
+
+Definition at line 195 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a889831ec4828d5dcd3e57c159cfeafb1}\label{main_8cpp_a889831ec4828d5dcd3e57c159cfeafb1}} 
+\index{main.cpp@{main.cpp}!getBatchID@{getBatchID}}
+\index{getBatchID@{getBatchID}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{getBatchID()}{getBatchID()}}
+{\footnotesize\ttfamily void get\+Batch\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Have the user input the test ID then create the directory and subdirectories if needed 
+
+
+
+Definition at line 117 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 443 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a93964d79b9e913c8f07d4675090c4aca}\label{main_8cpp_a93964d79b9e913c8f07d4675090c4aca}} 
+\index{main.cpp@{main.cpp}!random\_range@{random\_range}}
+\index{random\_range@{random\_range}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{random\_range()}{random\_range()}}
+{\footnotesize\ttfamily float random\+\_\+range (\begin{DoxyParamCaption}\item[{float}]{LO,  }\item[{float}]{HI }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1435 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_ab65825df0ed35a7ab5f5ae74b238fd12}\label{main_8cpp_ab65825df0ed35a7ab5f5ae74b238fd12}} 
+\index{main.cpp@{main.cpp}!readVTK@{readVTK}}
+\index{readVTK@{readVTK}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{readVTK()}{readVTK()}}
+{\footnotesize\ttfamily void read\+VTK (\begin{DoxyParamCaption}\item[{std\+::string}]{vtk\+File }\end{DoxyParamCaption})}
+
+
+
+Reads a vtk structured grid file and save the resulting vtk object to original\+VF (a global vtk structured grid object) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vtk\+File} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 567 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a64dc4c33b951b3618d3638bccfb9ed9d}\label{main_8cpp_a64dc4c33b951b3618d3638bccfb9ed9d}} 
+\index{main.cpp@{main.cpp}!runTestsLatest@{runTestsLatest}}
+\index{runTestsLatest@{runTestsLatest}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{runTestsLatest()}{runTestsLatest()}}
+{\footnotesize\ttfamily void run\+Tests\+Latest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Run tests using latest reconstruction method, first generated by the create\+Test\+Latest() method 
+
+
+
+Definition at line 238 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_ad5313bbacd8a40c3b1267eaa8a2938ae}\label{main_8cpp_ad5313bbacd8a40c3b1267eaa8a2938ae}} 
+\index{main.cpp@{main.cpp}!runTestsLegacy@{runTestsLegacy}}
+\index{runTestsLegacy@{runTestsLegacy}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{runTestsLegacy()}{runTestsLegacy()}}
+{\footnotesize\ttfamily void run\+Tests\+Legacy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Run Legacy Tests generated by create\+Legacy\+Tests() 
+
+
+
+Definition at line 328 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a878b095993c14a258092392effc8083e}\label{main_8cpp_a878b095993c14a258092392effc8083e}} 
+\index{main.cpp@{main.cpp}!saveErrorsToCSV@{saveErrorsToCSV}}
+\index{saveErrorsToCSV@{saveErrorsToCSV}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{saveErrorsToCSV()}{saveErrorsToCSV()}}
+{\footnotesize\ttfamily void save\+Errors\+To\+CSV (\begin{DoxyParamCaption}\item[{std\+::string}]{testid,  }\item[{std\+::string}]{test\+Categories,  }\item[{float \&}]{err\+\_\+angle,  }\item[{float \&}]{err\+\_\+mag,  }\item[{float \&}]{err\+\_\+vx,  }\item[{float \&}]{err\+\_\+vy,  }\item[{float \&}]{err\+\_\+vz,  }\item[{int}]{skip\+Lines,  }\item[{int}]{skip\+Nodes }\end{DoxyParamCaption})}
+
+
+
+Append all errors of a single test to the next ling of the logs\+ID.\+csv 
+
+
+\begin{DoxyParams}{Parameters}
+{\em testid} & readable string (parameters are listed) of the test + parameters\\
+\hline
+{\em test\+Categories} & only the test\textquotesingle{}s parameters are listed\\
+\hline
+{\em err\+\_\+angle} & average angle error\\
+\hline
+{\em err\+\_\+mag} & average magnitude error\\
+\hline
+{\em err\+\_\+vx} & average vx error\\
+\hline
+{\em err\+\_\+vy} & average vy error\\
+\hline
+{\em err\+\_\+vz} & average vz error\\
+\hline
+{\em skip\+Lines} & How many streamlines to skip for each streamline\\
+\hline
+{\em skip\+Nodes} & How many streamline nodes to skip for each node\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 483 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a21d94e0ce09d8760c550f39bb185ea8c}\label{main_8cpp_a21d94e0ce09d8760c550f39bb185ea8c}} 
+\index{main.cpp@{main.cpp}!segmentStarterstoSeedingPoints@{segmentStarterstoSeedingPoints}}
+\index{segmentStarterstoSeedingPoints@{segmentStarterstoSeedingPoints}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{segmentStarterstoSeedingPoints()}{segmentStarterstoSeedingPoints()}}
+{\footnotesize\ttfamily std\+::vector$<$ Vector3f $>$ segment\+Startersto\+Seeding\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 834 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a9fe6e2d06c49ed3e4f8d5615dbccc786}\label{main_8cpp_a9fe6e2d06c49ed3e4f8d5615dbccc786}} 
+\index{main.cpp@{main.cpp}!showBasicMenu@{showBasicMenu}}
+\index{showBasicMenu@{showBasicMenu}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{showBasicMenu()}{showBasicMenu()}}
+{\footnotesize\ttfamily void show\+Basic\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 413 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a0786b8a85c94348648106e3edb7f7cf0}\label{main_8cpp_a0786b8a85c94348648106e3edb7f7cf0}} 
+\index{main.cpp@{main.cpp}!testErrorLegacy@{testErrorLegacy}}
+\index{testErrorLegacy@{testErrorLegacy}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{testErrorLegacy()}{testErrorLegacy()}}
+{\footnotesize\ttfamily void test\+Error\+Legacy (\begin{DoxyParamCaption}\item[{vtk\+Smart\+Pointer$<$ vtk\+Structured\+Points $>$}]{original\+VF,  }\item[{vtk\+Smart\+Pointer$<$ vtk\+Structured\+Points $>$}]{recon\+VF,  }\item[{bool}]{do\+Normalize\+Check,  }\item[{bool}]{do\+Normalize\+Recon,  }\item[{float}]{threshold\+Angle,  }\item[{float}]{threshold\+Velocity,  }\item[{bool}]{use\+Segment,  }\item[{float}]{radar,  }\item[{float \&}]{err\+\_\+angle,  }\item[{float \&}]{err\+\_\+dot,  }\item[{float \&}]{err\+\_\+mag,  }\item[{float \&}]{err\+\_\+vx,  }\item[{float \&}]{err\+\_\+vy,  }\item[{float \&}]{err\+\_\+vz,  }\item[{int}]{skip\+Lines,  }\item[{int}]{skip\+Nodes,  }\item[{std\+::string}]{testid,  }\item[{std\+::string}]{test\+Categories }\end{DoxyParamCaption})}
+
+
+
+Running legacy reconstruction method and keep track of average errors,then log TODO\+: NEED FIX. Currently unused as legacy method is being called from the newer test function! 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original\+VF} & \\
+\hline
+{\em recon\+VF} & \\
+\hline
+{\em do\+Normalize\+Check} & \\
+\hline
+{\em do\+Normalize\+Recon} & \\
+\hline
+{\em threshold\+Angle} & \\
+\hline
+{\em threshold\+Velocity} & \\
+\hline
+{\em use\+Segment} & \\
+\hline
+{\em radar} & \\
+\hline
+{\em err\+\_\+angle} & \\
+\hline
+{\em err\+\_\+dot} & \\
+\hline
+{\em err\+\_\+mag} & \\
+\hline
+{\em err\+\_\+vx} & \\
+\hline
+{\em err\+\_\+vy} & \\
+\hline
+{\em err\+\_\+vz} & \\
+\hline
+{\em skip\+Lines} & \\
+\hline
+{\em skip\+Nodes} & \\
+\hline
+{\em testid} & \\
+\hline
+{\em test\+Categories} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1244 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a332cf2ef7369b2aa36e5b4ad755c0325}\label{main_8cpp_a332cf2ef7369b2aa36e5b4ad755c0325}} 
+\index{main.cpp@{main.cpp}!testErrorStdev@{testErrorStdev}}
+\index{testErrorStdev@{testErrorStdev}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{testErrorStdev()}{testErrorStdev()}}
+{\footnotesize\ttfamily void test\+Error\+Stdev (\begin{DoxyParamCaption}\item[{float}]{threshold\+Size,  }\item[{float}]{max\+Threshold,  }\item[{vtk\+Smart\+Pointer$<$ vtk\+Structured\+Points $>$}]{original\+VF,  }\item[{vtk\+Smart\+Pointer$<$ vtk\+Structured\+Points $>$}]{recon\+VF,  }\item[{int}]{skip\+Lines,  }\item[{int}]{skip\+Nodes,  }\item[{std\+::string}]{testid,  }\item[{std\+::string}]{test\+Categories }\end{DoxyParamCaption})}
+
+
+
+Main reconstruction method using the latest method. Keep track of average error values and log them accordingly 
+
+
+\begin{DoxyParams}{Parameters}
+{\em threshold\+Size} & \\
+\hline
+{\em max\+Threshold} & \\
+\hline
+{\em original\+VF} & \\
+\hline
+{\em recon\+VF} & \\
+\hline
+{\em skip\+Lines} & \\
+\hline
+{\em skip\+Nodes} & \\
+\hline
+{\em testid} & \\
+\hline
+{\em test\+Categories} & \\
+\hline
+\end{DoxyParams}
+int tid = omp\+\_\+get\+\_\+thread\+\_\+num();
+
+Definition at line 987 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a7c8ccbde9eff4c016a62948f2954f83e}\label{main_8cpp_a7c8ccbde9eff4c016a62948f2954f83e}} 
+\index{main.cpp@{main.cpp}!traceSL@{traceSL}}
+\index{traceSL@{traceSL}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{traceSL()}{traceSL()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ Vector3f $>$ $>$ trace\+SL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_steady3_d}{Steady3D}} \&}]{vector\+Field,  }\item[{std\+::vector$<$ Vector3f $>$}]{seeding\+Curve }\end{DoxyParamCaption})}
+
+
+
+trace streamline from the vectorfield 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector\+Field} & \\
+\hline
+{\em seeding\+Curve} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 1412 of file main.\+cpp.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8cpp_a25354111d7542df7e4e21a5271b3eb72}\label{main_8cpp_a25354111d7542df7e4e21a5271b3eb72}} 
+\index{main.cpp@{main.cpp}!DATASET\_DIR@{DATASET\_DIR}}
+\index{DATASET\_DIR@{DATASET\_DIR}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{DATASET\_DIR}{DATASET\_DIR}}
+{\footnotesize\ttfamily std\+::string DATASET\+\_\+\+DIR = \char`\"{}D\+:/Academic/VReconstruction/datasets/\char`\"{}}
+
+
+
+Definition at line 68 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_ac785d6bd2e210b6fb928489b48741e91}\label{main_8cpp_ac785d6bd2e210b6fb928489b48741e91}} 
+\index{main.cpp@{main.cpp}!DIRECTORY@{DIRECTORY}}
+\index{DIRECTORY@{DIRECTORY}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{DIRECTORY}{DIRECTORY}}
+{\footnotesize\ttfamily std\+::string DIRECTORY = \char`\"{}F\+:/academic/Vector\+Recon/\char`\"{}}
+
+
+
+Definition at line 70 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_aff9a2523f2975f5feab7ae5b61a451b6}\label{main_8cpp_aff9a2523f2975f5feab7ae5b61a451b6}} 
+\index{main.cpp@{main.cpp}!NUM\_THREADS@{NUM\_THREADS}}
+\index{NUM\_THREADS@{NUM\_THREADS}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{NUM\_THREADS}{NUM\_THREADS}}
+{\footnotesize\ttfamily const int NUM\+\_\+\+THREADS = 11}
+
+
+
+Definition at line 974 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_aa287d9a959841ad85de92632d291499e}\label{main_8cpp_aa287d9a959841ad85de92632d291499e}} 
+\index{main.cpp@{main.cpp}!originalVF@{originalVF}}
+\index{originalVF@{originalVF}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{originalVF}{originalVF}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Structured\+Points$>$ original\+VF}
+
+
+
+Original Vectorfield 
+
+
+
+Definition at line 100 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a924dc665470972a6335b0d6f439643da}\label{main_8cpp_a924dc665470972a6335b0d6f439643da}} 
+\index{main.cpp@{main.cpp}!reconVF@{reconVF}}
+\index{reconVF@{reconVF}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{reconVF}{reconVF}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Structured\+Points$>$ recon\+VF}
+
+
+
+Reconstructed Vectorfield 
+
+
+
+Definition at line 105 of file main.\+cpp.
+

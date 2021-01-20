@@ -1,0 +1,166 @@
+\hypertarget{class_point_locator}{}\doxysection{Point\+Locator Class Reference}
+\label{class_point_locator}\index{PointLocator@{PointLocator}}
+
+
+{\ttfamily \#include $<$kd\+Tree\+Helper.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_point_locator_a87fdc738cc44f112bb99931fd59aeb65}{Point\+Locator}} ()
+\item 
+\mbox{\hyperlink{class_point_locator_a599a663d5f49c31a3bf460d20c31852f}{Point\+Locator}} (vtk\+Smart\+Pointer$<$ vtk\+Data\+Set $>$ poly\+Data)
+\item 
+void \mbox{\hyperlink{class_point_locator_a2decffda0246f6400fa17b2c1c802e89}{build\+Locator}} (vtk\+Smart\+Pointer$<$ vtk\+Data\+Set $>$ poly\+Data)
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Id\+List $>$ \mbox{\hyperlink{class_point_locator_aa88a45d74a29f8481dae9d40bb8424ac}{Kd\+Tree\+Find\+Points\+Within\+Radius}} (double radious, double $\ast$pt)
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Id\+List $>$ \mbox{\hyperlink{class_point_locator_a8fadcdfffebc2fd17cf818ccdbf9e918}{Kd\+Tree\+Find\+Closest\+KPoints}} (int k, double $\ast$pt)
+\item 
+vtk\+Id\+Type \mbox{\hyperlink{class_point_locator_ae79d0f37ce6f1b9c7c234364ad1737c1}{Kd\+Tree\+Find\+Closest\+Point}} (double $\ast$pt)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_point_locator_a0064e20b18f344dbbe2687999c4908a6}{ready}} = false
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Incremental\+Octree\+Point\+Locator $>$ \mbox{\hyperlink{class_point_locator_ab7fa97238fcd2d1edcbafb4d3ecb2f06}{point\+Tree}}
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Data\+Array $>$ \mbox{\hyperlink{class_point_locator_aac2451ab34fa45c5289bf0ea62f8aec0}{velocity}}
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Data\+Array $>$ \mbox{\hyperlink{class_point_locator_a86ee3c39a31cfaa1a3b1fed55e85edf1}{heatmap}}
+\item 
+std\+::vector$<$ vtk\+Id\+Type $>$ \mbox{\hyperlink{class_point_locator_a22cfc31ec4ed19058b06ee0ad2e86248}{id\+Map}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 10 of file kd\+Tree\+Helper.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_point_locator_a87fdc738cc44f112bb99931fd59aeb65}\label{class_point_locator_a87fdc738cc44f112bb99931fd59aeb65}} 
+\index{PointLocator@{PointLocator}!PointLocator@{PointLocator}}
+\index{PointLocator@{PointLocator}!PointLocator@{PointLocator}}
+\doxysubsubsection{\texorpdfstring{PointLocator()}{PointLocator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Point\+Locator\+::\+Point\+Locator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 19 of file kd\+Tree\+Helper.\+h.
+
+\mbox{\Hypertarget{class_point_locator_a599a663d5f49c31a3bf460d20c31852f}\label{class_point_locator_a599a663d5f49c31a3bf460d20c31852f}} 
+\index{PointLocator@{PointLocator}!PointLocator@{PointLocator}}
+\index{PointLocator@{PointLocator}!PointLocator@{PointLocator}}
+\doxysubsubsection{\texorpdfstring{PointLocator()}{PointLocator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Point\+Locator\+::\+Point\+Locator (\begin{DoxyParamCaption}\item[{vtk\+Smart\+Pointer$<$ vtk\+Data\+Set $>$}]{poly\+Data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file kd\+Tree\+Helper.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_point_locator_a2decffda0246f6400fa17b2c1c802e89}\label{class_point_locator_a2decffda0246f6400fa17b2c1c802e89}} 
+\index{PointLocator@{PointLocator}!buildLocator@{buildLocator}}
+\index{buildLocator@{buildLocator}!PointLocator@{PointLocator}}
+\doxysubsubsection{\texorpdfstring{buildLocator()}{buildLocator()}}
+{\footnotesize\ttfamily void Point\+Locator\+::build\+Locator (\begin{DoxyParamCaption}\item[{vtk\+Smart\+Pointer$<$ vtk\+Data\+Set $>$}]{poly\+Data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file kd\+Tree\+Helper.\+cpp.
+
+\mbox{\Hypertarget{class_point_locator_a8fadcdfffebc2fd17cf818ccdbf9e918}\label{class_point_locator_a8fadcdfffebc2fd17cf818ccdbf9e918}} 
+\index{PointLocator@{PointLocator}!KdTreeFindClosestKPoints@{KdTreeFindClosestKPoints}}
+\index{KdTreeFindClosestKPoints@{KdTreeFindClosestKPoints}!PointLocator@{PointLocator}}
+\doxysubsubsection{\texorpdfstring{KdTreeFindClosestKPoints()}{KdTreeFindClosestKPoints()}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$ vtk\+Id\+List $>$ Point\+Locator\+::\+Kd\+Tree\+Find\+Closest\+KPoints (\begin{DoxyParamCaption}\item[{int}]{k,  }\item[{double $\ast$}]{pt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 53 of file kd\+Tree\+Helper.\+cpp.
+
+\mbox{\Hypertarget{class_point_locator_ae79d0f37ce6f1b9c7c234364ad1737c1}\label{class_point_locator_ae79d0f37ce6f1b9c7c234364ad1737c1}} 
+\index{PointLocator@{PointLocator}!KdTreeFindClosestPoint@{KdTreeFindClosestPoint}}
+\index{KdTreeFindClosestPoint@{KdTreeFindClosestPoint}!PointLocator@{PointLocator}}
+\doxysubsubsection{\texorpdfstring{KdTreeFindClosestPoint()}{KdTreeFindClosestPoint()}}
+{\footnotesize\ttfamily vtk\+Id\+Type Point\+Locator\+::\+Kd\+Tree\+Find\+Closest\+Point (\begin{DoxyParamCaption}\item[{double $\ast$}]{pt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 61 of file kd\+Tree\+Helper.\+cpp.
+
+\mbox{\Hypertarget{class_point_locator_aa88a45d74a29f8481dae9d40bb8424ac}\label{class_point_locator_aa88a45d74a29f8481dae9d40bb8424ac}} 
+\index{PointLocator@{PointLocator}!KdTreeFindPointsWithinRadius@{KdTreeFindPointsWithinRadius}}
+\index{KdTreeFindPointsWithinRadius@{KdTreeFindPointsWithinRadius}!PointLocator@{PointLocator}}
+\doxysubsubsection{\texorpdfstring{KdTreeFindPointsWithinRadius()}{KdTreeFindPointsWithinRadius()}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$ vtk\+Id\+List $>$ Point\+Locator\+::\+Kd\+Tree\+Find\+Points\+Within\+Radius (\begin{DoxyParamCaption}\item[{double}]{radious,  }\item[{double $\ast$}]{pt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 45 of file kd\+Tree\+Helper.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_point_locator_a86ee3c39a31cfaa1a3b1fed55e85edf1}\label{class_point_locator_a86ee3c39a31cfaa1a3b1fed55e85edf1}} 
+\index{PointLocator@{PointLocator}!heatmap@{heatmap}}
+\index{heatmap@{heatmap}!PointLocator@{PointLocator}}
+\doxysubsubsection{\texorpdfstring{heatmap}{heatmap}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Data\+Array$>$ Point\+Locator\+::heatmap}
+
+
+
+Definition at line 17 of file kd\+Tree\+Helper.\+h.
+
+\mbox{\Hypertarget{class_point_locator_a22cfc31ec4ed19058b06ee0ad2e86248}\label{class_point_locator_a22cfc31ec4ed19058b06ee0ad2e86248}} 
+\index{PointLocator@{PointLocator}!idMap@{idMap}}
+\index{idMap@{idMap}!PointLocator@{PointLocator}}
+\doxysubsubsection{\texorpdfstring{idMap}{idMap}}
+{\footnotesize\ttfamily std\+::vector$<$vtk\+Id\+Type$>$ Point\+Locator\+::id\+Map}
+
+
+
+Definition at line 18 of file kd\+Tree\+Helper.\+h.
+
+\mbox{\Hypertarget{class_point_locator_ab7fa97238fcd2d1edcbafb4d3ecb2f06}\label{class_point_locator_ab7fa97238fcd2d1edcbafb4d3ecb2f06}} 
+\index{PointLocator@{PointLocator}!pointTree@{pointTree}}
+\index{pointTree@{pointTree}!PointLocator@{PointLocator}}
+\doxysubsubsection{\texorpdfstring{pointTree}{pointTree}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Incremental\+Octree\+Point\+Locator$>$ Point\+Locator\+::point\+Tree}
+
+
+
+Definition at line 15 of file kd\+Tree\+Helper.\+h.
+
+\mbox{\Hypertarget{class_point_locator_a0064e20b18f344dbbe2687999c4908a6}\label{class_point_locator_a0064e20b18f344dbbe2687999c4908a6}} 
+\index{PointLocator@{PointLocator}!ready@{ready}}
+\index{ready@{ready}!PointLocator@{PointLocator}}
+\doxysubsubsection{\texorpdfstring{ready}{ready}}
+{\footnotesize\ttfamily bool Point\+Locator\+::ready = false}
+
+
+
+Definition at line 14 of file kd\+Tree\+Helper.\+h.
+
+\mbox{\Hypertarget{class_point_locator_aac2451ab34fa45c5289bf0ea62f8aec0}\label{class_point_locator_aac2451ab34fa45c5289bf0ea62f8aec0}} 
+\index{PointLocator@{PointLocator}!velocity@{velocity}}
+\index{velocity@{velocity}!PointLocator@{PointLocator}}
+\doxysubsubsection{\texorpdfstring{velocity}{velocity}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Data\+Array$>$ Point\+Locator\+::velocity}
+
+
+
+Definition at line 16 of file kd\+Tree\+Helper.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Academic/\+VReconstruction/src/\+Point\+Locator/\mbox{\hyperlink{kd_tree_helper_8h}{kd\+Tree\+Helper.\+h}}\item 
+D\+:/\+Academic/\+VReconstruction/src/\+Point\+Locator/\mbox{\hyperlink{kd_tree_helper_8cpp}{kd\+Tree\+Helper.\+cpp}}\end{DoxyCompactItemize}

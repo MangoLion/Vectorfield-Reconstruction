@@ -1,0 +1,78 @@
+\hypertarget{_vector_field_8cpp}{}\doxysection{D\+:/\+Academic/\+VReconstruction/src/\+Data\+Readers/\+Vector\+Field.cpp File Reference}
+\label{_vector_field_8cpp}\index{D:/Academic/VReconstruction/src/DataReaders/VectorField.cpp@{D:/Academic/VReconstruction/src/DataReaders/VectorField.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$vtk\+Smart\+Pointer.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Poly\+Data.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Structured\+Points\+Reader.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Structured\+Points.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Data\+Array.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Image\+Data.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Point\+Data.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Stream\+Tracer.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Poly\+Data\+Reader.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Id\+Type\+Array.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Id\+List.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Float\+Array.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Generic\+Data\+Object\+Writer.\+h$>$}\newline
+{\ttfamily \#include $<$vtk\+Structured\+Points\+Writer.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_vector_field_8cpp_adc91148b9b064dc73d233fe7992fe4e1}{write\+SLFile}} (std\+::string input\+Filename, vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$ poly\+Data)
+\item 
+void \mbox{\hyperlink{_vector_field_8cpp_a44e782768a386de756c5078a9fd9ad21}{write\+VTKFile}} (std\+::string input\+Filename, vtk\+Smart\+Pointer$<$ vtk\+Structured\+Points $>$ vtk\+Field)
+\item 
+vtk\+Smart\+Pointer$<$ vtk\+Structured\+Points $>$ \mbox{\hyperlink{_vector_field_8cpp_a7b19dc95fcc14b3acf9a4ffa9ab523fb}{read\+VTKFile}} (std\+::string input\+Filename)
+\item 
+void \mbox{\hyperlink{_vector_field_8cpp_a94142fcafdfca85b50b61ed8fd176e2e}{test\+Read\+VTKFile}} (std\+::string input\+File\+Name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_vector_field_8cpp_a7b19dc95fcc14b3acf9a4ffa9ab523fb}\label{_vector_field_8cpp_a7b19dc95fcc14b3acf9a4ffa9ab523fb}} 
+\index{VectorField.cpp@{VectorField.cpp}!readVTKFile@{readVTKFile}}
+\index{readVTKFile@{readVTKFile}!VectorField.cpp@{VectorField.cpp}}
+\doxysubsubsection{\texorpdfstring{readVTKFile()}{readVTKFile()}}
+{\footnotesize\ttfamily vtk\+Smart\+Pointer$<$vtk\+Structured\+Points$>$ read\+VTKFile (\begin{DoxyParamCaption}\item[{std\+::string}]{input\+Filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 51 of file Vector\+Field.\+cpp.
+
+\mbox{\Hypertarget{_vector_field_8cpp_a94142fcafdfca85b50b61ed8fd176e2e}\label{_vector_field_8cpp_a94142fcafdfca85b50b61ed8fd176e2e}} 
+\index{VectorField.cpp@{VectorField.cpp}!testReadVTKFile@{testReadVTKFile}}
+\index{testReadVTKFile@{testReadVTKFile}!VectorField.cpp@{VectorField.cpp}}
+\doxysubsubsection{\texorpdfstring{testReadVTKFile()}{testReadVTKFile()}}
+{\footnotesize\ttfamily void test\+Read\+VTKFile (\begin{DoxyParamCaption}\item[{std\+::string}]{input\+File\+Name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 63 of file Vector\+Field.\+cpp.
+
+\mbox{\Hypertarget{_vector_field_8cpp_adc91148b9b064dc73d233fe7992fe4e1}\label{_vector_field_8cpp_adc91148b9b064dc73d233fe7992fe4e1}} 
+\index{VectorField.cpp@{VectorField.cpp}!writeSLFile@{writeSLFile}}
+\index{writeSLFile@{writeSLFile}!VectorField.cpp@{VectorField.cpp}}
+\doxysubsubsection{\texorpdfstring{writeSLFile()}{writeSLFile()}}
+{\footnotesize\ttfamily void write\+SLFile (\begin{DoxyParamCaption}\item[{std\+::string}]{input\+Filename,  }\item[{vtk\+Smart\+Pointer$<$ vtk\+Poly\+Data $>$}]{poly\+Data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file Vector\+Field.\+cpp.
+
+\mbox{\Hypertarget{_vector_field_8cpp_a44e782768a386de756c5078a9fd9ad21}\label{_vector_field_8cpp_a44e782768a386de756c5078a9fd9ad21}} 
+\index{VectorField.cpp@{VectorField.cpp}!writeVTKFile@{writeVTKFile}}
+\index{writeVTKFile@{writeVTKFile}!VectorField.cpp@{VectorField.cpp}}
+\doxysubsubsection{\texorpdfstring{writeVTKFile()}{writeVTKFile()}}
+{\footnotesize\ttfamily void write\+VTKFile (\begin{DoxyParamCaption}\item[{std\+::string}]{input\+Filename,  }\item[{vtk\+Smart\+Pointer$<$ vtk\+Structured\+Points $>$}]{vtk\+Field }\end{DoxyParamCaption})}
+
+
+
+Definition at line 39 of file Vector\+Field.\+cpp.
+

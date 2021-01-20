@@ -1,0 +1,112 @@
+\hypertarget{class_streamline_tracer}{}\doxysection{Streamline\+Tracer Class Reference}
+\label{class_streamline_tracer}\index{StreamlineTracer@{StreamlineTracer}}
+
+
+{\ttfamily \#include $<$Streamline\+Tracer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_streamline_tracer_a0271c4683f089b9bf4bbbbe0d8a6f279}{Streamline\+Tracer}} (\mbox{\hyperlink{class_steady3_d}{Steady3D}} \&steady3D)
+\item 
+\mbox{\hyperlink{class_streamline_tracer_a8324f36fed07c64ef1c4d00f0a821274}{$\sim$\+Streamline\+Tracer}} ()
+\item 
+void \mbox{\hyperlink{class_streamline_tracer_a050b918d696368c1301d26693a090522}{set\+Step\+Size}} (const float \&\+\_\+step\+Size)
+\item 
+void \mbox{\hyperlink{class_streamline_tracer_a7801cfba9656528bb6cbe1690099bed6}{set\+Length}} (const int \&\+\_\+length)
+\item 
+void \mbox{\hyperlink{class_streamline_tracer_a0573d456d5bb98996d8cb292bde38e06}{set\+Forward}} (const bool \&\+\_\+forward)
+\item 
+vector$<$ Vector3f $>$ \mbox{\hyperlink{class_streamline_tracer_a64bfcc672027ce8408352c264667ea99}{trace}} (Vector3f seeding\+Point, int length)
+\item 
+bool \mbox{\hyperlink{class_streamline_tracer_a0c7f9a9188aa15acf2b0b179e5579b71}{get\+Next\+Point\+RK4}} (float x, float y, float z, float \&nx, float \&ny, float \&nz)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 6 of file Streamline\+Tracer.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_streamline_tracer_a0271c4683f089b9bf4bbbbe0d8a6f279}\label{class_streamline_tracer_a0271c4683f089b9bf4bbbbe0d8a6f279}} 
+\index{StreamlineTracer@{StreamlineTracer}!StreamlineTracer@{StreamlineTracer}}
+\index{StreamlineTracer@{StreamlineTracer}!StreamlineTracer@{StreamlineTracer}}
+\doxysubsubsection{\texorpdfstring{StreamlineTracer()}{StreamlineTracer()}}
+{\footnotesize\ttfamily Streamline\+Tracer\+::\+Streamline\+Tracer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_steady3_d}{Steady3D}} \&}]{steady3D }\end{DoxyParamCaption})}
+
+
+
+Definition at line 22 of file Streamline\+Tracer.\+cpp.
+
+\mbox{\Hypertarget{class_streamline_tracer_a8324f36fed07c64ef1c4d00f0a821274}\label{class_streamline_tracer_a8324f36fed07c64ef1c4d00f0a821274}} 
+\index{StreamlineTracer@{StreamlineTracer}!````~StreamlineTracer@{$\sim$StreamlineTracer}}
+\index{````~StreamlineTracer@{$\sim$StreamlineTracer}!StreamlineTracer@{StreamlineTracer}}
+\doxysubsubsection{\texorpdfstring{$\sim$StreamlineTracer()}{~StreamlineTracer()}}
+{\footnotesize\ttfamily Streamline\+Tracer\+::$\sim$\+Streamline\+Tracer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file Streamline\+Tracer.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_streamline_tracer_a0c7f9a9188aa15acf2b0b179e5579b71}\label{class_streamline_tracer_a0c7f9a9188aa15acf2b0b179e5579b71}} 
+\index{StreamlineTracer@{StreamlineTracer}!getNextPointRK4@{getNextPointRK4}}
+\index{getNextPointRK4@{getNextPointRK4}!StreamlineTracer@{StreamlineTracer}}
+\doxysubsubsection{\texorpdfstring{getNextPointRK4()}{getNextPointRK4()}}
+{\footnotesize\ttfamily bool Streamline\+Tracer\+::get\+Next\+Point\+RK4 (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z,  }\item[{float \&}]{nx,  }\item[{float \&}]{ny,  }\item[{float \&}]{nz }\end{DoxyParamCaption})}
+
+
+
+Definition at line 91 of file Streamline\+Tracer.\+cpp.
+
+\mbox{\Hypertarget{class_streamline_tracer_a0573d456d5bb98996d8cb292bde38e06}\label{class_streamline_tracer_a0573d456d5bb98996d8cb292bde38e06}} 
+\index{StreamlineTracer@{StreamlineTracer}!setForward@{setForward}}
+\index{setForward@{setForward}!StreamlineTracer@{StreamlineTracer}}
+\doxysubsubsection{\texorpdfstring{setForward()}{setForward()}}
+{\footnotesize\ttfamily void Streamline\+Tracer\+::set\+Forward (\begin{DoxyParamCaption}\item[{const bool \&}]{\+\_\+forward }\end{DoxyParamCaption})}
+
+
+
+Definition at line 85 of file Streamline\+Tracer.\+cpp.
+
+\mbox{\Hypertarget{class_streamline_tracer_a7801cfba9656528bb6cbe1690099bed6}\label{class_streamline_tracer_a7801cfba9656528bb6cbe1690099bed6}} 
+\index{StreamlineTracer@{StreamlineTracer}!setLength@{setLength}}
+\index{setLength@{setLength}!StreamlineTracer@{StreamlineTracer}}
+\doxysubsubsection{\texorpdfstring{setLength()}{setLength()}}
+{\footnotesize\ttfamily void Streamline\+Tracer\+::set\+Length (\begin{DoxyParamCaption}\item[{const int \&}]{\+\_\+length }\end{DoxyParamCaption})}
+
+
+
+Definition at line 80 of file Streamline\+Tracer.\+cpp.
+
+\mbox{\Hypertarget{class_streamline_tracer_a050b918d696368c1301d26693a090522}\label{class_streamline_tracer_a050b918d696368c1301d26693a090522}} 
+\index{StreamlineTracer@{StreamlineTracer}!setStepSize@{setStepSize}}
+\index{setStepSize@{setStepSize}!StreamlineTracer@{StreamlineTracer}}
+\doxysubsubsection{\texorpdfstring{setStepSize()}{setStepSize()}}
+{\footnotesize\ttfamily void Streamline\+Tracer\+::set\+Step\+Size (\begin{DoxyParamCaption}\item[{const float \&}]{\+\_\+step\+Size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 75 of file Streamline\+Tracer.\+cpp.
+
+\mbox{\Hypertarget{class_streamline_tracer_a64bfcc672027ce8408352c264667ea99}\label{class_streamline_tracer_a64bfcc672027ce8408352c264667ea99}} 
+\index{StreamlineTracer@{StreamlineTracer}!trace@{trace}}
+\index{trace@{trace}!StreamlineTracer@{StreamlineTracer}}
+\doxysubsubsection{\texorpdfstring{trace()}{trace()}}
+{\footnotesize\ttfamily vector$<$ Vector3f $>$ Streamline\+Tracer\+::trace (\begin{DoxyParamCaption}\item[{Vector3f}]{seeding\+Point,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file Streamline\+Tracer.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Academic/\+VReconstruction/src/\+Duong/\mbox{\hyperlink{_streamline_tracer_8h}{Streamline\+Tracer.\+h}}\item 
+D\+:/\+Academic/\+VReconstruction/src/\+Duong/\mbox{\hyperlink{_streamline_tracer_8cpp}{Streamline\+Tracer.\+cpp}}\end{DoxyCompactItemize}

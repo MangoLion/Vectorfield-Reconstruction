@@ -1,0 +1,440 @@
+\hypertarget{class_sparse_matrix}{}\doxysection{Sparse\+Matrix$<$ T $>$ Class Template Reference}
+\label{class_sparse_matrix}\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Sparse\+Matrix.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sparse_matrix_a14f8df02d304c3e60a308b426e908613}{Sparse\+Matrix}} (int \mbox{\hyperlink{class_sparse_matrix_a4f4f2e4576777de77b9ff9440ba8c3aa}{n}})
+\item 
+\mbox{\hyperlink{class_sparse_matrix_a9e50d719e7d7fc212cfdac41eea1a63b}{Sparse\+Matrix}} (int \mbox{\hyperlink{class_sparse_matrix_ae05818038853f77907d8f62dcf6a4212}{rows}}, int columns)
+\item 
+\mbox{\hyperlink{class_sparse_matrix_a6663767592800039b2773eacdcf1af41}{Sparse\+Matrix}} (const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \&\mbox{\hyperlink{class_sparse_matrix_af1e9b0d715443dab4518166571dce229}{m}})
+\item 
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \& \mbox{\hyperlink{class_sparse_matrix_a05d217abbc4176a510b559de4e7e08ea}{operator=}} (const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \&\mbox{\hyperlink{class_sparse_matrix_af1e9b0d715443dab4518166571dce229}{m}})
+\item 
+\mbox{\hyperlink{class_sparse_matrix_a53605fabcf4f3478b37acad8847258f3}{$\sim$\+Sparse\+Matrix}} (void)
+\item 
+int \mbox{\hyperlink{class_sparse_matrix_a950b1eec827d101c8af39f67a9ab2de6}{get\+Row\+Count}} (void) const
+\item 
+int \mbox{\hyperlink{class_sparse_matrix_a1d277ae5f84b0aff6c68aa998f6c34c9}{get\+Column\+Count}} (void) const
+\item 
+T \mbox{\hyperlink{class_sparse_matrix_a89cbb0ab6fa2daf2da319cb1dcb83dee}{get}} (int row, int col) const
+\item 
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}} \& \mbox{\hyperlink{class_sparse_matrix_a5344d8d6543344f3aec055c373ac61de}{set}} (T val, int row, int col)
+\item 
+vector$<$ T $>$ \mbox{\hyperlink{class_sparse_matrix_abc9b7e28c9553c6313812315a713efec}{multiply}} (const vector$<$ T $>$ \&x) const
+\item 
+vector$<$ T $>$ \mbox{\hyperlink{class_sparse_matrix_a8f73a5e33363ccf69f8e08f2fe349cdb}{operator$\ast$}} (const vector$<$ T $>$ \&x) const
+\item 
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \mbox{\hyperlink{class_sparse_matrix_a59b187a53434c5899275db643d6189d5}{multiply}} (const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \&\mbox{\hyperlink{class_sparse_matrix_af1e9b0d715443dab4518166571dce229}{m}}) const
+\item 
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \mbox{\hyperlink{class_sparse_matrix_adaf4b94004498faa4ddcc0b6953c275e}{operator$\ast$}} (const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \&\mbox{\hyperlink{class_sparse_matrix_af1e9b0d715443dab4518166571dce229}{m}}) const
+\item 
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \mbox{\hyperlink{class_sparse_matrix_a47e03cea691bb3f993857619670e82ef}{add}} (const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \&\mbox{\hyperlink{class_sparse_matrix_af1e9b0d715443dab4518166571dce229}{m}}) const
+\item 
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \mbox{\hyperlink{class_sparse_matrix_a18474c16207bde733f1b5d489c2ba993}{operator+}} (const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \&\mbox{\hyperlink{class_sparse_matrix_af1e9b0d715443dab4518166571dce229}{m}}) const
+\item 
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \mbox{\hyperlink{class_sparse_matrix_a8ccf5c86efc488668e795c7325873af0}{subtract}} (const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \&\mbox{\hyperlink{class_sparse_matrix_af1e9b0d715443dab4518166571dce229}{m}}) const
+\item 
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \mbox{\hyperlink{class_sparse_matrix_a7e99346931d79a9c3df9fc443070a504}{operator-\/}} (const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \&\mbox{\hyperlink{class_sparse_matrix_af1e9b0d715443dab4518166571dce229}{m}}) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_sparse_matrix_aa6b91bb222016ad483ac68ae4ec1435e}{construct}} (int \mbox{\hyperlink{class_sparse_matrix_af1e9b0d715443dab4518166571dce229}{m}}, int \mbox{\hyperlink{class_sparse_matrix_a4f4f2e4576777de77b9ff9440ba8c3aa}{n}})
+\item 
+void \mbox{\hyperlink{class_sparse_matrix_a128d0bac9d14773365f2520c0ade72dd}{destruct}} (void)
+\item 
+void \mbox{\hyperlink{class_sparse_matrix_a2610bd50c8da4126d8cb04ccadf0ac95}{deep\+Copy}} (const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \&\mbox{\hyperlink{class_sparse_matrix_af1e9b0d715443dab4518166571dce229}{m}})
+\item 
+void \mbox{\hyperlink{class_sparse_matrix_a5d62625eb7602b46fbabc0bbec295113}{validate\+Coordinates}} (int row, int col) const
+\item 
+void \mbox{\hyperlink{class_sparse_matrix_ae6519827f4041a681b988ae62ecb75e2}{insert}} (int index, int row, int col, T val)
+\item 
+void \mbox{\hyperlink{class_sparse_matrix_a829c4deabf1a97d951587632cb88776d}{remove}} (int index, int row)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_sparse_matrix_af1e9b0d715443dab4518166571dce229}{m}}
+\item 
+int \mbox{\hyperlink{class_sparse_matrix_a4f4f2e4576777de77b9ff9440ba8c3aa}{n}}
+\item 
+vector$<$ T $>$ $\ast$ \mbox{\hyperlink{class_sparse_matrix_a17f2105c2b40311ea9c13dbde6468cff}{vals}}
+\item 
+vector$<$ int $>$ $\ast$ \mbox{\hyperlink{class_sparse_matrix_ae05818038853f77907d8f62dcf6a4212}{rows}}
+\item 
+vector$<$ int $>$ $\ast$ \mbox{\hyperlink{class_sparse_matrix_adf9a2e3c51cfd9bc24a74508d79cb0fb}{cols}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename X $>$ }\\bool \mbox{\hyperlink{class_sparse_matrix_a058b32b95bdca0b067a5b4c6a147d17d}{operator==}} (const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ X $>$ \&a, const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ X $>$ \&b)
+\item 
+{\footnotesize template$<$typename X $>$ }\\bool \mbox{\hyperlink{class_sparse_matrix_a481b3587590d6373243cc0fb77769fd8}{operator!=}} (const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ X $>$ \&a, const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ X $>$ \&b)
+\item 
+{\footnotesize template$<$typename X $>$ }\\ostream \& \mbox{\hyperlink{class_sparse_matrix_ad76bad4d79c605bca8f14852420635fe}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ X $>$ \&\mbox{\hyperlink{legacy_viewer_8cpp_aeec4234ceebc14c51e8c12db72a71715}{matrix}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Sparse\+Matrix$<$ T $>$}
+
+
+
+Definition at line 20 of file Sparse\+Matrix.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sparse_matrix_a14f8df02d304c3e60a308b426e908613}\label{class_sparse_matrix_a14f8df02d304c3e60a308b426e908613}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!SparseMatrix@{SparseMatrix}}
+\index{SparseMatrix@{SparseMatrix}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SparseMatrix()}{SparseMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}} (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file Sparse\+Matrix.\+cpp.
+
+\mbox{\Hypertarget{class_sparse_matrix_a9e50d719e7d7fc212cfdac41eea1a63b}\label{class_sparse_matrix_a9e50d719e7d7fc212cfdac41eea1a63b}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!SparseMatrix@{SparseMatrix}}
+\index{SparseMatrix@{SparseMatrix}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SparseMatrix()}{SparseMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}} (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{columns }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file Sparse\+Matrix.\+cpp.
+
+\mbox{\Hypertarget{class_sparse_matrix_a6663767592800039b2773eacdcf1af41}\label{class_sparse_matrix_a6663767592800039b2773eacdcf1af41}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!SparseMatrix@{SparseMatrix}}
+\index{SparseMatrix@{SparseMatrix}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SparseMatrix()}{SparseMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \&}]{m }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file Sparse\+Matrix.\+cpp.
+
+\mbox{\Hypertarget{class_sparse_matrix_a53605fabcf4f3478b37acad8847258f3}\label{class_sparse_matrix_a53605fabcf4f3478b37acad8847258f3}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!````~SparseMatrix@{$\sim$SparseMatrix}}
+\index{````~SparseMatrix@{$\sim$SparseMatrix}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$SparseMatrix()}{~SparseMatrix()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 67 of file Sparse\+Matrix.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sparse_matrix_a47e03cea691bb3f993857619670e82ef}\label{class_sparse_matrix_a47e03cea691bb3f993857619670e82ef}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!add@{add}}
+\index{add@{add}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \&}]{m }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 244 of file Sparse\+Matrix.\+cpp.
+
+\mbox{\Hypertarget{class_sparse_matrix_aa6b91bb222016ad483ac68ae4ec1435e}\label{class_sparse_matrix_aa6b91bb222016ad483ac68ae4ec1435e}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!construct@{construct}}
+\index{construct@{construct}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{construct()}{construct()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::construct (\begin{DoxyParamCaption}\item[{int}]{m,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 74 of file Sparse\+Matrix.\+cpp.
+
+\mbox{\Hypertarget{class_sparse_matrix_a2610bd50c8da4126d8cb04ccadf0ac95}\label{class_sparse_matrix_a2610bd50c8da4126d8cb04ccadf0ac95}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!deepCopy@{deepCopy}}
+\index{deepCopy@{deepCopy}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deepCopy()}{deepCopy()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::deep\+Copy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 53 of file Sparse\+Matrix.\+cpp.
+
+\mbox{\Hypertarget{class_sparse_matrix_a128d0bac9d14773365f2520c0ade72dd}\label{class_sparse_matrix_a128d0bac9d14773365f2520c0ade72dd}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!destruct@{destruct}}
+\index{destruct@{destruct}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{destruct()}{destruct()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::destruct (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 90 of file Sparse\+Matrix.\+cpp.
+
+\mbox{\Hypertarget{class_sparse_matrix_a89cbb0ab6fa2daf2da319cb1dcb83dee}\label{class_sparse_matrix_a89cbb0ab6fa2daf2da319cb1dcb83dee}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!get@{get}}
+\index{get@{get}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::get (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 120 of file Sparse\+Matrix.\+cpp.
+
+\mbox{\Hypertarget{class_sparse_matrix_a1d277ae5f84b0aff6c68aa998f6c34c9}\label{class_sparse_matrix_a1d277ae5f84b0aff6c68aa998f6c34c9}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!getColumnCount@{getColumnCount}}
+\index{getColumnCount@{getColumnCount}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getColumnCount()}{getColumnCount()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::get\+Column\+Count (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 111 of file Sparse\+Matrix.\+cpp.
+
+\mbox{\Hypertarget{class_sparse_matrix_a950b1eec827d101c8af39f67a9ab2de6}\label{class_sparse_matrix_a950b1eec827d101c8af39f67a9ab2de6}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!getRowCount@{getRowCount}}
+\index{getRowCount@{getRowCount}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getRowCount()}{getRowCount()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::get\+Row\+Count (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 104 of file Sparse\+Matrix.\+cpp.
+
+\mbox{\Hypertarget{class_sparse_matrix_ae6519827f4041a681b988ae62ecb75e2}\label{class_sparse_matrix_ae6519827f4041a681b988ae62ecb75e2}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{int}]{row,  }\item[{int}]{col,  }\item[{T}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 313 of file Sparse\+Matrix.\+cpp.
+
+\mbox{\Hypertarget{class_sparse_matrix_a59b187a53434c5899275db643d6189d5}\label{class_sparse_matrix_a59b187a53434c5899275db643d6189d5}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!multiply@{multiply}}
+\index{multiply@{multiply}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{multiply()}{multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \&}]{m }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 207 of file Sparse\+Matrix.\+cpp.
+
+\mbox{\Hypertarget{class_sparse_matrix_abc9b7e28c9553c6313812315a713efec}\label{class_sparse_matrix_abc9b7e28c9553c6313812315a713efec}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!multiply@{multiply}}
+\index{multiply@{multiply}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{multiply()}{multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+vector$<$ T $>$ \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::multiply (\begin{DoxyParamCaption}\item[{const vector$<$ T $>$ \&}]{x }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 176 of file Sparse\+Matrix.\+cpp.
+
+\mbox{\Hypertarget{class_sparse_matrix_adaf4b94004498faa4ddcc0b6953c275e}\label{class_sparse_matrix_adaf4b94004498faa4ddcc0b6953c275e}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \&}]{m }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 237 of file Sparse\+Matrix.\+cpp.
+
+\mbox{\Hypertarget{class_sparse_matrix_a8f73a5e33363ccf69f8e08f2fe349cdb}\label{class_sparse_matrix_a8f73a5e33363ccf69f8e08f2fe349cdb}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+vector$<$ T $>$ \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const vector$<$ T $>$ \&}]{x }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 200 of file Sparse\+Matrix.\+cpp.
+
+\mbox{\Hypertarget{class_sparse_matrix_a18474c16207bde733f1b5d489c2ba993}\label{class_sparse_matrix_a18474c16207bde733f1b5d489c2ba993}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \&}]{m }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 266 of file Sparse\+Matrix.\+cpp.
+
+\mbox{\Hypertarget{class_sparse_matrix_a7e99346931d79a9c3df9fc443070a504}\label{class_sparse_matrix_a7e99346931d79a9c3df9fc443070a504}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \&}]{m }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 295 of file Sparse\+Matrix.\+cpp.
+
+\mbox{\Hypertarget{class_sparse_matrix_a05d217abbc4176a510b559de4e7e08ea}\label{class_sparse_matrix_a05d217abbc4176a510b559de4e7e08ea}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \& \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \&}]{m }\end{DoxyParamCaption})}
+
+
+
+Definition at line 41 of file Sparse\+Matrix.\+cpp.
+
+\mbox{\Hypertarget{class_sparse_matrix_a829c4deabf1a97d951587632cb88776d}\label{class_sparse_matrix_a829c4deabf1a97d951587632cb88776d}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{int}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 331 of file Sparse\+Matrix.\+cpp.
+
+\mbox{\Hypertarget{class_sparse_matrix_a5344d8d6543344f3aec055c373ac61de}\label{class_sparse_matrix_a5344d8d6543344f3aec055c373ac61de}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!set@{set}}
+\index{set@{set}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \& \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::set (\begin{DoxyParamCaption}\item[{T}]{val,  }\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+
+
+Definition at line 142 of file Sparse\+Matrix.\+cpp.
+
+\mbox{\Hypertarget{class_sparse_matrix_a8ccf5c86efc488668e795c7325873af0}\label{class_sparse_matrix_a8ccf5c86efc488668e795c7325873af0}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!subtract@{subtract}}
+\index{subtract@{subtract}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{subtract()}{subtract()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$ \&}]{m }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 273 of file Sparse\+Matrix.\+cpp.
+
+\mbox{\Hypertarget{class_sparse_matrix_a5d62625eb7602b46fbabc0bbec295113}\label{class_sparse_matrix_a5d62625eb7602b46fbabc0bbec295113}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!validateCoordinates@{validateCoordinates}}
+\index{validateCoordinates@{validateCoordinates}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{validateCoordinates()}{validateCoordinates()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::validate\+Coordinates (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 304 of file Sparse\+Matrix.\+cpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_sparse_matrix_a481b3587590d6373243cc0fb77769fd8}\label{class_sparse_matrix_a481b3587590d6373243cc0fb77769fd8}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=}{operator!=}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename X $>$ \\
+bool operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ X $>$ \&}]{a,  }\item[{const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ X $>$ \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_sparse_matrix_ad76bad4d79c605bca8f14852420635fe}\label{class_sparse_matrix_ad76bad4d79c605bca8f14852420635fe}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename X $>$ \\
+ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ X $>$ \&}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_sparse_matrix_a058b32b95bdca0b067a5b4c6a147d17d}\label{class_sparse_matrix_a058b32b95bdca0b067a5b4c6a147d17d}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename X $>$ \\
+bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ X $>$ \&}]{a,  }\item[{const \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ X $>$ \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sparse_matrix_adf9a2e3c51cfd9bc24a74508d79cb0fb}\label{class_sparse_matrix_adf9a2e3c51cfd9bc24a74508d79cb0fb}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!cols@{cols}}
+\index{cols@{cols}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{cols}{cols}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+vector$<$int$>$ $\ast$ \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::cols\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 80 of file Sparse\+Matrix.\+h.
+
+\mbox{\Hypertarget{class_sparse_matrix_af1e9b0d715443dab4518166571dce229}\label{class_sparse_matrix_af1e9b0d715443dab4518166571dce229}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!m@{m}}
+\index{m@{m}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::m\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 77 of file Sparse\+Matrix.\+h.
+
+\mbox{\Hypertarget{class_sparse_matrix_a4f4f2e4576777de77b9ff9440ba8c3aa}\label{class_sparse_matrix_a4f4f2e4576777de77b9ff9440ba8c3aa}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!n@{n}}
+\index{n@{n}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::n\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 77 of file Sparse\+Matrix.\+h.
+
+\mbox{\Hypertarget{class_sparse_matrix_ae05818038853f77907d8f62dcf6a4212}\label{class_sparse_matrix_ae05818038853f77907d8f62dcf6a4212}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!rows@{rows}}
+\index{rows@{rows}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{rows}{rows}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+vector$<$int$>$$\ast$ \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::rows\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 80 of file Sparse\+Matrix.\+h.
+
+\mbox{\Hypertarget{class_sparse_matrix_a17f2105c2b40311ea9c13dbde6468cff}\label{class_sparse_matrix_a17f2105c2b40311ea9c13dbde6468cff}} 
+\index{SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}!vals@{vals}}
+\index{vals@{vals}!SparseMatrix$<$ T $>$@{SparseMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{vals}{vals}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+vector$<$T$>$$\ast$ \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ T $>$\+::vals\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 79 of file Sparse\+Matrix.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Academic/\+VReconstruction/src/\+Sparse\+Matrix/\mbox{\hyperlink{_sparse_matrix_8h}{Sparse\+Matrix.\+h}}\item 
+D\+:/\+Academic/\+VReconstruction/src/\+Sparse\+Matrix/\mbox{\hyperlink{_sparse_matrix_8cpp}{Sparse\+Matrix.\+cpp}}\end{DoxyCompactItemize}

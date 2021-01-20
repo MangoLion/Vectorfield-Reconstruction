@@ -1,0 +1,61 @@
+\hypertarget{structures_8h}{}\doxysection{D\+:/\+Academic/\+VReconstruction/src/structures.h File Reference}
+\label{structures_8h}\index{D:/Academic/VReconstruction/src/structures.h@{D:/Academic/VReconstruction/src/structures.h}}
+
+
+Store the global initialization of needed structs by all cpp files.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structneighbor}{neighbor}}
+\item 
+struct \mbox{\hyperlink{structnode}{node}}
+\begin{DoxyCompactList}\small\item\em Simple node struct that only sture the vector value on the field. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsegment}{segment}}
+\begin{DoxyCompactList}\small\item\em main unit of the graph representation, stire two streamline nodes and the list of neighboring nodes to the segment \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmatrix__entry}{matrix\+\_\+entry}}
+\item 
+struct \mbox{\hyperlink{structnode__main}{node\+\_\+main}}
+\begin{DoxyCompactList}\small\item\em a \mbox{\hyperlink{structnode__main}{node\+\_\+main}} is a basic struct that represents a point on the vector field. This struct stores all values needed in the reconstructed field, including error values, vector value of the original vector field point, and of the reconstructed value \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structstreamlet}{streamlet}}
+\begin{DoxyCompactList}\small\item\em Used to trace LIC texture, one streamlet backward and one forward. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structg__vertice}{g\+\_\+vertice}}
+\item 
+struct \mbox{\hyperlink{structindirect__edge}{indirect\+\_\+edge}}
+\begin{DoxyCompactList}\small\item\em used to store edge info (distance, angle, ...), stored within the graph matrix. It doesn\textquotesingle{}t store the two verticies it is connected with because the info is already in the matrix \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structvtk__steady__vectorfield}{vtk\+\_\+steady\+\_\+vectorfield}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{structures_8h_a1f5dbc79108993c4d59f3e0d749cd345}{VELOCITY\+\_\+\+COMPONENTS}} = 3
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Store the global initialization of needed structs by all cpp files. 
+
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2020-\/01-\/18
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{structures_8h_a1f5dbc79108993c4d59f3e0d749cd345}\label{structures_8h_a1f5dbc79108993c4d59f3e0d749cd345}} 
+\index{structures.h@{structures.h}!VELOCITY\_COMPONENTS@{VELOCITY\_COMPONENTS}}
+\index{VELOCITY\_COMPONENTS@{VELOCITY\_COMPONENTS}!structures.h@{structures.h}}
+\doxysubsubsection{\texorpdfstring{VELOCITY\_COMPONENTS}{VELOCITY\_COMPONENTS}}
+{\footnotesize\ttfamily const int VELOCITY\+\_\+\+COMPONENTS = 3}
+
+
+
+Definition at line 152 of file structures.\+h.
+

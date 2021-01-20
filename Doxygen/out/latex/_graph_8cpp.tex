@@ -1,0 +1,1473 @@
+\hypertarget{_graph_8cpp}{}\doxysection{D\+:/\+Academic/\+VReconstruction/src/\+Neighbor\+Graph/\+Graph.cpp File Reference}
+\label{_graph_8cpp}\index{D:/Academic/VReconstruction/src/NeighborGraph/Graph.cpp@{D:/Academic/VReconstruction/src/NeighborGraph/Graph.cpp}}
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Data\+Readers/\+Reader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../globals.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$bitset$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Sparse\+Matrix/\+Sparse\+Matrix.\+cpp\char`\"{}}\newline
+{\ttfamily \#include $<$complex$>$}\newline
+{\ttfamily \#include \char`\"{}glm/glm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}glm/gtx/quaternion.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Unused/kdtree.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Point\+Locator/kd\+Tree\+Helper.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$omp.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}glm/gtc/type\+\_\+ptr.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structedge__cell}{edge\+\_\+cell}}
+\item 
+class \mbox{\hyperlink{classsparse__arr__key}{sparse\+\_\+arr\+\_\+key}}
+\item 
+struct \mbox{\hyperlink{structvec3d}{vec3d}}
+\item 
+struct \mbox{\hyperlink{structline3d}{line3d}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_graph_8cpp_a74263fa3743689e30ab02b1f6c844899}{pdd}}~pair$<$double, double$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{_graph_8cpp_a15532f65a21a6273ccf6011bc1ce36f7}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{structedge__cell}{edge\+\_\+cell}} \&cell)
+\item 
+double \mbox{\hyperlink{_graph_8cpp_a986ea032931d359131eb5d422d7fb8ec}{Det}} (double a, double b, double c, double d)
+\begin{DoxyCompactList}\small\item\em get the determinant of a 2x2 matrix \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_graph_8cpp_a31549e79ca462c0d184a214deb39884d}{in\+Range}} (float low, float high, float x)
+\begin{DoxyCompactList}\small\item\em Returns true if x is in range \mbox{[}low..high\mbox{]}, else false. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_graph_8cpp_acf9a721e9798d8eefe435f986be05e8b}{Line\+Line\+Intersect}} (double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4, double \&ix\+Out, double \&iy\+Out)
+\begin{DoxyCompactList}\small\item\em Calculate intersection of two lines. \href{http://mathworld.wolfram.com/Line-LineIntersection.html}{\texttt{ http\+://mathworld.\+wolfram.\+com/\+Line-\/\+Line\+Intersection.\+html}}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structsegment}{segment}} $\ast$ $>$ \mbox{\hyperlink{_graph_8cpp_aeb8db20266cd09fcb647531bd46538ed}{get\+\_\+segments\+\_\+in\+\_\+area}} (float x1, float y1, float z1, float x2, float y2, float z2, \mbox{\hyperlink{structsegment}{segment}} $\ast$exclude)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structsegment}{segment}} $\ast$ $>$ \mbox{\hyperlink{_graph_8cpp_ab8d2bb95736a779dfcad3becc672d957}{get\+\_\+segments\+\_\+in\+\_\+area}} (float x1, float y1, float z1, float x2, float y2, float z2)
+\begin{DoxyCompactList}\small\item\em Get the graph segments within a rectangular area. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_graph_8cpp_a3e36914b07d0a78e59cd1af91ea08060}{raycast\+\_\+segment}} (\mbox{\hyperlink{structsegment}{segment}} $\ast$s, int direction)
+\begin{DoxyCompactList}\small\item\em from the center of the segment, raycast into two perpendicular directions and check for intersections with surrounding segments \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structvec3d}{vec3d}} \mbox{\hyperlink{_graph_8cpp_a24e6cd1b6338a0dbefc78e137c69c3a7}{operator/}} (float num, const \mbox{\hyperlink{structvec3d}{vec3d}} \&left)
+\item 
+ostream \& \mbox{\hyperlink{_graph_8cpp_a5bbf604b82aa1c0aa21cd6b50275ae12}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{structvec3d}{vec3d}} \&pt)
+\item 
+ostream \& \mbox{\hyperlink{_graph_8cpp_a60ebc99b842125d1385be7a1eccd1fee}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{structnode}{node}} \&pt)
+\item 
+ostream \& \mbox{\hyperlink{_graph_8cpp_a6638a15b700f286c2b5d176332d9f02b}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{structline3d}{line3d}} \&line)
+\item 
+bool \mbox{\hyperlink{_graph_8cpp_ab8f4c928667ddc1d8d791d6397185fdd}{check\+\_\+area}} (\mbox{\hyperlink{structline3d}{line3d}} line, \mbox{\hyperlink{structvec3d}{vec3d}} point, int compare\+\_\+type)
+\item 
+void \mbox{\hyperlink{_graph_8cpp_a1df9bd94562b1defea507096d3aa6bec}{rotate\+\_\+vec}} (\mbox{\hyperlink{structvec3d}{vec3d}} \&vec, \mbox{\hyperlink{structvec3d}{vec3d}} vec\+\_\+angle)
+\item 
+\mbox{\hyperlink{structline3d}{line3d}} \mbox{\hyperlink{_graph_8cpp_a51f115385615e3a7d054039ede80417e}{reverse\+\_\+line}} (\mbox{\hyperlink{structline3d}{line3d}} line)
+\item 
+quat \mbox{\hyperlink{_graph_8cpp_a8fa36a51995bbb5bced14371654c6531}{Rotation\+Between\+Vectors}} (vec3 start, vec3 dest)
+\item 
+glm\+::vec3 \mbox{\hyperlink{_graph_8cpp_ae6183a863a370953e8c59489baedaef2}{q\+Rotateto\+Global}} (glm\+::vec3 point, glm\+::vec3 rotate)
+\item 
+glm\+::vec3 \mbox{\hyperlink{_graph_8cpp_a7d9b9e25bb65f394ee131a2a1114b30a}{q\+Rotateto\+Local}} (glm\+::vec3 point, glm\+::vec3 rotate)
+\item 
+glm\+::vec3 \mbox{\hyperlink{_graph_8cpp_a0b016731a23c84ea977156a98cfacec9}{q\+Rotate2}} (glm\+::vec3 point, glm\+::vec3 rotate)
+\item 
+\mbox{\hyperlink{structvec3d}{vec3d}} \mbox{\hyperlink{_graph_8cpp_a8bc03f0375b8f3f3c33c05684f2c7db0}{local\+\_\+2\+\_\+global}} (\mbox{\hyperlink{structline3d}{line3d}} ref\+\_\+line, \mbox{\hyperlink{structvec3d}{vec3d}} input)
+\item 
+\mbox{\hyperlink{structvec3d}{vec3d}} \mbox{\hyperlink{_graph_8cpp_aead458bb9631c8ba22e119009a5567a3}{global\+\_\+2\+\_\+local}} (\mbox{\hyperlink{structline3d}{line3d}} ref\+\_\+line, \mbox{\hyperlink{structvec3d}{vec3d}} input)
+\item 
+void \mbox{\hyperlink{_graph_8cpp_ac7130c1c56ec260b9a72cdaf3267bcba}{rotate\+\_\+vec}} (\mbox{\hyperlink{structvec3d}{vec3d}} \&vec, float angle)
+\item 
+void \mbox{\hyperlink{_graph_8cpp_ae4dd079e4b1c1564796594bcf6849ee1}{set\+\_\+neighbor}} (\mbox{\hyperlink{structsegment}{segment}} $\ast$a, \mbox{\hyperlink{structsegment}{segment}} $\ast$b, int dir)
+\item 
+int \mbox{\hyperlink{_graph_8cpp_a3e84f05fcd88839538fff89037118f29}{rad2deg}} (float rad)
+\item 
+void \mbox{\hyperlink{_graph_8cpp_a2ba33fb794bfd2b82ddac7734415ba96}{init\+\_\+search\+\_\+vectors}} ()
+\item 
+int \mbox{\hyperlink{_graph_8cpp_ac6615d796a2bed4fb28f04c748de1354}{get\+\_\+quadrant}} (\mbox{\hyperlink{structvec3d}{vec3d}} point)
+\item 
+int \mbox{\hyperlink{_graph_8cpp_a298b972bcd033beb4d2e532744a656d6}{find\+\_\+neighbor2}} (\mbox{\hyperlink{structsegment}{segment}} $\ast$s)
+\item 
+int \mbox{\hyperlink{_graph_8cpp_a3c35e18467706b086d3ae5a50779ee8c}{find\+\_\+neighbor}} (\mbox{\hyperlink{structsegment}{segment}} $\ast$s, \mbox{\hyperlink{structsegment}{segment}} $\ast$s\+\_\+search)
+\item 
+void \mbox{\hyperlink{_graph_8cpp_a2f6103ed953e12257cd436a65d18265a}{get\+\_\+debug\+\_\+segment2}} (\mbox{\hyperlink{structsegment}{segment}} $\ast$current)
+\item 
+void \mbox{\hyperlink{_graph_8cpp_a4109905b835562a1eed6722561513cdb}{get\+\_\+debug\+\_\+segment}} (\mbox{\hyperlink{structsegment}{segment}} $\ast$current)
+\item 
+bool \mbox{\hyperlink{_graph_8cpp_abdf7cda574d88cf645b98b288c9dcdbc}{check\+\_\+range}} (float n, float a, float b)
+\item 
+bool \mbox{\hyperlink{_graph_8cpp_aa375c49077cb62fb51e711d261af748d}{is\+\_\+angle\+\_\+between}} (int target, int angle1, int angle2)
+\item 
+\mbox{\hyperlink{_graphbu_8cpp_a74263fa3743689e30ab02b1f6c844899}{pdd}} \mbox{\hyperlink{_graph_8cpp_a7e6dca07d3075f006b51fbb3f40420b1}{line\+Line\+Intersection}} (\mbox{\hyperlink{_graphbu_8cpp_a74263fa3743689e30ab02b1f6c844899}{pdd}} A, \mbox{\hyperlink{_graphbu_8cpp_a74263fa3743689e30ab02b1f6c844899}{pdd}} B, \mbox{\hyperlink{_graphbu_8cpp_a74263fa3743689e30ab02b1f6c844899}{pdd}} C, \mbox{\hyperlink{_graphbu_8cpp_a74263fa3743689e30ab02b1f6c844899}{pdd}} D)
+\item 
+\mbox{\hyperlink{structvec3d}{vec3d}} \mbox{\hyperlink{_graph_8cpp_a9d4f8c0173d9905755e0d91acd1aa330}{crude\+\_\+trim}} (\mbox{\hyperlink{structline3d}{line3d}} line, \mbox{\hyperlink{structvec3d}{vec3d}} pt)
+\item 
+bool \mbox{\hyperlink{_graph_8cpp_a9e58526482c6c8468d09af0fa910a1fc}{check\+Invalid}} (float x)
+\item 
+int \mbox{\hyperlink{_graph_8cpp_a13d3864dbb2d62a23ea1e345df37fe6e}{find\+\_\+neighbor}} (\mbox{\hyperlink{structsegment}{segment}} $\ast$s)
+\item 
+int \mbox{\hyperlink{_graph_8cpp_ab5b9960b59806e3f501a92bc843821c0}{find\+\_\+neighbor3}} (\mbox{\hyperlink{structsegment}{segment}} $\ast$s)
+\item 
+void \mbox{\hyperlink{_graph_8cpp_acba059f0690c103a87f9a95c4651a7cd}{draw\+\_\+neighbor\+\_\+test}} ()
+\item 
+void \mbox{\hyperlink{_graph_8cpp_a15d6f8c763742e8ebcb2b65fcdcd50d0}{read\+\_\+segments\+\_\+from\+\_\+sl}} ()
+\begin{DoxyCompactList}\small\item\em loop through all streamlines, add segment based on the GRAPH\+\_\+\+RESOLUTION \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_graph_8cpp_a614886e77e4adc8ae058a9f743bca514}{char\+Toint}} (char a)
+\item 
+void \mbox{\hyperlink{_graph_8cpp_a208b677eaa373f01aec751bcf30d7fb2}{update\+\_\+graph}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$$>$ \&streamlines\+\_\+)
+\begin{DoxyCompactList}\small\item\em loop through all segments (depend on the current segment resolution) to find their neighbors \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_graph_8cpp_a8c2d2f604852344772af43120339dc7d}{switch\+\_\+color}} (float $\ast$\&rgb)
+\item 
+void \mbox{\hyperlink{_graph_8cpp_a471c250ea2f2be2bc6494f21423e7b00}{save\+\_\+matrix}} ()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structmatrix__entry}{matrix\+\_\+entry}} $>$ \mbox{\hyperlink{_graph_8cpp_a5b867c0f54eed84158204884da9b9a9a}{compile\+\_\+matrix}} (int \&size)
+\item 
+void \mbox{\hyperlink{_graph_8cpp_a62233453c66903d1e27a7537be38e3b1}{get\+\_\+sections\+\_\+active}} (\mbox{\hyperlink{structsegment}{segment}} $\ast$s)
+\item 
+void \mbox{\hyperlink{_graph_8cpp_ae57d1862bd474f1651cc5f8f4052ef1d}{draw\+\_\+base\+\_\+segment}} (\mbox{\hyperlink{structsegment}{segment}} $\ast$s)
+\item 
+void \mbox{\hyperlink{_graph_8cpp_a7155c2ef0aace1d2fe726cc8db0b7101}{draw\+\_\+global\+\_\+search\+\_\+vectors}} (\mbox{\hyperlink{structsegment}{segment}} $\ast$s)
+\item 
+void \mbox{\hyperlink{_graph_8cpp_ada05987f83f6a0835c37869b70617063}{draw\+\_\+segment\+\_\+matrix}} ()
+\begin{DoxyCompactList}\small\item\em draw segment matrix, only meant for very small resolution to confirm the accuracy of the neighbors finding algorithm \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_graph_8cpp_af14124c5432e7d7a1533f810433f3ea5}{draw\+\_\+debug}} ()
+\item 
+void \mbox{\hyperlink{_graph_8cpp_a985c039a37d23385ca4732bdc7ebcfc5}{draw\+\_\+segment}} ()
+\item 
+void \mbox{\hyperlink{_graph_8cpp_a32539def676aa9b5c43677918c0eaa8b}{compile\+\_\+matrix\+\_\+bu}} (int i)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$ $>$ \mbox{\hyperlink{_graph_8cpp_a3c581467559c6f7d5e94c51ed224488c}{streamlines}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structsegment}{segment}} $\ast$ $>$ \mbox{\hyperlink{_graph_8cpp_ac7498a51543de6df85754add7616524a}{segment\+\_\+starters}}
+\item 
+int \mbox{\hyperlink{_graph_8cpp_a54ee41423892fb312495458f6797944b}{bin\+\_\+width\+\_\+segment}} = 2
+\item 
+int \mbox{\hyperlink{_graph_8cpp_ad5d030a0fd8d2e5ee811914c79799406}{bin\+\_\+num\+\_\+segment}} = 2 $\ast$ 50
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structsegment}{segment}} $\ast$ $>$ \mbox{\hyperlink{_graph_8cpp_a817c1c2b3f92cc1b82b8ced9ab528354}{bins\+\_\+segment}} \mbox{[}2\mbox{]}\mbox{[}2\mbox{]}
+\item 
+float \mbox{\hyperlink{_graph_8cpp_a8a371f37d10006ffee1455a2ca260450}{debug\+A\+\_\+xyz}} \mbox{[}3\mbox{]} = \{0, 0, 0\}
+\item 
+float \mbox{\hyperlink{_graph_8cpp_a3e83175648ef788c874b1310573bfe1a}{debug\+B\+\_\+xyz}} \mbox{[}3\mbox{]} = \{0, 0, 0\}
+\item 
+int \mbox{\hyperlink{_graph_8cpp_adc885c4719510dd40dfda0994288b534}{search\+\_\+sections}} = 3
+\item 
+int \mbox{\hyperlink{_graph_8cpp_a55d862a7b9121f3f46963b9de826b244}{search\+\_\+neighbor\+\_\+index}} = 0
+\item 
+\mbox{\hyperlink{structsegment}{segment}} \mbox{\hyperlink{_graph_8cpp_aa17390f047a29394466558ec9ed04637}{seg\+\_\+base}}
+\item 
+\mbox{\hyperlink{structsegment}{segment}} $\ast$ \mbox{\hyperlink{_graph_8cpp_a737fdc7f9a6146e2844d350d8af36df8}{seg\+\_\+neighbors}} = new \mbox{\hyperlink{structsegment}{segment}}\mbox{[}10\mbox{]}
+\item 
+int \mbox{\hyperlink{_graph_8cpp_aa8115d2efbe70fe88ce65698a7c822f0}{seg\+\_\+neighbors\+\_\+num}} = 0
+\item 
+float \mbox{\hyperlink{_graph_8cpp_a0a8d61e6c17c6e1b3e37e783ee86e792}{matrix\+\_\+region\+\_\+x1}} = -\/0.\+5
+\item 
+float \mbox{\hyperlink{_graph_8cpp_a59816c4f666c2c347067cf5d41d0ba3b}{matrix\+\_\+region\+\_\+x2}} = 0.\+5
+\item 
+float \mbox{\hyperlink{_graph_8cpp_aea00a1e6fb3e9e23968dc5df9e55d811}{matrix\+\_\+region\+\_\+y1}} = -\/0.\+5
+\item 
+float \mbox{\hyperlink{_graph_8cpp_a241aec6ac1e6dfaf502007fc513e7da4}{matrix\+\_\+region\+\_\+y2}} = 0.\+5
+\item 
+float \mbox{\hyperlink{_graph_8cpp_a5e4753aa51186eda91a7d7e28de76359}{matrix\+\_\+region\+\_\+z1}} = -\/0.\+5
+\item 
+float \mbox{\hyperlink{_graph_8cpp_a4416c6df1243c6b4935f42d30e02449b}{matrix\+\_\+region\+\_\+z2}} = 0.\+5
+\item 
+int \mbox{\hyperlink{_graph_8cpp_a46c778f7a2098e5d92b38373a4a20a73}{segment\+\_\+offset}} = -\/1
+\item 
+int \mbox{\hyperlink{_graph_8cpp_a3ad3e0a024d9715e456d27411d590904}{draw\+\_\+base}} = 0
+\item 
+float \mbox{\hyperlink{_graph_8cpp_aab64cb526a8b2a329a53e1051ca83e04}{SL\+\_\+\+LENGTH}} = 1 / 10.
+\item 
+\mbox{\hyperlink{structsegment}{segment}} $\ast$$\ast$ \mbox{\hyperlink{_graph_8cpp_af9e2a3a397dcf1838f3280d62efbb368}{all\+\_\+segments}}
+\item 
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ \mbox{\hyperlink{structedge__cell}{edge\+\_\+cell}} $>$ $\ast$ \mbox{\hyperlink{_graph_8cpp_ac74cd4295d0ebfd69f99c63927ec075a}{m\+\_\+edges}}
+\item 
+\mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$ \mbox{\hyperlink{structedge__cell}{edge\+\_\+cell}} $>$ $\ast$ \mbox{\hyperlink{_graph_8cpp_a4e12e225c3c1f6f99b8a0dfffec1e180}{m\+\_\+edge\+\_\+type}}
+\item 
+int \mbox{\hyperlink{_graph_8cpp_a75e8c6eefc3c0a375eb7f6346ff2d6ff}{segment\+\_\+num}} = 0
+\item 
+const int \mbox{\hyperlink{_graph_8cpp_a3b042076b4997c36561eb86b2d4b12a7}{DIR\+\_\+\+LEFT}} = 0
+\begin{DoxyCompactList}\small\item\em direction constants, for 2D \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_graph_8cpp_a12cd911867d7964b7a6891164eca3317}{DIR\+\_\+\+RIGHT}} = 1
+\item 
+const int \mbox{\hyperlink{_graph_8cpp_ac03d51014d4142895b93f33c9ac0d270}{DIR\+\_\+\+NA}} = -\/1
+\item 
+const float \mbox{\hyperlink{_graph_8cpp_af3405b7caf3bf9105bc478549eaa6307}{search\+\_\+range}} = 3
+\begin{DoxyCompactList}\small\item\em constant for the search range of each graph node to find its neighbors \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_graph_8cpp_a2973095d5fdee1acfb9af2e940d409be}{LESS\+\_\+\+THAN}} = 0
+\item 
+const int \mbox{\hyperlink{_graph_8cpp_a56730fae46b0a24f6ed47a850c782cdd}{MORE\+\_\+\+THAN}} = 1
+\item 
+float \mbox{\hyperlink{_graph_8cpp_aa2b754f07f4a22269e75d7e53159b126}{cached\+\_\+angle}} = -\/1000000
+\item 
+float \mbox{\hyperlink{_graph_8cpp_a60f9fd48b72ad48ba139fb9889a2d124}{cached\+\_\+sin}}
+\item 
+float \mbox{\hyperlink{_graph_8cpp_a59edb38f0c5aa9c3bddd12bd7fafce17}{cached\+\_\+cos}}
+\item 
+int \mbox{\hyperlink{_graph_8cpp_a817b10ff9cdf895056a61e62b96ca35d}{do\+Rotate}} = 1
+\item 
+const float \mbox{\hyperlink{_graph_8cpp_a97d0982f57daa8ae976c64009d33db89}{sqrt2}} = sqrt(2.\+0)
+\item 
+const float \mbox{\hyperlink{_graph_8cpp_a000585cb168e6be8e34cb947cde398ac}{cos\+\_\+neg\+\_\+45}} = 0.\+70710678
+\item 
+const float \mbox{\hyperlink{_graph_8cpp_ac69e046391058a698f59079e01cf7d8d}{sin\+\_\+neg\+\_\+45}} = -\/0.\+70710678
+\item 
+float \mbox{\hyperlink{_graph_8cpp_a8fa15102d8fdf612fe8fca09f89f3a88}{SEARCH\+\_\+\+LENGTH}} = 3
+\item 
+\mbox{\hyperlink{structvec3d}{vec3d}} $\ast$ \mbox{\hyperlink{_graph_8cpp_a301a7c3dd0ac6ee2913fa1f5acd4eb96}{search\+\_\+vectors}} = nullptr
+\item 
+\mbox{\hyperlink{structvec3d}{vec3d}} \mbox{\hyperlink{_graph_8cpp_a207d5d37730331d5b8a88c753fcca54e}{base\+\_\+seg}}
+\item 
+bool $\ast$ \mbox{\hyperlink{_graph_8cpp_a2a451618dcf7bd81d10d413d0fa009ee}{sections\+\_\+active}}
+\item 
+const int \mbox{\hyperlink{_graph_8cpp_a27b474479bcbdabc6bab95df7c27f437}{FORWARD\+\_\+\+DIR}} = -\/1
+\item 
+const int \mbox{\hyperlink{_graph_8cpp_a3298a0c621393512a9cf3932efda539f}{BACKWARD\+\_\+\+DIR}} = -\/2
+\item 
+\mbox{\hyperlink{structsegment}{segment}} $\ast$ \mbox{\hyperlink{_graph_8cpp_a627c4ab2fcd7920f78fa94d9cd076739}{manual\+\_\+segment}} = new \mbox{\hyperlink{structsegment}{segment}}
+\item 
+int \mbox{\hyperlink{_graph_8cpp_ad4126ad0764992ed216140e7678aea1c}{skip\+\_\+lines}} = 1
+\item 
+int \mbox{\hyperlink{_graph_8cpp_a003286629f1c5aa1d20a04d9691dd97f}{skip\+\_\+nodes}} = 1
+\item 
+int \mbox{\hyperlink{_graph_8cpp_ac0148c423a5b3eaaa40ea9e0450f85a4}{total\+\_\+nodes}} = 0
+\item 
+ofstream \mbox{\hyperlink{_graph_8cpp_a667ad9d6ce915ec7e7499928043aee8a}{outfile}}
+\item 
+float \mbox{\hyperlink{_graph_8cpp_ac034595deb498a11b504a6dc06f64222}{red}} \mbox{[}3\mbox{]} = \{1, 0, 0\}
+\item 
+float \mbox{\hyperlink{_graph_8cpp_af55aade70ec6cb118b07b91a24d90994}{blue}} \mbox{[}3\mbox{]} = \{1, 1, 0\}
+\item 
+float \mbox{\hyperlink{_graph_8cpp_af9f3fc172b073c437fe82711787f3855}{gray}} \mbox{[}3\mbox{]} = \{0.\+3, 0.\+3, 0.\+3\}
+\item 
+float \mbox{\hyperlink{_graph_8cpp_a619de1decbcc9957389e67b4da53faf7}{white}} \mbox{[}3\mbox{]} = \{1, 1, 1\}
+\item 
+float \mbox{\hyperlink{_graph_8cpp_a289ce0e5e24e53321a9253bd3508eab7}{black}} \mbox{[}3\mbox{]} = \{0, 0, 0\}
+\item 
+const int \mbox{\hyperlink{_graph_8cpp_a09ff29b2d0a25d0c2cfb4debfe5f5b3a}{c\+\_\+red}} = 0
+\item 
+const int \mbox{\hyperlink{_graph_8cpp_ae9147742f44422af4c036fe6952f03c2}{c\+\_\+blue}} = 1
+\item 
+int \mbox{\hyperlink{_graph_8cpp_a0fd02fb9277ffcb35a75066ffe95e8c7}{color}} = \mbox{\hyperlink{_graphbu_8cpp_a09ff29b2d0a25d0c2cfb4debfe5f5b3a}{c\+\_\+red}}
+\item 
+float \mbox{\hyperlink{_graph_8cpp_ad0c746c93e445ba5d4a25cc2b6333d45}{IMG\+\_\+\+SIZE}} = 512
+\item 
+bool \mbox{\hyperlink{_graph_8cpp_a91ee41213a1d2102d68d88bea46319ab}{do\+\_\+draw\+\_\+matrix}} = false
+\item 
+\mbox{\hyperlink{structsegment}{segment}} $\ast$ \mbox{\hyperlink{_graph_8cpp_a5a88a3f2c5ac4291c9f9eb3a15e254cd}{base\+\_\+segment}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_graph_8cpp_a74263fa3743689e30ab02b1f6c844899}\label{_graph_8cpp_a74263fa3743689e30ab02b1f6c844899}} 
+\index{Graph.cpp@{Graph.cpp}!pdd@{pdd}}
+\index{pdd@{pdd}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{pdd}{pdd}}
+{\footnotesize\ttfamily \#define pdd~pair$<$double, double$>$}
+
+
+
+Definition at line 1142 of file Graph.\+cpp.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_graph_8cpp_a614886e77e4adc8ae058a9f743bca514}\label{_graph_8cpp_a614886e77e4adc8ae058a9f743bca514}} 
+\index{Graph.cpp@{Graph.cpp}!charToint@{charToint}}
+\index{charToint@{charToint}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{charToint()}{charToint()}}
+{\footnotesize\ttfamily int char\+Toint (\begin{DoxyParamCaption}\item[{char}]{a }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1912 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ab8f4c928667ddc1d8d791d6397185fdd}\label{_graph_8cpp_ab8f4c928667ddc1d8d791d6397185fdd}} 
+\index{Graph.cpp@{Graph.cpp}!check\_area@{check\_area}}
+\index{check\_area@{check\_area}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{check\_area()}{check\_area()}}
+{\footnotesize\ttfamily bool check\+\_\+area (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structline3d}{line3d}}}]{line,  }\item[{\mbox{\hyperlink{structvec3d}{vec3d}}}]{point,  }\item[{int}]{compare\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 358 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_abdf7cda574d88cf645b98b288c9dcdbc}\label{_graph_8cpp_abdf7cda574d88cf645b98b288c9dcdbc}} 
+\index{Graph.cpp@{Graph.cpp}!check\_range@{check\_range}}
+\index{check\_range@{check\_range}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{check\_range()}{check\_range()}}
+{\footnotesize\ttfamily bool check\+\_\+range (\begin{DoxyParamCaption}\item[{float}]{n,  }\item[{float}]{a,  }\item[{float}]{b }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1121 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a9e58526482c6c8468d09af0fa910a1fc}\label{_graph_8cpp_a9e58526482c6c8468d09af0fa910a1fc}} 
+\index{Graph.cpp@{Graph.cpp}!checkInvalid@{checkInvalid}}
+\index{checkInvalid@{checkInvalid}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{checkInvalid()}{checkInvalid()}}
+{\footnotesize\ttfamily bool check\+Invalid (\begin{DoxyParamCaption}\item[{float}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1188 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a5b867c0f54eed84158204884da9b9a9a}\label{_graph_8cpp_a5b867c0f54eed84158204884da9b9a9a}} 
+\index{Graph.cpp@{Graph.cpp}!compile\_matrix@{compile\_matrix}}
+\index{compile\_matrix@{compile\_matrix}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{compile\_matrix()}{compile\_matrix()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structmatrix__entry}{matrix\+\_\+entry}}$>$ compile\+\_\+matrix (\begin{DoxyParamCaption}\item[{int \&}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2038 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a32539def676aa9b5c43677918c0eaa8b}\label{_graph_8cpp_a32539def676aa9b5c43677918c0eaa8b}} 
+\index{Graph.cpp@{Graph.cpp}!compile\_matrix\_bu@{compile\_matrix\_bu}}
+\index{compile\_matrix\_bu@{compile\_matrix\_bu}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{compile\_matrix\_bu()}{compile\_matrix\_bu()}}
+{\footnotesize\ttfamily void compile\+\_\+matrix\+\_\+bu (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2100 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a9d4f8c0173d9905755e0d91acd1aa330}\label{_graph_8cpp_a9d4f8c0173d9905755e0d91acd1aa330}} 
+\index{Graph.cpp@{Graph.cpp}!crude\_trim@{crude\_trim}}
+\index{crude\_trim@{crude\_trim}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{crude\_trim()}{crude\_trim()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structvec3d}{vec3d}} crude\+\_\+trim (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structline3d}{line3d}}}]{line,  }\item[{\mbox{\hyperlink{structvec3d}{vec3d}}}]{pt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1171 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a986ea032931d359131eb5d422d7fb8ec}\label{_graph_8cpp_a986ea032931d359131eb5d422d7fb8ec}} 
+\index{Graph.cpp@{Graph.cpp}!Det@{Det}}
+\index{Det@{Det}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{Det()}{Det()}}
+{\footnotesize\ttfamily double Det (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{double}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get the determinant of a 2x2 matrix 
+
+
+
+Definition at line 103 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ae57d1862bd474f1651cc5f8f4052ef1d}\label{_graph_8cpp_ae57d1862bd474f1651cc5f8f4052ef1d}} 
+\index{Graph.cpp@{Graph.cpp}!draw\_base\_segment@{draw\_base\_segment}}
+\index{draw\_base\_segment@{draw\_base\_segment}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{draw\_base\_segment()}{draw\_base\_segment()}}
+{\footnotesize\ttfamily void draw\+\_\+base\+\_\+segment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsegment}{segment}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2075 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_af14124c5432e7d7a1533f810433f3ea5}\label{_graph_8cpp_af14124c5432e7d7a1533f810433f3ea5}} 
+\index{Graph.cpp@{Graph.cpp}!draw\_debug@{draw\_debug}}
+\index{draw\_debug@{draw\_debug}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{draw\_debug()}{draw\_debug()}}
+{\footnotesize\ttfamily void draw\+\_\+debug (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2092 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a7155c2ef0aace1d2fe726cc8db0b7101}\label{_graph_8cpp_a7155c2ef0aace1d2fe726cc8db0b7101}} 
+\index{Graph.cpp@{Graph.cpp}!draw\_global\_search\_vectors@{draw\_global\_search\_vectors}}
+\index{draw\_global\_search\_vectors@{draw\_global\_search\_vectors}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{draw\_global\_search\_vectors()}{draw\_global\_search\_vectors()}}
+{\footnotesize\ttfamily void draw\+\_\+global\+\_\+search\+\_\+vectors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsegment}{segment}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2079 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_acba059f0690c103a87f9a95c4651a7cd}\label{_graph_8cpp_acba059f0690c103a87f9a95c4651a7cd}} 
+\index{Graph.cpp@{Graph.cpp}!draw\_neighbor\_test@{draw\_neighbor\_test}}
+\index{draw\_neighbor\_test@{draw\_neighbor\_test}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{draw\_neighbor\_test()}{draw\_neighbor\_test()}}
+{\footnotesize\ttfamily void draw\+\_\+neighbor\+\_\+test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1768 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a985c039a37d23385ca4732bdc7ebcfc5}\label{_graph_8cpp_a985c039a37d23385ca4732bdc7ebcfc5}} 
+\index{Graph.cpp@{Graph.cpp}!draw\_segment@{draw\_segment}}
+\index{draw\_segment@{draw\_segment}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{draw\_segment()}{draw\_segment()}}
+{\footnotesize\ttfamily void draw\+\_\+segment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2096 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ada05987f83f6a0835c37869b70617063}\label{_graph_8cpp_ada05987f83f6a0835c37869b70617063}} 
+\index{Graph.cpp@{Graph.cpp}!draw\_segment\_matrix@{draw\_segment\_matrix}}
+\index{draw\_segment\_matrix@{draw\_segment\_matrix}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{draw\_segment\_matrix()}{draw\_segment\_matrix()}}
+{\footnotesize\ttfamily void draw\+\_\+segment\+\_\+matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+draw segment matrix, only meant for very small resolution to confirm the accuracy of the neighbors finding algorithm 
+
+
+
+Definition at line 2086 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a13d3864dbb2d62a23ea1e345df37fe6e}\label{_graph_8cpp_a13d3864dbb2d62a23ea1e345df37fe6e}} 
+\index{Graph.cpp@{Graph.cpp}!find\_neighbor@{find\_neighbor}}
+\index{find\_neighbor@{find\_neighbor}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{find\_neighbor()}{find\_neighbor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int find\+\_\+neighbor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsegment}{segment}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+if (s\+\_\+search == manual\+\_\+segment)
+
+END SEARCH
+
+Definition at line 1192 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a3c35e18467706b086d3ae5a50779ee8c}\label{_graph_8cpp_a3c35e18467706b086d3ae5a50779ee8c}} 
+\index{Graph.cpp@{Graph.cpp}!find\_neighbor@{find\_neighbor}}
+\index{find\_neighbor@{find\_neighbor}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{find\_neighbor()}{find\_neighbor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int find\+\_\+neighbor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsegment}{segment}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{structsegment}{segment}} $\ast$}]{s\+\_\+search }\end{DoxyParamCaption})}
+
+END SEARCH
+
+Definition at line 862 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a298b972bcd033beb4d2e532744a656d6}\label{_graph_8cpp_a298b972bcd033beb4d2e532744a656d6}} 
+\index{Graph.cpp@{Graph.cpp}!find\_neighbor2@{find\_neighbor2}}
+\index{find\_neighbor2@{find\_neighbor2}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{find\_neighbor2()}{find\_neighbor2()}}
+{\footnotesize\ttfamily int find\+\_\+neighbor2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsegment}{segment}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 736 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ab5b9960b59806e3f501a92bc843821c0}\label{_graph_8cpp_ab5b9960b59806e3f501a92bc843821c0}} 
+\index{Graph.cpp@{Graph.cpp}!find\_neighbor3@{find\_neighbor3}}
+\index{find\_neighbor3@{find\_neighbor3}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{find\_neighbor3()}{find\_neighbor3()}}
+{\footnotesize\ttfamily int find\+\_\+neighbor3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsegment}{segment}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+END SEARCH
+
+Definition at line 1467 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a4109905b835562a1eed6722561513cdb}\label{_graph_8cpp_a4109905b835562a1eed6722561513cdb}} 
+\index{Graph.cpp@{Graph.cpp}!get\_debug\_segment@{get\_debug\_segment}}
+\index{get\_debug\_segment@{get\_debug\_segment}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_debug\_segment()}{get\_debug\_segment()}}
+{\footnotesize\ttfamily void get\+\_\+debug\+\_\+segment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsegment}{segment}} $\ast$}]{current }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1101 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a2f6103ed953e12257cd436a65d18265a}\label{_graph_8cpp_a2f6103ed953e12257cd436a65d18265a}} 
+\index{Graph.cpp@{Graph.cpp}!get\_debug\_segment2@{get\_debug\_segment2}}
+\index{get\_debug\_segment2@{get\_debug\_segment2}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_debug\_segment2()}{get\_debug\_segment2()}}
+{\footnotesize\ttfamily void get\+\_\+debug\+\_\+segment2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsegment}{segment}} $\ast$}]{current }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1069 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ac6615d796a2bed4fb28f04c748de1354}\label{_graph_8cpp_ac6615d796a2bed4fb28f04c748de1354}} 
+\index{Graph.cpp@{Graph.cpp}!get\_quadrant@{get\_quadrant}}
+\index{get\_quadrant@{get\_quadrant}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_quadrant()}{get\_quadrant()}}
+{\footnotesize\ttfamily int get\+\_\+quadrant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvec3d}{vec3d}}}]{point }\end{DoxyParamCaption})}
+
+
+
+Definition at line 722 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a62233453c66903d1e27a7537be38e3b1}\label{_graph_8cpp_a62233453c66903d1e27a7537be38e3b1}} 
+\index{Graph.cpp@{Graph.cpp}!get\_sections\_active@{get\_sections\_active}}
+\index{get\_sections\_active@{get\_sections\_active}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_sections\_active()}{get\_sections\_active()}}
+{\footnotesize\ttfamily void get\+\_\+sections\+\_\+active (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsegment}{segment}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2061 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ab8d2bb95736a779dfcad3becc672d957}\label{_graph_8cpp_ab8d2bb95736a779dfcad3becc672d957}} 
+\index{Graph.cpp@{Graph.cpp}!get\_segments\_in\_area@{get\_segments\_in\_area}}
+\index{get\_segments\_in\_area@{get\_segments\_in\_area}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_segments\_in\_area()}{get\_segments\_in\_area()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structsegment}{segment}} $\ast$$>$ get\+\_\+segments\+\_\+in\+\_\+area (\begin{DoxyParamCaption}\item[{float}]{x1,  }\item[{float}]{y1,  }\item[{float}]{z1,  }\item[{float}]{x2,  }\item[{float}]{y2,  }\item[{float}]{z2 }\end{DoxyParamCaption})}
+
+
+
+Get the graph segments within a rectangular area. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & first x of the rect area \\
+\hline
+{\em y1} & first y of the rect area \\
+\hline
+{\em x2} & second x of the rect area \\
+\hline
+{\em y2} & second y of the rect area \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$segment$\ast$$>$$\ast$ 
+\end{DoxyReturn}
+
+
+Definition at line 203 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_aeb8db20266cd09fcb647531bd46538ed}\label{_graph_8cpp_aeb8db20266cd09fcb647531bd46538ed}} 
+\index{Graph.cpp@{Graph.cpp}!get\_segments\_in\_area@{get\_segments\_in\_area}}
+\index{get\_segments\_in\_area@{get\_segments\_in\_area}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_segments\_in\_area()}{get\_segments\_in\_area()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structsegment}{segment}} $\ast$$>$ get\+\_\+segments\+\_\+in\+\_\+area (\begin{DoxyParamCaption}\item[{float}]{x1,  }\item[{float}]{y1,  }\item[{float}]{z1,  }\item[{float}]{x2,  }\item[{float}]{y2,  }\item[{float}]{z2,  }\item[{\mbox{\hyperlink{structsegment}{segment}} $\ast$}]{exclude }\end{DoxyParamCaption})}
+
+
+
+Definition at line 166 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_aead458bb9631c8ba22e119009a5567a3}\label{_graph_8cpp_aead458bb9631c8ba22e119009a5567a3}} 
+\index{Graph.cpp@{Graph.cpp}!global\_2\_local@{global\_2\_local}}
+\index{global\_2\_local@{global\_2\_local}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{global\_2\_local()}{global\_2\_local()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structvec3d}{vec3d}} global\+\_\+2\+\_\+local (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structline3d}{line3d}}}]{ref\+\_\+line,  }\item[{\mbox{\hyperlink{structvec3d}{vec3d}}}]{input }\end{DoxyParamCaption})}
+
+
+
+Definition at line 487 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a2ba33fb794bfd2b82ddac7734415ba96}\label{_graph_8cpp_a2ba33fb794bfd2b82ddac7734415ba96}} 
+\index{Graph.cpp@{Graph.cpp}!init\_search\_vectors@{init\_search\_vectors}}
+\index{init\_search\_vectors@{init\_search\_vectors}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{init\_search\_vectors()}{init\_search\_vectors()}}
+{\footnotesize\ttfamily void init\+\_\+search\+\_\+vectors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 693 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a31549e79ca462c0d184a214deb39884d}\label{_graph_8cpp_a31549e79ca462c0d184a214deb39884d}} 
+\index{Graph.cpp@{Graph.cpp}!inRange@{inRange}}
+\index{inRange@{inRange}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{inRange()}{inRange()}}
+{\footnotesize\ttfamily bool in\+Range (\begin{DoxyParamCaption}\item[{float}]{low,  }\item[{float}]{high,  }\item[{float}]{x }\end{DoxyParamCaption})}
+
+
+
+Returns true if x is in range \mbox{[}low..high\mbox{]}, else false. 
+
+
+
+Definition at line 112 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_aa375c49077cb62fb51e711d261af748d}\label{_graph_8cpp_aa375c49077cb62fb51e711d261af748d}} 
+\index{Graph.cpp@{Graph.cpp}!is\_angle\_between@{is\_angle\_between}}
+\index{is\_angle\_between@{is\_angle\_between}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_angle\_between()}{is\_angle\_between()}}
+{\footnotesize\ttfamily bool is\+\_\+angle\+\_\+between (\begin{DoxyParamCaption}\item[{int}]{target,  }\item[{int}]{angle1,  }\item[{int}]{angle2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1127 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_acf9a721e9798d8eefe435f986be05e8b}\label{_graph_8cpp_acf9a721e9798d8eefe435f986be05e8b}} 
+\index{Graph.cpp@{Graph.cpp}!LineLineIntersect@{LineLineIntersect}}
+\index{LineLineIntersect@{LineLineIntersect}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{LineLineIntersect()}{LineLineIntersect()}}
+{\footnotesize\ttfamily bool Line\+Line\+Intersect (\begin{DoxyParamCaption}\item[{double}]{x1,  }\item[{double}]{y1,  }\item[{double}]{x2,  }\item[{double}]{y2,  }\item[{double}]{x3,  }\item[{double}]{y3,  }\item[{double}]{x4,  }\item[{double}]{y4,  }\item[{double \&}]{ix\+Out,  }\item[{double \&}]{iy\+Out }\end{DoxyParamCaption})}
+
+
+
+Calculate intersection of two lines. \href{http://mathworld.wolfram.com/Line-LineIntersection.html}{\texttt{ http\+://mathworld.\+wolfram.\+com/\+Line-\/\+Line\+Intersection.\+html}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & Line 1 start \\
+\hline
+{\em y1} & Line 1 start \\
+\hline
+{\em x2} & Line 1 end \\
+\hline
+{\em y2} & Line 1 end \\
+\hline
+{\em x3} & Line 2 start \\
+\hline
+{\em y3} & Line 2 start \\
+\hline
+{\em x4} & Line 2 end \\
+\hline
+{\em y4} & Line 2 end \\
+\hline
+{\em ix\+Out} & intersection x result \\
+\hline
+{\em iy\+Out} & intersection y result \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if intersection is found 
+
+false if intersection is not found or error 
+\end{DoxyReturn}
+
+
+Definition at line 134 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a7e6dca07d3075f006b51fbb3f40420b1}\label{_graph_8cpp_a7e6dca07d3075f006b51fbb3f40420b1}} 
+\index{Graph.cpp@{Graph.cpp}!lineLineIntersection@{lineLineIntersection}}
+\index{lineLineIntersection@{lineLineIntersection}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{lineLineIntersection()}{lineLineIntersection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_graphbu_8cpp_a74263fa3743689e30ab02b1f6c844899}{pdd}} line\+Line\+Intersection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_graphbu_8cpp_a74263fa3743689e30ab02b1f6c844899}{pdd}}}]{A,  }\item[{\mbox{\hyperlink{_graphbu_8cpp_a74263fa3743689e30ab02b1f6c844899}{pdd}}}]{B,  }\item[{\mbox{\hyperlink{_graphbu_8cpp_a74263fa3743689e30ab02b1f6c844899}{pdd}}}]{C,  }\item[{\mbox{\hyperlink{_graphbu_8cpp_a74263fa3743689e30ab02b1f6c844899}{pdd}}}]{D }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1143 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a8bc03f0375b8f3f3c33c05684f2c7db0}\label{_graph_8cpp_a8bc03f0375b8f3f3c33c05684f2c7db0}} 
+\index{Graph.cpp@{Graph.cpp}!local\_2\_global@{local\_2\_global}}
+\index{local\_2\_global@{local\_2\_global}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{local\_2\_global()}{local\_2\_global()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structvec3d}{vec3d}} local\+\_\+2\+\_\+global (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structline3d}{line3d}}}]{ref\+\_\+line,  }\item[{\mbox{\hyperlink{structvec3d}{vec3d}}}]{input }\end{DoxyParamCaption})}
+
+
+
+Definition at line 467 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a24e6cd1b6338a0dbefc78e137c69c3a7}\label{_graph_8cpp_a24e6cd1b6338a0dbefc78e137c69c3a7}} 
+\index{Graph.cpp@{Graph.cpp}!operator/@{operator/}}
+\index{operator/@{operator/}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structvec3d}{vec3d}} operator/ (\begin{DoxyParamCaption}\item[{float}]{num,  }\item[{const \mbox{\hyperlink{structvec3d}{vec3d}} \&}]{left }\end{DoxyParamCaption})}
+
+
+
+Definition at line 294 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a15532f65a21a6273ccf6011bc1ce36f7}\label{_graph_8cpp_a15532f65a21a6273ccf6011bc1ce36f7}} 
+\index{Graph.cpp@{Graph.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{structedge__cell}{edge\+\_\+cell}} \&}]{cell }\end{DoxyParamCaption})}
+
+
+
+Definition at line 61 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a6638a15b700f286c2b5d176332d9f02b}\label{_graph_8cpp_a6638a15b700f286c2b5d176332d9f02b}} 
+\index{Graph.cpp@{Graph.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{structline3d}{line3d}} \&}]{line }\end{DoxyParamCaption})}
+
+
+
+Definition at line 352 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a60ebc99b842125d1385be7a1eccd1fee}\label{_graph_8cpp_a60ebc99b842125d1385be7a1eccd1fee}} 
+\index{Graph.cpp@{Graph.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{structnode}{node}} \&}]{pt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 308 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a5bbf604b82aa1c0aa21cd6b50275ae12}\label{_graph_8cpp_a5bbf604b82aa1c0aa21cd6b50275ae12}} 
+\index{Graph.cpp@{Graph.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{structvec3d}{vec3d}} \&}]{pt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 303 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a0b016731a23c84ea977156a98cfacec9}\label{_graph_8cpp_a0b016731a23c84ea977156a98cfacec9}} 
+\index{Graph.cpp@{Graph.cpp}!qRotate2@{qRotate2}}
+\index{qRotate2@{qRotate2}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{qRotate2()}{qRotate2()}}
+{\footnotesize\ttfamily glm\+::vec3 q\+Rotate2 (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{point,  }\item[{glm\+::vec3}]{rotate }\end{DoxyParamCaption})}
+
+
+
+Definition at line 451 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ae6183a863a370953e8c59489baedaef2}\label{_graph_8cpp_ae6183a863a370953e8c59489baedaef2}} 
+\index{Graph.cpp@{Graph.cpp}!qRotatetoGlobal@{qRotatetoGlobal}}
+\index{qRotatetoGlobal@{qRotatetoGlobal}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{qRotatetoGlobal()}{qRotatetoGlobal()}}
+{\footnotesize\ttfamily glm\+::vec3 q\+Rotateto\+Global (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{point,  }\item[{glm\+::vec3}]{rotate }\end{DoxyParamCaption})}
+
+
+
+Definition at line 420 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a7d9b9e25bb65f394ee131a2a1114b30a}\label{_graph_8cpp_a7d9b9e25bb65f394ee131a2a1114b30a}} 
+\index{Graph.cpp@{Graph.cpp}!qRotatetoLocal@{qRotatetoLocal}}
+\index{qRotatetoLocal@{qRotatetoLocal}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{qRotatetoLocal()}{qRotatetoLocal()}}
+{\footnotesize\ttfamily glm\+::vec3 q\+Rotateto\+Local (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{point,  }\item[{glm\+::vec3}]{rotate }\end{DoxyParamCaption})}
+
+
+
+Definition at line 427 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a3e84f05fcd88839538fff89037118f29}\label{_graph_8cpp_a3e84f05fcd88839538fff89037118f29}} 
+\index{Graph.cpp@{Graph.cpp}!rad2deg@{rad2deg}}
+\index{rad2deg@{rad2deg}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{rad2deg()}{rad2deg()}}
+{\footnotesize\ttfamily int rad2deg (\begin{DoxyParamCaption}\item[{float}]{rad }\end{DoxyParamCaption})}
+
+
+
+Definition at line 687 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a3e36914b07d0a78e59cd1af91ea08060}\label{_graph_8cpp_a3e36914b07d0a78e59cd1af91ea08060}} 
+\index{Graph.cpp@{Graph.cpp}!raycast\_segment@{raycast\_segment}}
+\index{raycast\_segment@{raycast\_segment}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{raycast\_segment()}{raycast\_segment()}}
+{\footnotesize\ttfamily void raycast\+\_\+segment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsegment}{segment}} $\ast$}]{s,  }\item[{int}]{direction }\end{DoxyParamCaption})}
+
+
+
+from the center of the segment, raycast into two perpendicular directions and check for intersections with surrounding segments 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \\
+\hline
+{\em direction} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 229 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a15d6f8c763742e8ebcb2b65fcdcd50d0}\label{_graph_8cpp_a15d6f8c763742e8ebcb2b65fcdcd50d0}} 
+\index{Graph.cpp@{Graph.cpp}!read\_segments\_from\_sl@{read\_segments\_from\_sl}}
+\index{read\_segments\_from\_sl@{read\_segments\_from\_sl}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{read\_segments\_from\_sl()}{read\_segments\_from\_sl()}}
+{\footnotesize\ttfamily void read\+\_\+segments\+\_\+from\+\_\+sl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+loop through all streamlines, add segment based on the GRAPH\+\_\+\+RESOLUTION 
+
+
+
+Definition at line 1806 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a51f115385615e3a7d054039ede80417e}\label{_graph_8cpp_a51f115385615e3a7d054039ede80417e}} 
+\index{Graph.cpp@{Graph.cpp}!reverse\_line@{reverse\_line}}
+\index{reverse\_line@{reverse\_line}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{reverse\_line()}{reverse\_line()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structline3d}{line3d}} reverse\+\_\+line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structline3d}{line3d}}}]{line }\end{DoxyParamCaption})}
+
+
+
+Definition at line 377 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ac7130c1c56ec260b9a72cdaf3267bcba}\label{_graph_8cpp_ac7130c1c56ec260b9a72cdaf3267bcba}} 
+\index{Graph.cpp@{Graph.cpp}!rotate\_vec@{rotate\_vec}}
+\index{rotate\_vec@{rotate\_vec}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{rotate\_vec()}{rotate\_vec()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void rotate\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvec3d}{vec3d}} \&}]{vec,  }\item[{float}]{angle }\end{DoxyParamCaption})}
+
+
+
+Definition at line 581 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a1df9bd94562b1defea507096d3aa6bec}\label{_graph_8cpp_a1df9bd94562b1defea507096d3aa6bec}} 
+\index{Graph.cpp@{Graph.cpp}!rotate\_vec@{rotate\_vec}}
+\index{rotate\_vec@{rotate\_vec}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{rotate\_vec()}{rotate\_vec()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void rotate\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvec3d}{vec3d}} \&}]{vec,  }\item[{\mbox{\hyperlink{structvec3d}{vec3d}}}]{vec\+\_\+angle }\end{DoxyParamCaption})}
+
+
+
+Definition at line 598 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a8fa36a51995bbb5bced14371654c6531}\label{_graph_8cpp_a8fa36a51995bbb5bced14371654c6531}} 
+\index{Graph.cpp@{Graph.cpp}!RotationBetweenVectors@{RotationBetweenVectors}}
+\index{RotationBetweenVectors@{RotationBetweenVectors}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{RotationBetweenVectors()}{RotationBetweenVectors()}}
+{\footnotesize\ttfamily quat Rotation\+Between\+Vectors (\begin{DoxyParamCaption}\item[{vec3}]{start,  }\item[{vec3}]{dest }\end{DoxyParamCaption})}
+
+
+
+Definition at line 386 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a471c250ea2f2be2bc6494f21423e7b00}\label{_graph_8cpp_a471c250ea2f2be2bc6494f21423e7b00}} 
+\index{Graph.cpp@{Graph.cpp}!save\_matrix@{save\_matrix}}
+\index{save\_matrix@{save\_matrix}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{save\_matrix()}{save\_matrix()}}
+{\footnotesize\ttfamily void save\+\_\+matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2005 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ae4dd079e4b1c1564796594bcf6849ee1}\label{_graph_8cpp_ae4dd079e4b1c1564796594bcf6849ee1}} 
+\index{Graph.cpp@{Graph.cpp}!set\_neighbor@{set\_neighbor}}
+\index{set\_neighbor@{set\_neighbor}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{set\_neighbor()}{set\_neighbor()}}
+{\footnotesize\ttfamily void set\+\_\+neighbor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsegment}{segment}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{structsegment}{segment}} $\ast$}]{b,  }\item[{int}]{dir }\end{DoxyParamCaption})}
+
+
+
+Definition at line 616 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a8c2d2f604852344772af43120339dc7d}\label{_graph_8cpp_a8c2d2f604852344772af43120339dc7d}} 
+\index{Graph.cpp@{Graph.cpp}!switch\_color@{switch\_color}}
+\index{switch\_color@{switch\_color}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{switch\_color()}{switch\_color()}}
+{\footnotesize\ttfamily void switch\+\_\+color (\begin{DoxyParamCaption}\item[{float $\ast$\&}]{rgb }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1987 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a208b677eaa373f01aec751bcf30d7fb2}\label{_graph_8cpp_a208b677eaa373f01aec751bcf30d7fb2}} 
+\index{Graph.cpp@{Graph.cpp}!update\_graph@{update\_graph}}
+\index{update\_graph@{update\_graph}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{update\_graph()}{update\_graph()}}
+{\footnotesize\ttfamily void update\+\_\+graph (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$$>$ \&}]{streamlines\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+loop through all segments (depend on the current segment resolution) to find their neighbors 
+
+
+
+Definition at line 1925 of file Graph.\+cpp.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_graph_8cpp_af9e2a3a397dcf1838f3280d62efbb368}\label{_graph_8cpp_af9e2a3a397dcf1838f3280d62efbb368}} 
+\index{Graph.cpp@{Graph.cpp}!all\_segments@{all\_segments}}
+\index{all\_segments@{all\_segments}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{all\_segments}{all\_segments}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsegment}{segment}}$\ast$$\ast$ all\+\_\+segments}
+
+
+
+Definition at line 67 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a3298a0c621393512a9cf3932efda539f}\label{_graph_8cpp_a3298a0c621393512a9cf3932efda539f}} 
+\index{Graph.cpp@{Graph.cpp}!BACKWARD\_DIR@{BACKWARD\_DIR}}
+\index{BACKWARD\_DIR@{BACKWARD\_DIR}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{BACKWARD\_DIR}{BACKWARD\_DIR}}
+{\footnotesize\ttfamily const int BACKWARD\+\_\+\+DIR = -\/2}
+
+
+
+Definition at line 861 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a207d5d37730331d5b8a88c753fcca54e}\label{_graph_8cpp_a207d5d37730331d5b8a88c753fcca54e}} 
+\index{Graph.cpp@{Graph.cpp}!base\_seg@{base\_seg}}
+\index{base\_seg@{base\_seg}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{base\_seg}{base\_seg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structvec3d}{vec3d}} base\+\_\+seg}
+
+
+
+Definition at line 684 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a5a88a3f2c5ac4291c9f9eb3a15e254cd}\label{_graph_8cpp_a5a88a3f2c5ac4291c9f9eb3a15e254cd}} 
+\index{Graph.cpp@{Graph.cpp}!base\_segment@{base\_segment}}
+\index{base\_segment@{base\_segment}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{base\_segment}{base\_segment}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsegment}{segment}}$\ast$ base\+\_\+segment}
+
+
+
+Definition at line 2090 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ad5d030a0fd8d2e5ee811914c79799406}\label{_graph_8cpp_ad5d030a0fd8d2e5ee811914c79799406}} 
+\index{Graph.cpp@{Graph.cpp}!bin\_num\_segment@{bin\_num\_segment}}
+\index{bin\_num\_segment@{bin\_num\_segment}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{bin\_num\_segment}{bin\_num\_segment}}
+{\footnotesize\ttfamily int bin\+\_\+num\+\_\+segment = 2 $\ast$ 50}
+
+
+
+Definition at line 32 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a54ee41423892fb312495458f6797944b}\label{_graph_8cpp_a54ee41423892fb312495458f6797944b}} 
+\index{Graph.cpp@{Graph.cpp}!bin\_width\_segment@{bin\_width\_segment}}
+\index{bin\_width\_segment@{bin\_width\_segment}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{bin\_width\_segment}{bin\_width\_segment}}
+{\footnotesize\ttfamily int bin\+\_\+width\+\_\+segment = 2}
+
+
+
+Definition at line 31 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a817c1c2b3f92cc1b82b8ced9ab528354}\label{_graph_8cpp_a817c1c2b3f92cc1b82b8ced9ab528354}} 
+\index{Graph.cpp@{Graph.cpp}!bins\_segment@{bins\_segment}}
+\index{bins\_segment@{bins\_segment}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{bins\_segment}{bins\_segment}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structsegment}{segment}} $\ast$$>$ bins\+\_\+segment\mbox{[}2\mbox{]}\mbox{[}2\mbox{]}}
+
+
+
+Definition at line 33 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a289ce0e5e24e53321a9253bd3508eab7}\label{_graph_8cpp_a289ce0e5e24e53321a9253bd3508eab7}} 
+\index{Graph.cpp@{Graph.cpp}!black@{black}}
+\index{black@{black}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{black}{black}}
+{\footnotesize\ttfamily float black\mbox{[}3\mbox{]} = \{0, 0, 0\}}
+
+
+
+Definition at line 1984 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_af55aade70ec6cb118b07b91a24d90994}\label{_graph_8cpp_af55aade70ec6cb118b07b91a24d90994}} 
+\index{Graph.cpp@{Graph.cpp}!blue@{blue}}
+\index{blue@{blue}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{blue}{blue}}
+{\footnotesize\ttfamily float blue\mbox{[}3\mbox{]} = \{1, 1, 0\}}
+
+
+
+Definition at line 1984 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ae9147742f44422af4c036fe6952f03c2}\label{_graph_8cpp_ae9147742f44422af4c036fe6952f03c2}} 
+\index{Graph.cpp@{Graph.cpp}!c\_blue@{c\_blue}}
+\index{c\_blue@{c\_blue}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{c\_blue}{c\_blue}}
+{\footnotesize\ttfamily const int c\+\_\+blue = 1}
+
+
+
+Definition at line 1985 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a09ff29b2d0a25d0c2cfb4debfe5f5b3a}\label{_graph_8cpp_a09ff29b2d0a25d0c2cfb4debfe5f5b3a}} 
+\index{Graph.cpp@{Graph.cpp}!c\_red@{c\_red}}
+\index{c\_red@{c\_red}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{c\_red}{c\_red}}
+{\footnotesize\ttfamily const int c\+\_\+red = 0}
+
+
+
+Definition at line 1985 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_aa2b754f07f4a22269e75d7e53159b126}\label{_graph_8cpp_aa2b754f07f4a22269e75d7e53159b126}} 
+\index{Graph.cpp@{Graph.cpp}!cached\_angle@{cached\_angle}}
+\index{cached\_angle@{cached\_angle}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{cached\_angle}{cached\_angle}}
+{\footnotesize\ttfamily float cached\+\_\+angle = -\/1000000}
+
+
+
+Definition at line 374 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a59edb38f0c5aa9c3bddd12bd7fafce17}\label{_graph_8cpp_a59edb38f0c5aa9c3bddd12bd7fafce17}} 
+\index{Graph.cpp@{Graph.cpp}!cached\_cos@{cached\_cos}}
+\index{cached\_cos@{cached\_cos}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{cached\_cos}{cached\_cos}}
+{\footnotesize\ttfamily float cached\+\_\+cos}
+
+
+
+Definition at line 374 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a60f9fd48b72ad48ba139fb9889a2d124}\label{_graph_8cpp_a60f9fd48b72ad48ba139fb9889a2d124}} 
+\index{Graph.cpp@{Graph.cpp}!cached\_sin@{cached\_sin}}
+\index{cached\_sin@{cached\_sin}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{cached\_sin}{cached\_sin}}
+{\footnotesize\ttfamily float cached\+\_\+sin}
+
+
+
+Definition at line 374 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a0fd02fb9277ffcb35a75066ffe95e8c7}\label{_graph_8cpp_a0fd02fb9277ffcb35a75066ffe95e8c7}} 
+\index{Graph.cpp@{Graph.cpp}!color@{color}}
+\index{color@{color}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily int color = \mbox{\hyperlink{_graphbu_8cpp_a09ff29b2d0a25d0c2cfb4debfe5f5b3a}{c\+\_\+red}}}
+
+
+
+Definition at line 1986 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a000585cb168e6be8e34cb947cde398ac}\label{_graph_8cpp_a000585cb168e6be8e34cb947cde398ac}} 
+\index{Graph.cpp@{Graph.cpp}!cos\_neg\_45@{cos\_neg\_45}}
+\index{cos\_neg\_45@{cos\_neg\_45}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{cos\_neg\_45}{cos\_neg\_45}}
+{\footnotesize\ttfamily const float cos\+\_\+neg\+\_\+45 = 0.\+70710678}
+
+
+
+Definition at line 635 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a8a371f37d10006ffee1455a2ca260450}\label{_graph_8cpp_a8a371f37d10006ffee1455a2ca260450}} 
+\index{Graph.cpp@{Graph.cpp}!debugA\_xyz@{debugA\_xyz}}
+\index{debugA\_xyz@{debugA\_xyz}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{debugA\_xyz}{debugA\_xyz}}
+{\footnotesize\ttfamily float debug\+A\+\_\+xyz\mbox{[}3\mbox{]} = \{0, 0, 0\}}
+
+
+
+Definition at line 35 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a3e83175648ef788c874b1310573bfe1a}\label{_graph_8cpp_a3e83175648ef788c874b1310573bfe1a}} 
+\index{Graph.cpp@{Graph.cpp}!debugB\_xyz@{debugB\_xyz}}
+\index{debugB\_xyz@{debugB\_xyz}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{debugB\_xyz}{debugB\_xyz}}
+{\footnotesize\ttfamily float debug\+B\+\_\+xyz\mbox{[}3\mbox{]} = \{0, 0, 0\}}
+
+
+
+Definition at line 36 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a3b042076b4997c36561eb86b2d4b12a7}\label{_graph_8cpp_a3b042076b4997c36561eb86b2d4b12a7}} 
+\index{Graph.cpp@{Graph.cpp}!DIR\_LEFT@{DIR\_LEFT}}
+\index{DIR\_LEFT@{DIR\_LEFT}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{DIR\_LEFT}{DIR\_LEFT}}
+{\footnotesize\ttfamily const int DIR\+\_\+\+LEFT = 0}
+
+
+
+direction constants, for 2D 
+
+
+
+Definition at line 92 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ac03d51014d4142895b93f33c9ac0d270}\label{_graph_8cpp_ac03d51014d4142895b93f33c9ac0d270}} 
+\index{Graph.cpp@{Graph.cpp}!DIR\_NA@{DIR\_NA}}
+\index{DIR\_NA@{DIR\_NA}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{DIR\_NA}{DIR\_NA}}
+{\footnotesize\ttfamily const int DIR\+\_\+\+NA = -\/1}
+
+
+
+Definition at line 92 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a12cd911867d7964b7a6891164eca3317}\label{_graph_8cpp_a12cd911867d7964b7a6891164eca3317}} 
+\index{Graph.cpp@{Graph.cpp}!DIR\_RIGHT@{DIR\_RIGHT}}
+\index{DIR\_RIGHT@{DIR\_RIGHT}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{DIR\_RIGHT}{DIR\_RIGHT}}
+{\footnotesize\ttfamily const int DIR\+\_\+\+RIGHT = 1}
+
+
+
+Definition at line 92 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a91ee41213a1d2102d68d88bea46319ab}\label{_graph_8cpp_a91ee41213a1d2102d68d88bea46319ab}} 
+\index{Graph.cpp@{Graph.cpp}!do\_draw\_matrix@{do\_draw\_matrix}}
+\index{do\_draw\_matrix@{do\_draw\_matrix}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{do\_draw\_matrix}{do\_draw\_matrix}}
+{\footnotesize\ttfamily bool do\+\_\+draw\+\_\+matrix = false}
+
+
+
+Definition at line 2003 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a817b10ff9cdf895056a61e62b96ca35d}\label{_graph_8cpp_a817b10ff9cdf895056a61e62b96ca35d}} 
+\index{Graph.cpp@{Graph.cpp}!doRotate@{doRotate}}
+\index{doRotate@{doRotate}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{doRotate}{doRotate}}
+{\footnotesize\ttfamily int do\+Rotate = 1}
+
+
+
+Definition at line 465 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a3ad3e0a024d9715e456d27411d590904}\label{_graph_8cpp_a3ad3e0a024d9715e456d27411d590904}} 
+\index{Graph.cpp@{Graph.cpp}!draw\_base@{draw\_base}}
+\index{draw\_base@{draw\_base}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{draw\_base}{draw\_base}}
+{\footnotesize\ttfamily int draw\+\_\+base = 0}
+
+
+
+Definition at line 44 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a27b474479bcbdabc6bab95df7c27f437}\label{_graph_8cpp_a27b474479bcbdabc6bab95df7c27f437}} 
+\index{Graph.cpp@{Graph.cpp}!FORWARD\_DIR@{FORWARD\_DIR}}
+\index{FORWARD\_DIR@{FORWARD\_DIR}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{FORWARD\_DIR}{FORWARD\_DIR}}
+{\footnotesize\ttfamily const int FORWARD\+\_\+\+DIR = -\/1}
+
+
+
+Definition at line 861 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_af9f3fc172b073c437fe82711787f3855}\label{_graph_8cpp_af9f3fc172b073c437fe82711787f3855}} 
+\index{Graph.cpp@{Graph.cpp}!gray@{gray}}
+\index{gray@{gray}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{gray}{gray}}
+{\footnotesize\ttfamily float gray\mbox{[}3\mbox{]} = \{0.\+3, 0.\+3, 0.\+3\}}
+
+
+
+Definition at line 1984 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ad0c746c93e445ba5d4a25cc2b6333d45}\label{_graph_8cpp_ad0c746c93e445ba5d4a25cc2b6333d45}} 
+\index{Graph.cpp@{Graph.cpp}!IMG\_SIZE@{IMG\_SIZE}}
+\index{IMG\_SIZE@{IMG\_SIZE}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{IMG\_SIZE}{IMG\_SIZE}}
+{\footnotesize\ttfamily float IMG\+\_\+\+SIZE = 512}
+
+
+
+Definition at line 2001 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a2973095d5fdee1acfb9af2e940d409be}\label{_graph_8cpp_a2973095d5fdee1acfb9af2e940d409be}} 
+\index{Graph.cpp@{Graph.cpp}!LESS\_THAN@{LESS\_THAN}}
+\index{LESS\_THAN@{LESS\_THAN}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{LESS\_THAN}{LESS\_THAN}}
+{\footnotesize\ttfamily const int LESS\+\_\+\+THAN = 0}
+
+
+
+Definition at line 357 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a4e12e225c3c1f6f99b8a0dfffec1e180}\label{_graph_8cpp_a4e12e225c3c1f6f99b8a0dfffec1e180}} 
+\index{Graph.cpp@{Graph.cpp}!m\_edge\_type@{m\_edge\_type}}
+\index{m\_edge\_type@{m\_edge\_type}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{m\_edge\_type}{m\_edge\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$\mbox{\hyperlink{structedge__cell}{edge\+\_\+cell}}$>$ $\ast$ m\+\_\+edge\+\_\+type}
+
+
+
+Definition at line 68 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ac74cd4295d0ebfd69f99c63927ec075a}\label{_graph_8cpp_ac74cd4295d0ebfd69f99c63927ec075a}} 
+\index{Graph.cpp@{Graph.cpp}!m\_edges@{m\_edges}}
+\index{m\_edges@{m\_edges}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{m\_edges}{m\_edges}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sparse_matrix}{Sparse\+Matrix}}$<$\mbox{\hyperlink{structedge__cell}{edge\+\_\+cell}}$>$$\ast$ m\+\_\+edges}
+
+
+
+Definition at line 68 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a627c4ab2fcd7920f78fa94d9cd076739}\label{_graph_8cpp_a627c4ab2fcd7920f78fa94d9cd076739}} 
+\index{Graph.cpp@{Graph.cpp}!manual\_segment@{manual\_segment}}
+\index{manual\_segment@{manual\_segment}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{manual\_segment}{manual\_segment}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsegment}{segment}}$\ast$ manual\+\_\+segment = new \mbox{\hyperlink{structsegment}{segment}}}
+
+
+
+Definition at line 1068 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a0a8d61e6c17c6e1b3e37e783ee86e792}\label{_graph_8cpp_a0a8d61e6c17c6e1b3e37e783ee86e792}} 
+\index{Graph.cpp@{Graph.cpp}!matrix\_region\_x1@{matrix\_region\_x1}}
+\index{matrix\_region\_x1@{matrix\_region\_x1}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{matrix\_region\_x1}{matrix\_region\_x1}}
+{\footnotesize\ttfamily float matrix\+\_\+region\+\_\+x1 = -\/0.\+5}
+
+
+
+Definition at line 42 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a59816c4f666c2c347067cf5d41d0ba3b}\label{_graph_8cpp_a59816c4f666c2c347067cf5d41d0ba3b}} 
+\index{Graph.cpp@{Graph.cpp}!matrix\_region\_x2@{matrix\_region\_x2}}
+\index{matrix\_region\_x2@{matrix\_region\_x2}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{matrix\_region\_x2}{matrix\_region\_x2}}
+{\footnotesize\ttfamily float matrix\+\_\+region\+\_\+x2 = 0.\+5}
+
+
+
+Definition at line 42 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_aea00a1e6fb3e9e23968dc5df9e55d811}\label{_graph_8cpp_aea00a1e6fb3e9e23968dc5df9e55d811}} 
+\index{Graph.cpp@{Graph.cpp}!matrix\_region\_y1@{matrix\_region\_y1}}
+\index{matrix\_region\_y1@{matrix\_region\_y1}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{matrix\_region\_y1}{matrix\_region\_y1}}
+{\footnotesize\ttfamily float matrix\+\_\+region\+\_\+y1 = -\/0.\+5}
+
+
+
+Definition at line 42 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a241aec6ac1e6dfaf502007fc513e7da4}\label{_graph_8cpp_a241aec6ac1e6dfaf502007fc513e7da4}} 
+\index{Graph.cpp@{Graph.cpp}!matrix\_region\_y2@{matrix\_region\_y2}}
+\index{matrix\_region\_y2@{matrix\_region\_y2}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{matrix\_region\_y2}{matrix\_region\_y2}}
+{\footnotesize\ttfamily float matrix\+\_\+region\+\_\+y2 = 0.\+5}
+
+
+
+Definition at line 42 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a5e4753aa51186eda91a7d7e28de76359}\label{_graph_8cpp_a5e4753aa51186eda91a7d7e28de76359}} 
+\index{Graph.cpp@{Graph.cpp}!matrix\_region\_z1@{matrix\_region\_z1}}
+\index{matrix\_region\_z1@{matrix\_region\_z1}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{matrix\_region\_z1}{matrix\_region\_z1}}
+{\footnotesize\ttfamily float matrix\+\_\+region\+\_\+z1 = -\/0.\+5}
+
+
+
+Definition at line 42 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a4416c6df1243c6b4935f42d30e02449b}\label{_graph_8cpp_a4416c6df1243c6b4935f42d30e02449b}} 
+\index{Graph.cpp@{Graph.cpp}!matrix\_region\_z2@{matrix\_region\_z2}}
+\index{matrix\_region\_z2@{matrix\_region\_z2}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{matrix\_region\_z2}{matrix\_region\_z2}}
+{\footnotesize\ttfamily float matrix\+\_\+region\+\_\+z2 = 0.\+5}
+
+
+
+Definition at line 42 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a56730fae46b0a24f6ed47a850c782cdd}\label{_graph_8cpp_a56730fae46b0a24f6ed47a850c782cdd}} 
+\index{Graph.cpp@{Graph.cpp}!MORE\_THAN@{MORE\_THAN}}
+\index{MORE\_THAN@{MORE\_THAN}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{MORE\_THAN}{MORE\_THAN}}
+{\footnotesize\ttfamily const int MORE\+\_\+\+THAN = 1}
+
+
+
+Definition at line 357 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a667ad9d6ce915ec7e7499928043aee8a}\label{_graph_8cpp_a667ad9d6ce915ec7e7499928043aee8a}} 
+\index{Graph.cpp@{Graph.cpp}!outfile@{outfile}}
+\index{outfile@{outfile}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{outfile}{outfile}}
+{\footnotesize\ttfamily ofstream outfile}
+
+
+
+Definition at line 1920 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ac034595deb498a11b504a6dc06f64222}\label{_graph_8cpp_ac034595deb498a11b504a6dc06f64222}} 
+\index{Graph.cpp@{Graph.cpp}!red@{red}}
+\index{red@{red}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{red}{red}}
+{\footnotesize\ttfamily float red\mbox{[}3\mbox{]} = \{1, 0, 0\}}
+
+
+
+Definition at line 1984 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a8fa15102d8fdf612fe8fca09f89f3a88}\label{_graph_8cpp_a8fa15102d8fdf612fe8fca09f89f3a88}} 
+\index{Graph.cpp@{Graph.cpp}!SEARCH\_LENGTH@{SEARCH\_LENGTH}}
+\index{SEARCH\_LENGTH@{SEARCH\_LENGTH}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{SEARCH\_LENGTH}{SEARCH\_LENGTH}}
+{\footnotesize\ttfamily float SEARCH\+\_\+\+LENGTH = 3}
+
+
+
+Definition at line 636 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a55d862a7b9121f3f46963b9de826b244}\label{_graph_8cpp_a55d862a7b9121f3f46963b9de826b244}} 
+\index{Graph.cpp@{Graph.cpp}!search\_neighbor\_index@{search\_neighbor\_index}}
+\index{search\_neighbor\_index@{search\_neighbor\_index}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{search\_neighbor\_index}{search\_neighbor\_index}}
+{\footnotesize\ttfamily int search\+\_\+neighbor\+\_\+index = 0}
+
+
+
+Definition at line 38 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_af3405b7caf3bf9105bc478549eaa6307}\label{_graph_8cpp_af3405b7caf3bf9105bc478549eaa6307}} 
+\index{Graph.cpp@{Graph.cpp}!search\_range@{search\_range}}
+\index{search\_range@{search\_range}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{search\_range}{search\_range}}
+{\footnotesize\ttfamily const float search\+\_\+range = 3}
+
+
+
+constant for the search range of each graph node to find its neighbors 
+
+
+
+Definition at line 98 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_adc885c4719510dd40dfda0994288b534}\label{_graph_8cpp_adc885c4719510dd40dfda0994288b534}} 
+\index{Graph.cpp@{Graph.cpp}!search\_sections@{search\_sections}}
+\index{search\_sections@{search\_sections}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{search\_sections}{search\_sections}}
+{\footnotesize\ttfamily int search\+\_\+sections = 3}
+
+
+
+Definition at line 38 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a301a7c3dd0ac6ee2913fa1f5acd4eb96}\label{_graph_8cpp_a301a7c3dd0ac6ee2913fa1f5acd4eb96}} 
+\index{Graph.cpp@{Graph.cpp}!search\_vectors@{search\_vectors}}
+\index{search\_vectors@{search\_vectors}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{search\_vectors}{search\_vectors}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structvec3d}{vec3d}}$\ast$ search\+\_\+vectors = nullptr}
+
+
+
+Definition at line 683 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a2a451618dcf7bd81d10d413d0fa009ee}\label{_graph_8cpp_a2a451618dcf7bd81d10d413d0fa009ee}} 
+\index{Graph.cpp@{Graph.cpp}!sections\_active@{sections\_active}}
+\index{sections\_active@{sections\_active}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{sections\_active}{sections\_active}}
+{\footnotesize\ttfamily bool$\ast$ sections\+\_\+active}
+
+
+
+Definition at line 685 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_aa17390f047a29394466558ec9ed04637}\label{_graph_8cpp_aa17390f047a29394466558ec9ed04637}} 
+\index{Graph.cpp@{Graph.cpp}!seg\_base@{seg\_base}}
+\index{seg\_base@{seg\_base}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{seg\_base}{seg\_base}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsegment}{segment}} seg\+\_\+base}
+
+
+
+Definition at line 39 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a737fdc7f9a6146e2844d350d8af36df8}\label{_graph_8cpp_a737fdc7f9a6146e2844d350d8af36df8}} 
+\index{Graph.cpp@{Graph.cpp}!seg\_neighbors@{seg\_neighbors}}
+\index{seg\_neighbors@{seg\_neighbors}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{seg\_neighbors}{seg\_neighbors}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsegment}{segment}} $\ast$ seg\+\_\+neighbors = new \mbox{\hyperlink{structsegment}{segment}}\mbox{[}10\mbox{]}}
+
+
+
+Definition at line 39 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_aa8115d2efbe70fe88ce65698a7c822f0}\label{_graph_8cpp_aa8115d2efbe70fe88ce65698a7c822f0}} 
+\index{Graph.cpp@{Graph.cpp}!seg\_neighbors\_num@{seg\_neighbors\_num}}
+\index{seg\_neighbors\_num@{seg\_neighbors\_num}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{seg\_neighbors\_num}{seg\_neighbors\_num}}
+{\footnotesize\ttfamily int seg\+\_\+neighbors\+\_\+num = 0}
+
+
+
+Definition at line 40 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a75e8c6eefc3c0a375eb7f6346ff2d6ff}\label{_graph_8cpp_a75e8c6eefc3c0a375eb7f6346ff2d6ff}} 
+\index{Graph.cpp@{Graph.cpp}!segment\_num@{segment\_num}}
+\index{segment\_num@{segment\_num}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{segment\_num}{segment\_num}}
+{\footnotesize\ttfamily int segment\+\_\+num = 0}
+
+
+
+Definition at line 87 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a46c778f7a2098e5d92b38373a4a20a73}\label{_graph_8cpp_a46c778f7a2098e5d92b38373a4a20a73}} 
+\index{Graph.cpp@{Graph.cpp}!segment\_offset@{segment\_offset}}
+\index{segment\_offset@{segment\_offset}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{segment\_offset}{segment\_offset}}
+{\footnotesize\ttfamily int segment\+\_\+offset = -\/1}
+
+
+
+Definition at line 43 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ac7498a51543de6df85754add7616524a}\label{_graph_8cpp_ac7498a51543de6df85754add7616524a}} 
+\index{Graph.cpp@{Graph.cpp}!segment\_starters@{segment\_starters}}
+\index{segment\_starters@{segment\_starters}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{segment\_starters}{segment\_starters}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structsegment}{segment}} $\ast$$>$ segment\+\_\+starters}
+
+
+
+Definition at line 30 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ac69e046391058a698f59079e01cf7d8d}\label{_graph_8cpp_ac69e046391058a698f59079e01cf7d8d}} 
+\index{Graph.cpp@{Graph.cpp}!sin\_neg\_45@{sin\_neg\_45}}
+\index{sin\_neg\_45@{sin\_neg\_45}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{sin\_neg\_45}{sin\_neg\_45}}
+{\footnotesize\ttfamily const float sin\+\_\+neg\+\_\+45 = -\/0.\+70710678}
+
+
+
+Definition at line 635 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ad4126ad0764992ed216140e7678aea1c}\label{_graph_8cpp_ad4126ad0764992ed216140e7678aea1c}} 
+\index{Graph.cpp@{Graph.cpp}!skip\_lines@{skip\_lines}}
+\index{skip\_lines@{skip\_lines}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{skip\_lines}{skip\_lines}}
+{\footnotesize\ttfamily int skip\+\_\+lines = 1}
+
+
+
+Definition at line 1800 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a003286629f1c5aa1d20a04d9691dd97f}\label{_graph_8cpp_a003286629f1c5aa1d20a04d9691dd97f}} 
+\index{Graph.cpp@{Graph.cpp}!skip\_nodes@{skip\_nodes}}
+\index{skip\_nodes@{skip\_nodes}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{skip\_nodes}{skip\_nodes}}
+{\footnotesize\ttfamily int skip\+\_\+nodes = 1}
+
+
+
+Definition at line 1800 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_aab64cb526a8b2a329a53e1051ca83e04}\label{_graph_8cpp_aab64cb526a8b2a329a53e1051ca83e04}} 
+\index{Graph.cpp@{Graph.cpp}!SL\_LENGTH@{SL\_LENGTH}}
+\index{SL\_LENGTH@{SL\_LENGTH}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{SL\_LENGTH}{SL\_LENGTH}}
+{\footnotesize\ttfamily float SL\+\_\+\+LENGTH = 1 / 10.}
+
+
+
+Definition at line 45 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a97d0982f57daa8ae976c64009d33db89}\label{_graph_8cpp_a97d0982f57daa8ae976c64009d33db89}} 
+\index{Graph.cpp@{Graph.cpp}!sqrt2@{sqrt2}}
+\index{sqrt2@{sqrt2}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{sqrt2}{sqrt2}}
+{\footnotesize\ttfamily const float sqrt2 = sqrt(2.\+0)}
+
+
+
+Definition at line 635 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a3c581467559c6f7d5e94c51ed224488c}\label{_graph_8cpp_a3c581467559c6f7d5e94c51ed224488c}} 
+\index{Graph.cpp@{Graph.cpp}!streamlines@{streamlines}}
+\index{streamlines@{streamlines}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{streamlines}{streamlines}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{structnode}{node}}$>$ $>$ streamlines}
+
+
+
+Definition at line 28 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_ac0148c423a5b3eaaa40ea9e0450f85a4}\label{_graph_8cpp_ac0148c423a5b3eaaa40ea9e0450f85a4}} 
+\index{Graph.cpp@{Graph.cpp}!total\_nodes@{total\_nodes}}
+\index{total\_nodes@{total\_nodes}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{total\_nodes}{total\_nodes}}
+{\footnotesize\ttfamily int total\+\_\+nodes = 0}
+
+
+
+Definition at line 1801 of file Graph.\+cpp.
+
+\mbox{\Hypertarget{_graph_8cpp_a619de1decbcc9957389e67b4da53faf7}\label{_graph_8cpp_a619de1decbcc9957389e67b4da53faf7}} 
+\index{Graph.cpp@{Graph.cpp}!white@{white}}
+\index{white@{white}!Graph.cpp@{Graph.cpp}}
+\doxysubsubsection{\texorpdfstring{white}{white}}
+{\footnotesize\ttfamily float white\mbox{[}3\mbox{]} = \{1, 1, 1\}}
+
+
+
+Definition at line 1984 of file Graph.\+cpp.
+

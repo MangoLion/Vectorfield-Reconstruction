@@ -1,0 +1,104 @@
+\hypertarget{_reconstruction_legacy_8h}{}\doxysection{D\+:/\+Academic/\+VReconstruction/src/\+Recon\+Methods/\+Reconstruction\+Legacy.h File Reference}
+\label{_reconstruction_legacy_8h}\index{D:/Academic/VReconstruction/src/ReconMethods/ReconstructionLegacy.h@{D:/Academic/VReconstruction/src/ReconMethods/ReconstructionLegacy.h}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_reconstruction_legacy_8h_accfabf1e9c6b8cb4491160ded8f09c83}{interpolate\+\_\+streamline\+\_\+adaptive\+\_\+weight\+\_\+sum}} (float xx, float yy, float \&vx, float \&vy, float radar)
+\begin{DoxyCompactList}\small\item\em reconstruct the vector value of the point (xx,yy) on the vector field by using the Adaptive Weighed Sum method \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_reconstruction_legacy_8h_a342af20620e531a759dd856d89f040cd}{interpolate\+\_\+streamline\+\_\+simple\+\_\+weighted\+\_\+sum}} (float xx, float yy, float \&vx, float \&vy, float radar)
+\begin{DoxyCompactList}\small\item\em reconstruct the vector value of a point by doing a simple weighted sum of all nearby streamline points. This is the least accurate method \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_reconstruction_legacy_8h_af11e7e720b8967b5e5e3d65a07bb4ee8}{interpolate\+\_\+streamline\+\_\+raycast}} (float xx, float yy, float \&vx, float \&vy, float radar)
+\begin{DoxyCompactList}\small\item\em poor man\textquotesingle{}s raycast implementation, only check four offset points from the desired vector field point. Not very effective \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_reconstruction_legacy_8h_accfabf1e9c6b8cb4491160ded8f09c83}\label{_reconstruction_legacy_8h_accfabf1e9c6b8cb4491160ded8f09c83}} 
+\index{ReconstructionLegacy.h@{ReconstructionLegacy.h}!interpolate\_streamline\_adaptive\_weight\_sum@{interpolate\_streamline\_adaptive\_weight\_sum}}
+\index{interpolate\_streamline\_adaptive\_weight\_sum@{interpolate\_streamline\_adaptive\_weight\_sum}!ReconstructionLegacy.h@{ReconstructionLegacy.h}}
+\doxysubsubsection{\texorpdfstring{interpolate\_streamline\_adaptive\_weight\_sum()}{interpolate\_streamline\_adaptive\_weight\_sum()}}
+{\footnotesize\ttfamily int interpolate\+\_\+streamline\+\_\+adaptive\+\_\+weight\+\_\+sum (\begin{DoxyParamCaption}\item[{float}]{xx,  }\item[{float}]{yy,  }\item[{float \&}]{vx,  }\item[{float \&}]{vy,  }\item[{float}]{radar }\end{DoxyParamCaption})}
+
+
+
+reconstruct the vector value of the point (xx,yy) on the vector field by using the Adaptive Weighed Sum method 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xx} & x coord of the point on the vector field \\
+\hline
+{\em yy} & y coord of the point on the vector field \\
+\hline
+{\em vx} & the resulting vx value after reconstruction \\
+\hline
+{\em vy} & the resulting vy value after reconstruction \\
+\hline
+{\em radar} & the radar diameter to scan for surrounding streamline nodes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int how many streamline nodes where found within the radar range, used for recursion. If the result is too few then increase radar range and vice versa 
+\end{DoxyReturn}
+
+
+Definition at line 114 of file Reconstruction\+Legacy.\+cpp.
+
+\mbox{\Hypertarget{_reconstruction_legacy_8h_af11e7e720b8967b5e5e3d65a07bb4ee8}\label{_reconstruction_legacy_8h_af11e7e720b8967b5e5e3d65a07bb4ee8}} 
+\index{ReconstructionLegacy.h@{ReconstructionLegacy.h}!interpolate\_streamline\_raycast@{interpolate\_streamline\_raycast}}
+\index{interpolate\_streamline\_raycast@{interpolate\_streamline\_raycast}!ReconstructionLegacy.h@{ReconstructionLegacy.h}}
+\doxysubsubsection{\texorpdfstring{interpolate\_streamline\_raycast()}{interpolate\_streamline\_raycast()}}
+{\footnotesize\ttfamily int interpolate\+\_\+streamline\+\_\+raycast (\begin{DoxyParamCaption}\item[{float}]{xx,  }\item[{float}]{yy,  }\item[{float \&}]{vx,  }\item[{float \&}]{vy,  }\item[{float}]{radar }\end{DoxyParamCaption})}
+
+
+
+poor man\textquotesingle{}s raycast implementation, only check four offset points from the desired vector field point. Not very effective 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xx} & x coord of the point on the vector field \\
+\hline
+{\em yy} & y coord of the point on the vector field \\
+\hline
+{\em vx} & the resulting vx value after reconstruction \\
+\hline
+{\em vy} & the resulting vy value after reconstruction \\
+\hline
+{\em radar} & the radar diameter to scan for surrounding streamline nodes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int how many streamline nodes where found within the radar range, used for recursion. If the result is too few then increase radar range and vice versa 
+\end{DoxyReturn}
+
+
+Definition at line 376 of file Reconstruction\+Legacy.\+cpp.
+
+\mbox{\Hypertarget{_reconstruction_legacy_8h_a342af20620e531a759dd856d89f040cd}\label{_reconstruction_legacy_8h_a342af20620e531a759dd856d89f040cd}} 
+\index{ReconstructionLegacy.h@{ReconstructionLegacy.h}!interpolate\_streamline\_simple\_weighted\_sum@{interpolate\_streamline\_simple\_weighted\_sum}}
+\index{interpolate\_streamline\_simple\_weighted\_sum@{interpolate\_streamline\_simple\_weighted\_sum}!ReconstructionLegacy.h@{ReconstructionLegacy.h}}
+\doxysubsubsection{\texorpdfstring{interpolate\_streamline\_simple\_weighted\_sum()}{interpolate\_streamline\_simple\_weighted\_sum()}}
+{\footnotesize\ttfamily int interpolate\+\_\+streamline\+\_\+simple\+\_\+weighted\+\_\+sum (\begin{DoxyParamCaption}\item[{float}]{xx,  }\item[{float}]{yy,  }\item[{float \&}]{vx,  }\item[{float \&}]{vy,  }\item[{float}]{radar }\end{DoxyParamCaption})}
+
+
+
+reconstruct the vector value of a point by doing a simple weighted sum of all nearby streamline points. This is the least accurate method 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xx} & x coord of the point on the vector field \\
+\hline
+{\em yy} & y coord of the point on the vector field \\
+\hline
+{\em vx} & the resulting vx value after reconstruction \\
+\hline
+{\em vy} & the resulting vy value after reconstruction \\
+\hline
+{\em radar} & the radar diameter to scan for surrounding streamline nodes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int how many streamline nodes where found within the radar range, used for recursion. If the result is too few then increase radar range and vice versa 
+\end{DoxyReturn}
+
+
+Definition at line 299 of file Reconstruction\+Legacy.\+cpp.
+

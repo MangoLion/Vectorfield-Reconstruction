@@ -1,0 +1,331 @@
+\hypertarget{_reconstruction_legacy_8cpp}{}\doxysection{D\+:/\+Academic/\+VReconstruction/src/\+Recon\+Methods/\+Reconstruction\+Legacy.cpp File Reference}
+\label{_reconstruction_legacy_8cpp}\index{D:/Academic/VReconstruction/src/ReconMethods/ReconstructionLegacy.cpp@{D:/Academic/VReconstruction/src/ReconMethods/ReconstructionLegacy.cpp}}
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Data\+Readers/\+Reader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Unused/\+Skeleton.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}vtk\+Points.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Point\+Locator/kd\+Tree\+Helper.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{_reconstruction_legacy_8cpp_a7104e8c3b0a2062c3c6685d5bf6ce97a}{get\+Absolute\+Diff2\+Angles}} (const double x, const double y)
+\item 
+float \mbox{\hyperlink{_reconstruction_legacy_8cpp_a574f648560e17a168c68829af4a8ae54}{bilinear\+\_\+interpolate\+\_\+scalar}} (float q11, float q12, float q21, float q22, float x1, float x2, float y1, float y2, float x, float y)
+\begin{DoxyCompactList}\small\item\em perform bilinear interpolation \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_reconstruction_legacy_8cpp_ac87cae5571d56b451db2f2018d42b677}{min\+\_\+distance\+\_\+to\+\_\+steamline}} (float x, float y, std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$ $\ast$streamline)
+\begin{DoxyCompactList}\small\item\em get the minimum distance to a specific streamline from a point x,y \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structnode}{node}} $\ast$ \mbox{\hyperlink{_reconstruction_legacy_8cpp_a21f961c29f18e6578f3272738013ac9f}{min\+\_\+node\+\_\+to\+\_\+steamline}} (float x, float y, std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$ $\ast$streamline)
+\begin{DoxyCompactList}\small\item\em get the closest node to a specific streamline from a point \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_reconstruction_legacy_8cpp_accfabf1e9c6b8cb4491160ded8f09c83}{interpolate\+\_\+streamline\+\_\+adaptive\+\_\+weight\+\_\+sum}} (float xx, float yy, float \&vx, float \&vy, float radar)
+\begin{DoxyCompactList}\small\item\em reconstruct the vector value of the point (xx,yy) on the vector field by using the Adaptive Weighed Sum method \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_reconstruction_legacy_8cpp_aa3f5aa6aa5c4ef00e34c6f646b1d6616}{interpolate\+\_\+streamline\+\_\+unknown}} (float xx, float yy, float \&vx, float \&vy, float radar)
+\begin{DoxyCompactList}\small\item\em TODO\+: figure out what this method does. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_reconstruction_legacy_8cpp_a342af20620e531a759dd856d89f040cd}{interpolate\+\_\+streamline\+\_\+simple\+\_\+weighted\+\_\+sum}} (float xx, float yy, float \&vx, float \&vy, float radar)
+\begin{DoxyCompactList}\small\item\em reconstruct the vector value of a point by doing a simple weighted sum of all nearby streamline points. This is the least accurate method \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structnode}{node}} $\ast$ \mbox{\hyperlink{_reconstruction_legacy_8cpp_aaeb2e546816ead289f4c3616d84e4c38}{get\+\_\+nearest\+\_\+streamline\+\_\+node}} (float xx, float yy)
+\begin{DoxyCompactList}\small\item\em Get the nearest streamline node object, search through all streamlines. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_reconstruction_legacy_8cpp_af11e7e720b8967b5e5e3d65a07bb4ee8}{interpolate\+\_\+streamline\+\_\+raycast}} (float xx, float yy, float \&vx, float \&vy, float radar)
+\begin{DoxyCompactList}\small\item\em poor man\textquotesingle{}s raycast implementation, only check four offset points from the desired vector field point. Not very effective \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_reconstruction_legacy_8cpp_ac2ee8e46d8503c2a0549b53e0ff561aa}{init\+\_\+grids}} ()
+\begin{DoxyCompactList}\small\item\em legacy 2d method\textquotesingle{}s main function for setting up critical values of the vector field reconstruction process It initializes average error values, the reconstructed vector field values, and begin the vector field construction process \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_reconstruction_legacy_8cpp_a257bc330e36ebc0af5866cfc0017799b}{interpolate\+\_\+grid}} ()
+\begin{DoxyCompactList}\small\item\em legacy 2d method to set the values of the interpolated grid based on the original grid \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_reconstruction_legacy_8cpp_a0e12e73800927bbae62911d176354832}{STREAMLINE\+\_\+\+LENGTH}} = 500
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_reconstruction_legacy_8cpp_a574f648560e17a168c68829af4a8ae54}\label{_reconstruction_legacy_8cpp_a574f648560e17a168c68829af4a8ae54}} 
+\index{ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}!bilinear\_interpolate\_scalar@{bilinear\_interpolate\_scalar}}
+\index{bilinear\_interpolate\_scalar@{bilinear\_interpolate\_scalar}!ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}}
+\doxysubsubsection{\texorpdfstring{bilinear\_interpolate\_scalar()}{bilinear\_interpolate\_scalar()}}
+{\footnotesize\ttfamily float bilinear\+\_\+interpolate\+\_\+scalar (\begin{DoxyParamCaption}\item[{float}]{q11,  }\item[{float}]{q12,  }\item[{float}]{q21,  }\item[{float}]{q22,  }\item[{float}]{x1,  }\item[{float}]{x2,  }\item[{float}]{y1,  }\item[{float}]{y2,  }\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+
+
+perform bilinear interpolation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q11} & bottom left value \\
+\hline
+{\em q12} & top left value \\
+\hline
+{\em q21} & bottom right value \\
+\hline
+{\em q22} & top right value \\
+\hline
+{\em x1} & left most x \\
+\hline
+{\em x2} & right most x \\
+\hline
+{\em y1} & bottom y \\
+\hline
+{\em y2} & top y \\
+\hline
+{\em x} & x value of the point to be interpolated \\
+\hline
+{\em y} & y value of the point to be interpolated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+
+Definition at line 42 of file Reconstruction\+Legacy.\+cpp.
+
+\mbox{\Hypertarget{_reconstruction_legacy_8cpp_aaeb2e546816ead289f4c3616d84e4c38}\label{_reconstruction_legacy_8cpp_aaeb2e546816ead289f4c3616d84e4c38}} 
+\index{ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}!get\_nearest\_streamline\_node@{get\_nearest\_streamline\_node}}
+\index{get\_nearest\_streamline\_node@{get\_nearest\_streamline\_node}!ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_nearest\_streamline\_node()}{get\_nearest\_streamline\_node()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structnode}{node}}$\ast$ get\+\_\+nearest\+\_\+streamline\+\_\+node (\begin{DoxyParamCaption}\item[{float}]{xx,  }\item[{float}]{yy }\end{DoxyParamCaption})}
+
+
+
+Get the nearest streamline node object, search through all streamlines. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xx} & x coord of the search \\
+\hline
+{\em yy} & y coord of the search \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+node$\ast$ closest streamline node 
+\end{DoxyReturn}
+
+
+Definition at line 344 of file Reconstruction\+Legacy.\+cpp.
+
+\mbox{\Hypertarget{_reconstruction_legacy_8cpp_a7104e8c3b0a2062c3c6685d5bf6ce97a}\label{_reconstruction_legacy_8cpp_a7104e8c3b0a2062c3c6685d5bf6ce97a}} 
+\index{ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}!getAbsoluteDiff2Angles@{getAbsoluteDiff2Angles}}
+\index{getAbsoluteDiff2Angles@{getAbsoluteDiff2Angles}!ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}}
+\doxysubsubsection{\texorpdfstring{getAbsoluteDiff2Angles()}{getAbsoluteDiff2Angles()}}
+{\footnotesize\ttfamily double get\+Absolute\+Diff2\+Angles (\begin{DoxyParamCaption}\item[{const double}]{x,  }\item[{const double}]{y }\end{DoxyParamCaption})}
+
+Return the 2d angle between 0-\/180 
+
+Definition at line 18 of file Reconstruction\+Legacy.\+cpp.
+
+\mbox{\Hypertarget{_reconstruction_legacy_8cpp_ac2ee8e46d8503c2a0549b53e0ff561aa}\label{_reconstruction_legacy_8cpp_ac2ee8e46d8503c2a0549b53e0ff561aa}} 
+\index{ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}!init\_grids@{init\_grids}}
+\index{init\_grids@{init\_grids}!ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}}
+\doxysubsubsection{\texorpdfstring{init\_grids()}{init\_grids()}}
+{\footnotesize\ttfamily void init\+\_\+grids (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+legacy 2d method\textquotesingle{}s main function for setting up critical values of the vector field reconstruction process It initializes average error values, the reconstructed vector field values, and begin the vector field construction process 
+
+
+
+Definition at line 401 of file Reconstruction\+Legacy.\+cpp.
+
+\mbox{\Hypertarget{_reconstruction_legacy_8cpp_a257bc330e36ebc0af5866cfc0017799b}\label{_reconstruction_legacy_8cpp_a257bc330e36ebc0af5866cfc0017799b}} 
+\index{ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}!interpolate\_grid@{interpolate\_grid}}
+\index{interpolate\_grid@{interpolate\_grid}!ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}}
+\doxysubsubsection{\texorpdfstring{interpolate\_grid()}{interpolate\_grid()}}
+{\footnotesize\ttfamily void interpolate\+\_\+grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+legacy 2d method to set the values of the interpolated grid based on the original grid 
+
+
+
+Definition at line 546 of file Reconstruction\+Legacy.\+cpp.
+
+\mbox{\Hypertarget{_reconstruction_legacy_8cpp_accfabf1e9c6b8cb4491160ded8f09c83}\label{_reconstruction_legacy_8cpp_accfabf1e9c6b8cb4491160ded8f09c83}} 
+\index{ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}!interpolate\_streamline\_adaptive\_weight\_sum@{interpolate\_streamline\_adaptive\_weight\_sum}}
+\index{interpolate\_streamline\_adaptive\_weight\_sum@{interpolate\_streamline\_adaptive\_weight\_sum}!ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}}
+\doxysubsubsection{\texorpdfstring{interpolate\_streamline\_adaptive\_weight\_sum()}{interpolate\_streamline\_adaptive\_weight\_sum()}}
+{\footnotesize\ttfamily int interpolate\+\_\+streamline\+\_\+adaptive\+\_\+weight\+\_\+sum (\begin{DoxyParamCaption}\item[{float}]{xx,  }\item[{float}]{yy,  }\item[{float \&}]{vx,  }\item[{float \&}]{vy,  }\item[{float}]{radar }\end{DoxyParamCaption})}
+
+
+
+reconstruct the vector value of the point (xx,yy) on the vector field by using the Adaptive Weighed Sum method 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xx} & x coord of the point on the vector field \\
+\hline
+{\em yy} & y coord of the point on the vector field \\
+\hline
+{\em vx} & the resulting vx value after reconstruction \\
+\hline
+{\em vy} & the resulting vy value after reconstruction \\
+\hline
+{\em radar} & the radar diameter to scan for surrounding streamline nodes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int how many streamline nodes where found within the radar range, used for recursion. If the result is too few then increase radar range and vice versa 
+\end{DoxyReturn}
+
+
+Definition at line 114 of file Reconstruction\+Legacy.\+cpp.
+
+\mbox{\Hypertarget{_reconstruction_legacy_8cpp_af11e7e720b8967b5e5e3d65a07bb4ee8}\label{_reconstruction_legacy_8cpp_af11e7e720b8967b5e5e3d65a07bb4ee8}} 
+\index{ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}!interpolate\_streamline\_raycast@{interpolate\_streamline\_raycast}}
+\index{interpolate\_streamline\_raycast@{interpolate\_streamline\_raycast}!ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}}
+\doxysubsubsection{\texorpdfstring{interpolate\_streamline\_raycast()}{interpolate\_streamline\_raycast()}}
+{\footnotesize\ttfamily int interpolate\+\_\+streamline\+\_\+raycast (\begin{DoxyParamCaption}\item[{float}]{xx,  }\item[{float}]{yy,  }\item[{float \&}]{vx,  }\item[{float \&}]{vy,  }\item[{float}]{radar }\end{DoxyParamCaption})}
+
+
+
+poor man\textquotesingle{}s raycast implementation, only check four offset points from the desired vector field point. Not very effective 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xx} & x coord of the point on the vector field \\
+\hline
+{\em yy} & y coord of the point on the vector field \\
+\hline
+{\em vx} & the resulting vx value after reconstruction \\
+\hline
+{\em vy} & the resulting vy value after reconstruction \\
+\hline
+{\em radar} & the radar diameter to scan for surrounding streamline nodes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int how many streamline nodes where found within the radar range, used for recursion. If the result is too few then increase radar range and vice versa 
+\end{DoxyReturn}
+
+
+Definition at line 376 of file Reconstruction\+Legacy.\+cpp.
+
+\mbox{\Hypertarget{_reconstruction_legacy_8cpp_a342af20620e531a759dd856d89f040cd}\label{_reconstruction_legacy_8cpp_a342af20620e531a759dd856d89f040cd}} 
+\index{ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}!interpolate\_streamline\_simple\_weighted\_sum@{interpolate\_streamline\_simple\_weighted\_sum}}
+\index{interpolate\_streamline\_simple\_weighted\_sum@{interpolate\_streamline\_simple\_weighted\_sum}!ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}}
+\doxysubsubsection{\texorpdfstring{interpolate\_streamline\_simple\_weighted\_sum()}{interpolate\_streamline\_simple\_weighted\_sum()}}
+{\footnotesize\ttfamily int interpolate\+\_\+streamline\+\_\+simple\+\_\+weighted\+\_\+sum (\begin{DoxyParamCaption}\item[{float}]{xx,  }\item[{float}]{yy,  }\item[{float \&}]{vx,  }\item[{float \&}]{vy,  }\item[{float}]{radar }\end{DoxyParamCaption})}
+
+
+
+reconstruct the vector value of a point by doing a simple weighted sum of all nearby streamline points. This is the least accurate method 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xx} & x coord of the point on the vector field \\
+\hline
+{\em yy} & y coord of the point on the vector field \\
+\hline
+{\em vx} & the resulting vx value after reconstruction \\
+\hline
+{\em vy} & the resulting vy value after reconstruction \\
+\hline
+{\em radar} & the radar diameter to scan for surrounding streamline nodes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int how many streamline nodes where found within the radar range, used for recursion. If the result is too few then increase radar range and vice versa 
+\end{DoxyReturn}
+
+
+Definition at line 299 of file Reconstruction\+Legacy.\+cpp.
+
+\mbox{\Hypertarget{_reconstruction_legacy_8cpp_aa3f5aa6aa5c4ef00e34c6f646b1d6616}\label{_reconstruction_legacy_8cpp_aa3f5aa6aa5c4ef00e34c6f646b1d6616}} 
+\index{ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}!interpolate\_streamline\_unknown@{interpolate\_streamline\_unknown}}
+\index{interpolate\_streamline\_unknown@{interpolate\_streamline\_unknown}!ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}}
+\doxysubsubsection{\texorpdfstring{interpolate\_streamline\_unknown()}{interpolate\_streamline\_unknown()}}
+{\footnotesize\ttfamily void interpolate\+\_\+streamline\+\_\+unknown (\begin{DoxyParamCaption}\item[{float}]{xx,  }\item[{float}]{yy,  }\item[{float \&}]{vx,  }\item[{float \&}]{vy,  }\item[{float}]{radar }\end{DoxyParamCaption})}
+
+
+
+TODO\+: figure out what this method does. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xx} & \\
+\hline
+{\em yy} & \\
+\hline
+{\em vx} & \\
+\hline
+{\em vy} & \\
+\hline
+{\em radar} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 170 of file Reconstruction\+Legacy.\+cpp.
+
+\mbox{\Hypertarget{_reconstruction_legacy_8cpp_ac87cae5571d56b451db2f2018d42b677}\label{_reconstruction_legacy_8cpp_ac87cae5571d56b451db2f2018d42b677}} 
+\index{ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}!min\_distance\_to\_steamline@{min\_distance\_to\_steamline}}
+\index{min\_distance\_to\_steamline@{min\_distance\_to\_steamline}!ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}}
+\doxysubsubsection{\texorpdfstring{min\_distance\_to\_steamline()}{min\_distance\_to\_steamline()}}
+{\footnotesize\ttfamily float min\+\_\+distance\+\_\+to\+\_\+steamline (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$ $\ast$}]{streamline }\end{DoxyParamCaption})}
+
+
+
+get the minimum distance to a specific streamline from a point x,y 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em streamline} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float min distance to streamline 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file Reconstruction\+Legacy.\+cpp.
+
+\mbox{\Hypertarget{_reconstruction_legacy_8cpp_a21f961c29f18e6578f3272738013ac9f}\label{_reconstruction_legacy_8cpp_a21f961c29f18e6578f3272738013ac9f}} 
+\index{ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}!min\_node\_to\_steamline@{min\_node\_to\_steamline}}
+\index{min\_node\_to\_steamline@{min\_node\_to\_steamline}!ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}}
+\doxysubsubsection{\texorpdfstring{min\_node\_to\_steamline()}{min\_node\_to\_steamline()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structnode}{node}}$\ast$ min\+\_\+node\+\_\+to\+\_\+steamline (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structnode}{node}} $>$ $\ast$}]{streamline }\end{DoxyParamCaption})}
+
+
+
+get the closest node to a specific streamline from a point 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em streamline} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+node$\ast$ the closest node of that streamline 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file Reconstruction\+Legacy.\+cpp.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_reconstruction_legacy_8cpp_a0e12e73800927bbae62911d176354832}\label{_reconstruction_legacy_8cpp_a0e12e73800927bbae62911d176354832}} 
+\index{ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}!STREAMLINE\_LENGTH@{STREAMLINE\_LENGTH}}
+\index{STREAMLINE\_LENGTH@{STREAMLINE\_LENGTH}!ReconstructionLegacy.cpp@{ReconstructionLegacy.cpp}}
+\doxysubsubsection{\texorpdfstring{STREAMLINE\_LENGTH}{STREAMLINE\_LENGTH}}
+{\footnotesize\ttfamily int STREAMLINE\+\_\+\+LENGTH = 500}
+
+
+
+Definition at line 394 of file Reconstruction\+Legacy.\+cpp.
+
